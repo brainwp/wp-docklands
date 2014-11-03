@@ -4,6 +4,7 @@ error_log
 Vagrantfile
 
 sftp-config.json
+wp-config.php
 
 *.swp
 *.swo
