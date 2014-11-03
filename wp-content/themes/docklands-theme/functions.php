@@ -141,6 +141,14 @@ if ( ! function_exists( 'odin_setup_features' ) ) {
 		 */
 		// add_post_type_support( 'page', 'excerpt' );
 	}
+
+	/*
+	 * Quando o tema Docklands for ativado,
+	 * seta a estrutura de permalinks para /%postname%/
+	 */
+	if ( isset( $_GET['activated'] ) && is_admin() ){
+	    update_option( 'permalink_structure', '/%postname%/' );
+	}
 }
 
 add_action( 'after_setup_theme', 'odin_setup_features' );
