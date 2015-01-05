@@ -10,7 +10,6 @@
 ?>
 
 <div id="secondary" class="col-sm-3 left" role="complementary">
-	Left
 	<?php
 		if ( ! dynamic_sidebar( 'left-sidebar' ) ) {
 			the_widget( 'WP_Widget_Recent_Posts', array( 'number' => 10 ) );

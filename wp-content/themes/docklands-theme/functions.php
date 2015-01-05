@@ -174,6 +174,17 @@ function odin_widgets_init() {
 			'after_title' => '</h3>',
 		)
 	);
+	register_sidebar(
+		array(
+			'name' => __( 'Left Sidebar', 'odin' ),
+			'id' => 'left-sidebar',
+			'description' => __( 'Left Sidebar', 'odin' ),
+			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+			'after_widget' => '</aside>',
+			'before_title' => '<h3 class="widgettitle widget-title">',
+			'after_title' => '</h3>',
+		)
+	);
 }
 
 add_action( 'widgets_init', 'odin_widgets_init' );
@@ -281,3 +292,8 @@ require_once get_template_directory() . '/inc/advanced-custom-fields/acf.php';
 require_once get_template_directory() . '/inc/acf-options-page/acf-options-page.php';
 require_once get_template_directory() . '/inc/acf-repeater/acf-repeater.php';
 require_once get_template_directory() . '/fields.php';
+
+/**
+ * Add file of the Custom Widgets
+ */
+require_once get_template_directory() . '/inc/widgets.php';

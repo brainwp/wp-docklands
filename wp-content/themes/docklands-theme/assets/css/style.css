@@ -176,8 +176,9 @@ h1, h2, h3, h4, h5, h6 {
 	font-size: 1.2em;
 }
 
-.each .content .preco .o-preco {
+.each .content .preco .price {
 	font-size: 1.4em;
+	font-weight: bold;
 }
 
 .each .content .preco .imposto-preco {
@@ -216,6 +217,79 @@ h1, h2, h3, h4, h5, h6 {
 
 .home .banners {
 	margin: 40px auto 20px;
+}
+
+/* Sidebar */
+
+h3.item {
+	border-bottom: 1px solid #9FA0A2;
+	color: #016CB0;
+	margin-bottom: 10px;
+	padding-bottom: 10px;
+	text-transform: capitalize;
+	width: 100%;
+}
+.col-md-12.Produtos_Widget {
+	padding-left: 0;
+	padding-right: 0;
+}
+.list-produtos {
+	overflow: hidden;
+	padding: 0;
+}
+
+.list-produtos li {
+	border: 1px solid #F1F1F1;
+	list-style: none;
+	margin: 5px auto 15px;
+	overflow: hidden;	
+}
+
+.list-produtos li .thumb {
+	background: #666;
+	height: 80px;
+	overflow: hidden;
+	width: 41.6667%;
+}
+
+.list-produtos li .thumb img {
+	min-height: 100%;
+}
+
+.list-produtos li .title {
+	color: #006AB2;
+	display: block;
+	margin: 10px 0 0;
+}
+
+.list-produtos li .desc {
+	padding-right: 0;
+	position: relative;
+}
+
+.list-produtos li .moeda-preco {
+	color: #D27E26;
+	display: inline-block;
+	font-size: 1.2em;
+	float: left;
+	line-height: 1.8;
+	margin-right: 5px;
+}
+
+.list-produtos li .price {
+	color: #D27E26;
+	float: left;
+	font-size: 1.4em;
+	font-weight: bold;
+}
+
+.list-produtos li .old-price {
+	bottom: 0;
+	color: #B4B4B4;
+	font-size: 0.85em;
+	text-decoration: line-through;
+	position: absolute;
+	right: 0px;
 }
 
 /* Footer */
