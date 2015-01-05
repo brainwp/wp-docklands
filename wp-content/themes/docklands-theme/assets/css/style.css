@@ -217,3 +217,68 @@ h1, h2, h3, h4, h5, h6 {
 .home .banners {
 	margin: 40px auto 20px;
 }
+
+/* Footer */
+#footer {
+    border-top: none;
+    margin-top: 20px;
+    padding: 0;
+}
+
+#footer .top {
+	background-color: #2E302F;
+	overflow: hidden;
+	padding: 20px 0;
+}
+
+#footer div {
+	border-right: 1px solid #6B6C70;
+}
+
+#footer div:last-child {
+	border: none;
+}
+
+#footer a {
+	color: #BDBFBE;
+}
+
+#footer a:hover {
+	color: #FFF;
+	text-decoration: none;
+}
+
+#footer .menu-footer {
+	margin: 0;
+	padding: 0;
+	text-align: left;
+}
+
+#footer .menu-footer li {
+	padding: 6px 10px;
+}
+
+#footer .contacts span {
+	display: block;
+	padding: 6px 10px;
+	text-align: left;
+}
+
+#footer .contacts .title {
+	color: #FFF;
+}
+
+#footer .contacts .address {
+	color: #BDBFBE;
+}
+
+#footer .contacts .phone,
+#footer .contacts .fax,
+#footer .contacts .email {
+	color: #D27E26;
+}
+
+#footer .social-media .bottom .join {
+	color: #FFF;
+	font-weight: bold;
+}
