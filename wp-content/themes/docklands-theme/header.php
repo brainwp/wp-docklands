@@ -32,22 +32,29 @@
 </head>
 
 <body <?php body_class(); ?>>
+
+	<div class="menu-top">
+		<div class="wrap">
+			<a href="">Teste</a>
+			<div class="social-media pull-right">
+				<div class="pull-left twitter"><a href=""></a></div>
+				<div class="pull-left facebook"><a href=""></a></div>
+				<div class="pull-left googleplus"><a href=""></a></div>
+				<div class="pull-left youtube"><a href=""></a></div>
+			</div><!-- top -->
+		</div>
+	</div><!-- menu-top -->
+
 	<div class="container">
 		<header id="header" role="banner">
-			<?php if ( is_home() ) : ?>
-				<h1 class="site-title"><a href="<?php echo home_url(); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
-			<?php else : ?>
-				<div class="site-title h1"><a href="<?php echo home_url(); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></div>
-				<div class="site-description h2"><?php bloginfo( 'description' ); ?></div>
-			<?php endif ?>
 
-			<?php
-				$header_image = get_header_image();
-				if ( ! empty( $header_image ) ) :
-			?>
-				<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo esc_url( $header_image ); ?>" height="<?php esc_attr_e( $header_image->height ); ?>" width="<?php esc_attr_e( $header_image->width ); ?>" alt="" /></a>
-			<?php endif; ?>
+			<div class="logo col-sm-3"></div><!-- logo -->
+
+			<div class="center col-sm-6">
+				<span class="desc">"<?php bloginfo( 'description' ); ?>"</span>
+			</div><!-- center -->
+
+			<div class="itens-shop col-sm-3"></div><!-- itens-shop -->
 
 			<nav id="main-navigation" class="navbar navbar-default" role="navigation">
 				<a class="assistive-text" href="#content" title="<?php esc_attr_e( 'Skip to content', 'odin' ); ?>"><?php _e( 'Skip to content', 'odin' ); ?></a>
