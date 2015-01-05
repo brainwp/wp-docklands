@@ -68,26 +68,28 @@
 				
 				<div class="col-sm-4 social-media">
 					<div class="top">
-						<div class="col-sm-3"></div>
-						<div class="col-sm-3"></div>
-						<div class="col-sm-3"></div>
-						<div class="col-sm-3"></div>
+						<div class="col-sm-3 youtube"></div>
+						<div class="col-sm-3 googleplus"></div>
+						<div class="col-sm-3 twitter"></div>
+						<div class="col-sm-3 facebook"></div>
 					</div><!-- top -->
 					<div class="bottom col-sm-12">
 						<span class="join">Join the Docklands Office Furniture Newsletter:</span>
-						Sign up now for our latest offers, news and discounts
+						<span>Sign up now for our latest offers, news and discounts</span>
 					</div><!-- bottom -->
-				</div>
+				</div><!-- social-media -->
 
 			</div><!-- top -->
 
 			<div class="clear"></div>
 
 			<div class="site-info">
-				<span>&copy; <?php echo date( 'Y' ); ?> <a href="<?php echo home_url(); ?>"><?php bloginfo( 'name' ); ?></a> - <?php _e( 'All rights reserved', 'odin' ); ?> | <?php echo sprintf( __( 'Powered by the <a href="%s" rel="nofollow" target="_blank">Odin</a> forces and <a href="%s" rel="nofollow" target="_blank">WordPress</a>.', 'odin' ), 'http://wpod.in/', 'http://wordpress.org/' ); ?></span>
+				<span><a href="<?php echo home_url(); ?>"><?php bloginfo( 'name' ); ?></a> &copy; <?php echo date( 'Y' ); ?></span>
 			</div><!-- .site-info -->
 		</footer><!-- #footer -->
 	</div><!-- .container -->
+
+	<a href="#header" class="btn back-top"></span>
 
 	<?php wp_footer(); ?>
 </body>

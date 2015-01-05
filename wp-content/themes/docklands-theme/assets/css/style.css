@@ -278,7 +278,79 @@ h1, h2, h3, h4, h5, h6 {
 	color: #D27E26;
 }
 
+#footer .social-media {
+	text-align: left;
+}
+
+#footer .social-media .top {
+	border: 0;
+}
+
+#footer .social-media .top .youtube {
+	background: url('../images/sprite-icons-social.jpg') 10px center no-repeat;
+	border: none;
+	height: 50px;
+	overflow: hidden;
+	margin-left: 47px;
+	max-width: 60px;
+}
+
+#footer .social-media .top .googleplus {
+	background: url('../images/sprite-icons-social.jpg') -38px center no-repeat;
+	border: none;
+	height: 50px;
+	overflow: hidden;
+	max-width: 60px;
+}
+
+#footer .social-media .top .twitter {
+	background: url('../images/sprite-icons-social.jpg') -90px center no-repeat;
+	border: none;
+	height: 50px;
+	overflow: hidden;
+	max-width: 60px;
+}
+
+#footer .social-media .top .facebook {
+	background: url('../images/sprite-icons-social.jpg') -142px center no-repeat;
+	border: none;
+	height: 50px;
+	overflow: hidden;
+	max-width: 60px;
+}
+
+#footer .social-media .bottom {
+	padding-bottom: 0;
+	padding-left: 0;
+}
+
+#footer .social-media .bottom span {
+	color: #8A8C8B;	
+	display: block;
+	margin-bottom: 5px;
+}
+
 #footer .social-media .bottom .join {
 	color: #FFF;
 	font-weight: bold;
 }
+
+#footer .site-info {
+	color: #8A8C8B;
+	padding: 25px 20px;
+	text-align: left;
+}
+
+#footer .site-info a {
+	color: #8A8C8B;
+}
+
+.btn.back-top {
+	background: url('../images/btn-top.jpg') center center no-repeat #292C2B;
+	bottom: 30px;
+	height: 30px;
+	position: fixed;
+	right: 35px;
+	width: 70px;
+}
+
