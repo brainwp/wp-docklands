@@ -80,7 +80,10 @@ h1, h2, h3, h4, h5, h6 {
 	/* Cores */
 	color: #FDE2AB;
 }
-
+.produto-content{
+	width:auto;
+	display:inline !important;
+}
 .btn.details {
 	/* Bordas */
 	border: 1px solid #C3C4C6;
@@ -316,7 +319,7 @@ h3.item {
 	border: 1px solid #F1F1F1;
 	list-style: none;
 	margin: 5px auto 15px;
-	overflow: hidden;	
+	overflow: hidden;
 }
 
 .list-produtos li .thumb {
@@ -473,7 +476,7 @@ h3.item {
 }
 
 #footer .social-media .bottom span {
-	color: #8A8C8B;	
+	color: #8A8C8B;
 	display: block;
 	margin-bottom: 5px;
 }

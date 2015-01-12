@@ -24,91 +24,25 @@ get_header();
 				</div><!-- slider-home -->
 
 				<h3 class="bg-title">New Arrivals</h3>
-				
+
 				<div class="col-sm-12 arrivals">
-					<div class="each col-sm-4">
-						<div class="content">
+					<?php
+					// WP_Query arguments
+					$args = array (
+						'post_type'              => 'product',
+						'posts_per_page'         => '5',
+					);
+					// The Query
+					$query = new WP_Query( $args );
+					?>
+					<?php if ( $query->have_posts() ) : ?>
+						<?php while ( $query->have_posts() ): $query->the_post(); ?>
+							<?php get_template_part('content','produto'); ?>
+						<?php endwhile; ?>
+					<?php endif; ?>
+					<?php wp_reset_postdata(); ?>
 
-							<div class="thumb">
-							</div><!-- thumb -->
-							<span class="desc">
-								Dododo dododd, dododododod dododododo.
-							</span><!-- desc -->
-							
-							<div class="preco">
-								<span class="string-preco">Our Price </span>
-								<span class="moeda-preco"> £ </span>
-								<span class="o-preco">23,99</span>
-								<span class="imposto-preco">(Inc. Vat £ 28,78)</span>
-							</div><!-- preco -->
-
-							<div class="bottom">
-								<a href="" class="btn cart">
-									Add to cart
-								</a>
-								<a href="" class="btn details pull-right">
-									Details
-								</a>
-							</div><!-- bottom -->
-							
-						</div><!-- content -->
-					</div><!-- each -->
-					<div class="each col-sm-4">
-						<div class="content">
-
-							<div class="thumb">
-							</div><!-- thumb -->
-							<span class="desc">
-								Dododo dododd, dododododod dododododo.
-							</span><!-- desc -->
-							
-							<div class="preco">
-								<span class="string-preco">Our Price </span>
-								<span class="moeda-preco"> £ </span>
-								<span class="o-preco">23,99</span>
-								<span class="imposto-preco">(Inc. Vat £ 28,78)</span>
-							</div><!-- preco -->
-
-							<div class="bottom">
-								<a href="" class="btn cart">
-									Add to cart
-								</a>
-								<a href="" class="btn details pull-right">
-									Details
-								</a>
-							</div><!-- bottom -->
-							
-						</div><!-- content -->
-					</div><!-- each -->
-					<div class="each col-sm-4">
-						<div class="content">
-
-							<div class="thumb">
-							</div><!-- thumb -->
-							<span class="desc">
-								Dododo dododd, dododododod dododododo.
-							</span><!-- desc -->
-
-							<div class="preco">
-								<span class="string-preco">Our Price </span>
-								<span class="moeda-preco"> £ </span>
-								<span class="o-preco">23,99</span>
-								<span class="imposto-preco">(Inc. Vat £ 28,78)</span>
-							</div><!-- preco -->
-
-							<div class="bottom">
-								<a href="" class="btn cart">
-									Add to cart
-								</a>
-								<a href="" class="btn details pull-right">
-									Details
-								</a>
-							</div><!-- bottom -->
-							
-						</div><!-- content -->
-					</div><!-- each -->
 				</div><!-- arrivals -->
-
 			</div><!-- right -->
 
 			<div class="col-sm-12 full">
@@ -126,7 +60,7 @@ get_header();
 				</div><!-- video -->
 
 				<?php if ( $differential = get_field( 'home_differential', 'options' ) ) : ?>
-					
+
 					<div class="differential col-xs-12">
 						<h4>Why Docklands are unique:</h4>
 						<span><?php echo $differential; ?></span>
@@ -135,7 +69,7 @@ get_header();
 				<?php endif ?>
 
 				<?php if ( $banner_2 = get_field( 'home_banner_2', 'options' ) ) : ?>
-					
+
 					<div class="banner col-sm-6">
 						<img src="<?php echo $banner_2; ?>" alt="">
 					</div><!-- banner -->
@@ -143,7 +77,7 @@ get_header();
 				<?php endif ?>
 
 				<?php if ( $banner_3 = get_field( 'home_banner_3', 'options' ) ) : ?>
-					
+
 					<div class="banner col-sm-6">
 						<img src="<?php echo $banner_3; ?>" alt="">
 					</div><!-- banner -->
