@@ -12,10 +12,11 @@ $product = new WC_Product( get_the_ID() );
 							</span><!-- desc -->
 
 							<div class="preco">
-								<span class="string-preco"><?php echo woocommerce_price($product->get_price_excluding_tax()); ?></span>
-								<span class="moeda-preco"> £ </span>
-								<span class="o-preco"><?php echo woocommerce_price($product->get_price_including_tax()); ?></span>
-								<span class="imposto-preco">(Inc. Vat £ 28,78)</span>
+								<span class="string-preco"><?php _e('Our Price','odin'); ?></span>
+								<span class="o-preco"><?php echo woocommerce_price($product->get_price_excluding_tax()); ?></span>
+								<span class="imposto-preco">
+									<?php printf( __('(Inc. Vat %s)','odin'), woocommerce_price($product->get_price_including_tax()) ); ?>
+								</span>
 							</div><!-- preco -->
 
 							<div class="bottom">
