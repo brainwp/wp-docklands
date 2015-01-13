@@ -114,7 +114,7 @@ function custom_taxs() {
 		'show_in_nav_menus'          => false,
 		'show_tagcloud'              => true,
 	);
-	register_taxonomy( 'color', array( 'product' ), $args );
+	register_taxonomy( 'price', array( 'product' ), $args );
 
 
 }

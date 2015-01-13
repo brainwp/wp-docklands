@@ -1,0 +1,8 @@
+#taxonomy-color label.color1{
+	width:100%;
+	display:block;
+	background:url('../images/admin-color1.jpg') no-repeat;
+	background-position: 20px;
+	min-height:32px;
+	color:transparent;
+}

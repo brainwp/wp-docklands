@@ -236,11 +236,20 @@ function odin_enqueue_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 	if( is_admin()){
-		wp_enqueue_style( 'woo-admin-css', $template_url . '/assets/css/admin.css', array(), null, 'all' );
+
 	}
 }
 
 add_action( 'wp_enqueue_scripts', 'odin_enqueue_scripts', 1 );
+
+function odin_admin_enqueue_scripts(){
+	$template_url = get_template_directory_uri();
+
+	wp_enqueue_style( 'woo-admin-css', $template_url . '/assets/css/admin.css', array(), null, 'all' );
+	wp_enqueue_script( 'woo-admin-js', $template_url . '/assets/js/admin.js', array(), null, true );
+
+}
+add_action( 'admin_init', 'odin_admin_enqueue_scripts');
 
 /**
  * Odin custom stylesheet URI.
