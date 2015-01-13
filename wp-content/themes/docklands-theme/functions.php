@@ -235,6 +235,9 @@ function odin_enqueue_scripts() {
 	if ( is_singular() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+	if( is_admin()){
+		wp_enqueue_style( 'woo-admin-css', $template_url . '/assets/css/admin.css', array(), null, 'all' );
+	}
 }
 
 add_action( 'wp_enqueue_scripts', 'odin_enqueue_scripts', 1 );

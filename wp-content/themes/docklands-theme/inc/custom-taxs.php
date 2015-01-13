@@ -26,7 +26,7 @@ function custom_taxs() {
 		'hierarchical'               => true,
 		'public'                     => true,
 		'show_ui'                    => true,
-		'show_admin_column'          => true,
+		'show_admin_column'          => false,
 		'show_in_nav_menus'          => false,
 		'show_tagcloud'              => true,
 	);
@@ -54,7 +54,7 @@ function custom_taxs() {
 		'hierarchical'               => true,
 		'public'                     => true,
 		'show_ui'                    => true,
-		'show_admin_column'          => true,
+		'show_admin_column'          => false,
 		'show_in_nav_menus'          => false,
 		'show_tagcloud'              => true,
 	);
@@ -82,7 +82,7 @@ function custom_taxs() {
 		'hierarchical'               => true,
 		'public'                     => true,
 		'show_ui'                    => true,
-		'show_admin_column'          => true,
+		'show_admin_column'          => false,
 		'show_in_nav_menus'          => false,
 		'show_tagcloud'              => true,
 	);
@@ -110,7 +110,7 @@ function custom_taxs() {
 		'hierarchical'               => true,
 		'public'                     => true,
 		'show_ui'                    => true,
-		'show_admin_column'          => true,
+		'show_admin_column'          => false,
 		'show_in_nav_menus'          => false,
 		'show_tagcloud'              => true,
 	);
