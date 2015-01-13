@@ -7,7 +7,7 @@
  */
 ?>
 
-<form method="get" id="searchform" class="form-inline" action="<?php echo esc_url( home_url( '/' ) ); ?>" role="search">
+<form method="get" id="searchform" class="form-inline" role="search">
 	<div class="form-group">
 		<label for="s" class="sr-only"><?php _e( 'Search', 'odin' ); ?></label>
 		<input type="text" class="form-control" name="s" id="s" />

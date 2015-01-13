@@ -15,7 +15,7 @@
 		<footer id="footer" role="contentinfo">
 
 			<div class="top">
-			
+
 				<div class="col-sm-2">
 					<?php
 						wp_nav_menu(
@@ -45,17 +45,17 @@
 					?>
 				</div>
 				<div class="col-sm-4 contacts">
-					
+
 					<span class="title">Contacts:</span>
-					
+
 					<?php if ( $address = get_field( 'footer_address', 'options' ) ) : ?>
 						<span class="address"><?php echo $address; ?></span>
 					<?php endif; ?>
-					
+
 					<?php if ( $phone = get_field( 'footer_phone', 'options' ) ) : ?>
 						<span class="phone"><?php echo $phone; ?></span>
 					<?php endif; ?>
-					
+
 					<?php if ( $fax = get_field( 'footer_fax', 'options' ) ) : ?>
 						<span class="fax"><?php echo $fax; ?></span>
 					<?php endif; ?>
@@ -63,9 +63,9 @@
 					<?php if ( $email = get_field( 'footer_email', 'options' ) ) : ?>
 						<span class="email"><?php echo $email; ?></span>
 					<?php endif; ?>
-					
+
 				</div>
-				
+
 				<div class="col-sm-4 social-media">
 					<div class="top">
 						<div class="col-sm-3 youtube"></div>
@@ -89,7 +89,7 @@
 		</footer><!-- #footer -->
 	</div><!-- .container -->
 
-	<a href="#header" class="btn back-top"></span>
+	<a href="#header" class="btn back-top"></a>
 
 	<?php wp_footer(); ?>
 </body>

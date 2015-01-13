@@ -298,5 +298,9 @@ require_once get_template_directory() . '/fields.php';
 /**
  * User view posts
  */
-require_once get_template_directory() . '/inc/product-views-user.php';
+//require_once get_template_directory() . '/inc/product-views-user.php';
+/**
+ * Custom taxonomy
+ */
+require_once get_template_directory() . '/inc/custom-taxs.php';
 add_filter('show_admin_bar', '__return_false');

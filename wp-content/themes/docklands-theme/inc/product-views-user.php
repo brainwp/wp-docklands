@@ -11,9 +11,11 @@ class Woo_Post_Views{
 	}
 
 	public function get_posts(){
-		$wp_cookie = $_COOKIE['posts'];
+		$wp_cookie = $_COOKIE['woocommerce_recently_viewed'];
 		if(empty($wp_cookie) || !isset($wp_cookie))
 			return false;
+		$wp_cookie = explode( '|', $_COOKIE['woocommerce_recently_viewed'] );
+		$wp_cookie = array_reverse( array_filter( array_map( 'absint', $viewed_products ) ) );
 		return array_unique($wp_cookie);
 	}
 }
