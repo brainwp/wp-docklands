@@ -80,6 +80,9 @@ h1, h2, h3, h4, h5, h6 {
 	/* Cores */
 	color: #FDE2AB;
 }
+.orange {
+	color: #D47616;
+}
 .produto-content{
 	width:auto;
 	display:inline !important;
@@ -367,6 +370,55 @@ h3.item {
 	text-decoration: line-through;
 	position: absolute;
 	right: 0px;
+}
+
+/* Woo */
+
+/* Recentrly viewed items */
+.recentrly-items {
+	border: 1px solid #CCC;
+	margin-bottom: 15px;
+	margin-top: 15px;
+	padding-bottom: 15px;
+}
+
+.recentrly-items a:hover {
+	text-decoration: none;
+}
+
+.recentrly-items > .title {
+	border-bottom: 1px solid #CCC;
+	display: block;
+	float: none;
+	margin: 10px auto 15px;
+	padding-bottom: 10px;
+	padding-left: 0;
+	width: 95%;
+}
+
+.recentrly-items .loop .each {
+	text-align: center;
+}
+
+.recentrly-items .loop .each .thumb span {
+	color: #C1C1C1;
+	font-size: 0.8em;
+	font-style: italic;
+	margin-bottom: 15px;
+}
+
+.recentrly-items .loop .each .desc {
+	color: #666;
+	font-size: 0.9em;
+	margin-top: 10px;
+}
+
+.recentrly-items .loop .each .desc .link {
+	color: #313133;
+	display: block;
+	font-weight: bold;
+	margin-top: 5px;
+	width: 100%;
 }
 
 /* Footer */
