@@ -52,6 +52,18 @@
 
 			<div class="center col-sm-6">
 				<span class="desc">"<?php bloginfo( 'description' ); ?>"</span>
+				<div class="infos-contact bg-title">
+
+					<?php if ( $phone = get_field( 'footer_phone', 'options' ) ) : ?>
+						<span class="col-sm-6 phone"><?php echo $phone; ?></span>
+					<?php endif; ?>
+
+					<span class="col-sm-6 online-support">
+						<span class="top">Online Support</span>
+						<span class="bottom">Email Us</span>
+					</span><!-- online-support -->
+
+				</div><!-- infos-contact -->
 			</div><!-- center -->
 
 			<div class="itens-shop col-sm-3"></div><!-- itens-shop -->
