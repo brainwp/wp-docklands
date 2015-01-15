@@ -179,6 +179,45 @@ h1, h2, h3, h4, h5, h6 {
 	text-align: center;
 }
 
+#header .center .infos-contact {
+	display: block;
+	max-width: 470px;
+	overflow: hidden;
+}
+
+#header .center .infos-contact .phone {
+	background: url('../images/icon-phone.png') left 8px no-repeat transparent;
+	font-size: 1.3em;
+	font-weight: bold;
+	margin: 0 auto;
+	padding-bottom: 3px;
+	padding-left: 35px;
+	padding-top: 10px;
+}
+
+#header .center .infos-contact .online-support {
+	background: url('../images/icon-online-support.png') left 8px no-repeat transparent;
+	padding-top: 3px;
+}
+
+#header .center .infos-contact .online-support .top {
+	color: #8D8F8E;
+	display: block;
+	font-size: 0.9em;
+	padding-left: 40px;
+	text-align: left;
+	width: 100%;
+}
+
+#header .center .infos-contact .online-support .bottom {
+	color: #2A2C2B;
+	display: block;
+	font-size: 1em;
+	padding-left: 40px;
+	text-align: left;
+	width: 100%;
+}
+
 .navbar-default {
 	clear: both;
 }
