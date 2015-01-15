@@ -229,6 +229,65 @@ h1, h2, h3, h4, h5, h6 {
 	width: 100%;
 }
 
+.slider-products {
+	margin: 15px auto;
+	overflow: hidden;
+}
+
+.slider-products .each {
+	margin-bottom: 15px;
+	min-height: 250px;
+	padding-left: 7px;
+	padding-right: 7px;
+	position: relative;
+}
+
+.slider-products .each .content {
+	background-color: #FFF;
+	border: 1px solid #FFF;
+	height: 100%;
+	margin: 0 auto;
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+}
+
+.slider-products .each .content .thumb {
+	background-color: #58585A;
+	border: 3px solid #FFF;
+	height: 180px;
+	margin: 3px;
+	outline: #CCC solid 2px;
+	overflow: hidden;
+	width: 95%;
+}
+
+.slider-products .each .content .desc {
+	color: #424242;
+	display: block;
+	font-size: 0.9em;
+	padding: 15px 15px 10px;
+}
+
+.slider-products .each .content .tag-price {
+	background: url('../images/icon-tag-price.png') center center no-repeat transparent;
+	color: #FFF;
+	font-weight: bold;
+	padding: 20px;
+	position: absolute;
+	text-align: right;
+	top: 125px;
+	right: -5px;
+}
+
+.slider-products .each .content .tag-price .price {
+	margin-top: 10px;
+}
+
+.slider-products .each .content .tag-price .vat {
+	font-size: 0.7em;
+}
+
 .arrivals {
 	background: #ffffff; /* Old browsers */
 	/* IE9 SVG, needs conditional override of 'filter' to 'none' */
@@ -253,15 +312,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .each .content {
 	background-color: #FFF;
-	border: 1px solid #FFF;
 	height: 100%;
 	margin: 0 auto;
 	overflow: hidden;
 	width: 100%;
-}
-
-.each .content:hover {
-	border: 1px solid #C9C9C9;
 }
 
 .each .content .thumb {
