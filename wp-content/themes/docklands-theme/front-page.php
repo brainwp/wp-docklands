@@ -26,7 +26,7 @@ get_header();
 				<div class="col-sm-12 slider-products">
 
 					<div class="each col-sm-4">
-					
+
 						<div class="content">
 
 							<div class="thumb">
@@ -45,7 +45,7 @@ get_header();
 					</div><!-- each -->
 
 					<div class="each col-sm-4">
-					
+
 						<div class="content">
 
 							<div class="thumb">
@@ -64,7 +64,7 @@ get_header();
 					</div><!-- each -->
 
 					<div class="each col-sm-4">
-					
+
 						<div class="content">
 
 							<div class="thumb">

@@ -248,8 +248,24 @@ function odin_admin_enqueue_scripts(){
 	wp_enqueue_style( 'woo-admin-css', $template_url . '/assets/css/admin.css', array(), null, 'all' );
 	wp_enqueue_script( 'woo-admin-js', $template_url . '/assets/js/admin.js', array(), null, true );
 
+	//check if theme cfg
+	$cfg = get_option('is_theme_config_brasa');
+	if(!$cfg && $cfg != 'true'){
+		$max_term = 8;
+		for ($i = 1; $i <= $max_term; $i++) {
+			wp_insert_term(
+			'Color' . $i, // the term
+			'color', // the taxonomy
+			array(
+				'slug' => 'color' . $i,
+				)
+			);
+		}
+		update_option('is_theme_config_brasa', 'true' );
+	}
 }
 add_action( 'admin_init', 'odin_admin_enqueue_scripts');
+
 
 /**
  * Odin custom stylesheet URI.
