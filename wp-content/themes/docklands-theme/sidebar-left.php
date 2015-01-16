@@ -10,6 +10,9 @@
 ?>
 
 <div id="secondary" class="col-sm-3 left" role="complementary">
+	
+	<?php get_template_part( 'parts/form-advanced-search' ); ?>
+
 	<?php
 		if ( ! dynamic_sidebar( 'left-sidebar' ) ) {
 			the_widget( 'WP_Widget_Recent_Posts', array( 'number' => 10 ) );

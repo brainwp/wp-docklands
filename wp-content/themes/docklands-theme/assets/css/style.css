@@ -112,6 +112,15 @@ h1, h2, h3, h4, h5, h6 {
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 ); /* IE6-8 */
 }
 
+.line { 
+	background-color: #CCC;
+	clear: both;
+	display: block;
+	height: 1px;
+	margin: 10px auto;
+	width: 92%;
+}
+
 /* Header */
 .menu-top {
 	background-color: #F2F4F3;
@@ -512,6 +521,59 @@ h3.item {
 	font-weight: bold;
 	margin-top: 5px;
 	width: 100%;
+}
+
+/* Advanced Search */
+.form-advanced-search h4 {
+	color: #48484A;
+	text-transform: capitalize;
+}
+
+.form-advanced-search .clear-form {
+	border: 1px solid #777;
+	color: #777;
+	font-size: 0.7em;
+	float: right;
+	margin-top: -3px;
+	padding: 4px;
+}
+
+.form-advanced-search .clear-form:hover {
+	background: #FFF;
+}
+
+.form-advanced-search .checkbox {
+	font-size: 1em;
+	margin-bottom: 15px;
+}
+
+.form-advanced-search .toggle .title {
+	border-bottom: 1px solid #CCC;
+	color: #8A8782;
+	font-weight: bold;
+	margin-bottom: 10px;
+	margin-top: 15px;
+	padding-bottom: 10px;
+	padding-left: 15px;
+}
+
+.form-advanced-search .icon-open-close {
+	background-color: #777;
+	border-radius: 2px;
+	color: #FFF;
+	cursor: pointer;
+	width: 22px;
+	padding: 1px 8px;
+	text-align: center;
+}
+
+.form-advanced-search .toggle ul {
+	padding-left: 15px;
+}
+
+.form-advanced-search .toggle ul li {
+	list-style: none;
+	margin-bottom: 10px;
 }
 
 /* Footer */
