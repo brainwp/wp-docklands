@@ -11,11 +11,7 @@
 
 <div id="secondary" class="col-sm-3 left" role="complementary">
 	<?php
-		if ( ! dynamic_sidebar( 'left-sidebar' ) ) {
-			the_widget( 'WP_Widget_Recent_Posts', array( 'number' => 10 ) );
-			the_widget( 'WP_Widget_Archives', array( 'count' => 0, 'dropdown' => 1 ) );
-			the_widget( 'WP_Widget_Tag_Cloud' );
-		}
+		dynamic_sidebar( 'left-sidebar' );
 	?>
 	<form action="<?php echo esc_url( home_url( '/' ) ); ?>" id="advanced-search" class="col-md-12">
 		<h4 class="sidebar-header"><?php _e('Categories','odin'); ?></h4><!-- .sidebar-header -->
