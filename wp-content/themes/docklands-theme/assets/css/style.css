@@ -108,6 +108,7 @@ h1, h2, h3, h4, h5, h6 {
 	background: linear-gradient(to bottom,  #ffffff 0%,#e5e5e5 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 ); /* IE6-8 */
 }
+.entry-content { color: #5B5B5D; }
 
 /* Header */
 .menu-top {
@@ -461,6 +462,57 @@ h3.item {
 	position: absolute;
 	right: 0px;
 }
+
+/* News or Blog */
+.single h2.bg-title {
+	color: #48484A;
+	text-transform: capitalize;
+	margin-bottom: 20px;
+}
+
+.breadcrumbs {
+	border-bottom: 1px solid #CCC;
+	color: #636363;
+	float: none;
+	margin: 0 auto;
+	padding-bottom: 10px;
+	padding-left: 20px;
+	width: 100%;
+}
+
+.single #primary .entry-title.single {
+	color: #0168AD;
+	font-size: 2em;
+	text-transform: capitalize;
+}
+
+.single #primary .entry-date {
+	background: url( '../images/icon-calendar.png' ) left center no-repeat transparent;
+	background-size: 22px 22px;
+	color: #9E9FA1;
+	padding-left: 32px;
+	text-transform: capitalize;
+}
+
+.single .entry-content {
+	margin-bottom: 15px;
+	margin-top: 15px;
+}
+
+.single .entry-meta {
+	border-bottom: 1px solid #CCC;
+	margin-bottom: 25px;
+}
+
+.single .entry-meta, .single .entry-meta a {
+	color: #5B5B5D;
+}
+
+.single .entry-meta a:hover {
+	color: #D67516;
+	text-decoration: none;
+}
+
 
 /* Footer */
 #footer {

@@ -8,6 +8,16 @@
 
 get_header(); ?>
 
+	<div class="col-sm-12">
+		<div class="breadcrumbs">
+			<span>Home >> Blog</span>
+		</div><!-- breadcrumbs -->
+
+		<h2 class="bg-title"><?php _e( 'News', 'odin' ); ?></h2>
+	</div>
+
+<?php get_sidebar(); ?>
+
 	<div id="primary" class="<?php echo odin_page_sidebar_classes(); ?>">
 		<div id="content" class="site-content" role="main">
 			<?php
@@ -31,5 +41,4 @@ get_header(); ?>
 	</div><!-- #primary -->
 
 <?php
-get_sidebar();
 get_footer();
