@@ -37,5 +37,18 @@ jQuery(document).ready(function($) {
 		$('#input-categories').attr('value',slug);
 		$('#advanced-search').submit();
 	});
+	$('li.cat-parent').hover(
+		function() {
+			if($(this).attr('data-open') != 'true'){
+				$(this).attr('data-open','true');
+				$(this).children('ul.children').show('medium');
+			}
+		}, function() {
+			if($(this).attr('data-open') == 'true'){
+				$(this).attr('data-open','false');
+				$(this).children('ul.children').hide('medium');
+		    }
+		}
+	);
 });
 

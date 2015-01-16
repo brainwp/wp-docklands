@@ -711,4 +711,6 @@ h3.item {
 	right: 35px;
 	width: 70px;
 }
-
+#secondary ul.children{
+	display:none;
+}
