@@ -8,3 +8,4 @@ jQuery(document).ready(function($) {
 	$('#taxonomy-color li label:contains("Color7")').addClass('color7');
 	$('#taxonomy-color li label:contains("Color8")').addClass('color8');
 });
+
