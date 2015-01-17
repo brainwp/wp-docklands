@@ -84,8 +84,8 @@ h1, h2, h3, h4, h5, h6 {
 	color: #D47616;
 }
 .produto-content{
-	width:auto;
-	display:inline !important;
+	width: auto;
+	display: inline !important;
 }
 .btn.details {
 	/* Bordas */
@@ -111,7 +111,7 @@ h1, h2, h3, h4, h5, h6 {
 	background: linear-gradient(to bottom,  #ffffff 0%,#e5e5e5 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 ); /* IE6-8 */
 }
-.entry-content { color: #5B5B5D; }
+.entry-content, .entry-summary { color: #5B5B5D; }
 
 .line { 
 	background-color: #CCC;
@@ -120,6 +120,10 @@ h1, h2, h3, h4, h5, h6 {
 	height: 1px;
 	margin: 10px auto;
 	width: 92%;
+}
+
+#secondary {
+	margin-top: 30px;
 }
 
 /* Header */
@@ -403,6 +407,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Sidebar */
+body.home #secondary {
+	margin-top: 0;
+}
 
 h3.item {
 	border-bottom: 1px solid #9FA0A2;
@@ -475,7 +482,6 @@ h3.item {
 	right: 0px;
 }
 
-<<<<<<< HEAD
 /* News or Blog */
 .single h2.bg-title {
 	color: #48484A;
@@ -524,6 +530,44 @@ h3.item {
 .single .entry-meta a:hover {
 	color: #D67516;
 	text-decoration: none;
+}
+
+/* Page Template Page Mews */
+.page-template-page-news .entry-summary {
+	padding-left: 0
+}
+
+.page-template-page-news .entry-title a {
+	color: #0168AD;
+	font-size: 0.8em;
+	text-transform: capitalize;
+}
+
+.page-template-page-news .entry-date {
+	background: url( '../images/icon-calendar.png' ) left center no-repeat transparent;
+	background-size: 22px 22px;
+	color: #9E9FA1;
+	padding-left: 32px;
+	text-transform: capitalize;
+}
+
+.page-template-page-news .entry-summary {
+	margin-bottom: 15px;
+	margin-top: 15px;
+}
+
+.page-template-page-news .thumb {
+	text-align: right;
+}
+
+.page-template-page-news .entry-meta, .page-template-page-news .entry-meta a {
+	color: #5B5B5D;
+}
+
+.page-template-page-news article.post {
+	border-bottom: 1px solid #CCC;
+	overflow: hidden;
+	padding-bottom: 20px;
 }
 
 /* Woo */

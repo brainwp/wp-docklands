@@ -48,7 +48,9 @@
 	<div class="container">
 		<header id="header" role="banner">
 
-			<div class="logo col-sm-3"></div><!-- logo -->
+			<a href="<?php echo home_url(); ?>">
+				<div class="logo col-sm-3"></div><!-- logo -->
+			</a>
 
 			<div class="center col-sm-6">
 				<span class="desc">"<?php bloginfo( 'description' ); ?>"</span>
