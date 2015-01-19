@@ -17,7 +17,7 @@ jQuery(document).ready(function($) {
 
 	// Tooltip.
 	$( '.odin-tooltip' ).tooltip();
-	$('#advanced-search input:checkbox').on('click', function() {
+	$('.only-onecheck').on('click', function() {
 	// in the handler, 'this' refers to the box clicked on
 	var $box = $(this);
 	if ($box.is(":checked")) {
@@ -31,7 +31,6 @@ jQuery(document).ready(function($) {
 	}
 	});
 	$('.product-cat-list').on('click',function(e){
-		console.log('oieee');
 		e.preventDefault();
 		var slug = $(this).attr('data-slug');
 		$('#input-categories').attr('value',slug);
@@ -50,5 +49,27 @@ jQuery(document).ready(function($) {
 		    }
 		}
 	);
+	$('.toggle .title').on('click',function(){
+		father = $(this).parent('.toggle');
+		icon = $(this).find('.icon-open-close');
+		if(father.attr('data-open') == 'false' || !father.attr('data-open')){
+			father.addClass('open');
+			father.attr('data-open','true');
+			icon.html('-');
+		}
+		else if(father.attr('data-open') == 'true'){
+			father.removeClass('open');
+			father.attr('data-open','false');
+			icon.html('+');
+		}
+	});
+	$('.clear-form').on('click',function(){
+		$('form').trigger('reset')
+	})
+	$('ul#price-selector li').on('click',function(){
+		$('ul#price-selector li.active').removeClass('active');
+		$('#price-input').attr('value',$(this).attr('data-slug'));
+		$(this).addClass('active');
+	});
 });
 

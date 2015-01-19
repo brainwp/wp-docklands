@@ -4,105 +4,144 @@
  */
 ?>
 
-<div class="form-advanced-search">
-	
+<form class="form-advanced-search" action="<?php echo esc_url( home_url( '/' ) ); ?>" role="search">
+	<input type="hidden" name="s" value="">
+	<input type="hidden" name="post_type" value="product">
 	<h4 class="bg-title">
 		<?php _e( 'Refine By', 'odin' ); ?>
 		<span class="clear-form">
 			<?php _e( 'Clear All', 'odin' ); ?>
 		</span>
 	</h4>
-
-	<div class="checkbox col-md-12">
-		<label><input type="checkbox" value="">New (23)</label>
-	</div><!-- checkbox -->
-
-	<div class="checkbox col-md-12">
-		<label><input type="checkbox" value="">Used (72)</label>
-	</div><!-- checkbox -->
-
+	<?php $categories = get_categories( array('taxonomy' => 'product_condition', 'orderby' => 'term_group') ); ?>
+	<?php foreach($categories as $cat): ?>
+	    <div class="checkbox col-md-12">
+	    	<label>
+	    		<input class="only-onecheck" type="checkbox" name="product_condition" value="<?php echo $cat->slug; ?>">
+	    		<?php echo sprintf('%s (%s)',$cat->name,$cat->count); ?>
+	    	</label>
+	    </div><!-- checkbox -->
+	<?php endforeach; ?>
 	<div class="line"></div>
 
 	<div class="toggle col-md-12">
 		<div class="title">
-			Show in stock only
+			<?php _e('Show in stock only','odin'); ?>
 			<span class="icon-open-close pull-right">+</span>
-		</div><!-- title -->
-		<div class="content"></div><!-- content -->
-	</div><!-- toggle -->
-
-	<div class="toggle col-md-12">
-		<div class="title">
-			Special Offer
-			<span class="icon-open-close pull-right">+</span>
-		</div><!-- title -->
-		<div class="content"></div><!-- content -->
-	</div><!-- toggle -->
-
-	<div class="toggle col-md-12">
-		<div class="title">
-			Brand
-			<span class="icon-open-close pull-right">+</span>
-		</div><!-- title -->
-		<div class="content"></div><!-- content -->
-	</div><!-- toggle -->
-
-	<div class="toggle col-md-12">
-		<div class="title">
-			Price
-			<span class="icon-open-close pull-right">-</span>
 		</div><!-- title -->
 		<div class="content">
-			<ul>
-			    <li>0 - 549,99 (34)</li>
-			    <li>550 - 1.059,99 (8)</li>
-			    <li>1.060 - 1.569,00 (3)</li>
-			    <li>1.570 - 2.550 (1)</li>
+			<div class="checkbox col-md-12">
+				<label for="">
+					<input type="checkbox" name="instock" value="true">
+					<?php _e('Show in stock only?','odin'); ?>
+				</label>
+			</div><!-- .checkbox col-md-12 -->
+		</div><!-- content -->
+	</div><!-- toggle -->
+
+	<div class="toggle col-md-12">
+		<div class="title">
+			<?php _e('Special Offer','odin'); ?>
+			<span class="icon-open-close pull-right">+</span>
+		</div><!-- title -->
+		<div class="content">
+			<div class="checkbox col-md-12">
+				<label>
+					<?php $cat = get_term_by('slug', 'special-offer', 'product_tag',OBJECT); ?>
+					<input class="only-onecheck" type="checkbox" name="product_cat" value="<?php echo $cat->slug; ?>">
+					<?php echo sprintf('%s (%s)',$cat->name,$cat->count); ?>
+	            </label>
+	        </div><!-- checkbox -->
+		</div><!-- content -->
+	</div><!-- toggle -->
+
+	<div class="toggle col-md-12">
+		<div class="title">
+			<?php _e('Brand','odin'); ?>
+			<span class="icon-open-close pull-right">+</span>
+		</div><!-- title -->
+		<div class="content">
+			<?php $categories = get_categories( array('taxonomy' => 'brands', 'orderby' => 'term_group') ); ?>
+			<?php foreach($categories as $cat): ?>
+			    <div class="checkbox col-md-12">
+			    	<label>
+			    		<input class="only-onecheck" type="checkbox" name="brands" value="<?php echo $cat->slug; ?>">
+			    		<?php echo sprintf('%s (%s)',$cat->name,$cat->count); ?>
+	         	    </label>
+	            </div><!-- checkbox -->
+	        <?php endforeach; ?>
+		</div><!-- content -->
+	</div><!-- toggle -->
+
+	<div class="toggle col-md-12">
+		<div class="title">
+			<?php _e('Price','odin'); ?>
+			<span class="icon-open-close pull-right">+</span>
+		</div><!-- title -->
+		<input type="hidden" name="price" value="" id="price-input">
+		<div class="content">
+			<ul id="price-selector">
+				<?php $categories = get_categories( array('taxonomy' => 'price', 'orderby' => 'term_group') ); ?>
+				<?php foreach($categories as $cat): ?>
+				    <li data-slug="<?php echo $cat->slug; ?>">
+				    	<?php echo sprintf('%s (%s)',$cat->name,$cat->count); ?>
+				    </li>
+	            <?php endforeach; ?>
 			</ul>
 		</div><!-- content -->
 	</div><!-- toggle -->
 
 	<div class="toggle col-md-12">
 		<div class="title">
-			Product Type
-			<span class="icon-open-close pull-right">-</span>
+			<?php _e('Product Type','odin'); ?>
+			<span class="icon-open-close pull-right">+</span>
 		</div><!-- title -->
 		<div class="content">
-
-			<div class="checkbox col-md-12">
-				<label><input type="checkbox" value="">4 Drawer (23)</label>
-			</div><!-- checkbox -->
-
-			<div class="checkbox col-md-12">
-				<label><input type="checkbox" value="">3 Drawer (72)</label>
-			</div><!-- checkbox -->
-
+			<?php $categories = get_categories( array('taxonomy' => 'tax_product_type', 'orderby' => 'term_group') ); ?>
+			<?php foreach($categories as $cat): ?>
+			    <div class="checkbox col-md-12">
+			    	<label>
+			    		<input class="only-onecheck" type="checkbox" name="tax_product_type" value="<?php echo $cat->slug; ?>">
+			    		<?php echo sprintf('%s (%s)',$cat->name,$cat->count); ?>
+	         	    </label>
+	            </div><!-- checkbox -->
+	        <?php endforeach; ?>
 		</div><!-- content -->
 	</div><!-- toggle -->
 
 	<div class="toggle col-md-12">
 		<div class="title">
-			Material
-			<span class="icon-open-close pull-right">-</span>
+			<?php _e('Material','odin'); ?>
+			<span class="icon-open-close pull-right">+</span>
 		</div><!-- title -->
 		<div class="content">
-
-			<div class="checkbox col-md-12">
-				<label><input type="checkbox" value="">Wood (19)</label>
-			</div><!-- checkbox -->
-
-			<div class="checkbox col-md-12">
-				<label><input type="checkbox" value="">MDF (3)</label>
-			</div><!-- checkbox -->
-
-			<div class="checkbox col-md-12">
-				<label><input type="checkbox" value="">Glass (2)</label>
-			</div><!-- checkbox -->
-
-			<div class="checkbox col-md-12">
-				<label><input type="checkbox" value="">Metal (2)</label>
-			</div><!-- checkbox -->
-
+			<?php $categories = get_categories( array('taxonomy' => 'material', 'orderby' => 'term_group') ); ?>
+			<?php foreach($categories as $cat): ?>
+			    <div class="checkbox col-md-12">
+			    	<label>
+			    		<input class="only-onecheck" type="checkbox" name="material" value="<?php echo $cat->slug; ?>">
+			    		<?php echo sprintf('%s (%s)',$cat->name,$cat->count); ?>
+	         	    </label>
+	            </div><!-- checkbox -->
+	        <?php endforeach; ?>
+		</div><!-- content -->
+	</div><!-- toggle -->
+	<div class="toggle col-md-12">
+		<div class="title">
+			<?php _e('Colors','odin'); ?>
+			<span class="icon-open-close pull-right">+</span>
+		</div><!-- title -->
+		<div class="content">
+			<?php $categories = get_categories( array('taxonomy' => 'color') ); ?>
+			<?php foreach($categories as $cat): ?>
+			    <div class="checkbox col-md-12">
+			    	<label>
+			    		<input class="only-onecheck" type="checkbox" name="color" value="<?php echo $cat->slug; ?>">
+			    		<img class="color-img" src="<?php bloginfo('template_url'); ?>/assets/images/admin-<?php echo $cat->slug;?>.jpg">
+			    		<?php echo sprintf('(%s)',$cat->count); ?>
+	         	    </label>
+	            </div><!-- checkbox -->
+	        <?php endforeach; ?>
 		</div><!-- content -->
 	</div><!-- toggle -->
 
@@ -111,5 +150,5 @@
 
 	<div class="toggle col-md-12">
 	</div><!-- toggle -->
-
-</div><!-- form-advanced-search -->
+	<button class="btn btn-large"><?php _e('Go!','odin');?></button>
+</form><!-- form-advanced-search -->

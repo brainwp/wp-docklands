@@ -235,9 +235,6 @@ function odin_enqueue_scripts() {
 	if ( is_singular() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
-	if( is_admin()){
-
-	}
 }
 
 add_action( 'wp_enqueue_scripts', 'odin_enqueue_scripts', 1 );
@@ -332,3 +329,7 @@ require_once get_template_directory() . '/fields.php';
  */
 require_once get_template_directory() . '/inc/custom-taxs.php';
 add_filter('show_admin_bar', '__return_false');
+/**
+ * Custom search
+ */
+require_once get_template_directory() . '/inc/custom-search.php';
