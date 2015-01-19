@@ -31,7 +31,7 @@
 		</div><!-- title -->
 		<div class="content">
 			<div class="checkbox col-md-12">
-				<label for="">
+				<label>
 					<input type="checkbox" name="instock" value="true">
 					<?php _e('Show in stock only?','odin'); ?>
 				</label>
