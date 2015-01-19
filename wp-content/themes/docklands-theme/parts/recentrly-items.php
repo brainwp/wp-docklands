@@ -3,13 +3,15 @@
  * The Template for displaying Recentrly viewed items.
  * use get_template_part() to apply in your template.
  */
+global $woo_post_views;
 ?>
 
 	<?php
 		// WP_Query arguments
 		$args = array (
-			'post_type'              => '',
-			'posts_per_page'         => '5',
+			'post_type'              => 'product',
+			'posts_per_page'         => 5,
+			'post__in'               => $woo_post_views->get_posts()
 		);
 
 		// The Query
@@ -17,9 +19,8 @@
 	?>
 
 	<?php if ( $query->have_posts() ) : ?>
-
 	<div class="col-sm-12 recentrly-items">
-			
+
 			<span class="col-xs-12 title">Recentrly viewed items</span>
 
 			<div class="loop">
@@ -27,7 +28,6 @@
 				<?php while ( $query->have_posts() ): $query->the_post(); ?>
 					<a href="<?php echo get_the_permalink(); ?>">
 					<div class="col-sm-2 each">
-						
 						<div class="thumb">
 							<?php if ( has_post_thumbnail() ) : ?>
 
@@ -44,7 +44,7 @@
 
 							<?php the_title(); ?>
 							<span class="link">View <span class="orange">></span></span>
-							
+
 						</div><!-- desc -->
 
 					</div><!-- each -->

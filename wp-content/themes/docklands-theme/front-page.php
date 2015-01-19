@@ -146,7 +146,7 @@ get_header();
 				<?php endif ?>
 
 			</div><!-- full -->
-
+			<?php get_template_part( 'parts/recentrly-items' ); ?>
 		</div><!-- #content -->
 	</div><!-- #primary -->
 
