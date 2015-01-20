@@ -4,8 +4,12 @@ $product = new WC_Product( get_the_ID() );
 ?>
 					<div class="each col-sm-4">
 						<div class="content">
-
+							<a href="<?php the_permalink(); ?>">
 							<div class="thumb">
+								<?php if ( has_post_thumbnail() ): ?>
+										<?php the_post_thumbnail( 'medium' ); ?>
+								<?php endif ?>
+							</a>
 							</div><!-- thumb -->
 							<span class="desc">
 								<?php the_title(); ?>
