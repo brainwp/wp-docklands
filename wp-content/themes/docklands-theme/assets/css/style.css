@@ -632,6 +632,7 @@ h3.item {
 	float: right;
 	margin-top: -3px;
 	padding: 4px;
+	cursor: pointer;
 }
 
 .form-advanced-search .clear-form:hover {
