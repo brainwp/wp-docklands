@@ -150,5 +150,7 @@
 
 	<div class="toggle col-md-12">
 	</div><!-- toggle -->
-	<button class="btn btn-large"><?php _e('Go!','odin');?></button>
+
+	<button class="btn btn-large"><?php _e('Search >>','odin');?></button>
+	<div class="clear"></div>
 </form><!-- form-advanced-search -->
