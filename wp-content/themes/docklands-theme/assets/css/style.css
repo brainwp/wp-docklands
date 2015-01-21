@@ -242,10 +242,26 @@ h1, h2, h3, h4, h5, h6 {
 /* Home */
 .slider-home {
 	background-color: #4E4C4D;
-	height: 400px;
 	width: 100%;
 }
-
+.slider-home img{
+	max-height:380px;
+	min-height:300px;
+	padding:0;
+	margin:0;
+	width:100%;
+}
+.slider-home .slick-dots{
+	padding: 0;
+	width: auto;
+	bottom: 30px;
+	right: 100px;
+}
+.slider-home .slick-dots li button::before{
+	border: 2px solid rgba(255,255,255,0.8);
+	border-radius: 50%;
+	color:transparent !important;
+}
 .slider-products {
 	margin: 15px auto;
 	overflow: hidden;

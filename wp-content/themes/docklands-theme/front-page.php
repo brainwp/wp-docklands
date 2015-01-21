@@ -21,6 +21,7 @@ get_header();
 			<div class="col-sm-9 right">
 
 				<div class="slider-home">
+					<?php echo do_shortcode( '[brasa_slider name="Slider Home"]' ); ?>
 				</div><!-- slider-home -->
 
 				<div class="col-sm-12 slider-products">
