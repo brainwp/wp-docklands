@@ -238,7 +238,30 @@ h1, h2, h3, h4, h5, h6 {
 .navbar-default {
 	clear: both;
 }
-
+.itens-shop .dropdown{
+	display:inline-block;
+	float:right;
+}
+.itens-shop .line{
+	padding:0;
+	margin:0;
+}
+.itens-shop .search-container input{
+	width:100%;
+	background:#f6f7f9;
+	padding:5px;
+	border:none !important;
+}
+.itens-shop .search-container button{
+	background:url('../images/header-search.jpg') no-repeat;
+	width:32px;
+	height:27px;
+	border:none !important;
+	position: absolute;
+	right: 0;
+	margin-right: 10px;
+	margin-top: 5px;
+}
 /* Home */
 .slider-home {
 	background-color: #4E4C4D;

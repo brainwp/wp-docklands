@@ -68,7 +68,9 @@
 				</div><!-- infos-contact -->
 			</div><!-- center -->
 
-			<div class="itens-shop col-sm-3"></div><!-- itens-shop -->
+			<div class="itens-shop col-sm-3">
+				<?php get_template_part('parts/woocommerce-infos'); ?>
+			</div><!-- itens-shop -->
 
 			<nav id="main-navigation" class="navbar navbar-default" role="navigation">
 				<a class="assistive-text" href="#content" title="<?php esc_attr_e( 'Skip to content', 'odin' ); ?>"><?php _e( 'Skip to content', 'odin' ); ?></a>
