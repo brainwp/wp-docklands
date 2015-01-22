@@ -41,6 +41,7 @@ global $woocommerce;
 	</a>
 </div><!-- .cart-container -->
 <form action="<?php echo home_url('/');?>" method="get" class="search-container">
+	<input name="post_type" type="hidden" value="product">
 	<input name="s" type="text" placeholder="<?php _e('Enter Search..','odin');?>">
 	<button></button>
 </form><!-- .search-container -->
