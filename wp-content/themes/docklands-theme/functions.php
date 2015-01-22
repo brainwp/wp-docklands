@@ -28,7 +28,7 @@ require_once get_template_directory() . '/core/classes/class-shortcodes.php';
 require_once get_template_directory() . '/core/classes/class-thumbnail-resizer.php';
 require_once get_template_directory() . '/core/classes/class-post-type.php';
 require_once get_template_directory() . '/core/classes/class-taxonomy.php';
-// require_once get_template_directory() . '/core/classes/class-theme-options.php';
+require_once get_template_directory() . '/core/classes/class-theme-options.php';
 // require_once get_template_directory() . '/core/classes/class-options-helper.php';
 // require_once get_template_directory() . '/core/classes/class-metabox.php';
 // require_once get_template_directory() . '/core/classes/abstracts/abstract-front-end-form.php';
@@ -225,6 +225,9 @@ function odin_enqueue_scripts() {
 	// FitVids.
 	wp_enqueue_script( 'fitvids', $template_url . '/assets/js/libs/jquery.fitvids.js', array(), null, true );
 
+    // Twitter fetcher.
+	wp_enqueue_script( 'twitter-fetcher', $template_url . '/assets/js/libs/twitter.min.js', array(), null, true );
+
 	// Main jQuery.
 	wp_enqueue_script( 'odin-main', $template_url . '/assets/js/main.js', array(), null, true );
 
@@ -333,3 +336,7 @@ add_filter('show_admin_bar', '__return_false');
  * Custom search
  */
 require_once get_template_directory() . '/inc/custom-search.php';
+/**
+ * options
+ */
+require_once get_template_directory() . '/inc/options.php';

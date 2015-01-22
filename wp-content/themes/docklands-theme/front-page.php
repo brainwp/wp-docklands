@@ -148,6 +148,11 @@ get_header();
 
 			</div><!-- full -->
 			<?php get_template_part( 'parts/recentrly-items' ); ?>
+			<?php get_template_part( 'parts/twitter-posts' ); ?>
+			<div id="twitter-container">
+				<a href=""
+				<div id="twitter-fetcher"></div><!-- #twitter-fetcher -->
+			</div><!-- #twitter-container -->
 		</div><!-- #content -->
 	</div><!-- #primary -->
 

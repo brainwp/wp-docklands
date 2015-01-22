@@ -877,3 +877,16 @@ h3.item {
 #secondary ul.children{
 	display:none;
 }
+/*twitter api*/
+#twitter-container{
+}
+#twitter-fetcher img, #twitter-fetcher span[data-scribe="element:name"]{
+	display:none;
+}
+#twitter-fetcher .user, #twitter-fetcher p.tweet{
+	display:inline;
+}
+#twitter-fetcher ul{
+	padding:0;
+	list-style-type: none;
+}

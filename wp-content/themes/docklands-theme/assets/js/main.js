@@ -71,5 +71,16 @@ jQuery(document).ready(function($) {
 		$('#price-input').attr('value',$(this).attr('data-slug'));
 		$(this).addClass('active');
 	});
+	var config1 = {
+		"id": $('#twitter-fetcher').attr('data-widget-id'),
+		"domId": 'twitter-fetcher',
+		"maxTweets": 5,
+		"enableLinks": true,
+		"showTime": false,
+		"showRetweet": false,
+		"showInteraction": false
+	};
+	twitterFetcher.fetch(config1);
+
 });
 
