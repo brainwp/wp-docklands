@@ -82,5 +82,12 @@ jQuery(document).ready(function($) {
 	};
 	twitterFetcher.fetch(config1);
 
+	$('#selector_qty').on('change',function(e){
+		console.log('chamou');
+		$('input.qty').val($(this).val());
+	});
+	$('#odin-add-to-cart').on('click',function(e){
+		$('form.cart').submit();
+	});
 });
 

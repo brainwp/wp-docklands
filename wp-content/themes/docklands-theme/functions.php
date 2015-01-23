@@ -261,7 +261,14 @@ function odin_admin_enqueue_scripts(){
 				)
 			);
 		}
-		update_option('is_theme_config_brasa', 'true' );
+		$single = array(
+	      'width' 	=> '230',	// px
+		  'height'	=> '180',	// px
+		  'crop'		=> 1 		// true
+	    );
+	    // Image sizes
+	   update_option( 'shop_single_image_size', $single ); 		// Single product image
+	   update_option('is_theme_config_brasa', 'true' );
 	}
 }
 add_action( 'admin_init', 'odin_admin_enqueue_scripts');
