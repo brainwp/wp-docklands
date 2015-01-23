@@ -89,5 +89,10 @@ jQuery(document).ready(function($) {
 	$('#odin-add-to-cart').on('click',function(e){
 		$('form.cart').submit();
 	});
+	$('#slider-cat').slick({
+		infinite: true,
+		slidesToShow: 3,
+		slidesToScroll: 1
+	});
 });
 

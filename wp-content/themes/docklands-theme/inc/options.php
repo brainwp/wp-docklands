@@ -11,6 +11,10 @@ $odin_theme_options->set_tabs(
             'id' => 'social', // ID da aba e nome da entrada no banco de dados.
             'title' => __( 'Social', 'odin' ), // Título da aba.
         ),
+        array(
+            'id' => 'home_cfg', // ID da aba e nome da entrada no banco de dados.
+            'title' => __( 'Home', 'odin' ), // Título da aba.
+        ),
     )
 );
 $odin_theme_options->set_fields(
@@ -30,6 +34,18 @@ $odin_theme_options->set_fields(
                     'label' => __('Twitter URL','odin'),
                     'type' => 'text',
                     'description' => ''
+                ),
+            )
+        ),
+        'home_section' => array(
+            'tab'   => 'home_cfg', // Sessão da aba odin_general
+            'title' => __( 'Home options', 'odin' ),
+            'fields' => array(
+                array(
+                    'id' => 'slider_cat',
+                    'label' => __('Slider Category Name','odin'),
+                    'type' => 'text',
+                    'description' => __('Set category for product slider in home','odin'),
                 ),
             )
         ),

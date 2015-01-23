@@ -343,7 +343,18 @@ h1, h2, h3, h4, h5, h6 {
 .slider-products .each .content .tag-price .vat {
 	font-size: 0.7em;
 }
-
+.slider-products .slick-prev::before, .slider-products .slick-next::before{
+	color:black;
+}
+.slider-products .slick-prev,.slider-products .slick-next{
+	top:35%;
+}
+.slider-products .slick-prev{
+	left:0;
+}
+.slider-products .slick-next{
+	right:0;
+}
 .arrivals {
 	background: #ffffff; /* Old browsers */
 	/* IE9 SVG, needs conditional override of 'filter' to 'none' */

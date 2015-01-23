@@ -23,68 +23,7 @@ get_header();
 				<div class="slider-home">
 					<?php echo do_shortcode( '[brasa_slider name="Slider Home"]' ); ?>
 				</div><!-- slider-home -->
-
-				<div class="col-sm-12 slider-products">
-
-					<div class="each col-sm-4">
-
-						<div class="content">
-
-							<div class="thumb">
-							</div><!-- thumb -->
-							<span class="desc">
-								<?php the_title(); ?>
-							</span><!-- desc -->
-
-							<div class="tag-price">
-								 <div class="price">£ 23,99</div>
-								 <div class="vat">+VAT</div>
-							</div><!-- tag-price -->
-
-						</div><!-- content -->
-
-					</div><!-- each -->
-
-					<div class="each col-sm-4">
-
-						<div class="content">
-
-							<div class="thumb">
-							</div><!-- thumb -->
-							<span class="desc">
-								<?php the_title(); ?>
-							</span><!-- desc -->
-
-							<div class="tag-price">
-								 <div class="price">£ 23,99</div>
-								 <div class="vat">+VAT</div>
-							</div><!-- tag-price -->
-
-						</div><!-- content -->
-
-					</div><!-- each -->
-
-					<div class="each col-sm-4">
-
-						<div class="content">
-
-							<div class="thumb">
-							</div><!-- thumb -->
-							<span class="desc">
-								<?php the_title(); ?>
-							</span><!-- desc -->
-
-							<div class="tag-price">
-								 <div class="price">£ 23,99</div>
-								 <div class="vat">+VAT</div>
-							</div><!-- tag-price -->
-
-						</div><!-- content -->
-
-					</div><!-- each -->
-
-				</div><!-- .slider-products -->
-
+				<?php get_template_part( 'parts/slider-product' ); ?>
 				<h3 class="bg-title">New Arrivals</h3>
 
 				<div class="col-sm-12 arrivals">
