@@ -917,21 +917,25 @@ h3.item {
 	padding-left: 10px;
 }
 .single-product .preco span.string-preco{
-	font-size: 1.3em;
+	font-size: 1.2em;
 }
 .single-product .preco{
 	color: #187DC1;
 	display: block;
+	padding-left: 0;
 }
 .single-product .o-preco{
-	font-size: 1.5em;
+	font-size: 1.9em;
+	margin-left: 5px;
 	font-weight: bold;
 }
 .single-product .imposto-preco{
 	display:block;
+	font-size: 0.9em;
 	margin-left:10%;
 }
 .single-product h1.product_title{
+	color: #454547;
 	text-transform: none !important;
 }
 .single-product .variations_form label{
@@ -962,6 +966,9 @@ h3.item {
 }
 .single-product .summary.entry-summary{
 	width:65% !important;
+}
+.single-product .entry-summary .line {
+	width: 100%;
 }
 .single-product div.qt label{
 	padding-right:20px;
