@@ -19,6 +19,9 @@ get_header();
 			<?php get_sidebar( 'left' ); ?>
 
 			<div class="col-sm-9 right">
+
+				<h2 class="bg-title"><?php _e('Storages','odin'); ?></h2>
+
 				<?php
 				/**
 				* woocommerce_before_main_content hook

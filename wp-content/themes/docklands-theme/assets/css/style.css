@@ -123,7 +123,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #secondary {
-	margin-top: 30px;
+	margin-top: 12px;
 }
 
 /* Header */
@@ -902,6 +902,11 @@ h3.item {
 	list-style-type: none;
 }
 /* single woocommerce */
+.single-product h2.bg-title {
+	color: #48484A;
+	text-transform: capitalize;
+	margin-bottom: 20px;
+}
 .single-product .cat-top-name{
 	width:100%;
 	display:block;
@@ -924,6 +929,10 @@ h3.item {
 	display: block;
 	padding-left: 0;
 }
+.single-product .preco .flex{
+	display: inline-block;
+	width: auto;
+}
 .single-product .o-preco{
 	font-size: 1.9em;
 	margin-left: 5px;
@@ -931,8 +940,8 @@ h3.item {
 }
 .single-product .imposto-preco{
 	display:block;
-	font-size: 0.9em;
-	margin-left:10%;
+	font-size: 0.8em;
+	text-align: right;
 }
 .single-product h1.product_title{
 	color: #454547;
@@ -946,6 +955,12 @@ h3.item {
 }
 .single-product .variations_form h4{
 	text-transform: none !important;
+}
+.single-product .woocommerce-main-image.zoom{
+	border: 1px solid #CCC;
+	display: block;
+	overflow: hidden;
+	padding: 3px;
 }
 .single-product .woocommerce-main-image img{
 	width:260px !important;
@@ -965,9 +980,16 @@ h3.item {
 	width:32% !important;
 }
 .single-product .summary.entry-summary{
+	border-bottom: 1px solid #CCC;
+	display: block;
+	overflow: hidden;
+	padding-bottom: 10px;
+	padding-top: 0;
 	width:65% !important;
 }
 .single-product .entry-summary .line {
+	margin-bottom: 18px;
+	margin-top: 0;
 	width: 100%;
 }
 .single-product div.qt label{
@@ -975,6 +997,9 @@ h3.item {
 }
 .single-product .single_add_to_cart_button, .single-product .buttons_added{
 	display:none !important;
+}
+.single-product .cart {
+	margin-bottom: 10px !important;
 }
 .single .btn-single{
 	background:#3c3e3d !important;
@@ -988,4 +1013,7 @@ h3.item {
 }
 .single .btn-single:hover{
 	color:#dd8426;
+}
+.woocommerce #content div.product div.images img, .woocommerce div.product div.images img, .woocommerce-page #content div.product div.images img, .woocommerce-page div.product div.images img {
+	box-shadow: none !important;
 }
