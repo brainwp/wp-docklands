@@ -35,7 +35,18 @@
 
 	<div class="menu-top">
 		<div class="wrap">
-			<a href="">Teste</a>
+			<?php
+				wp_nav_menu(
+					array(
+						'theme_location' => 'top-menu',
+						'depth'          => 0,
+						'container'      => false,
+						'menu_class'     => 'nav navbar-nav',
+						'fallback_cb'    => 'Odin_Bootstrap_Nav_Walker::fallback',
+						'walker'         => new Odin_Bootstrap_Nav_Walker()
+					)
+				);
+			?>
 			<div class="social-media pull-right">
 				<div class="pull-left twitter"><a href=""></a></div>
 				<div class="pull-left facebook"><a href=""></a></div>

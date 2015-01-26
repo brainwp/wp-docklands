@@ -181,7 +181,16 @@ h1, h2, h3, h4, h5, h6 {
 .menu-top .wrap .social-media .pull-left a:hover {
 	border: 2px solid #CCC;
 }
-
+.menu-top .social-media{
+	position: absolute;
+	margin-left:75%;
+	top:3px;
+}
+.menu-top .navbar-nav{
+	width: 50%;
+	display: block;
+	float: inherit;
+}
 .logo {
 	background: url('../images/logo-docklands.png') center center no-repeat transparent;
 	margin: 25px auto;
