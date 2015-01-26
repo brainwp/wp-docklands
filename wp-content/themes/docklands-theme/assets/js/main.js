@@ -74,7 +74,7 @@ jQuery(document).ready(function($) {
 	var config1 = {
 		"id": $('#twitter-fetcher').attr('data-widget-id'),
 		"domId": 'twitter-fetcher',
-		"maxTweets": 5,
+		"maxTweets": $('#twitter-fetcher').attr('data-widget-max'),
 		"enableLinks": true,
 		"showTime": false,
 		"showRetweet": false,
@@ -83,7 +83,6 @@ jQuery(document).ready(function($) {
 	twitterFetcher.fetch(config1);
 
 	$('#selector_qty').on('change',function(e){
-		console.log('chamou');
 		$('input.qty').val($(this).val());
 	});
 	$('#odin-add-to-cart').on('click',function(e){
