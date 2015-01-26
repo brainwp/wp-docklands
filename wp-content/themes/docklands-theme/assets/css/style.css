@@ -247,7 +247,29 @@ h1, h2, h3, h4, h5, h6 {
 .navbar-default {
 	clear: both;
 }
-
+#main-navigation{
+	background:black;
+	border-radius:0;
+}
+#main-navigation ul li a{
+	color:white;
+}
+#main-navigation a{
+	background:black;
+	color:white;
+}
+#main-navigation a:hover{
+	background:#58585a;
+}
+#main-navigation ul ul li:hover>ul{
+	display: block;
+	position: absolute;
+	margin-left: 99%;
+	top: -8px;
+}
+#main-navigation ul>li:hover>ul{
+	display:block;
+}
 .itens-shop {
 	margin-top: 30px;
 }

@@ -84,27 +84,12 @@
 			</div><!-- itens-shop -->
 
 			<nav id="main-navigation" class="navbar navbar-default" role="navigation">
-				<a class="assistive-text" href="#content" title="<?php esc_attr_e( 'Skip to content', 'odin' ); ?>"><?php _e( 'Skip to content', 'odin' ); ?></a>
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-navigation">
-					<span class="sr-only"><?php _e( 'Toggle navigation', 'odin' ); ?></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-					<?php /*
-
-					<a class="navbar-brand" href="<?php echo home_url(); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
-
-					*/ ?>
-				</div>
-
-				<div class="collapse navbar-collapse navbar-main-navigation">
+				<div class="collapse navbar-collapse navbar-main-navigation col-md-12">
 					<?php
 						wp_nav_menu(
 							array(
 								'theme_location' => 'main-menu',
-								'depth'          => 2,
+								'depth'          => 3,
 								'container'      => false,
 								'menu_class'     => 'nav navbar-nav',
 								'fallback_cb'    => 'Odin_Bootstrap_Nav_Walker::fallback',
@@ -112,14 +97,6 @@
 							)
 						);
 					?>
-
-					<form method="get" class="navbar-form navbar-right" action="<?php echo esc_url( home_url( '/' ) ); ?>" role="search">
-						<label for="navbar-search" class="sr-only"><?php _e( 'Search:', 'odin' ); ?></label>
-						<div class="form-group">
-							<input type="text" class="form-control" name="s" id="navbar-search" />
-						</div>
-						<button type="submit" class="btn btn-default"><?php _e( 'Search', 'odin' ); ?></button>
-					</form>
 				</div><!-- .navbar-collapse -->
 			</nav><!-- #main-menu -->
 		</header><!-- #header -->
