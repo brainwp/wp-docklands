@@ -910,8 +910,22 @@ h3.item {
 #secondary ul.children{
 	display:none;
 }
-/*twitter api*/
+/* Twitter API */
 #twitter-container{
+	font-size: 0.9em;
+}
+#twitter-container ul {
+	margin: 10px 0;
+}
+#twitter-container li {
+	margin-bottom: 5px;
+}
+#twitter-container li .user {
+	color: #5dbbe1;
+	display: block;
+}
+#twitter-container .tweet a {
+	color: #666;
 }
 #twitter-fetcher img, #twitter-fetcher span[data-scribe="element:name"]{
 	display:none;
