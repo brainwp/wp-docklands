@@ -8,6 +8,5 @@ $opts = get_option('social');
 	<a href="<?php echo esc_url($opts['twitter_url']); ?>">
 		<img src="<?php bloginfo('template_url'); ?>/assets/images/twitter-link.jpg">
 	</a>
-	<div id="twitter-fetcher" data-widget-id="<?php echo esc_attr($opts['twitter_widget']);?>">
-	</div><!-- #twitter-fetcher -->
+	<?php echo sprintf('<div id="twitter-fetcher" data-widget-id="%s" data-widget-max="%s"></div>',esc_attr($opts['twitter_widget']),esc_attr($opts['twitter_widget_max'])); ?>
 </div><!-- #twitter-container -->
