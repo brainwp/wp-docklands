@@ -238,20 +238,42 @@ h1, h2, h3, h4, h5, h6 {
 .navbar-default {
 	clear: both;
 }
+
+.itens-shop {
+	margin-top: 30px;
+}
+.itens-shop a {
+	color: #333;
+	text-decoration: none;
+}
+.itens-shop a.text-left {
+	display: inline-block;
+	padding: 10px 0;
+}
+
 .itens-shop .dropdown{
 	display:inline-block;
 	float:right;
 }
 .itens-shop .line{
+	background-color: #E9E9E9;
 	padding:0;
-	margin:0;
+	margin:0 0 10px 0;
+	width: 100%;
 }
 .itens-shop .search-container input{
+	background: #f6f7f9;
+	border-radius: 3px;
+	padding: 7px 12px;
+	border: 1px solid #f6f7f9;
+	transition:200ms ease all;
 	width:100%;
-	background:#f6f7f9;
-	padding:5px;
-	border:none !important;
 }
+
+.itens-shop .search-container input:focus {
+	border-color: #CCC;
+}
+
 .itens-shop .search-container button{
 	background:url('../images/header-search.jpg') no-repeat;
 	width:32px;
@@ -259,7 +281,7 @@ h1, h2, h3, h4, h5, h6 {
 	border:none !important;
 	position: absolute;
 	right: 0;
-	margin-right: 10px;
+	margin-right: 15px;
 	margin-top: 5px;
 }
 /* Home */
