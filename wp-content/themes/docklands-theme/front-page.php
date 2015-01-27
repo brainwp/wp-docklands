@@ -86,12 +86,13 @@ get_header();
 				<?php endif ?>
 
 			</div><!-- full -->
+
 			<?php get_template_part( 'parts/recentrly-items' ); ?>
-			<?php get_template_part( 'parts/twitter-posts' ); ?>
-			<div id="twitter-container">
-				<a href=""
-				<div id="twitter-fetcher"></div><!-- #twitter-fetcher -->
-			</div><!-- #twitter-container -->
+			
+			<div class="col-md-6 pull-right">
+				<?php get_template_part( 'parts/twitter-posts' ); ?>				
+			</div><!-- .col-md-6 -->
+
 		</div><!-- #content -->
 	</div><!-- #primary -->
 
