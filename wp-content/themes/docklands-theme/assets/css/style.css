@@ -8,7 +8,7 @@ h1, h2, h3, h4, h5, h6 {
 	text-transform: uppercase;
 }
 
-.bg-title {
+.bg-title, .widget-title {
 	/* Degrade */
 	background: #f1f1f1; /* Old browsers */
 	/* IE9 SVG, needs conditional override of 'filter' to 'none' */
@@ -523,6 +523,39 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Sidebar */
+ul.product-categories{
+	padding:0;
+}
+ul.product-categories, ul.product-categories ul{
+	list-style-type: none;
+}
+ul.product-categories ul li:last-child{
+	border:none !important;
+}
+ul.product-categories>li.cat-parent>a{
+	width:100%;
+	display:inline-block;
+	padding:5px;
+	background:url('../images/bg-categories-toggle.jpg') right no-repeat;
+}
+ul.product-categories>li>a:hover, ul.product-categories>li[data-open="true"]>a{
+	background:#0875b6;
+	color:white;
+	text-decoration: none;
+}
+ul.product-categories li{
+	text-align: center;
+	border-bottom:2px solid #CCC;
+}
+ul.product-categories a{
+	color:#48484A;
+	font-size:18px;
+}
+h3.widget-title{
+	font-size: 18px;
+	color: #48484A;
+	text-transform: capitalize;
+}
 body.home #secondary {
 	margin-top: 0;
 }
