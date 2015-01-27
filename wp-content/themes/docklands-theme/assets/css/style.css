@@ -126,6 +126,13 @@ h1, h2, h3, h4, h5, h6 {
 	margin-top: 12px;
 }
 
+.container {
+	background-color: #E9E9E9;
+	overflow: hidden;
+	padding-left: 0;
+	padding-right: 0;
+}
+
 /* Header */
 .menu-top {
 	background-color: #F2F4F3;
@@ -207,6 +214,8 @@ h1, h2, h3, h4, h5, h6 {
 
 #header .center .infos-contact {
 	display: block;
+	float: none;
+	margin: 0 auto;
 	max-width: 470px;
 	overflow: hidden;
 }
@@ -486,6 +495,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .home .full {
 	margin: 40px auto 20px;
+	padding: 0;
 }
 
 .home .full .banner, .home .full .video {
@@ -502,7 +512,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .home .differential {
-	margin: 20px auto;
+	display: block;
+	margin: 0 auto;
+	padding: 25px 16px 30px;
+	overflow: hidden;
 }
 
 .home .banners {

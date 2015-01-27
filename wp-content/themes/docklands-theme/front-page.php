@@ -26,7 +26,7 @@ get_header();
 				<?php get_template_part( 'parts/slider-product' ); ?>
 				<h3 class="bg-title">New Arrivals</h3>
 
-				<div class="col-sm-12 arrivals">
+				<div class="col-sm-12 arrivals full">
 					<?php
 					// WP_Query arguments
 					$args = array (
@@ -60,14 +60,22 @@ get_header();
 					</div><!-- content -->
 				</div><!-- video -->
 
+			</div>
+
+			<div class="col-sm-12 full">
+
 				<?php if ( $differential = get_field( 'home_differential', 'options' ) ) : ?>
 
-					<div class="differential col-xs-12">
+					<div class="differential">
 						<h4>Why Docklands are unique:</h4>
 						<span><?php echo $differential; ?></span>
 					</div><!-- differential -->
 
 				<?php endif ?>
+
+			</div>
+
+			<div class="col-sm-12 full">
 
 				<?php if ( $banner_2 = get_field( 'home_banner_2', 'options' ) ) : ?>
 
@@ -87,7 +95,9 @@ get_header();
 
 			</div><!-- full -->
 
-			<?php get_template_part( 'parts/recentrly-items' ); ?>
+			<div class="col-md-12">
+				<?php get_template_part( 'parts/recentrly-items' ); ?>
+			</div>
 			
 			<div class="col-md-6 pull-right">
 				<?php get_template_part( 'parts/twitter-posts' ); ?>				
