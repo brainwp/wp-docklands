@@ -271,8 +271,7 @@ function odin_admin_enqueue_scripts(){
 	}
 }
 add_action( 'admin_init', 'odin_admin_enqueue_scripts');
-
-
+remove_action( 'woocommerce_before_main_content','woocommerce_breadcrumb', 20, 0);
 /**
  * Odin custom stylesheet URI.
  *
