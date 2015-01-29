@@ -1134,3 +1134,32 @@ h3.item {
 .woocommerce #content div.product div.images img, .woocommerce div.product div.images img, .woocommerce-page #content div.product div.images img, .woocommerce-page div.product div.images img {
 	box-shadow: none !important;
 }
+/*archive services */
+body.post-type-archive-services .slider-home .slick-prev,body.post-type-archive-services .slider-home .slick-next{
+	bottom:40px;
+	right:0 !important;
+	left:inherit;
+	top:inherit;
+}
+body.post-type-archive-services .slider-home .slick-prev{
+	margin-right: 40px
+}
+body.post-type-archive-services .slider-home .slick-next{
+	margin-right:20px;
+}
+.services{
+	text-decoration: none !important;
+}
+.services img{
+	width:100%;
+}
+.services h3{
+	color:black;
+	font-size:16px;
+}
+.services .product-info{
+	font-size:16px;
+	display:inline-block;
+	width:100%;
+	color:#D47616;
+}
