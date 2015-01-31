@@ -34,6 +34,7 @@
 <body <?php body_class(); ?>>
 
 	<div class="menu-top">
+		
 		<div class="wrap">
 			<?php
 				wp_nav_menu(
@@ -52,8 +53,9 @@
 				<div class="pull-left facebook"><a href=""></a></div>
 				<div class="pull-left googleplus"><a href=""></a></div>
 				<div class="pull-left youtube"><a href=""></a></div>
-			</div><!-- top -->
-		</div>
+			</div><!-- social-media -->
+		</div><!-- wrap -->
+
 	</div><!-- menu-top -->
 
 	<div class="container">
