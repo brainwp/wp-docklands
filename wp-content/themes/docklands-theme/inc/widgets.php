@@ -37,11 +37,11 @@ class Produtos_Widget extends WP_Widget {
 		$temp_posts = $post;
 	
 		$produtos_posts = get_posts( array(
-			'post_type' => 'post',
+			'post_type' => 'product',
 			'posts_per_page' => $qtd_produtos,
 			'tax_query' => array(
     			array(
-      				'taxonomy' => 'category',
+      				'taxonomy' => 'product_cat',
       				'field' => 'id',
       				'terms' => $cat_produtos,
       				'include_children' => false
@@ -113,7 +113,7 @@ class Produtos_Widget extends WP_Widget {
 				<?php echo 'Categoria de Produtos'; ?>
 			</label>
 			<select id="<?php echo $this->get_field_id('cat_produtos'); ?>" name="<?php echo $this->get_field_name('cat_produtos'); ?>" class="widefat" style="width:100%;">
-	            <?php foreach(get_terms('category','parent=0&hide_empty=0') as $term) { ?>
+	            <?php foreach(get_terms('product_cat','parent=0&hide_empty=0') as $term) { ?>
 	            <option <?php selected( $instance['cat_produtos'], $term->term_id ); ?> value="<?php echo $term->term_id; ?>"><?php echo $term->name; ?></option>
 	            <?php } ?>      
 	        </select>
