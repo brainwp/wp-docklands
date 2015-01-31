@@ -395,7 +395,7 @@ h1, h2, h3, h4, h5, h6 {
 	position: absolute;
 	text-align: right;
 	top: 125px;
-	right: -5px;
+	right: 0px;
 }
 
 .slider-products .each .content .tag-price .price {
@@ -533,6 +533,10 @@ ul.product-categories{
 ul.product-categories, ul.product-categories ul{
 	list-style-type: none;
 }
+ul.product-categories li {
+	margin: 0 auto;
+	max-width: 90%;
+}
 ul.product-categories ul li:last-child{
 	border: none !important;
 }
@@ -555,7 +559,7 @@ ul.product-categories>li>a:hover, ul.product-categories>li[data-open="true"]>a{
 	text-decoration: none;
 }
 ul.product-categories li{
-	border-bottom: 2px solid #CCC;
+	border-bottom: 1px solid #CCC;
 }
 ul.product-categories a {
 	color: #8A8782;
@@ -566,6 +570,7 @@ ul.children {
 	padding-left: 0;
 }
 ul.children li {
+	width: 100%;
 }
 ul.children li a{
 	background: url('../images/bg-categories-toggle-left.jpg') 10px center no-repeat;
