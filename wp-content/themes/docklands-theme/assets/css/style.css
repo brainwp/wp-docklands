@@ -127,7 +127,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .container {
-	background-color: #E9E9E9;
+	/*background-color: #E9E9E9;*/
 	overflow: hidden;
 	padding-left: 0;
 	padding-right: 0;
@@ -534,30 +534,52 @@ ul.product-categories, ul.product-categories ul{
 	list-style-type: none;
 }
 ul.product-categories ul li:last-child{
-	border:none !important;
+	border: none !important;
 }
-ul.product-categories>li>a{
-	width:100%;
-	display:inline-block;
-	padding:5px;
-	transition:300ms ease all;
+ul.product-categories > li > a {
+	color: #8A8782;
+	display: inline-block;
+	font-size: 1em;
+	font-weight: bold;
+	padding: 7px 5px 7px 15px;
+	transition: 300ms ease all;
+	width: 100%;
 }
 ul.product-categories>li.cat-parent>a{
-	background:url('../images/bg-categories-toggle.jpg') right no-repeat;
+	background:url('../images/bg-categories-toggle.jpg') center right no-repeat;
 }
 ul.product-categories>li>a:hover, ul.product-categories>li[data-open="true"]>a{
+	transition:300ms linear all;
+	background: #0875b6;
+	color: white;
+	text-decoration: none;
+}
+ul.product-categories li{
+	border-bottom: 2px solid #CCC;
+}
+ul.product-categories a {
+	color: #8A8782;
+	font-size: 0.9em;
+}
+ul.children {
+	margin-left: 0;
+	padding-left: 0;
+}
+ul.children li {
+}
+ul.children li a{
+	background: url('../images/bg-categories-toggle-left.jpg') 10px center no-repeat;
+	color: #48484A;
+	display: inline-block;
+	font-size: 0.9em;
+	padding: 7px 5px 7px 35px;
+	width: 100%;
+}
+ul.children li a:hover{
 	transition:300ms linear all;
 	background:#0875b6;
 	color:white;
 	text-decoration: none;
-}
-ul.product-categories li{
-	text-align: center;
-	border-bottom:2px solid #CCC;
-}
-ul.product-categories a{
-	color:#48484A;
-	font-size:18px;
 }
 h3.widget-title{
 	font-size: 18px;
