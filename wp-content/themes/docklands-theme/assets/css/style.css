@@ -514,7 +514,7 @@ h1, h2, h3, h4, h5, h6 {
 .home .differential {
 	display: block;
 	margin: 0 auto;
-	padding: 25px 16px 30px;
+	padding: 0 15px;
 	overflow: hidden;
 }
 
