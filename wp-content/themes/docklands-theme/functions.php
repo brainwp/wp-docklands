@@ -184,6 +184,17 @@ function odin_widgets_init() {
 			'after_title' => '</h3>',
 		)
 	);
+	register_sidebar(
+		array(
+			'name' => __( 'Cloud Sidebar', 'odin' ),
+			'id' => 'cloud-sidebar',
+			'description' => __( 'Cloud Sidebar', 'odin' ),
+			'before_widget' => '<div id="%1$s" class="widget col-md-12 %2$s">',
+			'after_widget' => '</div>',
+			'before_title' => '<h3 class="widgettitle widget-title">',
+			'after_title' => '</h3>',
+		)
+	);
 }
 
 add_action( 'widgets_init', 'odin_widgets_init' );

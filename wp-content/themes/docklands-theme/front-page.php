@@ -98,9 +98,12 @@ get_header();
 			<div class="col-md-12">
 				<?php get_template_part( 'parts/recentrly-items' ); ?>
 			</div>
-			
+			<div class="col-md-6 pull-left">
+				<?php dynamic_sidebar( 'cloud-sidebar' ); ?>
+			</div><!-- .col-md-6 -->
+
 			<div class="col-md-6 pull-right">
-				<?php get_template_part( 'parts/twitter-posts' ); ?>				
+				<?php get_template_part( 'parts/twitter-posts' ); ?>
 			</div><!-- .col-md-6 -->
 
 		</div><!-- #content -->
