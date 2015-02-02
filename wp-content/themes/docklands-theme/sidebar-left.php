@@ -11,7 +11,11 @@
 
 <div id="secondary" class="col-sm-3 left" role="complementary">
 	
-	<?php get_template_part( 'parts/form-advanced-search' ); ?>
+	<?php
+		if ( is_page_template( 'page-search-advanced.php' ) || is_search() )  :
+			get_template_part( 'parts/form-advanced-search' );
+		endif;
+	?>
 
 	<?php dynamic_sidebar( 'left-sidebar' ); ?>
 	
