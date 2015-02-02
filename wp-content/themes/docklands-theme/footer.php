@@ -89,7 +89,7 @@
 		</footer><!-- #footer -->
 	</div><!-- .container -->
 
-	<a href="#header" class="btn back-top"></a>
+	<a href="#header" class="btn back-top movescroll"></a>
 
 	<?php wp_footer(); ?>
 </body>
