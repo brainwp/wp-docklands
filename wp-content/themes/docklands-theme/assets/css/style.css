@@ -201,6 +201,7 @@ h1, h2, h3, h4, h5, h6 {
 	float: right;
 	width: 18%;
 }
+
 .logo {
 	background: url('../images/logo-docklands.png') center center no-repeat transparent;
 	margin: 25px auto;
@@ -255,7 +256,12 @@ h1, h2, h3, h4, h5, h6 {
 	text-align: left;
 	width: 100%;
 }
-
+#header .dropdown-menu {
+	left: auto;
+	right: 0 !important;
+}
+#header .dropdown-menu > li > a { text-align: center; }
+#header .search-container { padding-top: 12px; }
 .navbar-default {
 	clear: both;
 }
