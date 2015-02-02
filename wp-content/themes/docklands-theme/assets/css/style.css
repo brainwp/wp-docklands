@@ -141,9 +141,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .menu-top .wrap {
-	display: inline-block;
+	display: block;
 	margin: 0 auto;
 	max-width: 1160px;
+	width: 100%;
 }
 
 .menu-top a {
@@ -189,15 +190,16 @@ h1, h2, h3, h4, h5, h6 {
 .menu-top .wrap .social-media .pull-left a:hover {
 	border: 2px solid #CCC;
 }
-.menu-top .social-media{
-	position: absolute;
-	margin-left:75%;
-	top:3px;
+.menu-top .navbar-nav {
+	float: left;
+	width: 80%;
 }
-.menu-top .navbar-nav{
-	width: 50%;
-	display: block;
-	float: inherit;
+.menu-top .navbar-nav > li > a {
+	padding: 10px;
+}
+.menu-top .social-media {
+	float: right;
+	width: 18%;
 }
 .logo {
 	background: url('../images/logo-docklands.png') center center no-repeat transparent;
