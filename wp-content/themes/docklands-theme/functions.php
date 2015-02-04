@@ -243,7 +243,11 @@ function odin_enqueue_scripts() {
 
 	// Grunt main file with Bootstrap, FitVids and others libs.
 	// wp_enqueue_script( 'odin-main-min', $template_url . '/assets/js/main.min.js', array(), null, true );
-
+	//acf google map
+	if(is_page_template('page-contact.php')){
+		wp_enqueue_script( 'acf-googlemap', 'http://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false', array(), null, true );
+	}
+	wp_enqueue_script( 'fitvids', $template_url . '/assets/js/libs/jquery.fitvids.js', array(), null, true );
 	// Load Thread comments WordPress script.
 	if ( is_singular() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
