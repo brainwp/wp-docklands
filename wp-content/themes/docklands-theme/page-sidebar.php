@@ -11,8 +11,12 @@
 get_header();
 ?>
 
-	<div id="primary" class="<?php echo odin_page_sidebar_classes(); ?>">
+	<div id="primary" class="">
 		<div id="content" class="site-content" role="main">
+
+			<?php get_sidebar( 'left' ); ?>
+
+			<div class="col-sm-9 right">
 
 			<?php
 				// Start the Loop.
@@ -28,9 +32,10 @@ get_header();
 				endwhile;
 			?>
 
+			</div><!-- right -->
+			
 		</div><!-- #content -->
 	</div><!-- #primary -->
 
 <?php
-get_sidebar();
 get_footer();
