@@ -9,10 +9,6 @@
 get_header(); ?>
 
 	<div class="col-sm-12">
-		<div class="breadcrumbs">
-			<span>Home >> Blog</span>
-		</div><!-- breadcrumbs -->
-
 		<h2 class="bg-title"><?php _e( 'News', 'odin' ); ?></h2>
 	</div>
 

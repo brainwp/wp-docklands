@@ -10,10 +10,6 @@
 get_header(); ?>
 
 	<div class="col-sm-12">
-		<div class="breadcrumbs">
-			<span>Home >> Blog</span>
-		</div><!-- breadcrumbs -->
-
 		<h2 class="bg-title"><?php _e( 'News', 'odin' ); ?></h2>
 	</div>
 
@@ -22,7 +18,7 @@ get_header(); ?>
 	<section id="primary" class="col-md-9">
 		<div id="content" class="site-content" role="main">
 
-				<?php $posts_query = new WP_Query('posts_per_page=2');
+				<?php $posts_query = new WP_Query('posts_per_page=10');
 				while($posts_query->have_posts()) : $posts_query->the_post(); ?>
 
 					<?php get_template_part( 'content', get_post_format() ); ?>

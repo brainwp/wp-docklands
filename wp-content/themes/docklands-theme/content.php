@@ -40,7 +40,9 @@
 			</div><!-- .entry-summary -->
 
 			<div class="thumb col-sm-5 pull-right">
-				<?php the_post_thumbnail( 'medium' ); ?>
+				<a href="<?php the_permalink(); ?>">
+					<?php the_post_thumbnail( 'medium' ); ?>
+				</a>
 			</div><!-- thumb -->
 		<?php else : ?>
 			<div class="entry-summary col-sm-12">
