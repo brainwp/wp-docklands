@@ -184,6 +184,17 @@ function odin_widgets_init() {
 			'after_title' => '</h3>',
 		)
 	);
+	register_sidebar(
+		array(
+			'name' => __( 'Cloud Sidebar', 'odin' ),
+			'id' => 'cloud-sidebar',
+			'description' => __( 'Cloud Sidebar', 'odin' ),
+			'before_widget' => '<div id="%1$s" class="widget col-md-12 %2$s">',
+			'after_widget' => '</div>',
+			'before_title' => '<h3 class="widgettitle widget-title">',
+			'after_title' => '</h3>',
+		)
+	);
 }
 
 add_action( 'widgets_init', 'odin_widgets_init' );
@@ -232,7 +243,11 @@ function odin_enqueue_scripts() {
 
 	// Grunt main file with Bootstrap, FitVids and others libs.
 	// wp_enqueue_script( 'odin-main-min', $template_url . '/assets/js/main.min.js', array(), null, true );
-
+	//acf google map
+	if(is_page_template('page-contact.php')){
+		wp_enqueue_script( 'acf-googlemap', 'http://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false', array(), null, true );
+	}
+	wp_enqueue_script( 'fitvids', $template_url . '/assets/js/libs/jquery.fitvids.js', array(), null, true );
 	// Load Thread comments WordPress script.
 	if ( is_singular() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -285,7 +300,14 @@ remove_action( 'woocommerce_before_main_content','woocommerce_breadcrumb', 20, 0
 function odin_stylesheet_uri( $uri, $dir ) {
 	return $dir . '/assets/css/style.css';
 }
-
+// Add specific CSS class by filter
+function add_woo_class($classes) {
+	// add 'class-name' to the $classes array
+	$classes[] = 'woocommerce';
+	// return the $classes array
+	return $classes;
+}
+add_filter( 'body_class', 'add_woo_class' );
 add_filter( 'stylesheet_uri', 'odin_stylesheet_uri', 10, 2 );
 
 /**

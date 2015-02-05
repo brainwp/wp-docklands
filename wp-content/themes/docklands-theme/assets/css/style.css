@@ -1095,13 +1095,13 @@ h3.item {
 	text-transform: capitalize;
 	margin-bottom: 20px;
 }
-.single-product .cat-top-name{
+.single-product .cat-top-name, .page-contact .top-name{
 	width:100%;
 	display:block;
 	background:url('../images/cat-bg.jpg') repeat;
 	height:52px;
 }
-.single-product .cat-top-name a{
+.single-product .cat-top-name a, .page-contact .top-name a{
 	color:#575759 !important;
 	text-decoration: none !important;
 	font-weight: bold;
@@ -1242,4 +1242,19 @@ body.page h1 {
 
 #comments {
 	margin-top: 35px;
+}
+/* Page contact */
+.page-contact .top-name{
+	color: #575759 !important;
+	font-weight: bold;
+	font-size: 1.6em;
+	padding-top:10px;
+	padding-left:10px;
+}
+.page-contact .contact-infos div{
+	margin:0;
+	padding:0;
+}
+.page-contact .acf-map{
+	height:500px;
 }

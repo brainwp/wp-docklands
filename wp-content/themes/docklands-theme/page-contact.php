@@ -1,0 +1,109 @@
+<?php
+/**
+ * Template Name: Contact us
+ *
+ * The template for displaying pages with sidebar.
+ *
+ * @package Odin
+ * @since 2.2.0
+ */
+
+get_header();
+?>
+
+	<div id="primary" class="">
+		<div id="content" class="site-content page-contact" role="main">
+
+			<?php get_sidebar( 'left' ); ?>
+
+			<div class="col-sm-9 right">
+
+			<?php
+				// Start the Loop.
+				while ( have_posts() ) : the_post();
+				?>
+				<h1 class="top-name">
+					<?php the_title(); ?>
+				</h1><!-- .top-name -->
+				<div class="col-md-6 pull-left contact-infos">
+					<h4><?php _e('Contact Us/E-mail','odin'); ?></h4>
+					<div class="col-md-6 pull-left">
+						<?php _e('E-mail:','odin'); ?>
+					</div><!-- .col-md-6 pull-left -->
+					<div class="col-md-6 pull-right">
+						<?php echo get_post_meta( get_the_ID(), 'contact-email', true ); ?>
+					</div><!-- .col-md-6 pull-left -->
+					<h4><?php _e('Contact Us/Phone','odin'); ?></h4>
+					<div class="col-md-6 pull-left">
+						<?php _e('Office:','odin'); ?>
+					</div><!-- .col-md-6 pull-left -->
+					<div class="col-md-6 pull-right">
+						<?php echo get_post_meta( get_the_ID(), 'contact-tel-office', true ); ?>
+					</div><!-- .col-md-6 pull-left -->
+					<div class="col-md-6 pull-left">
+						<?php _e('24hr Hot Line:','odin'); ?>
+					</div><!-- .col-md-6 pull-left -->
+					<div class="col-md-6 pull-right">
+						<?php echo get_post_meta( get_the_ID(), 'contact-tel-hot-line', true ); ?>
+					</div><!-- .col-md-6 pull-left -->
+					<h4><?php _e('Contact Us/Office Hours','odin'); ?></h4>
+					<div class="col-md-6 pull-left">
+						<?php _e('Monday:','odin'); ?>
+					</div><!-- .col-md-6 pull-left -->
+					<div class="col-md-6 pull-right">
+						<?php echo get_post_meta( get_the_ID(), 'contact-hr-monday', true ); ?>
+					</div><!-- .col-md-6 pull-left -->
+					<div class="col-md-6 pull-left">
+						<?php _e('Tuesday:','odin'); ?>
+					</div><!-- .col-md-6 pull-left -->
+					<div class="col-md-6 pull-right">
+						<?php echo get_post_meta( get_the_ID(), 'contact-hr-tuesday', true ); ?>
+					</div><!-- .col-md-6 pull-left -->
+					<div class="col-md-6 pull-left">
+						<?php _e('Wednesday:','odin'); ?>
+					</div><!-- .col-md-6 pull-left -->
+					<div class="col-md-6 pull-right">
+						<?php echo get_post_meta( get_the_ID(), 'contact-hr-wednesday', true ); ?>
+					</div><!-- .col-md-6 pull-left -->
+					<div class="col-md-6 pull-left">
+						<?php _e('Thursday:','odin'); ?>
+					</div><!-- .col-md-6 pull-left -->
+					<div class="col-md-6 pull-right">
+						<?php echo get_post_meta( get_the_ID(), 'contact-hr-thursday', true ); ?>
+					</div><!-- .col-md-6 pull-left -->
+					<div class="col-md-6 pull-left">
+						<?php _e('Friday:','odin'); ?>
+					</div><!-- .col-md-6 pull-left -->
+					<div class="col-md-6 pull-right">
+						<?php echo get_post_meta( get_the_ID(), 'contact-hr-friday', true ); ?>
+					</div><!-- .col-md-6 pull-left -->
+					<div class="col-md-6 pull-left">
+						<?php _e('Sunday:','odin'); ?>
+					</div><!-- .col-md-6 pull-left -->
+					<div class="col-md-6 pull-right">
+						<?php echo get_post_meta( get_the_ID(), 'contact-hr-sunday', true ); ?>
+					</div><!-- .col-md-6 pull-left -->
+				</div><!-- .col-md-6 pull-left contact-infos -->
+				<div class="col-md-6 pull-left contact-form">
+					<?php the_content(); ?>
+				</div><!-- .col-md-6 pull-left contact-form -->
+				<div class="col-md-12 contact-map">
+			    	<?php
+			    	$location = get_field('contact-map');
+			    	if( !empty($location) ):
+			    	?>
+			        <div class="acf-map">
+			             <div class="marker" data-lat="<?php echo $location['lat']; ?>" data-lng="<?php echo $location['lng']; ?>"></div>
+			        </div>
+			        <h5><?php echo $location['address']; ?></h5>
+		            <?php endif; ?>
+			    </div><!-- .col-md-12 contact-map -->
+				<?php
+				endwhile;
+			?>
+		  </div><!-- .right !-->
+		</div><!-- #content -->
+	</div><!-- #primary -->
+
+<?php
+get_footer();
