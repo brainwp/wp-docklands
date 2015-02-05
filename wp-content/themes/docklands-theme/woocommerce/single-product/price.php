@@ -24,6 +24,7 @@ global $product;
 	</div><!-- flex -->
 </div>
 <div class="pull-right col-md-6 qt">
+	<div id="brasa-product-id" style="display:none" data-id="<?php echo esc_attr(get_the_ID()); ?>"></div>
 	<label class="pull-left"><?php _e('Key','odin'); ?></label>
 	<?php $max = 9999 ?>
 	<?php if($product->get_total_stock()): ?>

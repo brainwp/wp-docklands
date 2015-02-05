@@ -116,6 +116,7 @@ jQuery(document).ready(function($) {
 		elem = $(this).attr('href');
 		$('html,body').animate({scrollTop:$(elem).offset().top},1000);
 	});
+	$('body.single-product input[name="add-to-cart"]').val($("#brasa-product-id").attr('data-id'));
 });
 (function($) {
 
