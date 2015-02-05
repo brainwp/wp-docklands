@@ -9,8 +9,7 @@
  * @package Odin
  * @since 2.2.0
  */
-
-get_header();
+get_header('shop');
 ?>
 
 	<div id="primary" class="col-sm-12">
@@ -19,7 +18,9 @@ get_header();
 			<?php get_sidebar( 'left' ); ?>
 
 			<div class="col-sm-9 right">
-
+				<div class="col-md-12">
+					<?php wc_print_notices(); ?>
+				</div><!-- .col-md-12 -->
 				<div class="slider-home">
 					<?php echo do_shortcode( '[brasa_slider name="Slider Home"]' ); ?>
 				</div><!-- slider-home -->

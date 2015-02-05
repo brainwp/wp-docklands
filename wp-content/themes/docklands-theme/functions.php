@@ -300,7 +300,14 @@ remove_action( 'woocommerce_before_main_content','woocommerce_breadcrumb', 20, 0
 function odin_stylesheet_uri( $uri, $dir ) {
 	return $dir . '/assets/css/style.css';
 }
-
+// Add specific CSS class by filter
+function add_woo_class($classes) {
+	// add 'class-name' to the $classes array
+	$classes[] = 'woocommerce';
+	// return the $classes array
+	return $classes;
+}
+add_filter( 'body_class', 'add_woo_class' );
 add_filter( 'stylesheet_uri', 'odin_stylesheet_uri', 10, 2 );
 
 /**
