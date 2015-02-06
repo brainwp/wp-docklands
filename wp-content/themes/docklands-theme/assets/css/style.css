@@ -1327,3 +1327,44 @@ body.page h1 {
 	padding-bottom: 15px;
 	padding-top: 15px;
 }
+
+/* Comments */
+#commentform p {
+	color: #888;
+	font-size: 0.85em;
+	font-style: italic;
+}
+#comments .comment-reply-title {
+	color: #D98128;
+	text-transform: capitalize;
+}
+#comments .form-group {
+	display: hidden;
+	overflow: hidden;
+	padding-bottom: 5px;
+	width: 100%;
+}
+#comments .form-group.textarea textarea {
+	max-width: 100%;
+}
+#comments .form-control {
+	float: left;
+	max-width: 40%;
+}
+#comments .control-label {
+	color: #666666;
+	float: left;
+	padding: 6px 0 0 10px;
+}
+
+#comments #submit {
+	background: #D98128 !important;
+	border: none !important;
+	color: #FFF !important;
+	cursor: pointer;
+	font-size: 14px !important;
+	font-style: normal;
+	font-weight: lighter !important;
+	padding: 10px 12px !important;
+	text-shadow: none !important;
+}

@@ -14,7 +14,7 @@ get_header(); ?>
 
 <?php get_sidebar(); ?>
 
-	<div id="primary" class="<?php echo odin_page_sidebar_classes(); ?>">
+	<div id="primary" class="col-md-9">
 		<div id="content" class="site-content" role="main">
 			<?php
 				// Start the Loop.

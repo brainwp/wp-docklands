@@ -51,11 +51,11 @@
 		comment_form(
 		array(
 			'comment_notes_after' => '',
-			'comment_field' => '<div class="comment-form-comment form-group"><label class="control-label" for="comment">' . __( 'Comment', 'odin' ) . '</label><div class="controls"><textarea id="comment" name="comment" cols="45" rows="8" class="form-control" aria-required="true"></textarea></div></div>',
+			'comment_field' => '<div class="comment-form-comment form-group textarea"><div class="controls"><textarea id="comment" name="comment" cols="45" rows="8" class="form-control" aria-required="true"></textarea></div><label class="control-label" for="comment"></label></div>',
 			'fields' => apply_filters( 'comment_form_default_fields', array(
-				'author' => '<div class="comment-form-author form-group">' . '<label class="control-label" for="author">' . __( 'Name', 'odin' ) . ( $req ? '<span class="required"> *</span>' : '' ) . '</label><input class="form-control" id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30"' . $aria_req . ' /></div>',
-				'email' => '<div class="comment-form-email form-group"><label class="control-label" for="email">' . __( 'E-mail', 'odin' ) . ( $req ? '<span class="required"> *</span>' : '' ) . '</label><input class="form-control" id="email" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30"' . $aria_req . ' /></div>',
-				'url' => '<div class="comment-form-url form-group"><label class="control-label" for="url">' . __( 'Website', 'odin' ) . '</label>' . '<input class="form-control" id="url" name="url" type="text" value="' . esc_attr( $commenter['comment_author_url'] ) . '" size="30" /></div>' ) )
+				'author' => '<div class="comment-form-author form-group">' . '<input class="form-control" id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30"' . $aria_req . ' /><label class="control-label" for="author">' . __( 'Name', 'odin' ) . ( $req ? '<span class="required"> *</span>' : '' ) . '</label></div>',
+				'email' => '<div class="comment-form-email form-group"><input class="form-control" id="email" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30"' . $aria_req . ' /><label class="control-label" for="email">' . __( 'E-mail', 'odin' ) . ( $req ? '<span class="required"> *</span>' : '' ) . '</label></div>',
+				'url' => '<div class="comment-form-url form-group"><input class="form-control" id="url" name="url" type="text" value="' . esc_attr( $commenter['comment_author_url'] ) . '" size="30" /><label class="control-label" for="url">' . __( 'Website', 'odin' ) . '</label></div>') )
 		)
 	); ?>
 </div><!-- #comments -->
