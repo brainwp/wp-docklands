@@ -1342,7 +1342,8 @@ body.page h1 {
 	font-size: 0.85em;
 	font-style: italic;
 }
-#comments .comment-reply-title {
+#comments .comment-reply-title,
+#comments #comments-title {
 	color: #D98128;
 	text-transform: capitalize;
 }
@@ -1374,4 +1375,36 @@ body.page h1 {
 	font-weight: lighter !important;
 	padding: 10px 12px !important;
 	text-shadow: none !important;
+}
+#comments .comment-awaiting-moderation {
+	color: #666;
+	font-style: italic;
+	padding-bottom: 5px;
+	padding-top: 3px;
+}
+#comments .commentlist li {
+	border: 1px solid #CCC;
+	border-radius: 3px;
+	padding: 15px;
+}
+#comments .commentlist li .avatar {
+	border-radius: 3px;
+}
+#comments .commentlist .children li {
+	border: none;
+	border-left: 1px solid #DDD;
+	margin-left: 15px;
+	margin-top: 10px;
+	padding-left: 20px;
+}
+#comments .commentlist ul.children li a {
+	width: auto;
+}
+#comments .commentlist ul.children li a:hover {
+	background: none;
+}
+#comments .comment-content {
+	color: #666;
+	padding-bottom: 5px;
+	padding-top: 5px;
 }
