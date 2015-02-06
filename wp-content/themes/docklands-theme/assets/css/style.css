@@ -1205,10 +1205,11 @@ h3.item {
 .woocommerce #content div.product div.images img, .woocommerce div.product div.images img, .woocommerce-page #content div.product div.images img, .woocommerce-page div.product div.images img {
 	box-shadow: none !important;
 }
-/*archive services */
-body.post-type-archive-services .slider-home .slick-prev,body.post-type-archive-services .slider-home .slick-next{
-	bottom:40px;
-	right:0 !important;
+/* Archive Services */
+body.post-type-archive-services .slider-home .slick-prev,
+body.post-type-archive-services .slider-home .slick-next{
+	bottom:20px;
+	right:20px !important;
 	left:inherit;
 	top:inherit;
 }
@@ -1224,6 +1225,12 @@ body.post-type-archive-services .slider-home .slick-next{
 .services img{
 	width:100%;
 }
+.post-type-archive-services h3.bg-title {
+	color: #48484A;
+	text-transform: capitalize;
+	margin-bottom: 20px;
+	margin-top: 27px;
+}
 .services h3{
 	color:black;
 	font-size:16px;
@@ -1233,6 +1240,19 @@ body.post-type-archive-services .slider-home .slick-next{
 	display:inline-block;
 	width:100%;
 	color:#D47616;
+}
+#slider-slider-services {
+	height: 300px;
+	overflow: hidden;
+}
+#slider-slider-services img {
+	max-height: 100%;
+}
+#slider-slider-services .slick-dots {
+	display: none !important;
+}
+.post-type-archive-services .each h3 {
+	text-transform: capitalize;
 }
 /* Pages */
 body.page h1 {
