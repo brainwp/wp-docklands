@@ -1234,20 +1234,19 @@ body.post-type-archive-services .slider-home .slick-next{
 	width:100%;
 	color:#D47616;
 }
-
 /* Pages */
 body.page h1 {
 	text-transform: capitalize;
 }
-
 #comments {
 	margin-top: 35px;
 }
-/* Page contact */
+/* Page Contact Us */
 .page-contact .top-name{
-	color: #575759 !important;
+	color:#575759 !important;
 	font-weight: bold;
-	font-size: 1.6em;
+	font-size:1.6em;
+	margin-top:30px;
 	padding-top:10px;
 	padding-left:10px;
 }
@@ -1256,5 +1255,75 @@ body.page h1 {
 	padding:0;
 }
 .page-contact .acf-map{
-	height:500px;
+	border-radius:3px;
+	height:350px;
+	margin-right:15px;
+}
+.page-contact h4 {
+	color: #016CB0;
+	display: inline-block;
+	margin-top: 25px;
+	text-transform: capitalize;
+	width: 100%;
+}
+.page-contact h4:first-child {
+	margin-top: 10px;
+}
+.page-contact .contact-infos > div {
+	color: #666666;
+	padding-bottom: 6px;
+	padding-top: 6px;
+}
+.page-contact .contact-form{
+	display: block;
+	margin-top: 30px;
+	overflow: hidden;
+}
+.page-contact .contact-form div {
+	color: #666666;
+	padding-bottom: 10px;
+	padding-top: 6px;
+}
+.page-contact .contact-form input[type="text"],
+.page-contact .contact-form input[type="email"],
+.page-contact .contact-form textarea {
+	border: 1px solid #888;
+	border-radius: 2px;
+	padding: 3px;
+	width: 100%;
+}
+.page-contact .contact-form select {
+	border: 1px solid #888;
+	border-radius: 2px;
+	cursor: pointer;
+	padding-bottom: 3px;
+	padding-top: 3px;
+	width: 100%;
+}
+.page-contact .contact-form input[type="submit"] {
+	background-color: #D98128;
+	color: #FFF;
+	cursor: pointer;
+	float: right;
+	margin-right: 15px;
+}
+.page-contact .contact-form div.wpcf7-mail-sent-ok,
+.page-contact .contact-form div.wpcf7-mail-sent-ng, 
+.page-contact .contact-form div.wpcf7-spam-blocked,
+.page-contact .contact-form div.wpcf7-validation-errors{
+	text-align: center;
+}
+.page-contact .contact-form span.wpcf7-not-valid-tip {
+	font-size: 0.8em;
+	font-style: italic;
+}
+.page-contact .contact-map {
+	margin-top: 25px;
+	overflow: hidden;
+}
+.page-contact .contact-map span.address {
+	color: #666666;
+	display: block;
+	padding-bottom: 15px;
+	padding-top: 15px;
 }
