@@ -25,7 +25,7 @@ $product = new WC_Product( get_the_ID() );
 
 							<div class="bottom">
 								<form class="cart produto-content" method="post" enctype="multipart/form-data">
-									<input name="add-to-cart" value="8" type="hidden">
+									<input name="add-to-cart" value="<?php echo get_the_ID(); ?>" type="hidden">
 									<button type="submit" class="btn cart"><?php _e('Add to cart','odin'); ?></button>
 								</form>
 								<a href="<?php the_permalink(); ?>" class="btn details pull-right">
