@@ -74,3 +74,26 @@ add_action( 'wp_dashboard_setup', 'odin_admin_remove_dashboard_widgets' );
  * Remove Welcome Panel.
  */
 remove_action( 'welcome_panel', 'wp_welcome_panel' );
+function docklands_add_theme_caps() {
+    // gets the author role
+    $role = get_role( 'shop_manager' );
+    // This only works, because it accesses the class instance.
+    // would allow the author to edit others' posts for current theme only
+    $role->add_cap( 'edit_theme_options' );
+ }
+add_action( 'admin_init', 'docklands_add_theme_caps');
+
+function docklands_get_user_role() {
+    global $current_user;
+    $user_roles = $current_user->roles;
+    $user_role = array_shift($user_roles);
+    return $user_role;
+}
+add_action( 'admin_menu', 'docklands_adjust_the_wp_menu', 999 );
+function docklands_adjust_the_wp_menu() {
+	if(docklands_get_user_role() == 'shop_manager'){
+		remove_menu_page( 'tools.php' );
+		remove_submenu_page( 'options-general.php', 'options-media.php' );
+		remove_submenu_page( 'options-general.php', 'options-permalink.php' );
+	}
+}
