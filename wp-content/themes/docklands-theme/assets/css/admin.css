@@ -62,3 +62,14 @@
 	min-height:32px;
 	color:transparent;
 }
+.column-is_in_stock .edit_stock{
+	display:none;
+}
+.column-is_in_stock:hover .edit_stock{
+	display:block;
+}
+#TB_ajaxContent div.loader{
+	width: 100%;
+	color:blue;
+	display:none;
+}

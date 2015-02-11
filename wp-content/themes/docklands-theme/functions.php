@@ -368,3 +368,7 @@ require_once get_template_directory() . '/inc/custom-search.php';
  * options
  */
 require_once get_template_directory() . '/inc/options.php';
+/**
+ * role seller
+ */
+require_once get_template_directory() . '/inc/role-seller.php';
