@@ -20,6 +20,10 @@ get_header();
 
 			<div class="col-sm-9 right">
 
+				<div class="col-sm-12">
+					<h3 class="bg-title"><?php _e( 'Services', 'odin' ); ?></h3>
+				</div>
+
 				<div class="slider-home">
 					<?php echo do_shortcode( '[brasa_slider name="Slider Services"]' ); ?>
 				</div><!-- slider-home -->
