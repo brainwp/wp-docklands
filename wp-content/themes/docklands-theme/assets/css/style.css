@@ -1252,7 +1252,11 @@ body.post-type-archive-services .slider-home .slick-next{
 	display: none !important;
 }
 .post-type-archive-services .each h3 {
+	color: #666;
 	text-transform: capitalize;
+}
+.post-type-archive-services .each h3:hover {
+	color: #000;
 }
 /* Pages */
 body.page h1 {
