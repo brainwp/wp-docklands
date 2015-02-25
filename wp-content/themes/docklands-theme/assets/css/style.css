@@ -396,7 +396,7 @@ h1, h2, h3, h4, h5, h6 {
 	background-color: #FFF;
 	border: 1px solid #FFF;
 	height: 100%;
-	margin: 0 auto;
+	margin: 10px auto;
 	overflow: hidden;
 	position: relative;
 	width: 100%;
@@ -476,17 +476,27 @@ h1, h2, h3, h4, h5, h6 {
 
 .each .content {
 	background-color: #FFF;
-	height: 100%;
-	margin: 0 auto;
+	height: 400px;
+	margin: 10px auto 0;
 	overflow: hidden;
+	position: relative;
 	width: 100%;
 }
 
-.each .content .thumb {
+/* Content de cada produto no Resultado da Busca */
+.search-results .each .content {
+	height: 350px;
+	margin-bottom: 15px;
+}
+
+.search-results .each .content .thumb {
 	background-color: #58585A;
+	border: 3px solid #FFF;
 	height: 180px;
+	margin: 3px;
+	outline: #CCC solid 2px;
 	overflow: hidden;
-	width: 100%;
+	width: 95%;
 }
 
 .each .content .desc {
@@ -526,6 +536,15 @@ h1, h2, h3, h4, h5, h6 {
 
 .each .content .bottom {
 	padding: 5px 15px 10px;
+}
+
+/* Parte inferior de cada produto */
+.each .content .footer {
+	background-color: #FFF;
+	bottom: 0;
+	overflow: hidden;
+	position: absolute;
+	width: 100%;
 }
 
 .home .full {
