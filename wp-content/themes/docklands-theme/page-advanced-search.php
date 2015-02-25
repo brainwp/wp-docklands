@@ -10,7 +10,8 @@
  * @since 2.2.0
  * @version 3.0.0
  */
-
+global $is_advanced_search;
+$is_advanced_search = true;
 get_header();
 ?>
 
@@ -20,9 +21,18 @@ get_header();
 			<?php get_sidebar( 'left' ); ?>
 
 			<div class="col-sm-9 right">
+				<?php
+				// WP_Query arguments
+				$args = array (
+					'post_type'              => 'product',
+					'posts_per_page'         => get_option('posts_per_page' ),
+					);
+				// The Query
+				$query = new WP_Query( $args );
+				?>
 				<?php woocommerce_product_loop_start(); ?>
 				<?php woocommerce_product_subcategories(); ?>
-				<?php while ( have_posts() ) : the_post(); ?>
+				<?php while ( $query->have_posts() ) : $query->the_post(); ?>
 					<?php get_template_part( 'content', 'produto' ); ?>
                 <?php endwhile; // end of the loop. ?>
                 <?php woocommerce_product_loop_end(); ?>
