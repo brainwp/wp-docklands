@@ -7,7 +7,7 @@
  * 'pages' on your WordPress site will use a different template.
  *
  * @package Odin
- * @since 2.2.0
+ * @version 3.0.0
  */
 
 get_header();

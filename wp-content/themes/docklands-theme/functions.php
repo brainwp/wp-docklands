@@ -347,7 +347,7 @@ require_once get_template_directory() . '/inc/widgets.php';
  * Advanced Custom Fields, Addons and Fields.
  */
 require_once get_template_directory() . '/inc/advanced-custom-fields/acf.php';
-//require_once get_template_directory() . '/inc/acf-options-page/acf-options-page.php';
+require_once get_template_directory() . '/inc/acf-options-page/acf-options-page.php';
 //require_once get_template_directory() . '/inc/acf-repeater/acf-repeater.php';
 require_once get_template_directory() . '/fields.php';
 /**
