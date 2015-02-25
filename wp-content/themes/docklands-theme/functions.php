@@ -282,6 +282,19 @@ function odin_admin_enqueue_scripts(){
 	    );
 	    // Image sizes
 	   update_option( 'shop_single_image_size', $single ); 		// Single product image
+
+	   //add page advanced search
+	   // Create post object
+	   $my_post = array(
+	   	'post_title'    => __('Advanced search','odin'),
+	   	'post_status'   => 'publish',
+	   	'post_name'     => 'advanced-search',
+	   	'post_type'     => 'page'
+	   	);
+
+	   // Insert the post into the database
+	   wp_insert_post( $my_post );
+
 	   update_option('is_theme_config_brasa', 'true' );
 	}
 }
@@ -347,7 +360,7 @@ require_once get_template_directory() . '/inc/widgets.php';
  * Advanced Custom Fields, Addons and Fields.
  */
 require_once get_template_directory() . '/inc/advanced-custom-fields/acf.php';
-require_once get_template_directory() . '/inc/acf-options-page/acf-options-page.php';
+//require_once get_template_directory() . '/inc/acf-options-page/acf-options-page.php';
 //require_once get_template_directory() . '/inc/acf-repeater/acf-repeater.php';
 require_once get_template_directory() . '/fields.php';
 /**

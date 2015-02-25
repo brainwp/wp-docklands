@@ -9,7 +9,6 @@
  * @package Odin
  * @since 2.2.0
  */
-
 get_header(); ?>
 
 	<div id="primary" class="<?php echo odin_full_page_classes(); ?>">
