@@ -96,9 +96,6 @@ get_header('shop');
 
 			</div><!-- full -->
 
-			<div class="col-md-12">
-				<?php get_template_part( 'parts/recentrly-items' ); ?>
-			</div>
 			<div class="col-md-6 pull-left">
 				<?php dynamic_sidebar( 'cloud-sidebar' ); ?>
 			</div><!-- .col-md-6 -->

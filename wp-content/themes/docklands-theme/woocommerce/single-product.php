@@ -124,48 +124,10 @@ get_header();
 				</div><!-- arrivals -->
 			</div><!-- right -->
 
-			<div class="col-sm-12 full">
+			<div class="col-md-12">
+				<?php //get_template_part( 'parts/recentrly-items' ); ?>
+			</div>
 
-				<div class="col-sm-6 banner">
-					<div class="content">
-						BANNER
-					</div><!-- content -->
-				</div><!-- banner -->
-
-				<div class="col-sm-6 video">
-					<div class="content">
-						VÍDEO
-					</div><!-- content -->
-				</div><!-- video -->
-
-				<?php if ( $differential = get_field( 'home_differential', 'options' ) ) : ?>
-
-					<div class="differential col-xs-12">
-						<h4>Why Docklands are unique:</h4>
-						<span><?php echo $differential; ?></span>
-					</div><!-- differential -->
-
-				<?php endif ?>
-
-				<?php if ( $banner_2 = get_field( 'home_banner_2', 'options' ) ) : ?>
-
-					<div class="banner col-sm-6">
-						<img src="<?php echo $banner_2; ?>" alt="">
-					</div><!-- banner -->
-
-				<?php endif ?>
-
-				<?php if ( $banner_3 = get_field( 'home_banner_3', 'options' ) ) : ?>
-
-					<div class="banner col-sm-6">
-						<img src="<?php echo $banner_3; ?>" alt="">
-					</div><!-- banner -->
-
-				<?php endif ?>
-
-			</div><!-- full -->
-			<?php get_template_part( 'parts/recentrly-items' ); ?>
-			<?php get_template_part( 'parts/twitter-posts' ); ?>
 		</div><!-- #content -->
 	</div><!-- #primary -->
 
