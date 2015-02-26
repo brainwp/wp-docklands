@@ -41,66 +41,6 @@ get_header();
                 */
                 do_action( 'woocommerce_after_main_content' );
                 ?>
-				<div class="col-sm-12 slider-products">
-
-					<div class="each col-sm-4">
-
-						<div class="content">
-
-							<div class="thumb">
-							</div><!-- thumb -->
-							<span class="desc">
-								<?php the_title(); ?>
-							</span><!-- desc -->
-
-							<div class="tag-price">
-								 <div class="price">£ 23,99</div>
-								 <div class="vat">+VAT</div>
-							</div><!-- tag-price -->
-
-						</div><!-- content -->
-
-					</div><!-- each -->
-
-					<div class="each col-sm-4">
-
-						<div class="content">
-
-							<div class="thumb">
-							</div><!-- thumb -->
-							<span class="desc">
-								<?php the_title(); ?>
-							</span><!-- desc -->
-
-							<div class="tag-price">
-								 <div class="price">£ 23,99</div>
-								 <div class="vat">+VAT</div>
-							</div><!-- tag-price -->
-
-						</div><!-- content -->
-
-					</div><!-- each -->
-
-					<div class="each col-sm-4">
-
-						<div class="content">
-
-							<div class="thumb">
-							</div><!-- thumb -->
-							<span class="desc">
-								<?php the_title(); ?>
-							</span><!-- desc -->
-
-							<div class="tag-price">
-								 <div class="price">£ 23,99</div>
-								 <div class="vat">+VAT</div>
-							</div><!-- tag-price -->
-
-						</div><!-- content -->
-
-					</div><!-- each -->
-
-				</div><!-- .slider-products -->
 
 				<h3 class="bg-title">New Arrivals</h3>
 
@@ -109,7 +49,7 @@ get_header();
 					// WP_Query arguments
 					$args = array (
 						'post_type'              => 'product',
-						'posts_per_page'         => '5',
+						'posts_per_page'         => '3',
 					);
 					// The Query
 					$query = new WP_Query( $args );
@@ -122,11 +62,12 @@ get_header();
 					<?php wp_reset_postdata(); ?>
 
 				</div><!-- arrivals -->
-			</div><!-- right -->
 
-			<div class="col-md-12">
-				<?php //get_template_part( 'parts/recentrly-items' ); ?>
-			</div>
+				<div class="col-md-12 full">
+					<?php get_template_part( 'parts/recentrly-items' ); ?>
+				</div><!-- full -->
+
+			</div><!-- right -->
 
 		</div><!-- #content -->
 	</div><!-- #primary -->
