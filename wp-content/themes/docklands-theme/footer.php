@@ -8,6 +8,7 @@
  * @package Odin
  * @since 2.2.0
  */
+$options = get_option('footer_cfg');
 ?>
 
 		</div><!-- #main -->
@@ -48,19 +49,19 @@
 
 					<span class="title">Contacts:</span>
 
-					<?php if ( $address = get_field( 'footer_address', 'options' ) ) : ?>
+					<?php if ( $address = $options['footer_address'] ) : ?>
 						<span class="address"><?php echo $address; ?></span>
 					<?php endif; ?>
 
-					<?php if ( $phone = get_field( 'footer_phone', 'options' ) ) : ?>
+					<?php if ( $phone = $options['footer_phone'] ) : ?>
 						<span class="phone"><?php echo $phone; ?></span>
 					<?php endif; ?>
 
-					<?php if ( $fax = get_field( 'footer_fax', 'options' ) ) : ?>
+					<?php if ( $fax = $options['footer_fax'] ) : ?>
 						<span class="fax"><?php echo $fax; ?></span>
 					<?php endif; ?>
 
-					<?php if ( $email = get_field( 'footer_email', 'options' ) ) : ?>
+					<?php if ( $email = $options['footer_email'] ) : ?>
 						<span class="email"><?php echo $email; ?></span>
 					<?php endif; ?>
 

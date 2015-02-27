@@ -9,6 +9,7 @@
  * @package Odin
  * @since 2.2.0
  */
+$options = get_option('home_cfg');
 get_header('shop');
 ?>
 
@@ -49,15 +50,20 @@ get_header('shop');
 
 			<div class="col-sm-12 full">
 
-				<div class="col-sm-6 banner">
-					<div class="content">
-						BANNER
-					</div><!-- content -->
-				</div><!-- banner -->
+				<?php if ( $banner_1 = $options['home_banner_1'] ) : ?>
+				    <?php $link = (!empty($options['home_banner_1_link']))? $options['home_banner_1_link'] : 'javascript:void(0)'; ?>
+
+					<div class="banner col-sm-6">
+						<a href="<?php echo $link;?>">
+							<?php echo wp_get_attachment_image($banner_1,'large'); ?>
+						</a>
+					</div><!-- banner -->
+
+				<?php endif ?>
 
 				<div class="col-sm-6 video">
 					<div class="content">
-						VÍDEO
+						<?php echo strip_tags($options['home_video'],'<iframe>'); ?>
 					</div><!-- content -->
 				</div><!-- video -->
 
@@ -65,7 +71,7 @@ get_header('shop');
 
 			<div class="col-sm-12 full">
 
-				<?php if ( $differential = get_field( 'home_differential', 'options' ) ) : ?>
+				<?php if ( $differential = $options['home_differential'] ) : ?>
 
 					<div class="differential">
 						<h4>Why Docklands are unique:</h4>
@@ -78,18 +84,24 @@ get_header('shop');
 
 			<div class="col-sm-12 full">
 
-				<?php if ( $banner_2 = get_field( 'home_banner_2', 'options' ) ) : ?>
+				<?php if ( $banner_2 = $options['home_banner_2'] ) : ?>
+				    <?php $link = (!empty($options['home_banner_2_link']))? $options['home_banner_2_link'] : 'javascript:void(0)'; ?>
 
 					<div class="banner col-sm-6">
-						<img src="<?php echo $banner_2; ?>" alt="">
+						<a href="<?php echo $link;?>">
+							<?php echo wp_get_attachment_image($banner_2,'large'); ?>
+						</a>
 					</div><!-- banner -->
 
 				<?php endif ?>
 
-				<?php if ( $banner_3 = get_field( 'home_banner_3', 'options' ) ) : ?>
+				<?php if ( $banner_3 = $options['home_banner_3'] ) : ?>
+				    <?php $link = (!empty($options['home_banner_3_link']))? $options['home_banner_3_link'] : 'javascript:void(0)'; ?>
 
 					<div class="banner col-sm-6">
-						<img src="<?php echo $banner_3; ?>" alt="">
+						<a href="<?php echo $link;?>">
+							<?php echo wp_get_attachment_image($banner_3,'large'); ?>
+						</a>
 					</div><!-- banner -->
 
 				<?php endif ?>
