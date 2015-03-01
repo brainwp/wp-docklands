@@ -11,6 +11,7 @@ class Woo_Seller_Role{
 		add_action( 'wp_ajax_woo_stock', array($this,'ajax_woo_stock') );
 		add_action( 'admin_init', array($this,'admin_init'), 9999);
 		add_action( 'admin_footer', array($this,'add_modal') );
+		add_action( 'current_screen', array($this,'redirect') );
 	}
 	private function get_user_role() {
 		global $current_user;
@@ -28,6 +29,16 @@ class Woo_Seller_Role{
 			echo 'true';
 		}
         die();
+	}
+	public function redirect(){
+		if($this->get_user_role() != 'woo_seller')
+			return;
+
+		$current_screen = get_current_screen();
+		if($current_screen->base != 'edit' || $_GET['post_type'] != 'product'){
+			wp_redirect(admin_url('edit.php?post_type=product' ));
+			die();
+		}
 	}
 	public function scripts(){
 		$template_url = get_template_directory_uri();

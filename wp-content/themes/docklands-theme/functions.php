@@ -372,7 +372,6 @@ require_once get_template_directory() . '/inc/product-views-user.php';
  */
 require_once get_template_directory() . '/inc/custom-taxs.php';
 require_once get_template_directory() . '/inc/custom-posts.php';
-add_filter('show_admin_bar', '__return_false');
 /**
  * Custom search
  */
