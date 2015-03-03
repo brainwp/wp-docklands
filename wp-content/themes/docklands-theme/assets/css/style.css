@@ -564,7 +564,10 @@ h1, h2, h3, h4, h5, h6 {
 	overflow: hidden;
 	width: 100%;
 }
-
+.home .full .video .content iframe  {
+	width:100% !important;
+	height:100% !important;
+}
 .home .differential {
 	display: block;
 	margin: 0 auto;
@@ -1394,7 +1397,7 @@ body.page h1 {
 	margin-right: 15px;
 }
 .page-contact .contact-form div.wpcf7-mail-sent-ok,
-.page-contact .contact-form div.wpcf7-mail-sent-ng, 
+.page-contact .contact-form div.wpcf7-mail-sent-ng,
 .page-contact .contact-form div.wpcf7-spam-blocked,
 .page-contact .contact-form div.wpcf7-validation-errors{
 	text-align: center;
