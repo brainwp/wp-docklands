@@ -143,3 +143,18 @@ if(function_exists("register_field_group"))
 		'menu_order' => 0,
 	));
 }
+//add woocommerce fields
+function brasa_woocommerce_product_options_shipping(){
+	woocommerce_wp_textarea_input(array(
+		'id' => 'woo_shipping_content',
+		'label' => __('Shipping description', 'odin')
+		)
+	);
+}
+add_action('woocommerce_product_options_shipping','brasa_woocommerce_product_options_shipping');
+function brasa_save_woocommerce($id){
+	if(empty($_POST['woo_shipping_content']))
+		return;
+	update_post_meta( $id, 'woo_shipping_content', $_POST['woo_shipping_content'], null );
+}
+add_action('save_post_product','brasa_save_woocommerce');

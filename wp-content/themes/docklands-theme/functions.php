@@ -323,6 +323,12 @@ function add_woo_class($classes) {
 add_filter( 'body_class', 'add_woo_class' );
 add_filter( 'stylesheet_uri', 'odin_stylesheet_uri', 10, 2 );
 
+function add_shipping_description(){
+	if($option = get_option('woo_cfg')){
+		echo esc_textarea($option['shipping_content']);
+	}
+}
+add_action('woocommerce_after_shipping_calculator', 'add_shipping_description');
 /**
  * Core Helpers.
  */

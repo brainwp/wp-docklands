@@ -19,6 +19,10 @@ $odin_theme_options->set_tabs(
 			'id' => 'footer_cfg', // ID da aba e nome da entrada no banco de dados.
 			'title' => __( 'Footer', 'odin' ), // Título da aba.
 		),
+		array(
+			'id' => 'woo_cfg', // ID da aba e nome da entrada no banco de dados.
+			'title' => __( 'WooCommerce', 'odin' ), // Título da aba.
+		),
 	)
 );
 $odin_theme_options->set_fields(
@@ -47,6 +51,18 @@ $odin_theme_options->set_fields(
 					'id' => 'twitter_url',
 					'label' => __('Twitter URL','odin'),
 					'type' => 'text',
+					'description' => ''
+				),
+			)
+		),
+	    'woo_section' => array(
+			'tab'   => 'woo_cfg', // Sessão da aba odin_general
+			'title' => __( 'WooCommerce options', 'odin' ),
+			'fields' => array(
+				array(
+					'id' => 'shipping_content',
+					'label' => __('Shipping description','odin'),
+					'type' => 'textarea',
 					'description' => ''
 				),
 			)
