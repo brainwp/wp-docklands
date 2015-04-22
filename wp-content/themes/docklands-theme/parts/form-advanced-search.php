@@ -78,16 +78,16 @@
 			<?php _e('Price','odin'); ?>
 			<span class="icon-open-close pull-right">+</span>
 		</div><!-- title -->
-		<input type="hidden" name="price" value="" id="price-input">
 		<div class="content">
-			<ul id="price-selector">
-				<?php $categories = get_categories( array('taxonomy' => 'price', 'orderby' => 'term_group') ); ?>
-				<?php foreach($categories as $cat): ?>
-				    <li data-slug="<?php echo $cat->slug; ?>">
-				    	<?php echo sprintf('%s (%s)',$cat->name,$cat->count); ?>
-				    </li>
+			<?php $categories = get_categories( array('taxonomy' => 'price', 'orderby' => 'term_group') ); ?>
+			<?php foreach($categories as $cat): ?>
+					<div class="checkbox col-md-12">
+						<label>
+							<input class="only-onecheck" type="checkbox" name="price" value="<?php echo $cat->slug; ?>">
+							<?php echo sprintf('%s (%s)',$cat->name,$cat->count); ?>
+						</label>
+	                </div><!-- checkbox -->
 	            <?php endforeach; ?>
-			</ul>
 		</div><!-- content -->
 	</div><!-- toggle -->
 
@@ -151,6 +151,6 @@
 	<div class="toggle col-md-12">
 	</div><!-- toggle -->
 
-	<button class="btn btn-large"><?php _e('Search >>','odin');?></button>
+	<input type="submit" value="<?php _e('Search >>','odin');?>" class="btn btn-large">
 	<div class="clear"></div>
 </form><!-- form-advanced-search -->

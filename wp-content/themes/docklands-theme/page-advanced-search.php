@@ -30,12 +30,9 @@ get_header();
 				// The Query
 				$query = new WP_Query( $args );
 				?>
-				<?php woocommerce_product_loop_start(); ?>
-				<?php woocommerce_product_subcategories(); ?>
 				<?php while ( $query->have_posts() ) : $query->the_post(); ?>
 					<?php get_template_part( 'content', 'produto' ); ?>
                 <?php endwhile; // end of the loop. ?>
-                <?php woocommerce_product_loop_end(); ?>
 			</div><!-- right -->
 
 			<div class="col-sm-12 full">
