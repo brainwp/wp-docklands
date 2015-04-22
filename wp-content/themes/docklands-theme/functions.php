@@ -329,6 +329,17 @@ function add_shipping_description(){
 	}
 }
 add_action('woocommerce_after_shipping_calculator', 'add_shipping_description');
+function brasa_woocommerce_checkout_after_order_review(){
+	echo '<div class="col-md-12 accept-terms text-center">';
+	echo '<label>';
+	echo '<input type="checkbox" required="true" name="terms-check">';
+	echo '<a href="'.home_url('/terms').'" target="_blank">&nbsp;';
+	_e('You must accept the terms & conditions before continuing','odin');
+	echo '</a>';
+	echo '</label>';
+	echo '</div>';
+}
+add_action('woocommerce_checkout_after_order_review', 'brasa_woocommerce_checkout_after_order_review');
 /**
  * Core Helpers.
  */
