@@ -1261,7 +1261,9 @@ h3.item {
 .single-product table.shop_attributes td.product_dimensions {
 	padding-top: 8px;
 }
-
+.woocommerce div.product form.cart div.quantity{
+	display:none;
+}
 /* Archive Services */
 body.post-type-archive-services .slider-home .slick-prev,
 body.post-type-archive-services .slider-home .slick-next{

@@ -23,12 +23,3 @@ global $product;
 		</span>
 	</div><!-- flex -->
 </div>
-<div class="pull-right col-md-6 qt">
-	<div id="brasa-product-id" style="display:none" data-id="<?php echo esc_attr(get_the_ID()); ?>"></div>
-	<label class="pull-left"><?php _e('Key','odin'); ?></label>
-	<?php $max = 9999 ?>
-	<?php if($product->get_total_stock()): ?>
-	    <?php $max = $product->get_total_stock(); ?>
-	<?php endif; ?>
-	<input id="selector_qty" min="1" step="1" max="<?php echo esc_attr($max);?>" value="1" title="Qtd" class="input-text qty text col-md-3" size="4" type="number">
-</div><!-- .pull-right col-md-6 qt -->
