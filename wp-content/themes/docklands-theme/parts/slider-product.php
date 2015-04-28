@@ -24,7 +24,7 @@ $term = get_term_by( 'name', $opts['slider_cat'], 'product_cat');
         <?php while ( $query->have_posts() ): $query->the_post();?>
             <?php $product = new WC_Product( get_the_ID() ); ?>
 			<div class="each col-sm-4">
-				<div class="content">
+				<a class="content content-cat-home" href="<?php the_permalink();?>">
 					<div class="thumb"></div><!-- thumb -->
 					<span class="desc"><?php the_title(); ?></span><!-- desc -->
 					<div class="tag-price">
@@ -33,7 +33,7 @@ $term = get_term_by( 'name', $opts['slider_cat'], 'product_cat');
 						</div>
 				        <div class="vat"><?php _e('+VAT','odin'); ?></div>
 				    </div><!-- tag-price -->
-				</div><!-- content -->
+				</a><!-- content -->
 			</div><!-- each -->
 		<?php endwhile; ?>
 	<?php endif; ?>
