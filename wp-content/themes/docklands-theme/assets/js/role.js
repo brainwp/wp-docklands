@@ -30,6 +30,9 @@ jQuery(document).ready(function($) {
 
 		$.post(ajaxurl, data, function(response) {
 			elem.children('.loader').css('display','none');
+			setTimeout(function(){
+				location.reload();
+			}, 2000)
 		});
 	});
 });
