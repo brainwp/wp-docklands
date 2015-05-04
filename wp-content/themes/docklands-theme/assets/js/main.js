@@ -86,8 +86,9 @@ jQuery(document).ready(function($) {
 	$('#selector_qty').on('change',function(e){
 		$('input.qty').val($(this).val());
 	});
+	$('.type-product form.cart input[name=add-to-cart]').val($('.type-product form.cart').attr('data-product_id'));
 	$('#odin-add-to-cart').on('click',function(e){
-		$('form.cart').submit();
+		$('.type-product form').submit();
 	});
 	$('#slider-cat').slick({
 		infinite: true,
@@ -116,7 +117,6 @@ jQuery(document).ready(function($) {
 		elem = $(this).attr('href');
 		$('html,body').animate({scrollTop:$(elem).offset().top},1000);
 	});
-	$('body.single-product input[name="add-to-cart"]').val($("#brasa-product-id").attr('data-id'));
 });
 (function($) {
 
