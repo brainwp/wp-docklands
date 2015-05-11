@@ -16,7 +16,7 @@ global $is_advanced_search;
 		if ( is_page_template( 'page-advanced-search.php' ) || is_search() || $is_advanced_search == true )  :
 			get_template_part( 'parts/form-advanced-search' );
 		endif;
-		echo get_page_template_slug();
+		//echo get_page_template_slug();
 	?>
 
 	<?php dynamic_sidebar( 'left-sidebar' ); ?>
