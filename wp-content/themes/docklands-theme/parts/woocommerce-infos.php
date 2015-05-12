@@ -40,9 +40,11 @@ global $woocommerce;
 	<img src="<?php bloginfo('template_url'); ?>/assets/images/header-cart.jpg">
 	<?php echo sprintf('<span class="cart-items">(%s)</span>',$woocommerce->cart->cart_contents_count); ?>
 	<span class="cart-items"><?php echo $woocommerce->cart->get_cart_total(); ?></span>
-	<a href="<?php echo $woocommerce->cart->get_checkout_url(); ?>" class="btn cart pull-right">
-		<?php _e('Check out','odin'); ?>
-	</a>
+	<?php if($woocommerce->cart->cart_contents_count != 0): ?>
+	    <a href="<?php echo $woocommerce->cart->get_cart_url(); ?>" class="btn cart pull-right">
+	    	<?php _e('Check out','odin'); ?>
+	    </a>
+	<?php endif;?>
 </div><!-- .cart-container -->
 <form action="<?php echo home_url('/');?>" method="get" class="search-container">
 	<input name="post_type" type="hidden" value="product">
