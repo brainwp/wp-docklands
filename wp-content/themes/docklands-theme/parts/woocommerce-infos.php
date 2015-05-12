@@ -4,7 +4,11 @@
  */
 global $woocommerce;
 ?>
-<a href="#naoseipraondevaiesse" class="text-left"><?php _e('My Enquiries','odin'); ?></a>
+<?php if($woocommerce->cart->cart_contents_count != 0): ?>
+    <a href="<?php echo $woocommerce->cart->get_cart_url(); ?>" class="text-left">
+    	<?php _e('My Enquiries','odin'); ?>
+    </a>
+<?php endif;?>
 <div class="dropdown">
 	<a href="#" class="text-left" id="account-dropdown" data-toggle="dropdown" aria-expanded="true">
 		<?php _e('Your Account','odin'); ?>
@@ -36,7 +40,7 @@ global $woocommerce;
 	<img src="<?php bloginfo('template_url'); ?>/assets/images/header-cart.jpg">
 	<?php echo sprintf('<span class="cart-items">(%s)</span>',$woocommerce->cart->cart_contents_count); ?>
 	<span class="cart-items"><?php echo $woocommerce->cart->get_cart_total(); ?></span>
-	<a href="<?php echo $woocommerce->cart->get_cart_url(); ?>" class="btn cart pull-right">
+	<a href="<?php echo $woocommerce->cart->get_checkout_url(); ?>" class="btn cart pull-right">
 		<?php _e('Check out','odin'); ?>
 	</a>
 </div><!-- .cart-container -->
