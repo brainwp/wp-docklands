@@ -240,7 +240,10 @@ function odin_enqueue_scripts() {
 
 	// Main jQuery.
 	wp_enqueue_script( 'odin-main', $template_url . '/assets/js/main.js', array(), null, true );
-
+	if(is_singular('product')){
+		global $wp_query;
+		wp_localize_script( 'odin-main', 'product_info', array('id' => $wp_query->post->ID) );
+	}
 	// Grunt main file with Bootstrap, FitVids and others libs.
 	// wp_enqueue_script( 'odin-main-min', $template_url . '/assets/js/main.min.js', array(), null, true );
 	//acf google map
@@ -401,3 +404,4 @@ require_once get_template_directory() . '/inc/options.php';
  * role seller
  */
 require_once get_template_directory() . '/inc/role-seller.php';
+ini_set('error_reporting', E_ALL);

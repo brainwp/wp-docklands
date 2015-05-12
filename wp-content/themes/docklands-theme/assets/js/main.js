@@ -86,7 +86,9 @@ jQuery(document).ready(function($) {
 	$('#selector_qty').on('change',function(e){
 		$('input.qty').val($(this).val());
 	});
-	$('.type-product form.cart input[name=add-to-cart]').val($('.type-product form.cart').attr('data-product_id'));
+	if($('body').hasClass('single-product')){
+		$('.type-product form.cart input[name=add-to-cart]').val(product_info.id);
+	}
 	$('#odin-add-to-cart').on('click',function(e){
 		$('.type-product form').submit();
 	});
