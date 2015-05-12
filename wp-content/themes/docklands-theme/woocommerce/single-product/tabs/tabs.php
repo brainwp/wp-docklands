@@ -47,7 +47,7 @@ if ( ! empty( $tabs ) ) : ?>
 		<a href="<?php echo home_url( '/delivery-and-returns/' ); ?>" class="btn btn-single">
 			<?php _e('Delivery & Returns','odin'); ?>
 		</a>
-		<a class="btn btn-single">
+		<a class="btn btn-single" href="javascript:window.print();">
 			<?php _e('Print this Page','odin'); ?>
 		</a>
 		<a class="btn btn-single">

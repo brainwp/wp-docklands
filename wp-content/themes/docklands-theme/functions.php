@@ -242,7 +242,7 @@ function odin_enqueue_scripts() {
 	wp_enqueue_script( 'odin-main', $template_url . '/assets/js/main.js', array(), null, true );
 	if(is_singular('product')){
 		global $wp_query;
-		wp_localize_script( 'odin-main', 'product_info', array('id' => $wp_query->post->ID) );
+		wp_localize_script( 'odin-main', 'product_info', array('id' => $wp_query->post->ID, 'ajax_url' => admin_url( 'admin-ajax.php' )) );
 	}
 	// Grunt main file with Bootstrap, FitVids and others libs.
 	// wp_enqueue_script( 'odin-main-min', $template_url . '/assets/js/main.min.js', array(), null, true );
