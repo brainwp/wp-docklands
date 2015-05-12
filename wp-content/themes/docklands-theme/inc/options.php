@@ -65,6 +65,12 @@ $odin_theme_options->set_fields(
 					'type' => 'textarea',
 					'description' => ''
 				),
+			   	array(
+					'id' => 'send_email_msg',
+					'label' => __('Default send e-mail message','odin'),
+					'type' => 'textarea',
+					'description' => ''
+				),
 			)
 		),
 		'home_section' => array(

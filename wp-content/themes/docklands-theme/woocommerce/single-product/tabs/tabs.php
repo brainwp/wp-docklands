@@ -50,7 +50,7 @@ if ( ! empty( $tabs ) ) : ?>
 		<a class="btn btn-single" href="javascript:window.print();">
 			<?php _e('Print this Page','odin'); ?>
 		</a>
-		<a class="btn btn-single">
+		<a class="btn btn-single" href="<?php echo home_url('/e-mail-a-friend')?>?url=<?php the_permalink();?>&amp;product_title=<?php echo esc_attr(get_the_title());?>">
 			<?php _e('E-mail a Friend','odin'); ?>
 		</a>
 		<a href="<?php echo home_url( '/testimonials/' ); ?>" class="btn btn-single">

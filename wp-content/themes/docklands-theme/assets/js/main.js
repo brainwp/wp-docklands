@@ -122,7 +122,12 @@ jQuery(document).ready(function($) {
 
 	//ask a question form
 	if (typeof form_info !== 'undefined') {
+		console.log(form_info)
 		$('input[name=product-url]').val(form_info.url);
+		if (typeof form_info.title !== 'undefined') {
+			$('input[name=product-name]').val(form_info.title);
+			$('[name=your-message]').val(form_info.msg);
+		}
 		if($('body').hasClass('logged-in')){
 			$('input[name=your-name]').val(form_info.user_name);
 			$('input[name=your-email]').val(form_info.user_email);
