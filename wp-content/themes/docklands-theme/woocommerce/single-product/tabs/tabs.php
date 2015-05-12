@@ -44,7 +44,7 @@ if ( ! empty( $tabs ) ) : ?>
 		<a class="btn btn-single">
 			<?php _e('Ask a Question','odin'); ?>
 		</a>
-		<a class="btn btn-single">
+		<a href="<?php echo home_url( '/delivery-and-returns/' ); ?>" class="btn btn-single">
 			<?php _e('Delivery & Returns','odin'); ?>
 		</a>
 		<a class="btn btn-single">
@@ -53,7 +53,7 @@ if ( ! empty( $tabs ) ) : ?>
 		<a class="btn btn-single">
 			<?php _e('E-mail a Friend','odin'); ?>
 		</a>
-		<a class="btn btn-single">
+		<a href="<?php echo home_url( '/testimonials/' ); ?>" class="btn btn-single">
 			<?php _e('Testimonials','odin'); ?>
 		</a>
 	</div><!-- .col-md-4 pull-right buttons -->
