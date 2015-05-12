@@ -41,7 +41,7 @@ if ( ! empty( $tabs ) ) : ?>
 		<button class="btn btn-single" id="odin-add-to-cart">
 			<?php _e('Add to Enquire','odin'); ?>
 		</button>
-		<a class="btn btn-single">
+		<a class="btn btn-single" href="<?php echo home_url('/ask-a-question')?>?url=<?php the_permalink();?>">
 			<?php _e('Ask a Question','odin'); ?>
 		</a>
 		<a href="<?php echo home_url( '/delivery-and-returns/' ); ?>" class="btn btn-single">

@@ -244,6 +244,20 @@ function odin_enqueue_scripts() {
 		global $wp_query;
 		wp_localize_script( 'odin-main', 'product_info', array('id' => $wp_query->post->ID, 'ajax_url' => admin_url( 'admin-ajax.php' )) );
 	}
+	if(is_page('ask-a-question') && isset($_GET['url']) && !empty($_GET['url'])){
+		if(!is_user_logged_in()){
+			wp_localize_script( 'odin-main', 'form_info', array('url' => esc_url($_GET['url'])) );
+		}
+		else{
+			$user = get_user_by('id', get_current_user_id());
+			wp_localize_script( 'odin-main', 'form_info', array(
+				'url'        => esc_url($_GET['url']),
+				'user_name'  => $user->display_name,
+				'user_email' => $user->user_email
+				)
+			);
+		}
+	}
 	// Grunt main file with Bootstrap, FitVids and others libs.
 	// wp_enqueue_script( 'odin-main-min', $template_url . '/assets/js/main.min.js', array(), null, true );
 	//acf google map

@@ -119,6 +119,15 @@ jQuery(document).ready(function($) {
 		elem = $(this).attr('href');
 		$('html,body').animate({scrollTop:$(elem).offset().top},1000);
 	});
+
+	//ask a question form
+	if (typeof form_info !== 'undefined') {
+		$('input[name=product-url]').val(form_info.url);
+		if($('body').hasClass('logged-in')){
+			$('input[name=your-name]').val(form_info.user_name);
+			$('input[name=your-email]').val(form_info.user_email);
+		}
+    }
 });
 (function($) {
 
