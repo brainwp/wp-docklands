@@ -66,7 +66,7 @@ class Produtos_Widget extends WP_Widget {
 			echo "29,99";
 			echo "</span><!-- price -->";
 			echo "<span class='old-price'>";
-			echo "$69,66";
+			echo "£ 69,66";
 			echo "</span><!-- old-price -->";
 			echo "</div>";
 			echo "</a>";
