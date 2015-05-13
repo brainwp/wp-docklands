@@ -7,7 +7,12 @@ h1, h2, h3, h4, h5, h6 {
 	color: #187DC1;
 	text-transform: uppercase;
 }
-
+img.alignleft,
+img.alignright,
+img.aligncenter{
+	display: block;
+	margin: 0 auto;
+}
 .bg-title, .widget-title {
 	/* Degrade */
 	background: #f1f1f1; /* Old browsers */
@@ -1283,6 +1288,9 @@ body.post-type-archive-services .slider-home .slick-next{
 }
 .services img{
 	width:100%;
+}
+.services .entry-content img {
+	width: auto;
 }
 .post-type-archive-services h3.bg-title {
 	color: #48484A;
