@@ -7,11 +7,19 @@ h1, h2, h3, h4, h5, h6 {
 	color: #187DC1;
 	text-transform: uppercase;
 }
-img.alignleft,
-img.alignright,
-img.aligncenter{
+img.aligncenter {
 	display: block;
-	margin: 0 auto;
+	margin: 20px auto 10px;
+}
+img.alignleft {
+	margin-top: 20px;
+	margin-right: 20px;
+	margin-bottom: 10px;
+}
+img.alignright {
+	margin-top: 20px;
+	margin-left: 20px;
+	margin-bottom: 10px;
 }
 .bg-title, .widget-title {
 	/* Degrade */
