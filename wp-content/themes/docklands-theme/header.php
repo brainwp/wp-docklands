@@ -34,7 +34,7 @@
 <body <?php body_class(); ?>>
 
 	<div class="menu-top">
-		
+
 		<div class="wrap">
 			<?php
 				wp_nav_menu(
@@ -48,11 +48,20 @@
 					)
 				);
 			?>
+			<?php $options = get_option('social');?>
 			<div class="social-media pull-right">
-				<div class="pull-left twitter"><a href=""></a></div>
-				<div class="pull-left facebook"><a href=""></a></div>
-				<div class="pull-left googleplus"><a href=""></a></div>
-				<div class="pull-left youtube"><a href=""></a></div>
+				<div class="pull-left twitter">
+					<a href="<?php if(!empty($options['twitter_url'])) echo $options['twitter_url'];?>"></a>
+				</div>
+				<div class="pull-left facebook">
+					<a href="<?php if(!empty($options['fb_url'])) echo $options['fb_url'];?>"></a>
+				</div>
+				<div class="pull-left googleplus">
+					<a href="<?php if(!empty($options['gplus_url'])) echo $options['gplus_url'];?>"></a>
+				</div>
+				<div class="pull-left youtube">
+					<a href="<?php if(!empty($options['yt_url'])) echo $options['yt_url'];?>"></a>
+				</div>
 			</div><!-- social-media -->
 		</div><!-- wrap -->
 

@@ -29,7 +29,7 @@ $odin_theme_options->set_fields(
 	array(
 		'social_section' => array(
 			'tab'   => 'social', // Sessão da aba odin_general
-			'title' => __( 'Social options', 'odin' ),
+			'title' => __( 'Twitter Options', 'odin' ),
 			'fields' => array(
 				array(
 					'id' => 'twitter_widget',
@@ -50,6 +50,42 @@ $odin_theme_options->set_fields(
 				array(
 					'id' => 'twitter_url',
 					'label' => __('Twitter URL','odin'),
+					'type' => 'text',
+					'description' => ''
+				),
+			)
+		),
+		'fb_section' => array(
+			'tab'   => 'social', // Sessão da aba odin_general
+			'title' => __( 'Facebook Options', 'odin' ),
+			'fields' => array(
+				array(
+					'id' => 'fb_url',
+					'label' => __('Facebook URL','odin'),
+					'type' => 'text',
+					'description' => ''
+				),
+			)
+		),
+		'gplus_section' => array(
+			'tab'   => 'social', // Sessão da aba odin_general
+			'title' => __( 'Google+ Options', 'odin' ),
+			'fields' => array(
+				array(
+					'id' => 'gplus_url',
+					'label' => __('Google+ URL','odin'),
+					'type' => 'text',
+					'description' => ''
+				),
+			)
+		),
+		'yt_section' => array(
+			'tab'   => 'social', // Sessão da aba odin_general
+			'title' => __( 'YouTube Options', 'odin' ),
+			'fields' => array(
+				array(
+					'id' => 'yt_url',
+					'label' => __('YouTube URL','odin'),
 					'type' => 'text',
 					'description' => ''
 				),
