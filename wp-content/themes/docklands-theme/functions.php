@@ -260,6 +260,9 @@ function odin_enqueue_scripts() {
 	}
 	if(is_page('e-mail-a-friend') && isset($_GET['url']) && !empty($_GET['url']) && isset($_GET['product_title']) && !empty($_GET['product_title'])){
 		$options = get_option('woo_cfg');
+		if(!array_key_exists ( 'send_email_msg' , $options)){
+			$options['send_email_msg'] = '';
+		}
 		if(!is_user_logged_in()){
 			wp_localize_script( 'odin-main', 'form_info', array(
 				'url'   => esc_url($_GET['url']),

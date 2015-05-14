@@ -12,7 +12,7 @@ class Produtos_Widget extends WP_Widget {
 	}
 
 	public function widget( $args, $instance ) {
-		
+
 		/** This filter is documented in wp-includes/default-widgets.php */
 		$title = apply_filters( 'widget_produtos_title', empty( $instance['title'] ) ? '' : $instance['title'], $instance, $this->id_base );
 
@@ -30,12 +30,12 @@ class Produtos_Widget extends WP_Widget {
 		echo '<div class="col-md-12 Produtos_Widget">';
 		echo '<h3 class="item">' . $title . '</h3>';
 		echo '<ul class="list-produtos">';
-		
+
 		global $post;
 
 		/* Guarda a variável $post em $temp_post */
 		$temp_posts = $post;
-	
+
 		$produtos_posts = get_posts( array(
 			'post_type' => 'product',
 			'posts_per_page' => $qtd_produtos,
@@ -52,7 +52,7 @@ class Produtos_Widget extends WP_Widget {
 		// Start the Loop.
 		if( $produtos_posts ) :
 			foreach( $produtos_posts as $post ) : setup_postdata( $post );
-			
+			$product = new WC_Product( $post->ID );
 			echo "<li>";
 			echo "<a href=" . get_the_permalink() . ">";
 			echo "<div class='thumb pull-left'>";
@@ -62,16 +62,23 @@ class Produtos_Widget extends WP_Widget {
 			echo "<span class='title'>";
 				the_title();
 			echo "</span><!-- title -->";
-			echo "<span class='moeda-preco'>£ </span><span class='price'>";
-			echo "29,99";
-			echo "</span><!-- price -->";
-			echo "<span class='old-price'>";
-			echo "£ 69,66";
-			echo "</span><!-- old-price -->";
+			if($product->get_sale_price()){
+				echo '<span class="moeda-preco">'. get_woocommerce_currency_symbol() . ' </span><span class="price">';
+				echo $product->get_sale_price();
+				echo "</span><!-- price -->";
+				echo "<span class='old-price'>";
+				echo $product->get_regular_price();
+				echo "</span><!-- old-price -->";
+			}
+			else{
+				echo '<span class="moeda-preco">'. get_woocommerce_currency_symbol() . ' </span><span class="price">';
+				echo $product->get_price();
+				echo "</span><!-- price -->";
+			}
 			echo "</div>";
 			echo "</a>";
 			echo "</li>";
-	
+
 			endforeach;
 			wp_reset_postdata();
 
@@ -91,7 +98,7 @@ class Produtos_Widget extends WP_Widget {
 	}
 
 	public function form( $instance ) {
-		$instance = wp_parse_args( (array) $instance, array( 'link' => '', 'text' => '', 'class' => '', 'title' => '', 'text' => '', 'image' => '') );
+		$instance = wp_parse_args( (array) $instance, array( 'title' => '', 'qtd_produtos' => '5', 'cat_produtos' => '') );
 		$title = strip_tags( $instance['title'] );
 		$qtd_produtos = strip_tags( $instance['qtd_produtos'] );
 		$cat_produtos = strip_tags( $instance['cat_produtos'] );
@@ -115,7 +122,7 @@ class Produtos_Widget extends WP_Widget {
 			<select id="<?php echo $this->get_field_id('cat_produtos'); ?>" name="<?php echo $this->get_field_name('cat_produtos'); ?>" class="widefat" style="width:100%;">
 	            <?php foreach(get_terms('product_cat','parent=0&hide_empty=0') as $term) { ?>
 	            <option <?php selected( $instance['cat_produtos'], $term->term_id ); ?> value="<?php echo $term->term_id; ?>"><?php echo $term->name; ?></option>
-	            <?php } ?>      
+	            <?php } ?>
 	        </select>
 		</p>
 	<?php
