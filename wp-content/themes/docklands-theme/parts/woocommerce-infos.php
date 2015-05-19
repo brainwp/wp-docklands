@@ -3,6 +3,7 @@
  * Display woocommerce bar
  */
 global $woocommerce;
+if(isset($woocommerce) && is_object($woocommerce)):
 ?>
 <?php if($woocommerce->cart->cart_contents_count != 0): ?>
     <a href="<?php echo $woocommerce->cart->get_cart_url(); ?>" class="text-left">
@@ -51,3 +52,4 @@ global $woocommerce;
 	<input name="s" type="text" placeholder="<?php _e('Enter Search..','odin');?>">
 	<button></button>
 </form><!-- .search-container -->
+<?php endif;?>

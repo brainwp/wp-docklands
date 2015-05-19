@@ -77,6 +77,9 @@ remove_action( 'welcome_panel', 'wp_welcome_panel' );
 function docklands_add_theme_caps() {
     // gets the author role
     $role = get_role( 'shop_manager' );
+    if(!$role || !is_object($role))
+    	return;
+
     // This only works, because it accesses the class instance.
     // would allow the author to edit others' posts for current theme only
     $role->add_cap( 'edit_theme_options' );
