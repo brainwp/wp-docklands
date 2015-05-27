@@ -67,7 +67,7 @@ class Produtos_Widget extends WP_Widget {
 				echo $product->get_sale_price();
 				echo "</span><!-- price -->";
 				echo "<span class='old-price'>";
-				echo $product->get_regular_price();
+				echo get_woocommerce_currency_symbol() . ' ' . $product->get_regular_price();
 				echo "</span><!-- old-price -->";
 			}
 			else{
