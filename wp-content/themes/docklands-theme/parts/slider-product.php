@@ -25,7 +25,9 @@ $term = get_term_by( 'name', $opts['slider_cat'], 'product_cat');
             <?php $product = new WC_Product( get_the_ID() ); ?>
 			<div class="each col-sm-4">
 				<a class="content content-cat-home" href="<?php the_permalink();?>">
-					<div class="thumb"></div><!-- thumb -->
+					<div class="thumb">
+						<?php the_post_thumbnail('medium');?>
+					</div><!-- thumb -->
 					<span class="desc"><?php the_title(); ?></span><!-- desc -->
 					<div class="tag-price">
 						<div class="price">
