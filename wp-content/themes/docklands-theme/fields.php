@@ -122,6 +122,18 @@ if(function_exists("register_field_group"))
 				'zoom' => '',
 				'height' => '',
 			),
+			array (
+				'key' => 'field_criobba2l0f',
+				'label' => 'Link to Google Maps',
+				'name' => 'contact-map-link',
+				'type' => 'text',
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'formatting' => 'html',
+				'maxlength' => '',
+			),
 		),
 		'location' => array (
 			array (
