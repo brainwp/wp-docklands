@@ -426,7 +426,11 @@ img.alignright {
 	overflow: hidden;
 	width: 95%;
 }
-
+.slider-products .each .content .thumb img{
+	width:100%;
+	min-height:100%;
+	display: block;
+}
 .slider-products .each .content .desc {
 	color: #424242;
 	display: block;
