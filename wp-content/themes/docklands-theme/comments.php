@@ -55,6 +55,7 @@
 			'fields' => apply_filters( 'comment_form_default_fields', array(
 				'author' => '<div class="comment-form-author form-group">' . '<input class="form-control" id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30"' . $aria_req . ' /><label class="control-label" for="author">' . __( 'Name', 'odin' ) . ( $req ? '<span class="required"> *</span>' : '' ) . '</label></div>',
 				'email' => '<div class="comment-form-email form-group"><input class="form-control" id="email" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30"' . $aria_req . ' /><label class="control-label" for="email">' . __( 'E-mail', 'odin' ) . ( $req ? '<span class="required"> *</span>' : '' ) . '</label></div>',
+				'url' => false
 				) )
 		)
 	); ?>
