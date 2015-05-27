@@ -95,6 +95,15 @@ img.alignright {
 	/* Cores */
 	color: #FDE2AB;
 }
+.woocommerce span.onsale{
+	top:60px !important;
+	bottom: inherit !important;
+	height: 48px !important;
+	width: 48px !important;
+	text-align: center !important;
+	padding:0 !important;
+	padding-top: 5px !important;
+}
 .orange {
 	color: #D47616;
 }
