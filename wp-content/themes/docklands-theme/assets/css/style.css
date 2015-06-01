@@ -267,6 +267,7 @@ img.alignright {
 #header .center .infos-contact .online-support {
 	background: url('../images/icon-online-support.png') left 8px no-repeat transparent;
 	padding-top: 3px;
+	cursor: pointer;
 }
 
 #header .center .infos-contact .online-support .top {

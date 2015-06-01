@@ -78,11 +78,12 @@
 				<span class="desc">"<?php bloginfo( 'description' ); ?>"</span>
 				<div class="infos-contact bg-title">
 
-					<?php if ( $phone = get_field( 'footer_phone', 'options' ) ) : ?>
-						<span class="col-sm-6 phone"><?php echo $phone; ?></span>
+                    <?php $options = get_option('footer_cfg');?>
+					<?php if ($options['footer_phone'] && !empty($options['footer_phone'])) : ?>
+						<span class="col-sm-6 phone"><?php echo $options['footer_phone']; ?></span>
 					<?php endif; ?>
 
-					<span class="col-sm-6 online-support">
+					<span class="col-sm-6 online-support open-tidio-chat">
 						<span class="top">Online Support</span>
 						<span class="bottom">Email Us</span>
 					</span><!-- online-support -->

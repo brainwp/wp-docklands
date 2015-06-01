@@ -133,6 +133,20 @@ jQuery(document).ready(function($) {
 			$('input[name=your-email]').val(form_info.user_email);
 		}
     }
+
+    // chat link support
+    if (typeof tidioChatApi !== 'undefined') {
+    	$('.open-tidio-chat').on('click', function(){
+    		if( $(this).attr('data-clicked') != 'true' ){
+    			tidioChatApi.method('popUpOpen');
+    			$(this).attr('data-clicked','true');
+    		}
+    		else{
+    			tidioChatApi.method('popUpHide');
+    			$(this).attr('data-clicked','false');
+		    }
+		});
+	}
 });
 (function($) {
 
