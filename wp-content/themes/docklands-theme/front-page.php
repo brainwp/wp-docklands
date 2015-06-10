@@ -55,7 +55,7 @@ get_header('shop');
 
 					<div class="banner col-sm-6">
 						<a href="<?php echo $link;?>">
-							<?php echo wp_get_attachment_image($banner_1,'large'); ?>
+							<?php echo wp_get_attachment_image($banner_1,'half-horizontal-thumb'); ?>
 						</a>
 					</div><!-- banner -->
 
@@ -89,22 +89,22 @@ get_header('shop');
 
 					<div class="banner col-sm-6">
 						<a href="<?php echo $link;?>">
-							<?php echo wp_get_attachment_image($banner_2,'large'); ?>
+							<?php echo wp_get_attachment_image($banner_2,'half-horizontal-thumb'); ?>
 						</a>
 					</div><!-- banner -->
 
-				<?php endif ?>
+				<?php endif; ?>
 
 				<?php if ( $banner_3 = $options['home_banner_3'] ) : ?>
 				    <?php $link = (!empty($options['home_banner_3_link']))? $options['home_banner_3_link'] : 'javascript:void(0)'; ?>
 
 					<div class="banner col-sm-6">
 						<a href="<?php echo $link;?>">
-							<?php echo wp_get_attachment_image($banner_3,'large'); ?>
+							<?php echo wp_get_attachment_image($banner_3,'half-horizontal-thumb'); ?>
 						</a>
 					</div><!-- banner -->
 
-				<?php endif ?>
+				<?php endif; ?>
 
 			</div><!-- full -->
 

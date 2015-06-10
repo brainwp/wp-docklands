@@ -71,6 +71,8 @@ if ( ! function_exists( 'odin_setup_features' ) ) {
 		 * Add post_thumbnails suport.
 		 */
 		add_theme_support( 'post-thumbnails' );
+		add_image_size( 'square-thumb', 400, 400, array('center','center') );
+		add_image_size( 'half-horizontal-thumb', 585, 200, array('center','center') );
 
 		/**
 		 * Add feed link.
