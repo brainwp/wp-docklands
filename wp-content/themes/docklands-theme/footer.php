@@ -78,6 +78,9 @@ $options = get_option('footer_cfg');
 					<div class="bottom col-sm-12">
 						<span class="join">Join the Docklands Office Furniture Newsletter:</span>
 						<span>Sign up now for our latest offers, news and discounts</span>
+						<?php if ( is_active_sidebar( 'join-sidebar' ) ) : ?>
+							<?php dynamic_sidebar( 'join-sidebar' ); ?>
+						<?php endif; ?>
 					</div><!-- bottom -->
 				</div><!-- social-media -->
 

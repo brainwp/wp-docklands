@@ -197,6 +197,17 @@ function odin_widgets_init() {
 			'after_title' => '</h3>',
 		)
 	);
+	register_sidebar(
+		array(
+			'name' => __( 'Join Newsletter', 'odin' ),
+			'id' => 'join-sidebar',
+			'description' => __( 'Join Newsletter Sidebar', 'odin' ),
+			'before_widget' => '<div id="%1$s" class="widget col-md-12 nopadding %2$s">',
+			'after_widget' => '</div>',
+			'before_title' => '<h3 class="widgettitle widget-title">',
+			'after_title' => '</h3>',
+		)
+	);
 }
 
 add_action( 'widgets_init', 'odin_widgets_init' );
