@@ -91,3 +91,23 @@ if ( ! function_exists( 'odin_paging_nav' ) ) {
 		echo odin_pagination( $mid, $end, false );
 	}
 }
+if ( ! function_exists( 'brasa_news_pagination' ) ) {
+
+	/**
+	 * Print HTML with meta information for the current post-date/time and author.
+	 *
+	 * @since 2.2.0
+	 *
+	 * @return void
+	 */
+	function brasa_news_pagination($max) {
+	    $big = 999999999; // need an unlikely integer
+	    echo paginate_links( array(
+	    	'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+	    	'format' => '?paged=%#%',
+	    	'current' => max( 1, get_query_var('paged') ),
+	    	'next_text' => '>',
+	    	'total' => $max
+	    ) );
+	}
+}

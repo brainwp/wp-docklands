@@ -744,6 +744,53 @@ h3.item {
 	color: #D67516;
 	text-decoration: none;
 }
+.news-pagination-links{
+	text-align: right;
+	border:1px solid #CCC;
+	background:#f8f8f8;
+	padding:5px;
+	color:#6c6c6c;
+}
+.news-pagination-links a.page-numbers{
+	padding-top:6px;
+	color:#6c6c6c;
+	font-weight: bold;
+}
+.news-pagination-links .current{
+	font-weight: bold;
+	color:white;
+	border-radius:50%;
+	background: #d98127;
+	display: inline-block;
+	height:20px;
+	width:20px;
+	text-align: center;
+}
+.news-pagination-links .prev.page-numbers{
+	display: none;
+}
+.news-pagination-links .next.page-numbers{
+	height:30px;
+	width: 30px;
+	color:rgba(0,0,0,0);
+	background: url('../images/pagination-next.jpg') center center no-repeat;
+	display: inline-block;
+}
+.pagination-control{
+	padding-top:20px;
+}
+.pagination-control select{
+	border:1px solid #CCC;
+	padding:6px;
+	-webkit-appearance:none;
+	-moz-appearance:none;
+	background:#f8f8f8 url('../images/select-arrow-news.jpg') right no-repeat;
+  	color:#6c6c6c;
+  	padding-right:25px;
+}
+.pagination-control label{
+	font-weight: normal;
+}
 /* Page Template Page Mews */
 .page-template-page-news .entry-summary {
 	padding-left: 0
