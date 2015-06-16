@@ -796,6 +796,7 @@ h3.item {
 	display: block;
 	background: transparent url("../images/cat-bg.jpg") repeat scroll 0% 0%;
 	height: 52px;
+	clear:both;
 }
 .bg-title-news a{
 	color: #575759 !important;
@@ -833,6 +834,9 @@ h3.item {
 }
 .page-template-page-news .entry-meta, .page-template-page-news .entry-meta a {
 	color: #5B5B5D;
+}
+.page-template-page-news .entry-meta{
+	clear: both;
 }
 .page-template-page-news article.post {
 	border-bottom: 1px solid #CCC;

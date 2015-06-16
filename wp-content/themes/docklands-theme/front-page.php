@@ -26,7 +26,9 @@ get_header('shop');
 					<?php echo do_shortcode( '[brasa_slider name="Slider Home"]' ); ?>
 				</div><!-- slider-home -->
 				<?php get_template_part( 'parts/slider-product' ); ?>
-				<h3 class="bg-title">New Arrivals</h3>
+				<h3 class="bg-title-news">
+					<a><?php _e('New Arrivals','odin');?></a>
+				</h3>
 
 				<div class="col-sm-12 arrivals full">
 					<?php
