@@ -10,7 +10,9 @@
 get_header(); ?>
 
 	<div class="col-sm-12">
-		<h2 class="bg-title"><?php _e( 'News', 'odin' ); ?></h2>
+		<h3 class="bg-title-news">
+			<a><?php _e( 'News', 'odin' ); ?></a>
+		</h3>
 	</div>
 
 <?php get_sidebar( 'news' ); ?>
@@ -41,6 +43,7 @@ get_header(); ?>
 					<?php get_template_part( 'content', get_post_format() ); ?>
 
 				<?php endwhile;?>
+				<?php global $wp_query;?>
 				<div class="col-md-12 pagination-control">
 					<div class="col-md-4">
 					    <label><?php _e('Sort by','odin');?></label>
@@ -61,7 +64,6 @@ get_header(); ?>
 					    </select>
 					</div><!-- .col-md-4 -->
 				    <div class="col-md-4">
-				    	<?php global $wp_query;?>
 					    <label><?php _e('Show','odin');?></label>
 					    <select>
                             <option value="<?php echo get_permalink($wp_query->post->ID);?>">
@@ -75,11 +77,13 @@ get_header(); ?>
                             </option>
 					    </select>
 					</div><!-- .col-md-4 -->
+					<?php if($posts_query->max_num_pages > 1):?>
 					<div class="col-md-4 pull-right">
 						<div class="pull-right news-pagination-links">
 							<?php brasa_news_pagination($posts_query->max_num_pages);?>
 						</div><!-- .pull-right -->
 					</div><!-- .col-md-4 -->
+				    <?php endif;?>
 				</div><!-- .col-md-12 pagination-control -->
 				<?php wp_reset_postdata(); // reset the query ?>
 

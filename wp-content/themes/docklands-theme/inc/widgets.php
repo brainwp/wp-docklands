@@ -128,7 +128,6 @@ class Produtos_Widget extends WP_Widget {
 	<?php
 	}
 }
-
 function theme_register_widgets() {
 	register_widget( 'Produtos_Widget' );
 }
