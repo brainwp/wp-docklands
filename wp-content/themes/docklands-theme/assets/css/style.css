@@ -543,7 +543,7 @@ body.home .slider-products .each .content .tag-price {
 	padding: 0;
 }
 .home .full .banner, .home .full .video {
-	height: 200px;
+	height: auto;
 	overflow: hidden;
 }
 .home .full .banner .content, .home .full .video .content {
