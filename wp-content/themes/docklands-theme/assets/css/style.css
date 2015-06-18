@@ -792,7 +792,8 @@ h3.item {
 .pagination-control label{
 	font-weight: normal;
 }
-.bg-title-news{
+.bg-title-news,
+.cat-top-name {
 	border-radius: 4px;
 	display: block;
 	background: transparent linear-gradient(to bottom, #FFF 0%, #E1E5E8 100%) repeat scroll 0% 0%;
@@ -801,9 +802,11 @@ h3.item {
 	padding: 12px 24px;
 	width: 100%;
 }
-.bg-title-news {
+.bg-title-news a,
+.cat-top-name a{
 	color: #575759 !important;
 	font-size: 18px;
+	line-height: 1 !important;
 	text-decoration: none !important;
 	display: inline-block;
 	text-transform: capitalize;
@@ -1187,13 +1190,13 @@ h3.item {
 	text-transform: capitalize;
 	margin-bottom: 20px;
 }
-.single-product .cat-top-name, .page-contact .top-name{
+.page-contact .top-name{
 	width:100%;
 	display:block;
 	background:url('../images/cat-bg.jpg') repeat;
 	height:52px;
 }
-.single-product .cat-top-name a, .page-contact .top-name a{
+.page-contact .top-name a{
 	color:#575759 !important;
 	text-decoration: none !important;
 	font-weight: bold;
@@ -1501,6 +1504,9 @@ body.page h1 {
 	color: #D98128;
 	text-transform: capitalize;
 }
+#comments .comment-reply-title {
+	font-size: 1em !important;
+}
 #comments .form-group {
 	display: hidden;
 	overflow: hidden;
@@ -1583,4 +1589,8 @@ div.sharedaddy h3.sd-title{
 	background: transparent url("../images/sprite-icons-social-header.png") no-repeat scroll -98px center !important;
 	width:40px !important;
 	height:40px !important;
+}
+.woocommerce a.button.alt,
+.woocommerce #payment #place_order {
+	background-color: #D98128 !important;
 }

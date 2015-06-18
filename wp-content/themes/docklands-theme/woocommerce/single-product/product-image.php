@@ -13,9 +13,9 @@ global $post, $woocommerce, $product;
 $cat = wp_get_object_terms($post->ID,'product_cat');
 ?>
 <?php if(!empty($cat)): ?>
-	<h4 class="cat-top-name">
-		<a href="<?php echo esc_url(get_term_link($cat[0])); ?>"><?php echo $cat[0]->name; ?></a>
-	</h4><!-- .cat-top-name -->
+	<h3 class="bg-title-news">
+		<a href="<?php echo esc_url( get_term_link( $cat[0] ) ); ?>"><?php echo $cat[0]->name; ?></a>
+	</h3><!-- .bg-title-news -->
 <?php endif; ?>
 <div class="images">
 
