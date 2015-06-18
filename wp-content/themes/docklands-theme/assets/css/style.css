@@ -793,19 +793,20 @@ h3.item {
 	font-weight: normal;
 }
 .bg-title-news{
-	width: 100%;
+	border-radius: 4px;
 	display: block;
-	background: transparent url("../images/cat-bg.jpg") repeat scroll 0% 0%;
+	background: transparent linear-gradient(to bottom, #FFF 0%, #E1E5E8 100%) repeat scroll 0% 0%;
 	height: 52px;
 	clear:both;
+	padding: 12px 24px;
+	width: 100%;
 }
-.bg-title-news a{
+.bg-title-news {
 	color: #575759 !important;
+	font-size: 18px;
 	text-decoration: none !important;
-	font-weight: bold;
-	padding-top: 15px;
 	display: inline-block;
-	padding-left: 10px;
+	text-transform: capitalize;
 }
 /* Page Template Page Mews */
 .page-template-page-news .entry-summary {
