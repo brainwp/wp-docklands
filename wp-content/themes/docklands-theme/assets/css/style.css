@@ -336,9 +336,10 @@ img.alignright {
 }
 .itens-shop .search-container input{
 	background: #f6f7f9;
+	border: 1px solid #f6f7f9;
 	border-radius: 3px;
 	padding: 7px 12px;
-	border: 1px solid #f6f7f9;
+	position: absolute;
 	transition:200ms ease all;
 	width:100%;
 }
@@ -352,7 +353,7 @@ img.alignright {
 	border:none !important;
 	position: absolute;
 	right: 0;
-	margin-right: 15px;
+	margin-right: 5px;
 	margin-top: 5px;
 }
 /* Home */
