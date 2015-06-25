@@ -137,7 +137,9 @@
 			    <div class="checkbox col-md-12">
 			    	<label>
 			    		<input class="only-onecheck" type="checkbox" name="color" value="<?php echo $cat->slug; ?>">
-			    		<img class="color-img" src="<?php bloginfo('template_url'); ?>/assets/images/admin-<?php echo $cat->slug;?>.jpg">
+			    		<?php if($color_img = get_field('color_img', $cat)):?>
+			    		    <img class="color-img" src="<?php echo $color_img['sizes']['thumbnail'];?>">
+			    		<?php endif;?>
 			    		<?php echo sprintf('(%s)',$cat->count); ?>
 	         	    </label>
 	            </div><!-- checkbox -->

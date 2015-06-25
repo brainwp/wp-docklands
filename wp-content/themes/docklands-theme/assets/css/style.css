@@ -1009,6 +1009,10 @@ h3.item {
 	padding: 5px;
 	cursor: pointer;
 }
+.color-img{
+	width:32px;
+	height:32px;
+}
 /* Footer */
 #footer {
     border-top: none;
