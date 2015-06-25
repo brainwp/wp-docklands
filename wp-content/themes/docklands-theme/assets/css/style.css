@@ -1359,6 +1359,37 @@ body.post-type-archive-services .slider-home .slick-next{
 .services .entry-content img {
 	width: auto;
 }
+.services.each {
+	height: 320px;
+	margin-bottom: 20px;
+	overflow: hidden;
+	position: relative;
+}
+.services.each .thumb {
+	background-color: #F9F9F9;
+	height: 100%;
+	position: absolute;
+	top: 0;
+}
+.services.each .desc {
+	background-color: #F1F1F1;
+	bottom: 0;
+	height: auto;
+	overflow: hidden;
+	padding-top: 15px;
+	position: absolute;
+	width: 100%;
+}
+.services.each .desc h3 {
+	margin-left: 15px;
+	margin-right: 15px;
+	margin-top: 5px;
+}
+.services.each .desc .product-info {
+	margin-bottom: 15px;
+	margin-left: 15px;
+	margin-right: 15px;
+}
 .post-type-archive-services h3.bg-title {
 	color: #48484A;
 	text-transform: capitalize;
