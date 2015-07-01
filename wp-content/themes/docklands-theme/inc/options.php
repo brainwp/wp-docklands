@@ -107,6 +107,24 @@ $odin_theme_options->set_fields(
 					'type' => 'textarea',
 					'description' => ''
 				),
+				array(
+					'id' => 'dams_ftp_host',
+					'label' => __('Dams FTP Host','odin'),
+					'type' => 'text',
+					'description' => ''
+				),
+				array(
+					'id' => 'dams_ftp_user',
+					'label' => __('Dams FTP Username','odin'),
+					'type' => 'text',
+					'description' => ''
+				),
+				array(
+					'id' => 'dams_ftp_pass',
+					'label' => __('Dams FTP Password','odin'),
+					'type' => 'text',
+					'description' => ''
+				),
 			)
 		),
 		'home_section' => array(
