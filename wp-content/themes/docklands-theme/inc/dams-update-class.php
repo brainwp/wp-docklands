@@ -30,7 +30,7 @@ class Brasa_Dams_FTP_Update{
 		$file = $this->get_xml_file();
 		// WP_Query arguments
 		$args = array (
-			'post_type'              => array( 'product' ),
+			'post_type'              => array( 'product', 'product_variation'),
 			'meta_query'             => array(
 				array(
 					'key'       => '_sku',
