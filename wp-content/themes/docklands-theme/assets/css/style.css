@@ -111,6 +111,9 @@ img.alignright {
 	width: auto;
 	display: inline !important;
 }
+.woocommerce .product_meta .col-md-12{
+	padding:0;
+}
 .btn.details {
 	/* Bordas */
 	border: 1px solid #C3C4C6;
