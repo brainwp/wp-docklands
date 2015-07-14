@@ -9,6 +9,10 @@ Description: Odin main stylesheet.
    padding: 0 !important;
    margin: 0 !important;
 }
+.clear{
+	height:1px;
+	clear: both;
+}
 a {
 	transition: all 1s ease;
 }
