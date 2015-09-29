@@ -35,7 +35,7 @@ require_once get_template_directory() . '/core/classes/class-theme-options.php';
 // require_once get_template_directory() . '/core/classes/class-contact-form.php';
 // require_once get_template_directory() . '/core/classes/class-post-form.php';
 // require_once get_template_directory() . '/core/classes/class-user-meta.php';
-require_once get_template_directory() . '/inc/dams-update-class.php';
+// require_once get_template_directory() . '/inc/dams-update-class.php';
 
 /**
  * Odin Widgets.
@@ -65,7 +65,8 @@ if ( ! function_exists( 'odin_setup_features' ) ) {
 			array(
 				'main-menu' => __( 'Main Menu', 'odin' ),
 				'top-menu' => __( 'Menu top', 'odin' ),
-				'second-footer-menu' => __( 'Second Footer Menu', 'odin' )
+				'second-footer-menu' => __( 'Second Footer Menu', 'odin' ),
+				'responsive-menu' => __( 'Responsive Menu', 'odin' )
 			)
 		);
 		/*
@@ -239,8 +240,14 @@ function odin_enqueue_scripts() {
 	// Loads Odin main stylesheet.
 	wp_enqueue_style( 'odin-style', get_stylesheet_uri(), array(), null, 'all' );
 
+	// Slicknav Menu
+	wp_enqueue_style( 'slicknav-style',  $template_url . '/assets/css/slicknav.css', array(), null, 'all' );
+
 	// jQuery.
 	wp_enqueue_script( 'jquery' );
+
+	// Slicknav Menu.
+	wp_enqueue_script( 'slicknav', $template_url . '/assets/js/libs/jquery.slicknav.min.js', array(), null, true );
 
 	// Twitter Bootstrap.
 	wp_enqueue_script( 'bootstrap', $template_url . '/assets/js/libs/bootstrap.min.js', array(), null, true );
@@ -254,7 +261,7 @@ function odin_enqueue_scripts() {
 
 	// Main jQuery.
 	wp_enqueue_script( 'odin-main', $template_url . '/assets/js/main.js', array(), null, true );
-	if(is_singular('product')){
+	if( is_singular( 'product' ) ){
 		global $wp_query;
 		wp_localize_script( 'odin-main', 'product_info', array('id' => $wp_query->post->ID, 'ajax_url' => admin_url( 'admin-ajax.php' )) );
 	}

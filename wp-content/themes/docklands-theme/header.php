@@ -48,6 +48,18 @@
 					)
 				);
 			?>
+			<?php
+				wp_nav_menu(
+					array(
+						'theme_location' => 'responsive-menu',
+						'depth'          => 0,
+						'container'      => false,
+						'menu_class'     => 'nav navbar-nav responsive',
+						'fallback_cb'    => 'Odin_Bootstrap_Nav_Walker::fallback',
+						'walker'         => new Odin_Bootstrap_Nav_Walker()
+					)
+				);
+			?>
 			<?php $options = get_option('social');?>
 			<div class="social-media pull-right">
 				<div class="pull-left twitter">
