@@ -110,11 +110,11 @@ get_header('shop');
 
 			</div><!-- full -->
 
-			<div class="col-md-6 pull-left">
+			<div class="col-md-6 pull-left cloud-sidebar">
 				<?php dynamic_sidebar( 'cloud-sidebar' ); ?>
 			</div><!-- .col-md-6 -->
 
-			<div class="col-md-6 pull-right">
+			<div class="col-md-6 pull-right twitter-posts">
 				<?php get_template_part( 'parts/twitter-posts' ); ?>
 			</div><!-- .col-md-6 -->
 
