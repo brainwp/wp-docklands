@@ -1,4 +1,7 @@
 <?php
+if ( ! isset( $opts['slider_cat'] ) || empty( $opts['slider_cat'] ) )
+	return;
+
 //slider products
 $opts = get_option('home_cfg');
 $term = get_term_by( 'name', $opts['slider_cat'], 'product_cat');
@@ -6,22 +9,30 @@ $term = get_term_by( 'name', $opts['slider_cat'], 'product_cat');
 <div class="col-sm-12 slider-products" id="slider-cat">
 	<?php
 	// WP_Query arguments
-	$args = array (
-		'post_type'              => 'product',
-		'posts_per_page'         => 12,
-		'tax_query' => array(
-			array(
-			'taxonomy' => 'product_cat',
-			'field'    => 'id',
-			'terms'    => $term->term_id,
+	if ( $term && is_object( $term ) ) :
+		$args = array (
+			'post_type'              => 'product',
+			'posts_per_page'         => 12,
+			'tax_query' => array(
+				array(
+				'taxonomy' => 'product_cat',
+				'field'    => 'id',
+				'terms'    => $term->term_id,
+				),
 			),
-		),
-	);
+		);
+	else:
+		$args = array (
+			'post_type'              => 'product',
+			'posts_per_page'         => 12,
+		);
+	endif;
 	// The Query
 	$query = new WP_Query( $args );
 	?>
 	<?php if ( $query->have_posts() ) : ?>
         <?php while ( $query->have_posts() ): $query->the_post();?>
+        	<?php if ( ! has_post_thumbnail( get_the_ID() ) ) continue; ?>
             <?php $product = new WC_Product( get_the_ID() ); ?>
 			<div class="each col-sm-4">
 				<a class="content content-cat-home" href="<?php the_permalink();?>">
