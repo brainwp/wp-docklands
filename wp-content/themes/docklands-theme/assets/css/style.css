@@ -596,11 +596,23 @@ ul.product-categories > li > a {
 	font-size: 1em;
 	font-weight: bold;
 	padding: 7px 5px 7px 15px;
+	transition: 300ms ease all;
 	width: 100%;
 }
-
+ul.product-categories li.cat-parent ul.children{
+	display: block !important;
+	opacity:0;
+	height:0;
+}
+ul.product-categories li.cat-parent.show ul.children{
+	opacity: 1;
+	height:auto;
+}
+ul.product-categories>li.cat-parent>a{
+	background:url('../images/bg-categories-toggle.jpg') center right no-repeat;
+}
 ul.product-categories li{
-	/*border-bottom: 1px solid #CCC;*/
+	border-bottom: 1px solid #CCC;
 }
 ul.product-categories a {
 	color: #8A8782;
@@ -614,13 +626,13 @@ ul.children li {
 	width: 100%;
 }
 ul.children li a{
+	background: url('../images/bg-categories-toggle-left.jpg') 10px center no-repeat;
 	color: #48484A;
 	display: inline-block;
 	font-size: 0.9em;
 	padding: 7px 5px 7px 35px;
 	width: 100%;
 }
-
 h3.widget-title{
 	font-size: 18px;
 	color: #48484A;
@@ -1149,6 +1161,9 @@ h3.item {
 	position: fixed;
 	right: 35px;
 	width: 70px;
+}
+#secondary ul.children{
+	display:none;
 }
 /* Twitter API */
 #twitter-container{

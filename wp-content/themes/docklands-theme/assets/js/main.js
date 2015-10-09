@@ -42,6 +42,14 @@ jQuery(document).ready(function($) {
 		$('#input-categories').attr('value',slug);
 		$('#advanced-search').submit();
 	});
+	$('ul.product-categories>li.cat-parent').on('click', function(e) {
+		$elem = e.target;
+
+		if( ! $(this).hasClass('show') ) {
+			e.preventDefault();
+			$(this).addClass('show');
+		}
+	});
 
 	$('.toggle .title').on('click',function(){
 		father = $(this).parent('.toggle');
