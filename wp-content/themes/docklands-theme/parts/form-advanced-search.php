@@ -7,6 +7,12 @@
 <form class="form-advanced-search" action="<?php echo esc_url( home_url( '/' ) ); ?>" role="search">
 	<input type="hidden" name="s" value="">
 	<input type="hidden" name="post_type" value="product">
+	<?php if ( is_tax( 'product_cat' ) ) : ?>
+		<?php global $wp_query;?>
+		<?php $term = $wp_query->queried_object;?>
+		<input type="hidden" id="product-cat-id" name="product_cat" value="<?php echo $term->slug;?>">
+	<?php endif;?>
+
 	<h4 class="bg-title">
 		<?php _e( 'Refine By', 'odin' ); ?>
 		<span class="clear-form">
@@ -87,7 +93,7 @@
 							<?php echo sprintf('%s (%s)',$cat->name,$cat->count); ?>
 						</label>
 	                </div><!-- checkbox -->
-	            <?php endforeach; ?>
+	       <?php endforeach; ?>
 		</div><!-- content -->
 	</div><!-- toggle -->
 
@@ -99,9 +105,10 @@
 		<div class="content">
 			<?php $categories = get_categories( array('taxonomy' => 'tax_product_type', 'orderby' => 'term_group') ); ?>
 			<?php foreach($categories as $cat): ?>
+				<?php $checked = ( isset( $_GET['tax_product_type'] ) && $_GET['tax_product_type'] == $cat->slug ? 'checked' : '' );?>
 			    <div class="checkbox col-md-12">
 			    	<label>
-			    		<input class="only-onecheck" type="checkbox" name="tax_product_type" value="<?php echo $cat->slug; ?>">
+			    		<input class="only-onecheck" type="checkbox" name="tax_product_type" value="<?php echo $cat->slug; ?>" <?php echo $checked;?>>
 			    		<?php echo sprintf('%s (%s)',$cat->name,$cat->count); ?>
 	         	    </label>
 	            </div><!-- checkbox -->
@@ -117,9 +124,10 @@
 		<div class="content">
 			<?php $categories = get_categories( array('taxonomy' => 'material', 'orderby' => 'term_group') ); ?>
 			<?php foreach($categories as $cat): ?>
+				<?php $checked = ( isset( $_GET['material'] ) && $_GET['material'] == $cat->slug ? 'checked' : '' );?>
 			    <div class="checkbox col-md-12">
 			    	<label>
-			    		<input class="only-onecheck" type="checkbox" name="material" value="<?php echo $cat->slug; ?>">
+			    		<input class="only-onecheck" type="checkbox" name="material" value="<?php echo $cat->slug; ?>" <?php echo $checked;?>>
 			    		<?php echo sprintf('%s (%s)',$cat->name,$cat->count); ?>
 	         	    </label>
 	            </div><!-- checkbox -->
@@ -134,9 +142,10 @@
 		<div class="content">
 			<?php $categories = get_categories( array('taxonomy' => 'color') ); ?>
 			<?php foreach($categories as $cat): ?>
+				<?php $checked = ( isset( $_GET['color'] ) && $_GET['color'] == $cat->slug ? 'checked' : '' );?>
 			    <div class="checkbox col-md-12">
 			    	<label>
-			    		<input class="only-onecheck" type="checkbox" name="color" value="<?php echo $cat->slug; ?>">
+			    		<input class="only-onecheck" type="checkbox" name="color" value="<?php echo $cat->slug; ?>" <?php echo $checked;?>>
 			    		<?php if($color_img = get_field('color_img', $cat)):?>
 			    		    <img class="color-img" src="<?php echo $color_img['sizes']['thumbnail'];?>">
 			    		<?php endif;?>

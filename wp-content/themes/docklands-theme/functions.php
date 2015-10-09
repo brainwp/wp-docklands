@@ -35,7 +35,7 @@ require_once get_template_directory() . '/core/classes/class-theme-options.php';
 // require_once get_template_directory() . '/core/classes/class-contact-form.php';
 // require_once get_template_directory() . '/core/classes/class-post-form.php';
 // require_once get_template_directory() . '/core/classes/class-user-meta.php';
-//require_once get_template_directory() . '/inc/dams-update-class.php';
+require_once get_template_directory() . '/inc/dams-update-class.php';
 
 /**
  * Odin Widgets.
@@ -180,6 +180,17 @@ function odin_widgets_init() {
 		array(
 			'name' => __( 'Left Sidebar', 'odin' ),
 			'id' => 'left-sidebar',
+			'description' => __( 'Left Sidebar', 'odin' ),
+			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+			'after_widget' => '</aside>',
+			'before_title' => '<h3 class="widgettitle widget-title">',
+			'after_title' => '</h3>',
+		)
+	);
+	register_sidebar(
+		array(
+			'name' => __( 'Left Sidebar Bottom', 'odin' ),
+			'id' => 'left-sidebar-bottom',
 			'description' => __( 'Left Sidebar', 'odin' ),
 			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 			'after_widget' => '</aside>',
