@@ -189,9 +189,9 @@ function odin_widgets_init() {
 	);
 	register_sidebar(
 		array(
-			'name' => __( 'Left Sidebar Bottom', 'odin' ),
-			'id' => 'left-sidebar-bottom',
-			'description' => __( 'Left Sidebar', 'odin' ),
+			'name' => __( 'Left Sidebar Filters', 'odin' ),
+			'id' => 'left-sidebar-filters',
+			'description' => __( 'Left Sidebar Filters', 'odin' ),
 			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 			'after_widget' => '</aside>',
 			'before_title' => '<h3 class="widgettitle widget-title">',
