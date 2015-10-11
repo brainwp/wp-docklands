@@ -68,3 +68,4 @@ class Woo_Seller_Role{
 	}
 }
 new Woo_Seller_Role();
+?>

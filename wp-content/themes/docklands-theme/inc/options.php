@@ -219,4 +219,3 @@ $odin_theme_options->set_fields(
 		),
 	)
 );
-?>
