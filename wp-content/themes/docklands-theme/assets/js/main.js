@@ -42,17 +42,33 @@ jQuery(document).ready(function($) {
 		$('#input-categories').attr('value',slug);
 		$('#advanced-search').submit();
 	});
-	$('ul.product-categories>li.cat-parent').on('click', function(e) {
+	$('ul.product-categories>li.cat-parent>a').on('click', function(e) {
+		$elem = $(this).closest('li.cat-parent');
 		e.preventDefault();
 
-		if( ! $(this).hasClass('show') ) {
-			$(this).addClass('show');
+		if( ! $($elem).hasClass('show') ) {
+			$($elem).addClass('show');
 		}
 		else{
-			$(this).removeClass('show');
+			$($elem).removeClass('show');
 		}
 	});
 
+	$('ul.product-categories>li.cat-parent>ul.children>li.cat-parent').on('click', function(e) {
+		if( e.target.nodeName.toLowerCase() == 'a' ) {
+			return;
+		}
+
+		$elem = this;
+
+		if( ! $($elem).hasClass('show') ) {
+			$($elem).addClass('show');
+		}
+		else{
+			$($elem).removeClass('show');
+		}
+	});
+	$('ul.product-categories li.current-cat-parent').addClass('show');
 	$('.toggle .title').on('click',function(){
 		father = $(this).parent('.toggle');
 		icon = $(this).find('.icon-open-close');
