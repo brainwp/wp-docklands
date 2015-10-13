@@ -43,11 +43,13 @@ jQuery(document).ready(function($) {
 		$('#advanced-search').submit();
 	});
 	$('ul.product-categories>li.cat-parent').on('click', function(e) {
-		$elem = e.target;
+		e.preventDefault();
 
 		if( ! $(this).hasClass('show') ) {
-			e.preventDefault();
 			$(this).addClass('show');
+		}
+		else{
+			$(this).removeClass('show');
 		}
 	});
 
