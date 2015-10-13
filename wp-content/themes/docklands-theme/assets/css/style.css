@@ -586,6 +586,7 @@ ul.product-categories, ul.product-categories ul{
 ul.product-categories li {
 	margin: 0 auto;
 	max-width: 90%;
+	clear: both;
 }
 ul.product-categories ul li:last-child{
 	border: none !important;
@@ -600,13 +601,10 @@ ul.product-categories > li > a {
 	width: 100%;
 }
 ul.product-categories li.cat-parent ul.children{
-	display: block !important;
-	opacity:0;
-	height:0;
+	display: none;
 }
-ul.product-categories li.cat-parent.show ul.children{
-	opacity: 1;
-	height:auto;
+ul.product-categories li.cat-parent.show>ul.children{
+	display: block !important;
 }
 ul.product-categories>li.cat-parent>a{
 	background:url('../images/bg-categories-toggle.jpg') center right no-repeat;
@@ -631,8 +629,31 @@ ul.children li a{
 	display: inline-block;
 	font-size: 0.9em;
 	padding: 7px 5px 7px 35px;
+}
+ul.product-categories>li.cat-parent>ul.children>li.cat-parent>a{
+	background: none !important;
+	display: inline-block;
+	font-size: 0.9em;
+	padding: 7px 5px 7px 7px;
+	width: auto !important;
+}
+ul.product-categories>li.cat-parent>ul.children>li.cat-parent {
+	cursor: pointer;
+	background: url('../images/bg-categories-toggle.jpg') top right no-repeat;
+}
+ul.product-categories li.current-cat a{
+	text-decoration: underline;
+	color:#000;
+}
+ul.children li a{
+	background: url('../images/bg-categories-toggle-left.jpg') 10px center no-repeat;
+	color: #48484A;
+	display: inline-block;
+	font-size: 0.9em;
+	padding: 7px 5px 7px 35px;
 	width: 100%;
 }
+
 h3.widget-title{
 	font-size: 18px;
 	color: #48484A;

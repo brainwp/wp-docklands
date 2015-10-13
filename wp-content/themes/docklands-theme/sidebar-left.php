@@ -11,13 +11,43 @@ global $is_advanced_search;
 ?>
 
 <div id="secondary" class="col-sm-3 left" role="complementary">
-
+<?php global $template; //echo $template; ?>
 	<?php
-		if ( is_page_template( 'page-advanced-search.php' ) || is_search() || $is_advanced_search == true || is_tax( 'product_cat' ) )  :
+
+		$is_last_child = 0;
+
+		if (!is_post_type_archive( 'product' )) {
+
+			$queried = get_queried_object();
+
+			if ( $queried ) {
+
+				//var_dump($queried);
+
+				$term_current = get_term_by( 'id', $queried->term_taxonomy_id, $queried->taxonomy );
+
+				if ( $term_current ) {
+
+					$children = get_term_children( $term_current->term_id, $queried->taxonomy );
+
+					if( sizeof( $children ) <= 0 ) {
+						$is_last_child = 1;
+					}
+				}
+
+			}
+
+		}
+
+		//echo $is_last_child;
+
+		if ( $is_last_child == '1' || is_woocommerce() ) {
 			dynamic_sidebar( 'left-sidebar-filters' );
-		else :
+		} elseif ( is_page_template( 'page-advanced-search.php' ) || is_search() || $is_advanced_search == true || is_tax( 'product_cat' ) && $is_last_child != '0' ) {
+			dynamic_sidebar( 'left-sidebar-filters' );
+		} else {
 			dynamic_sidebar( 'left-sidebar' );
-		endif;
+		}
 		//echo get_page_template_slug();
 	?>
 
