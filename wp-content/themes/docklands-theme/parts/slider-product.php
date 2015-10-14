@@ -1,9 +1,8 @@
 <?php
-if ( ! isset( $opts['slider_cat'] ) || empty( $opts['slider_cat'] ) )
-	return;
-
 //slider products
 $opts = get_option('home_cfg');
+if ( ! isset( $opts['slider_cat'] ) || empty( $opts['slider_cat'] ) )
+	return;
 $term = get_term_by( 'name', $opts['slider_cat'], 'product_cat');
 ?>
 <div class="col-sm-12 slider-products" id="slider-cat">

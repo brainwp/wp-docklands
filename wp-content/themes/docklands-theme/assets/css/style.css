@@ -400,6 +400,7 @@ img.alignright {
 .slider-products .each .content {
 	background-color: #FFF;
 	border: 1px solid #FFF;
+	display: block;
 	height: 100%;
 	margin: 10px auto;
 	overflow: hidden;
@@ -407,11 +408,8 @@ img.alignright {
 	width: 100%;
 }
 .slider-products .each .content .thumb {
-	background-color: #58585A;
-	border: 3px solid #FFF;
 	height: 180px;
 	margin: 3px;
-	outline: #CCC solid 2px;
 	overflow: hidden;
 	width: 95%;
 }
@@ -437,7 +435,7 @@ body.home .slider-products .each .content .desc {
 	position: absolute;
 	text-align: right;
 	top: 120px;
-	right: -267px;
+	right: 0;
 	height: 80px;
 	width: 80px;
 }
@@ -485,11 +483,15 @@ body.home .slider-products .each .content .tag-price {
 }
 .each .content {
 	background-color: #FFF;
-	height: 400px;
+	height: 440px;
 	margin: 10px auto 0;
 	overflow: hidden;
 	position: relative;
 	width: 100%;
+}
+.each .content .thumb {
+	border: 2px solid #CCC;
+	padding: 2px;
 }
 /* Content de cada produto no Resultado da Busca */
 .search-results .each .content {
@@ -661,7 +663,7 @@ ul.children li a{
 
 /* WOOF */
 .widget-woof .woof {
-	padding: 15px;
+	padding: 15px 0px;
 }
 .woocommerce .widget_price_filter{
 	display: block !important;
@@ -684,35 +686,78 @@ ul.children li a{
 	display: block;
 }
 .widget .woof_container .woof_container_inner>h4{
-	width: 100%;
-	cursor: pointer;
 	border-bottom: 1px solid #CCC;
-	color: #8A8782;
+	color: #5E5C72;
 	font-weight: bold;
 	margin-bottom: 10px;
 	margin-top: 15px;
 	padding-bottom: 10px;
 	padding-left: 15px;
+	width: 100%;
+	cursor: pointer;
 	font-size:14px;
 	text-transform: none !important;
 }
 .widget .woof_container .woof_container_inner>h4::after{
 	display: block;
-	height: 22px;
+	height: 20px;
 	background-color: #777;
-	border-radius: 2px;
+	border-radius: 1px;
 	color: #FFF;
 	cursor: pointer;
-	width: 22px;
-	padding: 1px 0px;
+	width: 20px;
+	padding: 1px 6px;
 	text-align: center;
 	content: '+';
 	position: absolute;
-	right: 50px;
-	margin-top: -20px;
+	right: 30px;
+	margin-top: -15px;
 }
 .widget .woof_container .woof_container_inner.show>h4::after{
 	content:'-';
+}
+.woof_price_search_container.woof_container {
+	padding-left: 15px;
+	padding-right: 15px;
+	border-bottom: 1px solid #CCC;
+}
+.woocommerce .widget_price_filter .price_slider_amount .button {
+	font-weight: lighter;
+	color: #777;
+	text-decoration: none;
+	border: 1px solid #777;
+	font-size: 1em !important;
+	padding: 6px 10px;
+	cursor: pointer;
+	border-radius: 4px;
+	background-color: #F1F1F1;
+	transition: 500ms ease all;
+}
+.woocommerce .widget_price_filter .price_slider_amount .button:hover {
+	background-color: #E1E1E1;
+	color: #333;
+}
+.woof_checkbox_instock_container.woof_container {
+	margin-bottom: 30px;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-top: 15px;
+	border-bottom: 1px solid #CCC;
+}
+.woof_checkbox_instock_container.woof_container label {
+	font-weight: lighter;
+}
+#woof_checkbox_instock {
+	cursor: pointer;
+}
+.woof_list {
+	padding-left: 11px;
+}
+.woof_list label {
+	font-weight: lighter;
+}
+.woof_list input[type="checkbox"] {
+	cursor: pointer;	
 }
 h3.widget-title{
 	font-size: 18px;
@@ -756,6 +801,7 @@ h3.item {
 .list-produtos li .title {
 	color: #006AB2;
 	display: block;
+	font-size: 0.9em;
 	margin: 10px 0 0;
 }
 .list-produtos li .desc {

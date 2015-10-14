@@ -8,7 +8,9 @@ $product = new WC_Product( get_the_ID() );
 							<div class="thumb">
 								<?php if ( has_post_thumbnail() ): ?>
 									<?php the_post_thumbnail( 'square-thumb' ); ?>
-								<?php endif ?>
+								<?php else: ?>
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/default-400-400.png" alt="<?php echo bloginfo( 'name' ); ?>">
+								<?php endif; ?>
 							</a>
 							</div><!-- thumb -->
 
