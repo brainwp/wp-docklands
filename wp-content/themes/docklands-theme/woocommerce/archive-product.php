@@ -10,7 +10,7 @@
  * @since 2.2.0
  * @version 3.0.0
  */
-
+$options = get_option('home_cfg');
 get_header();
 ?>
 
@@ -30,17 +30,26 @@ get_header();
 
 			<div class="col-sm-12 full">
 
-				<div class="col-sm-6 banner">
-					<div class="content">
-						BANNER
-					</div><!-- content -->
-				</div><!-- banner -->
+				<?php if ( $banner_1 = $options['home_banner_1'] ) : ?>
+				    <?php $link = (!empty($options['home_banner_1_link']))? $options['home_banner_1_link'] : 'javascript:void(0)'; ?>
+
+					<div class="banner col-sm-6">
+						<a href="<?php echo $link;?>">
+							<?php echo wp_get_attachment_image($banner_1,'half-horizontal-thumb'); ?>
+						</a>
+					</div><!-- banner -->
+
+				<?php endif ?>
 
 				<div class="col-sm-6 video">
 					<div class="content">
-						VÍDEO
+						<?php echo strip_tags($options['home_video'],'<iframe>'); ?>
 					</div><!-- content -->
 				</div><!-- video -->
+
+			</div>
+
+			<div class="col-sm-12 full">
 
 				<?php if ( $differential = get_field( 'home_differential', 'options' ) ) : ?>
 
