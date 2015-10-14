@@ -1299,6 +1299,9 @@ h3.item {
 #secondary ul.children{
 	display:none;
 }
+.tagcloud {
+	text-align: center;
+}
 /* Twitter API */
 #twitter-container{
 	font-size: 0.9em;

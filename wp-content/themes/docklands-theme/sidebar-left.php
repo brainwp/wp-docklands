@@ -49,7 +49,7 @@ global $is_advanced_search;
 			dynamic_sidebar( 'left-sidebar' );
 		}
 		//echo get_page_template_slug();
-		get_template_part( 'parts/form-advanced-search' );
+		//get_template_part( 'parts/form-advanced-search' );
 	?>
 
 
