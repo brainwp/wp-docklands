@@ -830,6 +830,10 @@ h3.item {
 	position: absolute;
 	right: 0px;
 }
+.textwidget {
+	margin-bottom: 20px;
+	margin-top: 30px;
+}
 .textwidget img {
 	width: 100%;
 }
