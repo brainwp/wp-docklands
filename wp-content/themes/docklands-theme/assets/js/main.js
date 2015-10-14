@@ -2,7 +2,7 @@
 jQuery(document).ready(function($) {
 
 	// Slicknav Menu
-	$('#menu-responsive-menu').slicknav();
+	//$('#menu-responsive-menu').slicknav();
 
 	// Placeholder AloEasy Mail
 	$('#opt_name').attr('placeholder','Your Name');
@@ -175,6 +175,19 @@ jQuery(document).ready(function($) {
 		var _href = $(this).attr('value');
 		if(_href && _href !== ''){
 			window.location.href = _href;
+		}
+	});
+
+	/* WOOF toggle */
+	$('.widget .woof_container .woof_container_inner>h4').on('click',function(e) {
+		$elem = $(this).closest('.woof_container_inner');
+		e.preventDefault();
+
+		if( ! $($elem).hasClass('show') ) {
+			$($elem).addClass('show');
+		}
+		else{
+			$($elem).removeClass('show');
 		}
 	});
 

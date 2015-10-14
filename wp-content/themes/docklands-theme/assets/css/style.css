@@ -659,6 +659,9 @@ ul.children li a{
 .widget-woof .woof {
 	padding: 15px;
 }
+.woocommerce .widget_price_filter{
+	display: block !important;
+}
 .woocommerce .widget_price_filter .ui-slider .ui-slider-range,
 .woocommerce .widget_price_filter .ui-slider .ui-slider-handle {
 	background-color: #D27E26 !important;
@@ -669,7 +672,44 @@ ul.children li a{
 .woocommerce .widget_price_filter .price_slider_wrapper .ui-widget-content {
 	background-color: #666 !important;
 }
-
+/* WOOF toggle */
+.widget .woof_container .woof_container_inner>div{
+	display: none;
+}
+.widget .woof_container .woof_container_inner.show>div{
+	display: block;
+}
+.widget .woof_container .woof_container_inner>h4{
+	width: 100%;
+	cursor: pointer;
+	border-bottom: 1px solid #CCC;
+	color: #8A8782;
+	font-weight: bold;
+	margin-bottom: 10px;
+	margin-top: 15px;
+	padding-bottom: 10px;
+	padding-left: 15px;
+	font-size:14px;
+	text-transform: none !important;
+}
+.widget .woof_container .woof_container_inner>h4::after{
+	display: block;
+	height: 22px;
+	background-color: #777;
+	border-radius: 2px;
+	color: #FFF;
+	cursor: pointer;
+	width: 22px;
+	padding: 1px 0px;
+	text-align: center;
+	content: '+';
+	position: absolute;
+	right: 50px;
+	margin-top: -20px;
+}
+.widget .woof_container .woof_container_inner.show>h4::after{
+	content:'-';
+}
 h3.widget-title{
 	font-size: 18px;
 	color: #48484A;
