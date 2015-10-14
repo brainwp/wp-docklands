@@ -20,11 +20,11 @@
 		</span>
 	</h4>
 	<?php $categories = get_categories( array('taxonomy' => 'product_condition', 'orderby' => 'term_group') ); ?>
-	<?php foreach($categories as $cat): ?>
-	    <div class="checkbox col-md-12">
+	<?php foreach( $categories as $cat ): ?>
+	    <div class="checkbox col-md-12 first">
 	    	<label>
 	    		<input class="only-onecheck" type="checkbox" name="product_condition" value="<?php echo $cat->slug; ?>">
-	    		<?php echo sprintf('%s (%s)',$cat->name,$cat->count); ?>
+	    		<?php echo sprintf( '%s (%s)', $cat->name, $cat->count ); ?>
 	    	</label>
 	    </div><!-- checkbox -->
 	<?php endforeach; ?>

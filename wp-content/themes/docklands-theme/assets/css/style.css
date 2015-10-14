@@ -147,7 +147,7 @@ img.alignright {
 	display: block;
 	height: 1px;
 	margin: 10px auto;
-	width: 92%;
+	width: 89.5%;
 }
 #secondary {
 	margin-top: 12px;
@@ -1038,9 +1038,16 @@ h3.item {
 	font-size: 1em;
 	margin-bottom: 15px;
 }
+.form-advanced-search .checkbox.first {
+	padding-left: 30px;
+	padding-right: 30px;
+}
+.form-advanced-search .toggle {
+	margin-bottom: 5px;
+}
 .form-advanced-search .toggle .title {
 	border-bottom: 1px solid #CCC;
-	color: #8A8782;
+	color: #5E5C72;
 	font-weight: bold;
 	margin-bottom: 10px;
 	margin-top: 15px;
@@ -1049,11 +1056,11 @@ h3.item {
 }
 .form-advanced-search .icon-open-close {
 	background-color: #777;
-	border-radius: 2px;
+	border-radius: 1px;
 	color: #FFF;
 	cursor: pointer;
-	width: 22px;
-	padding: 1px 8px;
+	width: 20px;
+	padding: 0px 6px;
 	text-align: center;
 }
 .form-advanced-search .toggle ul {
@@ -1086,7 +1093,7 @@ h3.item {
 	float: right;
 	margin-bottom: 15px;
 	margin-right: 15px;
-	margin-top: 5px;
+	margin-top: -5px;
 	padding: 5px;
 	cursor: pointer;
 }
