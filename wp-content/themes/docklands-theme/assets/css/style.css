@@ -14,7 +14,7 @@ Description: Odin main stylesheet.
 	clear: both;
 }
 a {
-	transition: all 1s ease;
+	transition: all 500ms ease;
 }
 h1, h2, h3, h4, h5, h6 {
 	color: #187DC1;
@@ -607,7 +607,7 @@ ul.product-categories li.cat-parent.show>ul.children{
 	display: block !important;
 }
 ul.product-categories>li.cat-parent>a{
-	background:url('../images/bg-categories-toggle.jpg') center right no-repeat;
+	background:url('../images/bg-categories-toggle.png') center right no-repeat;
 }
 ul.product-categories li{
 	border-bottom: 1px solid #CCC;
@@ -615,6 +615,7 @@ ul.product-categories li{
 ul.product-categories a {
 	color: #8A8782;
 	font-size: 0.9em;
+	text-decoration: none;
 }
 ul.children {
 	margin-left: 0;
@@ -639,7 +640,7 @@ ul.product-categories>li.cat-parent>ul.children>li.cat-parent>a{
 }
 ul.product-categories>li.cat-parent>ul.children>li.cat-parent {
 	cursor: pointer;
-	background: url('../images/bg-categories-toggle.jpg') top right no-repeat;
+	background: url('../images/bg-categories-toggle.png') right 6px no-repeat;
 }
 ul.product-categories li.current-cat a{
 	text-decoration: underline;
@@ -652,6 +653,21 @@ ul.children li a{
 	font-size: 0.9em;
 	padding: 7px 5px 7px 35px;
 	width: 100%;
+}
+
+/* WOOF */
+.widget-woof .woof {
+	padding: 15px;
+}
+.woocommerce .widget_price_filter .ui-slider .ui-slider-range,
+.woocommerce .widget_price_filter .ui-slider .ui-slider-handle {
+	background-color: #D27E26 !important;
+}
+.woof .widget_price_filter .ui-slider .ui-slider-handle {
+	border: 1px solid #D27E26 !important;
+}
+.woocommerce .widget_price_filter .price_slider_wrapper .ui-widget-content {
+	background-color: #666 !important;
 }
 
 h3.widget-title{
