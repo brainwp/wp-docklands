@@ -57,6 +57,9 @@ img.alignright {
 	display: inline-block;
 	width: 100%;
 }
+h3.bg-title {
+	text-transform: capitalize;
+}
 .btn.cart {
 	background: #f3bb4e; /* Old browsers */
 	/* IE9 SVG, needs conditional override of 'filter' to 'none' */
@@ -150,7 +153,7 @@ img.alignright {
 	width: 89.5%;
 }
 #secondary {
-	margin-top: 12px;
+	margin-top: 6px;
 }
 .container {
 	/*background-color: #E9E9E9;*/
