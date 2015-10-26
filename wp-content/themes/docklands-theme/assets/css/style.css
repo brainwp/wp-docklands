@@ -528,6 +528,10 @@ body.home .slider-products .each .content .tag-price {
 	font-size: 1.4em;
 	font-weight: bold;
 }
+.each .content .preco .o-preco {
+	font-size: 1.4em;
+	font-weight: bold;
+}
 .each .content .preco .imposto-preco {
 	border-bottom: 1px solid #E6E6E6;
 	display: block;
@@ -575,6 +579,9 @@ body.home .slider-products .each .content .tag-price {
 	margin: 0 auto;
 	padding: 0 15px;
 	overflow: hidden;
+}
+.home .differential h4 {
+	font-weight: bolder;
 }
 .home .banners {
 	margin: 40px auto 20px;
@@ -1155,6 +1162,9 @@ h3.item {
 	width:32px;
 	height:32px;
 }
+.twitter-posts {
+	padding-top: 20px;
+}
 /* Footer */
 #footer {
     border-top: none;
@@ -1314,11 +1324,15 @@ h3.item {
 	margin: 10px 0;
 }
 #twitter-container li {
-	margin-bottom: 5px;
+	margin-bottom: 8px;
+	margin-top: 10px;
 }
 #twitter-container li .user {
 	color: #5dbbe1;
 	display: block;
+}
+#twitter-container li .user a {
+	color: #28A5D5;
 }
 #twitter-container .tweet a {
 	color: #666;
