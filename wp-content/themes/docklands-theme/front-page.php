@@ -69,7 +69,7 @@ get_header('shop');
 					</div><!-- content -->
 				</div><!-- video -->
 
-			</div>
+			</div><!-- full -->
 
 			<div class="col-sm-12 full">
 
@@ -82,7 +82,7 @@ get_header('shop');
 
 				<?php endif ?>
 
-			</div>
+			</div><!-- full -->
 
 			<div class="col-sm-12 full">
 

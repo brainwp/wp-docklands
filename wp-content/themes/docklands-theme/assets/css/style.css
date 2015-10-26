@@ -153,7 +153,7 @@ h3.bg-title {
 	width: 89.5%;
 }
 #secondary {
-	margin-top: 6px;
+	margin-top: 40px;
 }
 .container {
 	/*background-color: #E9E9E9;*/
@@ -855,13 +855,16 @@ h3.item {
 }
 .breadcrumb {
 	background-color: #FFF;
-	border-bottom: 1px solid #CCC;
+	border-bottom: 1px solid #DDD;
 	color: #636363;
 	float: none;
 	margin: 0 auto;
-	padding-bottom: 10px;
-	padding-left: 30px;
+	padding-bottom: 5px;
+	padding-left: 0;
 	width: 100%;
+}
+.breadcrumb a {
+	color: #777;
 }
 .single #primary .entry-title.single {
 	color: #0168AD;
