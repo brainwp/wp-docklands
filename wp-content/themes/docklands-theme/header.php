@@ -126,4 +126,3 @@
 		</header><!-- #header -->
 
 		<div id="main" class="site-main row">
-			<?php odin_breadcrumbs(); ?>

@@ -57,6 +57,9 @@ img.alignright {
 	display: inline-block;
 	width: 100%;
 }
+h3.bg-title {
+	text-transform: capitalize;
+}
 .btn.cart {
 	background: #f3bb4e; /* Old browsers */
 	/* IE9 SVG, needs conditional override of 'filter' to 'none' */
@@ -150,7 +153,7 @@ img.alignright {
 	width: 89.5%;
 }
 #secondary {
-	margin-top: 12px;
+	margin-top: 40px;
 }
 .container {
 	/*background-color: #E9E9E9;*/
@@ -528,6 +531,10 @@ body.home .slider-products .each .content .tag-price {
 	font-size: 1.4em;
 	font-weight: bold;
 }
+.each .content .preco .o-preco {
+	font-size: 1.4em;
+	font-weight: bold;
+}
 .each .content .preco .imposto-preco {
 	border-bottom: 1px solid #E6E6E6;
 	display: block;
@@ -575,6 +582,9 @@ body.home .slider-products .each .content .tag-price {
 	margin: 0 auto;
 	padding: 0 15px;
 	overflow: hidden;
+}
+.home .differential h4 {
+	font-weight: bolder;
 }
 .home .banners {
 	margin: 40px auto 20px;
@@ -845,13 +855,16 @@ h3.item {
 }
 .breadcrumb {
 	background-color: #FFF;
-	border-bottom: 1px solid #CCC;
+	border-bottom: 1px solid #DDD;
 	color: #636363;
 	float: none;
 	margin: 0 auto;
-	padding-bottom: 10px;
-	padding-left: 30px;
+	padding-bottom: 5px;
+	padding-left: 0;
 	width: 100%;
+}
+.breadcrumb a {
+	color: #777;
 }
 .single #primary .entry-title.single {
 	color: #0168AD;
@@ -1155,6 +1168,9 @@ h3.item {
 	width:32px;
 	height:32px;
 }
+.twitter-posts {
+	padding-top: 20px;
+}
 /* Footer */
 #footer {
     border-top: none;
@@ -1314,11 +1330,15 @@ h3.item {
 	margin: 10px 0;
 }
 #twitter-container li {
-	margin-bottom: 5px;
+	margin-bottom: 8px;
+	margin-top: 10px;
 }
 #twitter-container li .user {
 	color: #5dbbe1;
 	display: block;
+}
+#twitter-container li .user a {
+	color: #28A5D5;
 }
 #twitter-container .tweet a {
 	color: #666;

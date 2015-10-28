@@ -21,6 +21,9 @@ get_header();
 			<?php get_sidebar( 'left' ); ?>
 
 			<div class="col-sm-9 right">
+
+				<?php odin_breadcrumbs(); ?>
+
 				<?php
 				// WP_Query arguments
 				$args = array (
@@ -33,49 +36,11 @@ get_header();
 				<?php while ( $query->have_posts() ) : $query->the_post(); ?>
 					<?php get_template_part( 'content', 'produto' ); ?>
                 <?php endwhile; // end of the loop. ?>
+
+                <?php get_template_part( 'parts/recentrly-items' ); ?>
+
 			</div><!-- right -->
 
-			<div class="col-sm-12 full">
-
-				<div class="col-sm-6 banner">
-					<div class="content">
-						BANNER
-					</div><!-- content -->
-				</div><!-- banner -->
-
-				<div class="col-sm-6 video">
-					<div class="content">
-						VÍDEO
-					</div><!-- content -->
-				</div><!-- video -->
-
-				<?php if ( $differential = get_field( 'home_differential', 'options' ) ) : ?>
-
-					<div class="differential col-xs-12">
-						<h4>Why Docklands are unique:</h4>
-						<span><?php echo $differential; ?></span>
-					</div><!-- differential -->
-
-				<?php endif ?>
-
-				<?php if ( $banner_2 = get_field( 'home_banner_2', 'options' ) ) : ?>
-
-					<div class="banner col-sm-6">
-						<img src="<?php echo $banner_2; ?>" alt="">
-					</div><!-- banner -->
-
-				<?php endif ?>
-
-				<?php if ( $banner_3 = get_field( 'home_banner_3', 'options' ) ) : ?>
-
-					<div class="banner col-sm-6">
-						<img src="<?php echo $banner_3; ?>" alt="">
-					</div><!-- banner -->
-
-				<?php endif ?>
-
-			</div><!-- full -->
-			<?php get_template_part( 'parts/recentrly-items' ); ?>
 		</div><!-- #content -->
 	</div><!-- #primary -->
 
