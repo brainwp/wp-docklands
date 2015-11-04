@@ -26,6 +26,12 @@ get_header();
 					<?php get_template_part( 'content', 'produto' ); ?>
                 <?php endwhile; // end of the loop. ?>
                 <?php woocommerce_product_loop_end(); ?>
+                <div class="col-md-12 pagination">
+                	<?php
+                	// Page navigation.
+					odin_paging_nav();
+					?>
+                </div><!-- .col-md-12 pagination -->
 			</div><!-- right -->
 
 			<div class="col-sm-12 full">
