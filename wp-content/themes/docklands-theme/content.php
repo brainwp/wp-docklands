@@ -27,16 +27,16 @@
 	</header><!-- .entry-header -->
 
 	<?php if ( is_search() ) : ?>
-		
+
 		<div class="entry-summary">
 			<?php the_excerpt(); ?>
 		</div><!-- .entry-summary -->
 
 	<?php elseif ( is_page_template( 'page-news.php' ) ) : ?>
-		
+
 		<?php if ( has_post_thumbnail() ) : ?>
 			<div class="entry-summary col-sm-7">
-				<?php the_excerpt(); ?>
+				<?php echo brasa_continue_reading( get_the_excerpt(), get_permalink() ); ?>
 			</div><!-- .entry-summary -->
 
 			<div class="thumb col-sm-5 pull-right">
@@ -46,12 +46,12 @@
 			</div><!-- thumb -->
 		<?php else : ?>
 			<div class="entry-summary col-sm-12">
-				<?php the_excerpt(); ?>
+				<?php echo brasa_continue_reading( get_the_excerpt(), get_permalink() );?>
 			</div><!-- .entry-summary -->
 		<?php endif; ?>
 
 	<?php else : ?>
-		
+
 		<div class="entry-content">
 			<?php
 				the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'odin' ) );
@@ -63,7 +63,7 @@
 				) );
 			?>
 		</div><!-- .entry-content -->
-		
+
 	<?php endif; ?>
 
 	<?php if ( 'services' != get_post_type() ) : ?>

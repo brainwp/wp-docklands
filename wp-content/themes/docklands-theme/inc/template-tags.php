@@ -111,3 +111,7 @@ if ( ! function_exists( 'brasa_news_pagination' ) ) {
 	    ) );
 	}
 }
+
+function brasa_continue_reading( $text, $link ) {
+	return $text . ' ' . sprintf( '<a href="%s" class="continue-reading">%s</a>', $link, __('Continue Reading >>>', 'odin'));
+}

@@ -767,7 +767,7 @@ ul.children li a{
 	font-weight: lighter;
 }
 .woof_list input[type="checkbox"] {
-	cursor: pointer;	
+	cursor: pointer;
 }
 h3.widget-title{
 	font-size: 18px;
@@ -1017,6 +1017,9 @@ h3.item {
 }
 .page-template-page-news .entry-title{
 	font-weight: bold;
+}
+.continue-reading {
+	color:#D87F23 !important;
 }
 #searchform #s{
 	border:0;
