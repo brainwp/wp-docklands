@@ -535,6 +535,9 @@ body.home .slider-products .each .content .tag-price {
 	font-size: 1.4em;
 	font-weight: bold;
 }
+.each .content .preco .o-preco .wc-symbol{
+	font-size:0.8em;
+}
 .each .content .preco .imposto-preco {
 	border-bottom: 1px solid #E6E6E6;
 	display: block;
