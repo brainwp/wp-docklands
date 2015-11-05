@@ -16,7 +16,7 @@ global $is_advanced_search;
 
 		$is_last_child = 0;
 
-		if ( !is_post_type_archive( 'product' ) && is_tax() ) {
+		if ( !is_post_type_archive( 'product' ) && is_tax() && ! is_singular() ) {
 
 			$queried = get_queried_object();
 
@@ -40,8 +40,9 @@ global $is_advanced_search;
 		}
 
 		//echo $is_last_child;
-
-		if ( $is_last_child == 1 || is_woocommerce() ) {
+		if ( is_singular( 'product' ) ) {
+			dynamic_sidebar( 'left-sidebar' );
+		} elseif ( $is_last_child == 1 || is_woocommerce() ) {
 			dynamic_sidebar( 'left-sidebar-filters' );
 		} elseif ( is_page_template( 'page-advanced-search.php' ) || is_search() || $is_advanced_search == true || is_tax( 'product_cat' ) && $is_last_child != 0 ) {
 			dynamic_sidebar( 'left-sidebar-filters' );
