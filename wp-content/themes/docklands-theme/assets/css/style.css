@@ -428,6 +428,7 @@ h3.bg-title {
 	padding: 15px 15px 10px;
 }
 body.home .slider-products .each .content .desc {
+	max-width: 75%;
 	padding-left: 0;
 }
 .slider-products .each .content .tag-price {
