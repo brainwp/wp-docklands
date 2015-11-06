@@ -27,8 +27,9 @@ get_header();
 				<?php
 				// WP_Query arguments
 				$args = array (
-					'post_type'              => 'product',
-					'posts_per_page'         => get_option('posts_per_page' ),
+					'post_type'			=> 'product',
+					'posts_per_page'	=> 9,
+					'paged'				=> get_query_var( 'paged', 1 )
 					);
 				// The Query
 				$query = new WP_Query( $args );
@@ -36,9 +37,15 @@ get_header();
 				<?php while ( $query->have_posts() ) : $query->the_post(); ?>
 					<?php get_template_part( 'content', 'produto' ); ?>
                 <?php endwhile; // end of the loop. ?>
+                <div class="col-md-12 pagination">
+                	<?php
+                	// Page navigation.
+					echo odin_pagination( 2, 1, false, $query );
+					?>
+                </div><!-- .col-md-12 pagination -->
+
 
                 <?php get_template_part( 'parts/recentrly-items' ); ?>
-
 			</div><!-- right -->
 
 		</div><!-- #content -->
