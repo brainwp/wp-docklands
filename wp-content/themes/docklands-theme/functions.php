@@ -476,4 +476,12 @@ require_once get_template_directory() . '/inc/options.php';
  * role seller
  */
 require_once get_template_directory() . '/inc/role-seller.php';
+/**
+ * filter reset link
+ */
+function docklands_woof_reset_link( $link ) {
+	return home_url( 'advanced-search' );
+}
+add_filter( 'woof_reset_btn_link', 'docklands_woof_reset_link' );
 ini_set('error_reporting', E_ALL);
+
