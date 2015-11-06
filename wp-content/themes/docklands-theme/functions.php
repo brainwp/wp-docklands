@@ -480,6 +480,11 @@ require_once get_template_directory() . '/inc/role-seller.php';
  * filter reset link
  */
 function docklands_woof_reset_link( $link ) {
+	global $wp_query;
+	if ( isset( $wp_query->query['product_cat'] ) ) {
+		$term = get_term_by( 'slug', $wp_query->query_vars['product_cat'], 'product_cat' );
+		return get_term_link( $term );
+	}
 	return home_url( 'advanced-search' );
 }
 add_filter( 'woof_reset_btn_link', 'docklands_woof_reset_link' );
