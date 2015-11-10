@@ -33,8 +33,11 @@ $product = $_pf->get_product( get_the_ID() );
 										<input name="add-to-cart" value="<?php echo get_the_ID(); ?>" type="hidden">
 										<?php if ( $product->product_type == 'variable' ) : ?>
 											<?php $variable = new WC_Product_Variable( $product );?>
-											<?php //var_dump( $variable->get_variation_default_attributes() );?>
-											<input type="hidden" name="variation_id" value="" />
+											<?php $variations = $variable->get_available_variations();?>
+											<input type="hidden" name="variation_id" value="<?php echo $variations[0]['variation_id'];?>" />
+											<?php foreach ( $variations[0]['attributes'] as $key => $value ) : ?>
+ 												<input type="hidden" name="<?php echo esc_attr( $key );?>" value="<?php echo esc_attr( $value );?>" />
+											<?php endforeach;?>
 										<?php endif;?>
 										<button type="submit" class="btn cart"><?php _e('Add to cart','odin'); ?></button>
 									</form>
