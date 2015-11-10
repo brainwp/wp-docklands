@@ -1512,6 +1512,70 @@ h3.item {
 .woocommerce div.product form.cart div.quantity{
 	display:none;
 }
+
+/* Up Sells */
+.upsells.products {
+	border: 1px solid #CCC;
+	display: block;
+	overflow: hidden;
+	width: 100%;
+	clear: both;
+}
+.upsells.products .products {
+	margin-bottom: 0;
+	position: relative;
+}
+.upsells-arrow {
+	background-color: #F5F3F1;
+	height: 100%;
+	overflow: hidden;
+	position: absolute;
+	width: 35px;
+	z-index: 9;
+}
+.upsells-arrow.left {
+	background: url( '../images/upsells-arrow-left.jpg' ) center center no-repeat #F5F3F1;
+	left: 0;
+}
+.upsells-arrow.right {
+	background: url( '../images/upsells-arrow-right.jpg' ) center center no-repeat #F5F3F1;
+	right: 0;
+}
+.upsells.products > h3 {
+	border-bottom: 1px solid #CCC;
+	color: #575759 !important;
+	font-size: 15px;
+	line-height: 1 !important;
+	margin-bottom: 0;
+	margin-top: 5px;
+	padding: 10px 15px;
+	text-decoration: none !important;
+	display: block;
+	text-transform: capitalize;
+	width: 100%;
+}
+.upsells.products .product {
+	margin-top: 15px !important;
+}
+.upsells.products .product a h3 {
+	color: #575759;
+	line-height: 1.5;
+	text-transform: capitalize;
+}
+.upsells.products .product img {
+	border: 1px solid #58585A;
+	border-radius: 2px;
+}
+.upsells.products .product a.view {
+	color: #D27E26;
+}
+.upsells.products .product a.view strong {
+	display: inline-block;
+}
+.upsells.products .product .add_to_cart_button {
+	display: none;
+}
+
 /* Archive Services */
 body.post-type-archive-services .slider-home .slick-prev,
 body.post-type-archive-services .slider-home .slick-next{

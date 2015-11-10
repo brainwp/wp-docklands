@@ -490,3 +490,7 @@ function docklands_woof_reset_link( $link ) {
 add_filter( 'woof_reset_btn_link', 'docklands_woof_reset_link' );
 ini_set('error_reporting', E_ALL);
 
+function docklands_change_button() {
+	echo '<a class="view" href="' . get_permalink() . '">' . __( 'View Products', 'woocommerce' ) . ' <strong>></strong></a>';
+}
+add_action( 'woocommerce_after_upsell_shop_loop_item_title', 'docklands_change_button' );
