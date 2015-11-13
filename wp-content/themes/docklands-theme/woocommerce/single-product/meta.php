@@ -28,19 +28,6 @@ $tag_count = sizeof( get_the_terms( $post->ID, 'product_tag' ) );
 	<?php echo $product->get_tags( ', ', '<span class="tagged_as">' . _n( 'Tag:', 'Tags:', $tag_count, 'woocommerce' ) . ' ', '</span>' ); ?>
 
 	<div class="col-md-12">
-		<?php $terms = get_the_terms( $post->ID, 'color' ); ?>
-		<?php if ( $terms && ! is_wp_error( $terms ) ) : ?>
-			<span class="tagged_as">
-				<?php _e('Colors:&nbsp;', 'odin');?>
-				<?php foreach ( $terms as $term ) : ?>
-					<?php if($color_img = get_field('color_img', $term)):?>
-						<a href="<?php echo get_term_link( $term->term_id, 'color' );?>">
-							<img class="color-img" src="<?php echo $color_img['sizes']['thumbnail'];?>">
-						</a>
-			    	<?php endif;?>
-				<?php endforeach; ?>
-			</span>
-		<?php endif;?>
 		<?php $terms = get_the_terms( $post->ID, 'tax_product_type' ); ?>
 		<?php if ( $terms && ! is_wp_error( $terms ) ) : ?>
 	    	<span class="tagged_as">
