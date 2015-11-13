@@ -15,7 +15,8 @@ global $product, $post;
 <?php do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 
 <form class="variations_form cart" method="post" enctype='multipart/form-data' data-product_id="<?php echo $post->ID; ?>" data-product_variations="<?php echo esc_attr( json_encode( $available_variations ) ) ?>">
-	<?php if ( ! empty( $available_variations ) ) : ?>
+	<?php $get_available_variations = $product->get_available_variations();?>
+	<?php if ( ! empty( $available_variations ) || ! empty( $get_available_variations ) ) : ?>
 		<h4 class="variable-options"><?php _e('Available Options','odin'); ?></h4>
 		<table class="variations" cellspacing="0">
 			<tbody>
