@@ -1513,6 +1513,46 @@ h3.item {
 	display:none;
 }
 
+/* Cart */
+body.woocommerce-cart .woocommerce table.shop_table {
+}
+body.woocommerce-cart table.cart img {
+	width: 50px !important;
+}
+body.woocommerce-cart table.cart input.checkout-button {
+	display: none;
+}
+body.woocommerce-cart table.cart input[type="submit"].button {
+	padding-bottom: 9px;
+	padding-top: 9px;
+	margin-right: 10px;
+	margin-top: 4px;
+}
+
+/* Coupon in Cart */
+body.woocommerce-cart .woocommerce form.half {
+	float: left;
+	width: 50% !important;
+}
+body.woocommerce-cart .woocommerce table.shop_table .coupon {
+	display: block;
+	width: 100%;
+}
+body.woocommerce-cart .woocommerce table.shop_table .coupon .input-text {
+	padding: 8px !important;
+	width: 73% !important;
+}
+body.woocommerce-cart .woocommerce table.shop_table .coupon .button {
+	margin-top: 0;
+	margin-right: 0;
+	width: 25% !important;
+}
+
+.woocommerce .cart-collaterals, .woocommerce-page .cart-collaterals {
+	float: right;
+	width: 48% !important;
+}
+
 /* Up Sells */
 .upsells.products {
 	border: 1px solid #CCC;
