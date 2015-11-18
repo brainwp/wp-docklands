@@ -852,8 +852,12 @@ h3.item {
 	width: 100%;
 }
 /* News or Blog */
-.single h2.bg-title, .page h2.bg-title {
+.single h2.bg-title,
+.page h2.bg-title,
+.single h3.bg-title {
 	color: #48484A;
+	font-size: 1.2em;
+	font-weight: bold;
 	text-transform: capitalize;
 	margin-bottom: 20px;
 }
@@ -1517,6 +1521,7 @@ h3.item {
 body.woocommerce-cart .woocommerce table.shop_table {
 }
 body.woocommerce-cart table.cart img {
+	margin-bottom: 0;
 	width: 50px !important;
 }
 body.woocommerce-cart table.cart input.checkout-button {
@@ -1527,6 +1532,21 @@ body.woocommerce-cart table.cart input[type="submit"].button {
 	padding-top: 9px;
 	margin-right: 10px;
 	margin-top: 4px;
+}
+body.woocommerce-cart .cart_totals .bg-title,
+body.woocommerce-cart .col-md-9 .bg-title {
+	color: #48484A;
+	font-size: 1.2em;
+	font-weight: bold;
+	margin-top: 0;
+}
+body.woocommerce-cart .entry-content table > thead > tr > th {
+	border-bottom: 0 !important;
+}
+body.woocommerce-cart .col-md-9 .bg-title {
+	margin-top: 60px;
+
+
 }
 
 /* Coupon in Cart */

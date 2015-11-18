@@ -449,6 +449,10 @@ require_once get_template_directory() . '/inc/template-tags.php';
  */
 require_once get_template_directory() . '/inc/widgets.php';
 /**
+ * Functions to Woocommerce.
+ */
+require_once get_template_directory() . '/inc/functions-woo.php';
+/**
  * Advanced Custom Fields, Addons and Fields.
  */
 require_once get_template_directory() . '/inc/advanced-custom-fields/acf.php';

@@ -23,6 +23,12 @@ get_header();
 						// Include the page content template.
 						get_template_part( 'content', 'page' );
 
+						get_sidebar( 'left' );
+
+						echo '<div class="col-md-9">';
+						do_action( 'woocommerce_end_cart' );
+						echo '</div>';
+
 					endwhile;
 				?>
 
