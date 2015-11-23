@@ -1512,7 +1512,19 @@ h3.item {
 .woocommerce div.product form.cart div.quantity{
 	display:none;
 }
+@keyframes warn-animate {
+    from {
+    	background-color: rgba( 250, 255, 127, 0.7);
+    }
 
+    to {
+    	background-color: #FFF;
+    }
+}
+.woocommerce div.product form.cart.warn-animate {
+	animation-name: warn-animate;
+    animation-duration: 4s;
+}
 /* Up Sells */
 .upsells.products {
 	border: 1px solid #CCC;
