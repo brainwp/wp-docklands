@@ -46,6 +46,8 @@ global $is_advanced_search;
 			dynamic_sidebar( 'left-sidebar-filters' );
 		} elseif ( is_page_template( 'page-advanced-search.php' ) || is_search() || $is_advanced_search == true || is_tax( 'product_cat' ) && $is_last_child != 0 ) {
 			dynamic_sidebar( 'left-sidebar-filters' );
+		} elseif ( is_cart() || is_checkout() ) {
+			dynamic_sidebar( 'left-sidebar-cart' );
 		} else {
 			dynamic_sidebar( 'left-sidebar' );
 		}
