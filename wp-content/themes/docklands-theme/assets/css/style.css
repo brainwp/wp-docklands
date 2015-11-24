@@ -1516,6 +1516,14 @@ h3.item {
 .woocommerce div.product form.cart div.quantity{
 	display:none;
 }
+@keyframes warn-animate {
+    from {
+    	background-color: rgba( 250, 255, 127, 0.7);
+    }
+    to {
+    	background-color: #FFF;
+    }
+}
 
 /* Cart */
 body.woocommerce-cart .woocommerce table.shop_table {
@@ -1545,8 +1553,6 @@ body.woocommerce-cart .entry-content table > thead > tr > th {
 }
 body.woocommerce-cart .col-md-9 .bg-title {
 	margin-top: 60px;
-
-
 }
 
 /* Coupon in Cart */
@@ -1571,6 +1577,10 @@ body.woocommerce-cart .woocommerce table.shop_table .coupon .button {
 .woocommerce .cart-collaterals, .woocommerce-page .cart-collaterals {
 	float: right;
 	width: 48% !important;
+}
+.woocommerce div.product form.cart.warn-animate {
+	animation-name: warn-animate;
+    animation-duration: 4s;
 }
 
 /* Up Sells */

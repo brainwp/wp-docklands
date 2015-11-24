@@ -111,9 +111,30 @@ jQuery(document).ready(function($) {
 	if($('body').hasClass('single-product')){
 		$('.type-product form.cart input[name=add-to-cart]').val(product_info.id);
 	}
+
 	$('#odin-add-to-cart').on('click',function(e){
-		$('.type-product form').submit();
+		e.preventDefault();
+		if ( $('.variations_form').length > 0 ) {
+			if ( $( '#input-variation' ).val() != '' ) {
+				$('.type-product form').submit();
+			}
+			else {
+				$( '.variations_form .variable-options' ).html( $( '.variations_form .variable-options' ).attr('data-on-send') );
+				$( '.variations_form' ).addClass( 'warn-animate' );
+				$('html,body').animate( {
+					scrollTop: $( 'div.type-product' ).offset().top
+				},400);
+
+				setTimeout( function(){
+					$( '.variations_form' ).removeClass( 'warn-animate' );
+				}, 4000);
+			}
+		}
+		else {
+			$('.type-product form').submit();
+		}
 	});
+
 	$('#slider-cat').slick({
 		infinite: true,
 		slidesToShow: 3,

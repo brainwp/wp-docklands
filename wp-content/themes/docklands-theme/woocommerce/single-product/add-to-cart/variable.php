@@ -17,7 +17,7 @@ global $product, $post;
 <form class="variations_form cart" method="post" enctype='multipart/form-data' data-product_id="<?php echo $post->ID; ?>" data-product_variations="<?php echo esc_attr( json_encode( $available_variations ) ) ?>">
 	<?php $get_available_variations = $product->get_available_variations();?>
 	<?php if ( ! empty( $available_variations ) || ! empty( $get_available_variations ) ) : ?>
-		<h4 class="variable-options"><?php _e('Available Options','odin'); ?></h4>
+		<h4 class="variable-options" data-on-send="<?php _e('Select Available Options','odin'); ?>"><?php _e('Available Options','odin'); ?></h4>
 		<table class="variations" cellspacing="0">
 			<tbody>
 				<?php $loop = 0; foreach ( $attributes as $name => $options ) : $loop++; ?>
@@ -80,7 +80,7 @@ global $product, $post;
 
 			<input type="hidden" name="add-to-cart" value="<?php echo esc_attr( $post->ID ); ?>" />
 			<input type="hidden" name="product_id" value="<?php echo esc_attr( $post->ID ); ?>" />
-			<input type="hidden" name="variation_id" value="" />
+			<input type="hidden" id="input-variation" name="variation_id" value="" />
 
 			<?php do_action( 'woocommerce_after_single_variation' ); ?>
 		</div>
