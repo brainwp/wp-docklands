@@ -852,23 +852,28 @@ h3.item {
 	width: 100%;
 }
 /* News or Blog */
-.single h2.bg-title, .page h2.bg-title {
+.single h2.bg-title,
+.page h2.bg-title,
+.single h3.bg-title {
 	color: #48484A;
+	font-size: 1.2em;
+	font-weight: bold;
 	text-transform: capitalize;
 	margin-bottom: 20px;
 }
 .breadcrumb {
 	background-color: #FFF;
 	border-bottom: 1px solid #DDD;
-	color: #636363;
+	color: #777;
 	float: none;
+	font-size: 0.85em;
 	margin: 0 auto;
 	padding-bottom: 5px;
 	padding-left: 0;
 	width: 100%;
 }
 .breadcrumb a {
-	color: #777;
+	color: #888;
 }
 .single #primary .entry-title.single {
 	color: #0168AD;
@@ -963,6 +968,10 @@ h3.item {
 	display: inline-block;
 	text-transform: capitalize;
 }
+.single-product .bg-title-news {
+	font-weight: 600;
+}
+
 /* Page Template Page Mews */
 .page-template-page-news .entry-summary {
 	padding-left: 0
@@ -1516,15 +1525,69 @@ h3.item {
     from {
     	background-color: rgba( 250, 255, 127, 0.7);
     }
-
     to {
     	background-color: #FFF;
     }
+}
+
+/* Cart */
+body.woocommerce-cart .woocommerce table.shop_table {
+}
+body.woocommerce-cart table.cart img {
+	margin-bottom: 0;
+	width: 50px !important;
+}
+body.woocommerce-cart table.cart input.checkout-button {
+	display: none;
+}
+body.woocommerce-cart table.cart input[type="submit"].button {
+	padding-bottom: 9px;
+	padding-top: 9px;
+	margin-right: 10px;
+	margin-top: 4px;
+}
+body.woocommerce-cart .cart_totals .bg-title,
+body.woocommerce-cart .col-md-9 .bg-title {
+	color: #48484A;
+	font-size: 1.2em;
+	font-weight: bold;
+	margin-top: 0;
+}
+body.woocommerce-cart .entry-content table > thead > tr > th {
+	border-bottom: 0 !important;
+}
+body.woocommerce-cart .col-md-9 .bg-title {
+	margin-top: 60px;
+}
+
+/* Coupon in Cart */
+body.woocommerce-cart .woocommerce form.half {
+	float: left;
+	width: 50% !important;
+}
+body.woocommerce-cart .woocommerce table.shop_table .coupon {
+	display: block;
+	width: 100%;
+}
+body.woocommerce-cart .woocommerce table.shop_table .coupon .input-text {
+	padding: 8px !important;
+	width: 73% !important;
+}
+body.woocommerce-cart .woocommerce table.shop_table .coupon .button {
+	margin-top: 0;
+	margin-right: 0;
+	width: 25% !important;
+}
+
+.woocommerce .cart-collaterals, .woocommerce-page .cart-collaterals {
+	float: right;
+	width: 48% !important;
 }
 .woocommerce div.product form.cart.warn-animate {
 	animation-name: warn-animate;
     animation-duration: 4s;
 }
+
 /* Up Sells */
 .upsells.products {
 	border: 1px solid #CCC;

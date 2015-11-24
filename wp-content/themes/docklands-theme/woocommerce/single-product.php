@@ -20,7 +20,7 @@ get_header();
 
 			<div class="col-sm-9 right">
 
-				<h2 class="bg-title"><?php _e('Storages','odin'); ?></h2>
+				<?php odin_breadcrumbs(); ?>
 
 				<?php
 				/**
@@ -41,31 +41,6 @@ get_header();
                 */
                 do_action( 'woocommerce_after_main_content' );
                 ?>
-
-				<h3 class="bg-title">New Arrivals</h3>
-
-				<div class="col-sm-12 arrivals">
-					<?php
-					// WP_Query arguments
-					$args = array (
-						'post_type'              => 'product',
-						'posts_per_page'         => '3',
-					);
-					// The Query
-					$query = new WP_Query( $args );
-					?>
-					<?php if ( $query->have_posts() ) : ?>
-						<?php while ( $query->have_posts() ): $query->the_post(); ?>
-							<?php get_template_part('content','produto'); ?>
-						<?php endwhile; ?>
-					<?php endif; ?>
-					<?php wp_reset_postdata(); ?>
-
-				</div><!-- arrivals -->
-
-				<div class="col-md-12 full">
-					<?php get_template_part( 'parts/recentrly-items' ); ?>
-				</div><!-- full -->
 
 			</div><!-- right -->
 
