@@ -20,7 +20,7 @@ get_header();
 
 			<div class="col-sm-9 right">
 
-				<h2 class="bg-title"><?php _e('Storages','odin'); ?></h2>
+				<?php odin_breadcrumbs(); ?>
 
 				<?php
 				/**

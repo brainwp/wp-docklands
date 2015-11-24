@@ -864,15 +864,16 @@ h3.item {
 .breadcrumb {
 	background-color: #FFF;
 	border-bottom: 1px solid #DDD;
-	color: #636363;
+	color: #777;
 	float: none;
+	font-size: 0.85em;
 	margin: 0 auto;
 	padding-bottom: 5px;
 	padding-left: 0;
 	width: 100%;
 }
 .breadcrumb a {
-	color: #777;
+	color: #888;
 }
 .single #primary .entry-title.single {
 	color: #0168AD;
@@ -967,6 +968,10 @@ h3.item {
 	display: inline-block;
 	text-transform: capitalize;
 }
+.single-product .bg-title-news {
+	font-weight: 600;
+}
+
 /* Page Template Page Mews */
 .page-template-page-news .entry-summary {
 	padding-left: 0
