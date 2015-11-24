@@ -212,6 +212,14 @@ jQuery(document).ready(function($) {
 		}
 	});
 
+	//* upsells products slider */
+	$('.upsells-slider').slick({
+		infinite: true,
+		slidesToShow: 4,
+		slidesToScroll: 1,
+		speed: 900,
+	});
+
 });
 (function($) {
 

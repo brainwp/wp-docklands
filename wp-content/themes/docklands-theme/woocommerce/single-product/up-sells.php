@@ -38,18 +38,14 @@ if ( $products->have_posts() ) : ?>
 
 		<h3><?php _e( 'Matching Products', 'woocommerce' ) ?></h3>
 
-		<?php woocommerce_product_loop_start(); ?>
-
-		<div class="upsells-arrow left"></div>
-		<div class="upsells-arrow right"></div>
-
+		<div class="upsells-slider">
 			<?php while ( $products->have_posts() ) : $products->the_post(); ?>
 
 				<?php wc_get_template_part( 'content', 'product-upsell' ); ?>
 
 			<?php endwhile; // end of the loop. ?>
 
-		<?php woocommerce_product_loop_end(); ?>
+		</div><!-- .upsells-slider -->
 
 	</div>
 

@@ -1587,7 +1587,29 @@ h3.item {
 .upsells.products .product .add_to_cart_button {
 	display: none;
 }
-
+.woocommerce ul.products li.product, .woocommerce-page ul.products li.product {
+	margin: 0 !important;
+}
+.woocommerce .products ul, .woocommerce ul.products {
+	padding: 0 !important;
+}
+.upsells.products .upsells-slider {
+	padding-left:10px;
+	border-left:30px solid #F5F3F1;
+	border-right:30px solid #F5F3F1;
+}
+.upsells-slider button::before {
+	content: '';
+}
+.upsells-slider .slick-prev {
+	background: url( '../images/upsells-arrow-left.jpg' ) center center no-repeat;
+}
+.upsells-slider .slick-next {
+	background: url( '../images/upsells-arrow-right.jpg' ) center center no-repeat;
+}
+.upsells-slider {
+	margin-bottom:0 !important;
+}
 /* Archive Services */
 body.post-type-archive-services .slider-home .slick-prev,
 body.post-type-archive-services .slider-home .slick-next{
