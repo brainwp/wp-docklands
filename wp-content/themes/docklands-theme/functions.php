@@ -509,3 +509,15 @@ function docklands_change_button() {
 	echo '<a class="view" href="' . get_permalink() . '">' . __( 'View Products', 'woocommerce' ) . ' <strong>></strong></a>';
 }
 add_action( 'woocommerce_after_upsell_shop_loop_item_title', 'docklands_change_button' );
+
+function docklands_login_logo() {
+    echo '<style type="text/css">
+        #login h1 a {
+        	background: url('.get_bloginfo( 'template_directory' ).'/assets/images/logo-docklands.png) center center no-repeat !important;
+        	background-size: 100%;
+        	height: 150px !important;
+        	width: 100% !important;
+        }
+    </style>';
+}
+add_action('login_head', 'docklands_login_logo', 9999999);
