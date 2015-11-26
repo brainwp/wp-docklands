@@ -2038,3 +2038,8 @@ div.sharedaddy h3.sd-title{
 @media ( max-width: 500px ) {
 
 }
+
+/* search form error */
+.form-group-error {
+	padding:0;
+}
