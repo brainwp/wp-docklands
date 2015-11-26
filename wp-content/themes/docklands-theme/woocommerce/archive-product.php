@@ -22,6 +22,7 @@ get_header();
 			<div class="col-sm-9 right">
 				<?php woocommerce_product_loop_start(); ?>
 				<?php woocommerce_product_subcategories(); ?>
+				<?php if ( have_posts() ) : ?>
 				<?php while ( have_posts() ) : the_post(); ?>
 					<?php get_template_part( 'content', 'produto' ); ?>
                 <?php endwhile; // end of the loop. ?>
@@ -32,6 +33,9 @@ get_header();
 					odin_paging_nav();
 					?>
                 </div><!-- .col-md-12 pagination -->
+            	<?php else : ?>
+            		<?php get_template_part( 'content', 'none' );?>
+            	<?php endif;?>
 			</div><!-- right -->
 
 			<div class="col-sm-12 full">
