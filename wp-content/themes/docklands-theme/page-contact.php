@@ -18,6 +18,8 @@ get_header();
 
 			<div class="col-sm-9 right">
 
+			<?php odin_breadcrumbs(); ?>
+
 			<?php
 				// Start the Loop.
 				while ( have_posts() ) : the_post();

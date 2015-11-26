@@ -20,6 +20,8 @@ get_header();
 
 			<div class="col-sm-9 right">
 
+				<?php odin_breadcrumbs(); ?>
+
 				<div class="col-sm-12">
 					<h3 class="bg-title"><?php _e( 'Services', 'odin' ); ?></h3>
 				</div>
