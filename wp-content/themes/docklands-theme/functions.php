@@ -521,3 +521,13 @@ function docklands_login_logo() {
     </style>';
 }
 add_action('login_head', 'docklands_login_logo', 9999999);
+
+/**
+ * Changes the redirect URL for the Return To Shop button in the cart.
+ *
+ * @return string
+ */
+function brasa_wc_return_to_shop_btn() {
+	return home_url();
+}
+add_filter( 'woocommerce_return_to_shop_redirect', 'brasa_wc_return_to_shop_btn' );
