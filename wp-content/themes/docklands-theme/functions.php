@@ -531,3 +531,9 @@ function brasa_wc_return_to_shop_btn() {
 	return home_url();
 }
 add_filter( 'woocommerce_return_to_shop_redirect', 'brasa_wc_return_to_shop_btn' );
+
+function brasa_current_term() {
+	global $wp_query;
+	$term =	$wp_query->queried_object;
+	return $term->name;
+}

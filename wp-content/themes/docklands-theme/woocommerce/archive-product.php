@@ -20,13 +20,21 @@ get_header();
 			<?php get_sidebar( 'left' ); ?>
 
 			<div class="col-sm-9 right">
-				<?php woocommerce_product_loop_start(); ?>
-				<?php woocommerce_product_subcategories(); ?>
-				<?php if ( have_posts() ) : ?>
-				<?php while ( have_posts() ) : the_post(); ?>
-					<?php get_template_part( 'content', 'produto' ); ?>
-                <?php endwhile; // end of the loop. ?>
-                <?php woocommerce_product_loop_end(); ?>
+
+				<?php odin_breadcrumbs(); ?>
+
+				<h3 class="bg-title"><?php echo brasa_current_term(); ?></h3>
+
+				<div class="row">
+					<?php woocommerce_product_loop_start(); ?>
+					<?php woocommerce_product_subcategories(); ?>
+					<?php if ( have_posts() ) : ?>
+					<?php while ( have_posts() ) : the_post(); ?>
+						<?php get_template_part( 'content', 'produto' ); ?>
+	                <?php endwhile; // end of the loop. ?>
+	                <?php woocommerce_product_loop_end(); ?>
+                </div><!-- row -->
+
                 <div class="col-md-12 pagination">
                 	<?php
                 	// Page navigation.
