@@ -1330,10 +1330,10 @@ h3.item {
 }
 .btn.back-top {
 	background: url('../images/btn-top.jpg') center center no-repeat #292C2B;
-	bottom: 30px;
+	bottom: 60px;
 	height: 30px;
 	position: fixed;
-	right: 35px;
+	right: 60px;
 	width: 70px;
 }
 #secondary ul.children{
