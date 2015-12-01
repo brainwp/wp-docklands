@@ -1765,6 +1765,91 @@ body.post-type-archive-services .slider-home .slick-next{
 .post-type-archive-services .each h3:hover {
 	color: #000;
 }
+/* Cases */
+body.post-type-archive-cases .slider-home .slick-prev,
+body.post-type-archive-cases .slider-home .slick-next{
+	bottom:20px;
+	right:20px !important;
+	left:inherit;
+	top:inherit;
+}
+body.post-type-archive-cases .slider-home .slick-prev{
+	margin-right: 40px
+}
+body.post-type-archive-cases .slider-home .slick-next{
+	margin-right:20px;
+}
+.cases{
+	text-decoration: none !important;
+}
+.cases img{
+	width:100%;
+}
+.cases .entry-content img {
+	width: auto;
+}
+.cases.each {
+	height: 320px;
+	margin-bottom: 20px;
+	overflow: hidden;
+	position: relative;
+}
+.cases.each .thumb {
+	background-color: #F9F9F9;
+	height: 100%;
+	position: absolute;
+	top: 0;
+}
+.cases.each .thumb {
+	width: 100%;
+}
+.cases.each .desc {
+	background-color: #F1F1F1;
+	bottom: 0;
+	height: auto;
+	overflow: hidden;
+	padding-top: 15px;
+	position: absolute;
+	width: 100%;
+}
+.cases.each .desc h3 {
+	text-transform: capitalize;
+	margin-left: 15px;
+	margin-right: 15px;
+	margin-top: 5px;
+}
+.cases.each .desc .product-info {
+	margin-bottom: 15px;
+	margin-left: 15px;
+	margin-right: 15px;
+}
+.post-type-archive-cases h3.bg-title {
+	color: #48484A;
+	text-transform: capitalize;
+	margin-bottom: 20px;
+	margin-top: 27px;
+}
+.cases #primary .entry-title.single {
+	color: #0168AD;
+	font-size: 2em;
+	text-transform: uppercase !important;
+}
+.cases h3{
+	color:black;
+	font-size:16px;
+}
+.cases .product-info{
+	font-size:16px;
+	display:inline-block;
+	width:100%;
+	color:#D47616;
+}
+.slider-home.cases .slick-dots {
+    display: none !important;
+}
+#slider-slider-cases {
+	padding-right: 0;
+}
 /* Pages */
 body.page h1 {
 	text-transform: capitalize;
