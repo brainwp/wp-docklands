@@ -10,11 +10,19 @@
 ?>
 
 <div id="secondary" class="col-md-3" role="complementary">
+	<?php if ( is_singular( 'services' ) ) : ?>
+		<?php get_search_form( true );?>
+	<?php endif;?>
 	<?php
-		if ( ! dynamic_sidebar( 'main-sidebar' ) ) {
-			the_widget( 'WP_Widget_Recent_Posts', array( 'number' => 10 ) );
-			the_widget( 'WP_Widget_Archives', array( 'count' => 0, 'dropdown' => 1 ) );
-			the_widget( 'WP_Widget_Tag_Cloud' );
+		if ( ! is_singular( 'services' ) ) {
+			if ( ! dynamic_sidebar( 'main-sidebar' ) ) {
+				the_widget( 'WP_Widget_Recent_Posts', array( 'number' => 10 ) );
+				the_widget( 'WP_Widget_Archives', array( 'count' => 0, 'dropdown' => 1 ) );
+				the_widget( 'WP_Widget_Tag_Cloud' );
+			}
+		}
+		else {
+			dynamic_sidebar( 'services-sidebar' );
 		}
 	?>
 </div><!-- #secondary -->

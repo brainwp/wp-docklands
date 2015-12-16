@@ -39,6 +39,8 @@ get_header();
 					<?php endif; ?>
 
 				</div><!-- arrivals -->
+				<?php get_template_part( 'parts/recentrly-items' ); ?>
+
 			</div><!-- right -->
 
 		</div><!-- #content -->

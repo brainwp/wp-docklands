@@ -66,7 +66,6 @@
 
 	<?php endif; ?>
 
-	<?php if ( 'services' != get_post_type() ) : ?>
 		<footer class="entry-meta">
 			<?php if ( in_array( 'category', get_object_taxonomies( get_post_type() ) ) ) : ?>
 				<span class="cat-links"><?php echo __( 'Posted in:', 'odin' ) . ' ' . get_the_category_list( _x( ', ', 'Used between list items, there is a space after the comma.', 'odin' ) ); ?></span>
@@ -78,6 +77,5 @@
 
 				<p><?php _e( 'Posted by ', 'odin' );?><?php the_author_posts_link(); ?></p>
 		</footer>
-	<?php endif ?>
 
 </article><!-- #post-## -->

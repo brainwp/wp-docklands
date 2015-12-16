@@ -11,7 +11,7 @@ get_header(); ?>
 	<div class="col-sm-12">
 
 		<?php odin_breadcrumbs(); ?>
-		
+
 		<h2 class="bg-title"><?php _e( 'News', 'odin' ); ?></h2>
 	</div>
 

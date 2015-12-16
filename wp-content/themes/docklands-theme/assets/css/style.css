@@ -1702,19 +1702,19 @@ body.post-type-archive-services .slider-home .slick-next{
 	width: auto;
 }
 .services.each {
-	height: 320px;
+	height: 210px;
 	margin-bottom: 20px;
 	overflow: hidden;
 	position: relative;
 }
 .services.each .thumb {
-	background-color: #F9F9F9;
+	background-color: #FFF;
 	height: 100%;
 	position: absolute;
 	top: 0;
 }
 .services.each .desc {
-	background-color: #F1F1F1;
+	background-color: #FFF;
 	bottom: 0;
 	height: auto;
 	overflow: hidden;
@@ -1737,6 +1737,7 @@ body.post-type-archive-services .slider-home .slick-next{
 	text-transform: capitalize;
 	margin-bottom: 20px;
 	margin-top: 27px;
+	font-weight: 600;
 }
 .services h3{
 	color:black;
@@ -1747,6 +1748,31 @@ body.post-type-archive-services .slider-home .slick-next{
 	display:inline-block;
 	width:100%;
 	color:#D47616;
+}
+.sidebar-services {
+	margin-top:10px !important;
+}
+.sidebar-services ul.menu {
+	padding:0 !important;
+	list-style-type: none;
+}
+.sidebar-services ul.menu a{
+	font-weight: 600;
+	color:#D27E26;
+}
+.sidebar-services ul.menu li {
+	padding-top:5px;
+	padding-bottom: 5px;
+	border-bottom: 2px solid #f6f7f9;
+}
+@media only screen and (min-width: 768px) {
+	body.single-services .sharedaddy {
+		clear: none !important;
+		position: absolute;
+		float: right;
+		right: 0;
+		margin-top: 18%;
+	}
 }
 #slider-slider-services {
 	height: 300px;
