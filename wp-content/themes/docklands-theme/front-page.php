@@ -35,7 +35,7 @@ get_header('shop');
 					// WP_Query arguments
 					$args = array (
 						'post_type'              => 'product',
-						'posts_per_page'         => '6',
+						'posts_per_page'         => '6'
 					);
 					// The Query
 					$query = new WP_Query( $args );
