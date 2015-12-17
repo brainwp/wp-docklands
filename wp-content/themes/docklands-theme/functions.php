@@ -201,6 +201,17 @@ function odin_widgets_init() {
 	);
 	register_sidebar(
 		array(
+			'name' => __( 'Left Sidebar Home', 'odin' ),
+			'id' => 'left-sidebar-home',
+			'description' => __( 'Left Sidebar Home', 'odin' ),
+			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+			'after_widget' => '</aside>',
+			'before_title' => '<h3 class="widgettitle widget-title">',
+			'after_title' => '</h3>',
+		)
+	);
+	register_sidebar(
+		array(
 			'name' => __( 'Left Sidebar Cart', 'odin' ),
 			'id' => 'left-sidebar-cart',
 			'description' => __( 'Left Sidebar Cart', 'odin' ),

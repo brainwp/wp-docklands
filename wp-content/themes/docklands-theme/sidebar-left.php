@@ -42,6 +42,8 @@ global $is_advanced_search;
 		//echo $is_last_child;
 		if ( is_singular( 'product' ) && !is_page( 'cart' ) ) {
 			dynamic_sidebar( 'left-sidebar-filters' );
+		} elseif ( is_home() || is_front_page() ) {
+			dynamic_sidebar( 'left-sidebar-home' );
 		} elseif ( is_post_type_archive( 'services' ) ) {
 			dynamic_sidebar( 'sidebar-archive-services' );
 		} elseif ( $is_last_child == 1 || is_woocommerce() ) {
