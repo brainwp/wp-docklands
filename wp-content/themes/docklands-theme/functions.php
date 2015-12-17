@@ -256,6 +256,17 @@ function odin_widgets_init() {
 	);
 	register_sidebar(
 		array(
+			'name' => __( 'Sidebar Single Cases', 'odin' ),
+			'id' => 'cases-sidebar',
+			'description' => __( 'Sidebar Single Cases', 'odin' ),
+			'before_widget' => '<div id="%1$s" class="widget col-md-12 nopadding %2$s sidebar-services">',
+			'after_widget' => '</div>',
+			'before_title' => '<h3 class="widgettitle widget-title" style="display:none;">',
+			'after_title' => '</h3>',
+		)
+	);
+	register_sidebar(
+		array(
 			'name' => __( 'Sidebar Archive Services', 'odin' ),
 			'id' => 'sidebar-archive-services',
 			'description' => __( 'Sidebar Archive Services', 'odin' ),
@@ -265,7 +276,17 @@ function odin_widgets_init() {
 			'after_title' => '</h3>',
 		)
 	);
-
+	register_sidebar(
+		array(
+			'name' => __( 'Sidebar Archive Cases', 'odin' ),
+			'id' => 'sidebar-archive-cases',
+			'description' => __( 'Sidebar Archive Cases', 'odin' ),
+			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+			'after_widget' => '</aside>',
+			'before_title' => '<h3 class="widgettitle widget-title">',
+			'after_title' => '</h3>',
+		)
+	);
 }
 
 add_action( 'widgets_init', 'odin_widgets_init' );

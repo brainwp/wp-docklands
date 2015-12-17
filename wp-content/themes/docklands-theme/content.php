@@ -62,6 +62,13 @@
 					'link_after'  => '</span>',
 				) );
 			?>
+			<?php if ( is_singular( 'cases' ) ) : ?>
+				<?php $link = get_post_type_archive_link( 'See Testimonials' );?>
+				<a href="<?php echo esc_url( $link );?>" class="btn btn-warning">
+					<b><?php _e( 'See Testimonials', 'odin');?></b>
+				</a>
+				<div class="col-md-12 clear" style="height:1px;clear:both;"></div><!-- .col-md-12 clear -->
+			<?php endif;?>
 		</div><!-- .entry-content -->
 
 	<?php endif; ?>

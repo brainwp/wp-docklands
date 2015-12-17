@@ -26,7 +26,7 @@ get_header();
 					<h3 class="bg-title"><?php _e( 'Cases', 'odin' ); ?></h3>
 				</div>
 
-				<div class="slider-home cases">
+				<div class="slider-home">
 					<?php echo do_shortcode( '[brasa_slider name="Slider Cases"]' ); ?>
 				</div><!-- slider-home -->
 
@@ -34,11 +34,13 @@ get_header();
 
 					<?php if ( have_posts() ) : ?>
 						<?php while ( have_posts() ): the_post(); ?>
-							<?php get_template_part( 'content', 'cases' ); ?>
+							<?php get_template_part('content','services'); ?>
 						<?php endwhile; ?>
 					<?php endif; ?>
 
-				</div><!-- full -->
+				</div><!-- arrivals -->
+				<?php get_template_part( 'parts/recentrly-items' ); ?>
+
 			</div><!-- right -->
 
 		</div><!-- #content -->
