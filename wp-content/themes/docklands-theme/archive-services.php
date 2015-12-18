@@ -31,7 +31,11 @@ get_header();
 				</div><!-- slider-home -->
 
 				<div class="col-sm-12 full">
-
+					<?php if ( isset( $_GET['s'] ) && ! empty( $_GET['s'] ) ) : ?>
+						<header class="page-header">
+							<h3 class="page-title"><?php printf( __( 'Search Results for: %s', 'odin' ), get_search_query() ); ?></h3>
+						</header><!-- .page-header -->
+					<?php endif;?>
 					<?php if ( have_posts() ) : ?>
 						<?php while ( have_posts() ): the_post(); ?>
 							<?php get_template_part('content','services'); ?>

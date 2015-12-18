@@ -115,3 +115,13 @@ if ( ! function_exists( 'brasa_news_pagination' ) ) {
 function brasa_continue_reading( $text, $link ) {
 	return $text . ' ' . sprintf( '<a href="%s" class="continue-reading">%s</a>', $link, __('Continue Reading >>>', 'odin'));
 }
+
+function brasa_search_redirect()
+{
+    if( is_search() && get_post_type() != 'product' )
+    {
+    	get_template_part( 'archive', get_post_type() );
+        exit();
+    }
+}
+add_action( 'template_redirect', 'brasa_search_redirect' );
