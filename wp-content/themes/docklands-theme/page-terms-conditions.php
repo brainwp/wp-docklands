@@ -10,7 +10,7 @@ get_header();
 $page_id = get_the_ID();
 ?>
 
-	<div id="primary" class="">
+	<div id="primary" class="terms-conditions">
 		<div id="content" class="site-content" role="main">
 
 			<?php get_sidebar( 'left' ); ?>
@@ -38,15 +38,16 @@ $page_id = get_the_ID();
 					while ( $subpages_query->have_posts() ) : $subpages_query->the_post(); ?>
 					 
 					<div class="each row">
-						<div class="left col-md-8">
+						<div class="left col-md-7">
 							<h2><?php the_title(); ?></h2>
 							<?php the_excerpt(); ?>
-							<a href="<?php the_permalink(); ?>">Continue reading >>></a>
 						</div><!-- left -->
-						<div class="thumb col-md-4">
-							<?php if (has_post_thumbnail()) {
-								the_post_thumbnail();
-							} ?>
+						<div class="thumb col-md-5">
+							<a href="<?php the_permalink(); ?>">
+								<?php if ( has_post_thumbnail() ) {
+									the_post_thumbnail( 'square-thumb' );
+								} ?>
+							</a>
 						</div><!-- thumb -->
 						
 					</div><!-- each -->
