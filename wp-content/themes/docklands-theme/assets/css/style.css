@@ -2088,7 +2088,19 @@ div.sharedaddy h3.sd-title{
 .woocommerce #payment #place_order {
 	background-color: #D98128 !important;
 }
+/* Page Terms & Conditions */
+.terms-conditions h2 {
+	text-transform: capitalize;
+}
+.terms-conditions a.read-more {
+	color: #D27E26;
+}
+.terms-conditions .each {
+	border-bottom: solid 1px #DDD;
+	margin-bottom: 20px;
+	overflow: hidden;
 
+}
 /* Slicknav Menu */
 .slicknav_menu {
 	display: none;
