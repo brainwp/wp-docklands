@@ -32,7 +32,8 @@ $page_id = get_the_ID();
 					<?php
 					    $args = array(
 					    	'post_type' => 'page',
-					    	'post_parent' => $page_id
+					    	'post_parent' => $page_id,
+					    	'paged' => get_query_var('paged',1)
 					   );
 
 					?>
