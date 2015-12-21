@@ -2101,6 +2101,9 @@ div.sharedaddy h3.sd-title{
 	overflow: hidden;
 
 }
+.terms-conditions .top-name {
+	padding-left:30px;
+}
 /* Slicknav Menu */
 .slicknav_menu {
 	display: none;

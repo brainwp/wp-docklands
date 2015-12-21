@@ -3,7 +3,7 @@
  * Template Name: Contact us
  *
  * The template for displaying pages with sidebar.
- *
+ * Template name: News
  * @package Odin
  * @since 2.2.0
  */
