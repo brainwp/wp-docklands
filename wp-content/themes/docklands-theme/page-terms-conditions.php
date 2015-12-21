@@ -33,7 +33,8 @@ $page_id = get_the_ID();
 					    $args = array(
 					    	'post_type' => 'page',
 					    	'post_parent' => $page_id,
-					    	'paged' => get_query_var('paged',1)
+					    	'paged' => get_query_var('paged',1),
+					    	'posts_per_page' => 12
 					   );
 
 					?>
