@@ -943,15 +943,18 @@ h3.item {
 }
 .pagination-control select{
 	border:1px solid #CCC;
-	padding:6px;
-	-webkit-appearance:none;
-	-moz-appearance:none;
 	background:#f8f8f8 url('../images/select-arrow-news.jpg') right no-repeat;
-  	color:#6c6c6c;
+  	color: #6c6c6c;
+  	cursor: pointer;
+  	padding: 6px;
   	padding-right:25px;
+  	-webkit-appearance:none;
+	-moz-appearance:none;
 }
 .pagination-control label{
+	color: #888;
 	font-weight: normal;
+	margin-right: 10px;
 }
 .bg-title-news,
 .cat-top-name {
@@ -2089,7 +2092,8 @@ div.sharedaddy h3.sd-title{
 	background-color: #D98128 !important;
 }
 /* Page Terms & Conditions */
-.terms-conditions h2 {
+.terms-conditions h2,
+.parent-of-terms-conditions .title {
 	text-transform: capitalize;
 }
 .terms-conditions a.read-more {
@@ -2097,12 +2101,18 @@ div.sharedaddy h3.sd-title{
 }
 .terms-conditions .each {
 	border-bottom: solid 1px #DDD;
-	margin-bottom: 20px;
+	margin-bottom: 15px;
+	margin-top: 15px;
 	overflow: hidden;
-
 }
 .terms-conditions .top-name {
 	padding-left:30px;
+}
+.parent-of-terms-conditions .bg-title {
+	color: #48484A;
+}
+.parent-of-terms-conditions #secondary {
+	margin-top: 0;
 }
 /* Slicknav Menu */
 .slicknav_menu {

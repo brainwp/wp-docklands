@@ -76,8 +76,8 @@ $page_id = get_the_ID();
 					    endwhile;
 					    }
 					    ?>
-					<div class="col-md-12 pagination-control">
-				    <div class="col-md-4">
+					<div class="col-md-12 nopadding pagination-control">
+				    <div class="col-md-4 nopadding">
 					    <label><?php _e('Show','odin');?></label>
 					    <select>
                             <option value="<?php echo get_permalink($wp_query->post->ID);?>">

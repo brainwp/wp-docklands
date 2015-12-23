@@ -12,6 +12,10 @@ get_header();
 	<div id="primary" class="">
 		<div id="content" class="site-content" role="main">
 
+			<?php if ( is_page_child() == true ): ?>
+				<h3 class="bg-title"><?php echo get_the_title( $post->post_parent ); ?></h3>
+			<?php endif ?>
+
 			<?php get_sidebar( 'left' ); ?>
 
 			<div class="col-sm-9 right">

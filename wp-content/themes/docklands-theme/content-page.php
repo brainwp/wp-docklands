@@ -9,7 +9,7 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	
-	<h3 class="bg-title"><?php the_title(); ?></h3>
+	<h3 class="title"><?php the_title(); ?></h3>
 
 	<div class="entry-content">
 		<?php

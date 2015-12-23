@@ -602,3 +602,30 @@ function excerpt_more( $more ) {
 	return '...   <a class="read-more" href="' . get_permalink( get_the_ID() ) . '">' . __( 'Continue reading >>>', 'odin' ) . '</a>';
 }
 add_filter( 'excerpt_more', 'excerpt_more' );
+
+// Body Class
+add_filter( 'body_class', 'brasa_slug_in_body' );
+
+function brasa_slug_in_body( $classes ) {
+	global $post;
+    $post_slug = $post->post_name;
+    $post_parent = $post->post_parent;
+    if ( !empty( $post_parent ) ) {
+    	$classes[] .= 'parent';
+    	$post_parent = get_post( $post_parent, ARRAY_A );
+    	//$classes[] .= $post_parent['post_name'];
+    	$classes[] .= 'parent parent-of-' . $post_parent['post_name'];
+    }
+    $classes[] .= $post_slug;
+   	return $classes;
+}
+
+add_action( 'wp', 'is_page_child' );
+function is_page_child() {
+	global $post;
+	//var_dump($post);
+    $post_parent = $post->post_parent;
+	if ( !empty( $post_parent ) ) {
+		return true;
+	}
+}
