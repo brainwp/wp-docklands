@@ -608,24 +608,28 @@ add_filter( 'body_class', 'brasa_slug_in_body' );
 
 function brasa_slug_in_body( $classes ) {
 	global $post;
-    $post_slug = $post->post_name;
-    $post_parent = $post->post_parent;
-    if ( !empty( $post_parent ) ) {
-    	$classes[] .= 'parent';
-    	$post_parent = get_post( $post_parent, ARRAY_A );
-    	//$classes[] .= $post_parent['post_name'];
-    	$classes[] .= 'parent parent-of-' . $post_parent['post_name'];
-    }
-    $classes[] .= $post_slug;
-   	return $classes;
+	if ( is_object( $post ) ) {
+	    $post_slug = $post->post_name;
+	    $post_parent = $post->post_parent;
+	    if ( !empty( $post_parent ) ) {
+	    	$classes[] .= 'parent';
+	    	$post_parent = get_post( $post_parent, ARRAY_A );
+	    	//$classes[] .= $post_parent['post_name'];
+	    	$classes[] .= 'parent parent-of-' . $post_parent['post_name'];
+	    }
+	    $classes[] .= $post_slug;
+	}
+	return $classes;
 }
 
 add_action( 'wp', 'is_page_child' );
 function is_page_child() {
 	global $post;
-	//var_dump($post);
-    $post_parent = $post->post_parent;
-	if ( !empty( $post_parent ) ) {
-		return true;
+	if ( is_object( $post ) ) {
+		//var_dump($post);
+	    $post_parent = $post->post_parent;
+		if ( !empty( $post_parent ) ) {
+			return true;
+		}		
 	}
 }
