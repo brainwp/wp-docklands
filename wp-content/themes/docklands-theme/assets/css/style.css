@@ -2132,6 +2132,27 @@ div.sharedaddy h3.sd-title{
 	padding-bottom: 20px;
 	padding-top: 20px;
 }
+/* Testimonials */
+.post-type-archive-testimonials h3.bg-title {
+	color: #48484A;
+	text-transform: capitalize;
+	margin-bottom: 20px;
+	margin-top: 27px;
+	font-weight: 600;
+}
+.post-type-archive-testimonials .each {
+	display: block;
+	overflow: hidden;
+	margin-bottom: 25px;
+}
+.post-type-archive-testimonials .thumb {
+	border: 2px solid #CCC;
+	padding: 2px;
+}
+.post-type-archive-testimonials .thumb img {
+	height: auto;
+	max-width: 100%;
+}
 
 @media ( max-width: 800px ) {
 	.logo {
