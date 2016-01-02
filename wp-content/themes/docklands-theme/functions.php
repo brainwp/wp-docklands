@@ -29,6 +29,7 @@ require_once get_template_directory() . '/core/classes/class-thumbnail-resizer.p
 require_once get_template_directory() . '/core/classes/class-post-type.php';
 require_once get_template_directory() . '/core/classes/class-taxonomy.php';
 require_once get_template_directory() . '/core/classes/class-theme-options.php';
+require_once get_template_directory() . '/core/classes/class-term-meta.php';
 // require_once get_template_directory() . '/core/classes/class-options-helper.php';
 // require_once get_template_directory() . '/core/classes/class-metabox.php';
 // require_once get_template_directory() . '/core/classes/abstracts/abstract-front-end-form.php';
@@ -631,5 +632,48 @@ function is_page_child() {
 		if ( !empty( $post_parent ) ) {
 			return true;
 		}		
+	}
+}
+
+function product_condition_term_meta() {
+
+    $category_meta = new Odin_Term_Meta(
+        'product_condition_meta',
+        'product_condition'
+    );
+
+    $category_meta->set_fields(
+        array(
+            // Image field.
+            array(
+                'id'          => 'product_condition_image', // Required
+                'label'       => __( 'Thumbnail Product Condition', 'odin' ), // Required
+                'type'        => 'image', // Required
+                // 'default'     => '', // Optional (image attachment id)
+                'description' => __( 'Add image to represent the product condition', 'odin' ), // Optional
+            ),
+        )
+    );
+}
+
+add_action( 'init', 'product_condition_term_meta', 1 );
+
+/**
+ * Get term meta fields
+ *
+ * Usage:
+ * <?php echo odin_get_term_meta( $term_id, $field );?>
+ *
+ * @since  2.2.7
+ *
+ * @param  int    $term_id      Term ID
+ * @param  string $field        Field slug
+ *
+ * @return string               Field value
+ */
+if (!function_exists('odin_get_term_meta')) {
+	function odin_get_term_meta( $term_id, $field ) {
+		$option = sprintf( 'odin_term_meta_%s_%s', $term_id, $field );
+		return get_option( $option );
 	}
 }
