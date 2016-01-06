@@ -180,6 +180,28 @@ function odin_widgets_init() {
 	);
 	register_sidebar(
 		array(
+			'name' => __( 'Left Sidebar About Us', 'odin' ),
+			'id' => 'left-sidebar-about',
+			'description' => __( 'Left Sidebar', 'odin' ),
+			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+			'after_widget' => '</aside>',
+			'before_title' => '<h3 class="widgettitle widget-title">',
+			'after_title' => '</h3>',
+		)
+	);
+	register_sidebar(
+		array(
+			'name' => __( 'Left Sidebar Contact', 'odin' ),
+			'id' => 'left-sidebar-contact',
+			'description' => __( 'Left Sidebar', 'odin' ),
+			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+			'after_widget' => '</aside>',
+			'before_title' => '<h3 class="widgettitle widget-title">',
+			'after_title' => '</h3>',
+		)
+	);
+	register_sidebar(
+		array(
 			'name' => __( 'Left Sidebar', 'odin' ),
 			'id' => 'left-sidebar',
 			'description' => __( 'Left Sidebar', 'odin' ),
@@ -631,7 +653,7 @@ function is_page_child() {
 	    $post_parent = $post->post_parent;
 		if ( !empty( $post_parent ) ) {
 			return true;
-		}		
+		}
 	}
 }
 
