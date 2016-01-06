@@ -66,6 +66,7 @@ if ( ! function_exists( 'odin_setup_features' ) ) {
 			array(
 				'main-menu' => __( 'Main Menu', 'odin' ),
 				'top-menu' => __( 'Menu top', 'odin' ),
+				'first-footer-menu' => __( 'First Footer Menu', 'odin' ),
 				'second-footer-menu' => __( 'Second Footer Menu', 'odin' ),
 				'responsive-menu' => __( 'Responsive Menu', 'odin' )
 			)
