@@ -1016,26 +1016,32 @@ h3.item {
 	overflow: hidden;
 	padding-bottom: 20px;
 }
-.page-template-page-news h3.widget-title{
+.page-template-page-news h3.widget-title,
+body.single-post h3.widget-title {
 	font-weight: bold;
 	background: none !important;
 	color:#d87f23;
 	border-bottom:1px solid #CCC;
 	border-radius: 0;
 }
-.page-template-page-news .widget a{
+.page-template-page-news .widget a,
+body.single-post .widget a
+{
 	color:#636365;
 }
-.page-template-page-news .widget li{
+.page-template-page-news .widget li,
+body.single-post .widget li{
 	list-style-type: none;
 	text-indent:-5px;
 }
-.page-template-page-news .widget li:before{
+.page-template-page-news .widget li:before,
+body.single-post .widget li:before{
 	content:'-';
 	position:relative;
 	left:-5px;
 }
-.page-template-page-news .entry-title{
+.page-template-page-news .entry-title,
+body.single-post .entry-title {
 	font-weight: bold;
 }
 .continue-reading {
