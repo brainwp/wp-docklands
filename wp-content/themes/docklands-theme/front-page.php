@@ -57,7 +57,12 @@ get_header('shop');
 
 					<div class="banner col-sm-6">
 						<a href="<?php echo $link;?>">
-							<?php echo wp_get_attachment_image($banner_1,'half-horizontal-thumb'); ?>
+							<?php $image_attributes = wp_get_attachment_image_src( $banner_1 ); ?>
+							<?php $style = '';?>
+							<?php if ( isset( $options['home_banner_1_height'] ) ) : ?>
+								<?php $style = 'height:' . $options['home_banner_1_height'] . 'px;';?>
+							<?php endif; ?>
+							<img src="<?php echo $image_attributes[0];?>" style="<?php echo $style;?>" />
 						</a>
 					</div><!-- banner -->
 

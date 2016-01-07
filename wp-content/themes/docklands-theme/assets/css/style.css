@@ -571,7 +571,6 @@ body.home .slider-products .each .content .tag-price {
 	overflow: hidden;
 }
 .full .video {
-	height: 190px;
 	overflow: hidden;
 }
 .home .full .banner .content, .home .full .video .content {
@@ -583,7 +582,6 @@ body.home .slider-products .each .content .tag-price {
 }
 .home .full .video .content iframe  {
 	width:100% !important;
-	height:100% !important;
 }
 .home .differential {
 	display: block;
@@ -599,6 +597,7 @@ body.home .slider-products .each .content .tag-price {
 }
 .home .banner img {
 	max-width: 100%;
+	width:100%;
 }
 /* Sidebar */
 ul.product-categories{
