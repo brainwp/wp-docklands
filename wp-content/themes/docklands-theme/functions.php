@@ -582,7 +582,7 @@ function docklands_woof_reset_link( $link ) {
 	return home_url( 'advanced-search' );
 }
 add_filter( 'woof_reset_btn_link', 'docklands_woof_reset_link' );
-ini_set('error_reporting', E_ALL);
+//ini_set('error_reporting', E_ALL);
 
 function docklands_change_button() {
 	echo '<a class="view" href="' . get_permalink() . '">' . __( 'View Products', 'woocommerce' ) . ' <strong>></strong></a>';

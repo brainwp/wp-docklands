@@ -1,4 +1,4 @@
-<?
+<?php
 /**
  * WooCommerce role seller
  *
