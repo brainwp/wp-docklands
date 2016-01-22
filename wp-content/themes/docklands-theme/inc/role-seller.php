@@ -12,6 +12,7 @@ class Woo_Seller_Role{
 		add_action( 'admin_init', array($this,'admin_init'), 9999);
 		add_action( 'admin_footer', array($this,'add_modal') );
 		add_action( 'current_screen', array($this,'redirect') );
+		add_action( 'woocommerce_prevent_admin_access', array($this,'remove_woocommerce_redirect'), 99999999 );
 	}
 	private function get_user_role() {
 		global $current_user;
@@ -53,7 +54,9 @@ class Woo_Seller_Role{
                 'product'           => true,
                 'edit_product'      => true,
                 'edit_others_products'=> true,
-                'edit_products' => true
+                'edit_products' => true,
+                'edit' => true,
+                'level_9' => true
             )
 		);
 	}
@@ -65,6 +68,14 @@ class Woo_Seller_Role{
 	}
 	public function add_modal(){
 		add_thickbox();
+	}
+	public function remove_woocommerce_redirect( $value ) {
+		if ( is_user_logged_in() ) {
+			if ( $this->get_user_role() == 'woo_seller' ) {
+				return false;
+			}
+		}
+		return $value;
 	}
 }
 new Woo_Seller_Role();
