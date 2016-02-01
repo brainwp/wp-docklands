@@ -62,7 +62,7 @@ get_header('shop');
 							<?php if ( isset( $options['home_banner_1_height'] ) ) : ?>
 								<?php $style = 'height:' . $options['home_banner_1_height'] . 'px;';?>
 							<?php endif; ?>
-							<img src="<?php echo $image_attributes[0];?>" style="<?php echo $style;?>" />
+							<img src="<?php echo $image_attributes[0];?>" style="<?php // echo $style; ?>" />
 						</a>
 					</div><!-- banner -->
 

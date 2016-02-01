@@ -5,7 +5,7 @@ if ( ! isset( $opts['slider_cat'] ) || empty( $opts['slider_cat'] ) )
 	return;
 $term = get_term_by( 'name', $opts['slider_cat'], 'product_cat');
 ?>
-<div class="col-sm-12 slider-products" id="slider-cat">
+<div class="col-sm-12 slider-products" id="slider-produtos-home">
 	<?php
 	// WP_Query arguments
 	if ( $term && is_object( $term ) ) :
