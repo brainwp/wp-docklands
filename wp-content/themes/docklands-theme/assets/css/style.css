@@ -568,6 +568,7 @@ body.home .slider-products .each .content .tag-price {
 }
 .home .full .banner {
 	height: auto;
+	max-height: 400px;
 	overflow: hidden;
 }
 .full .video {
@@ -822,6 +823,8 @@ h3.item {
 	margin: 10px 0 0;
 }
 .list-produtos li .desc {
+	padding-bottom: 15px;
+	padding-top: 10px;
 	padding-right: 0;
 	position: relative;
 }
@@ -846,6 +849,12 @@ h3.item {
 	text-decoration: line-through;
 	position: absolute;
 	right: 0px;
+}
+.list-produtos li .wrap-preco {
+	display: inline-block;
+    text-align: center;
+    width: auto;
+    margin: 0 auto;
 }
 .textwidget {
 	margin-bottom: 20px;
@@ -2159,6 +2168,29 @@ div.sharedaddy h3.sd-title{
 	max-width: 100%;
 }
 
+@media ( max-width: 1200px ) {
+	.each .content {
+		height: 380px;
+	}
+	body.home .full .banner {
+		margin-bottom: 25px;
+		text-align: center;
+	}
+	body.home .full .banner img {
+		height: auto;
+		max-height: 400px;
+		max-width: 100%;
+		width: auto;
+	}
+	.each .content {
+		height: auto;
+	}
+	.each .content .footer {
+		position: relative;
+	}
+
+}
+
 @media ( max-width: 800px ) {
 	.logo {
 		background-size: 100%;
@@ -2168,6 +2200,9 @@ div.sharedaddy h3.sd-title{
 	}
 	.menu-top .social-media {
 	    width: 25%;
+	}
+	.each .content .thumb {
+		text-align: center;
 	}
 }
 @media ( max-width: 768px ) {
@@ -2197,6 +2232,10 @@ div.sharedaddy h3.sd-title{
 	.menu-top .social-media {
 	    width: 100%;
 	}
+	.slider-home .is_slider {
+		padding-left: 0;
+		padding-right: 0;
+	}
 	.cloud-sidebar,
 	.twitter-posts {
 		width: 100%;
@@ -2206,9 +2245,31 @@ div.sharedaddy h3.sd-title{
 		padding-right: 30px;
 		padding-top: 20px;
 	}
+	.widget_image {
+		margin-bottom: 20px;
+		margin-top: 20px;
+		text-align: center;
+	}
+	.Produtos_Widget .list-produtos li .thumb {
+		height: auto;
+		text-align: center;
+		width: 100%;
+	}
+	.Produtos_Widget .list-produtos li .desc {
+		overflow: hidden;
+		text-align: center;
+	}
+	.single-product .images {
+		width: 100% !important;
+	}
 }
 @media ( max-width: 500px ) {
-
+	.navbar.navbar-default {
+		display: none;
+	}
+	.single-product .woocommerce-main-image img {
+		width: 100% !important;
+	}
 }
 
 /* search form error */

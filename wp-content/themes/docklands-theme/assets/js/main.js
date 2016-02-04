@@ -140,6 +140,29 @@ jQuery(document).ready(function($) {
 		slidesToShow: 3,
 		slidesToScroll: 1
 	});
+	$('#slider-produtos-home').slick({
+		lazyLoad: 'progressive',
+		infinite: true,
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		responsive: [
+	    {
+	      breakpoint: 800,
+	      settings: {
+	        slidesToShow: 2,
+	      }
+	    },
+	    {
+	      breakpoint: 480,
+	      settings: {
+	        slidesToShow: 1,
+	      }
+	    }
+	    // You can unslick at a given breakpoint now by adding:
+	    // settings: "unslick"
+	    // instead of a settings object
+	  ]
+	});
 	$('.movescroll').each(function(){
 		elem = $(this).attr('href');
 		if($(elem).visible() == true){
