@@ -2188,6 +2188,10 @@ div.sharedaddy h3.sd-title{
 	.each .content .footer {
 		position: relative;
 	}
+	.archive .woocommerce .products ul, .woocommerce ul.products {
+		padding-left: 15px !important;
+		padding-right: 15px !important;
+	}
 
 }
 
@@ -2203,6 +2207,9 @@ div.sharedaddy h3.sd-title{
 	}
 	.each .content .thumb {
 		text-align: center;
+	}
+	.twitter-posts {
+		width: 100%;
 	}
 }
 @media ( max-width: 768px ) {
@@ -2236,8 +2243,7 @@ div.sharedaddy h3.sd-title{
 		padding-left: 0;
 		padding-right: 0;
 	}
-	.cloud-sidebar,
-	.twitter-posts {
+	.cloud-sidebar {
 		width: 100%;
 	}
 	.twitter-posts {
@@ -2250,6 +2256,9 @@ div.sharedaddy h3.sd-title{
 		margin-top: 20px;
 		text-align: center;
 	}
+	.banner {
+		margin-bottom: 15px;
+	}
 	.Produtos_Widget .list-produtos li .thumb {
 		height: auto;
 		text-align: center;
@@ -2261,6 +2270,45 @@ div.sharedaddy h3.sd-title{
 	}
 	.single-product .images {
 		width: 100% !important;
+	}
+	.home #header .search-container {
+		margin-bottom: 40px;
+	}
+	.page-header {
+	    margin-bottom: 1em;
+	    display: block;
+	    width: 100%;
+	    clear: both;
+	    padding-top: 10px;
+	}
+	.col-sm-12.recentrly-items .loop .each {
+		border-bottom: 1px solid #CCC;
+		display: block;
+		margin-bottom: 20px;
+		overflow: hidden;
+		padding-bottom: 20px;
+	}
+	.single-product .summary.entry-summary {
+		width: 100% !important;
+	}
+	.page #content {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+	.page-template-page-contact .contact-form {
+		margin-bottom: 20px;
+		padding-left: 0;
+		padding-right: 0;
+		width: 100%;
+	}
+	.page-contact .contact-form select,
+	.page-contact .contact-form textarea {
+		max-width: 98%;
+	}
+	.page-contact .acf-map {
+	    border-radius: 3px;
+	    height: 250px;
+	    margin-right: 0;
 	}
 }
 @media ( max-width: 500px ) {
