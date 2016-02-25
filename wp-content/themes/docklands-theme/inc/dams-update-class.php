@@ -27,7 +27,7 @@ class Brasa_Dams_FTP_Update{
     			//echo 'oiii';
     			//die();
     		}
-    		ftp_chdir( $ftp_connect, '/var/www/html/wp-content/xml/' );
+    		//ftp_chdir( $ftp_connect, '/' );
     		$local = fopen( get_template_directory() . '/inc/temp.xml', 'w' );
     		$result = ftp_fget( $ftp_connect, $local, 'Stock.xml', FTP_BINARY );
 			fclose( $local );
