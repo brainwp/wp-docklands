@@ -80,6 +80,12 @@ get_header();
 						<?php echo get_post_meta( get_the_ID(), 'contact-hr-friday', true ); ?>
 					</div><!-- .col-md-8 pull-left -->
 					<div class="col-md-4 pull-left">
+						<?php _e('Saturday:','odin'); ?>
+					</div><!-- .col-md-4 pull-left -->
+					<div class="col-md-8 pull-right">
+						<?php echo get_post_meta( get_the_ID(), 'contact-hr-saturday', true ); ?>
+					</div><!-- .col-md-8 pull-left -->
+					<div class="col-md-4 pull-left">
 						<?php _e('Sunday:','odin'); ?>
 					</div><!-- .col-md-4 pull-left -->
 					<div class="col-md-8 pull-right">

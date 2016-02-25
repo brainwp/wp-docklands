@@ -101,6 +101,18 @@ if(function_exists("register_field_group"))
 				'maxlength' => '',
 			),
 			array (
+				'key' => 'field_54d2a794aewweieiw994944',
+				'label' => 'Hours Saturday',
+				'name' => 'contact-hr-saturday',
+				'type' => 'text',
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'formatting' => 'html',
+				'maxlength' => '',
+			),
+			array (
 				'key' => 'field_54d2a799a7d35',
 				'label' => 'Hours Sunday',
 				'name' => 'contact-hr-sunday',
