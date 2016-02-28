@@ -2337,6 +2337,20 @@ div.sharedaddy h3.sd-title{
 		background: url('../images/sprite-icons-social.png') -157px center no-repeat;
 	}
 }
+@media ( max-width: 600px ) {
+	/* Cart */
+	body.woocommerce-cart .cart-collaterals,
+	body.woocommerce-cart .woocommerce form.half {
+		float: left;
+		width: 100% !important;
+	}
+	body.woocommerce-cart .woocommerce table.shop_table .coupon .button {
+		font-size: 0.85em;
+	}
+	body.woocommerce-cart .woocommerce table.shop_table .checkout-button {
+		text-align: center;
+	}
+}
 @media ( max-width: 500px ) {
 	.navbar.navbar-default {
 		display: none;
@@ -2344,7 +2358,6 @@ div.sharedaddy h3.sd-title{
 	.single-product .woocommerce-main-image img {
 		width: 100% !important;
 	}
-
 }
 @media ( max-width: 480px ) {
 }
