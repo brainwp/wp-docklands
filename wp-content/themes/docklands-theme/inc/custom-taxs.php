@@ -289,4 +289,10 @@ function custom_taxs() {
 add_action( 'init', 'custom_taxs', 0 );
 
 }
+function set_post_types_archives_query( $query ) {
+    if ( is_post_type_archive( 'services' ) && $query->is_main_query() ) {
+        $query->set( 'posts_per_page', '-1' );
+    }
+}
+add_action( 'pre_get_posts', 'set_post_types_archives_query' );
 ?>
