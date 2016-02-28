@@ -5,6 +5,19 @@ Description: Odin main stylesheet.
 #content.widecolumn{
 	text-align: center;
 }
+@media only screen and (max-width: 700px) {
+	#content {
+		display: flex;
+		width: 100%;
+		flex-flow: column-reverse wrap;
+	}
+	#content #secondary {
+		order:1;
+	}
+	#content > div.col-sm-9.right {
+		order:3;
+	}
+}
 .nopadding {
    padding: 0 !important;
    margin: 0 !important;
@@ -1471,6 +1484,7 @@ body.single-post .entry-title {
 	padding-bottom: 10px;
 	padding-top: 0;
 	width:65% !important;
+	float:right !important;
 }
 .single-product .entry-summary .line {
 	margin-bottom: 18px;
@@ -1612,7 +1626,7 @@ body.woocommerce-cart .woocommerce table.shop_table .coupon .button {
 	display: inline-block;
 	margin: 30px auto;
 	overflow: hidden;
-	width: 100%;	
+	width: 100%;
 }
 .upsells.products .products {
 	margin-bottom: 0;
