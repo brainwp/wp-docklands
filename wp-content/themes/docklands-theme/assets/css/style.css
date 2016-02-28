@@ -586,8 +586,19 @@ body.home .slider-products .each .content .tag-price {
 	overflow: hidden;
 	width: 100%;
 }
+
+.home .full .video .content {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+}
 .home .full .video .content iframe  {
-	width:100% !important;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
 }
 .home .differential {
 	display: block;
