@@ -2315,6 +2315,10 @@ div.sharedaddy h3.sd-title{
 	    height: 250px;
 	    margin-right: 0;
 	}
+	/* Checkout */
+	body.woocommerce-page.woocommerce.checkout  #secondary {
+		display: none;
+	}
 	#footer .social-media .top a {
 		height: 50px !important;
 		padding: 25px;
