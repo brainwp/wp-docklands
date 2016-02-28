@@ -99,14 +99,19 @@ h3.bg-title {
 	color: #FDE2AB;
 }
 .woocommerce span.onsale{
+	-webkit-border-radius: 50px !important;
+	-moz-border-radius: 50px !important;
+	border-radius: 50px !important;
 	top:60px !important;
 	bottom: inherit !important;
 	height: 48px !important;
 	width: 48px !important;
 	text-align: center !important;
 	padding:0 !important;
-	padding-top: 5px !important;
+	padding-top: 7px !important;
 	z-index: 999;
+	opacity: 0.90;
+	filter: alpha( opacity = 90 );
 }
 .woocommerce .upsells span.onsale {
 	top: -5px !important;
@@ -1612,10 +1617,11 @@ body.woocommerce-cart .woocommerce table.shop_table .coupon .button {
 /* Up Sells */
 .upsells.products {
 	border: 1px solid #CCC;
-	display: block;
-	overflow: hidden;
-	width: 100%;
 	clear: both;
+	display: inline-block;
+	margin: 30px auto;
+	overflow: hidden;
+	width: 100%;	
 }
 .upsells.products .products {
 	margin-bottom: 0;
@@ -1650,8 +1656,14 @@ body.woocommerce-cart .woocommerce table.shop_table .coupon .button {
 	text-transform: capitalize;
 	width: 100%;
 }
+.upsells.products .slick-prev,
+.upsells.products .slick-next {
+	height: 30px;
+
+}
 .upsells.products .product {
 	margin-top: 15px !important;
+	text-align: center;
 }
 .upsells.products .product a h3 {
 	color: #575759;
@@ -1662,6 +1674,7 @@ body.woocommerce-cart .woocommerce table.shop_table .coupon .button {
 .upsells.products .product img {
 	border: 1px solid #58585A;
 	border-radius: 2px;
+	display: inline-block;
 }
 .upsells.products .product a.view {
 	color: #D27E26;
@@ -1679,6 +1692,7 @@ body.woocommerce-cart .woocommerce table.shop_table .coupon .button {
 	padding: 0 !important;
 }
 .upsells.products .upsells-slider {
+	padding-bottom: 20px;
 	padding-left:10px;
 	border-left:30px solid #F5F3F1;
 	border-right:30px solid #F5F3F1;
@@ -2318,6 +2332,9 @@ div.sharedaddy h3.sd-title{
 	.single-product .woocommerce-main-image img {
 		width: 100% !important;
 	}
+
+}
+@media ( max-width: 480px ) {
 }
 
 /* search form error */
