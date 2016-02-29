@@ -2386,6 +2386,19 @@ div.sharedaddy h3.sd-title{
 	body.woocommerce-page .each .content {
     	background-color: transparent !important;
     }
+    /* Filtros */
+    .woof_list input[type="checkbox"] {
+    	/* Up sized Checkboxes */
+		-ms-transform: scale(1.6); /* IE */
+		-moz-transform: scale(1.6); /* FF */
+		-webkit-transform: scale(1.6); /* Safari and Chrome */
+		-o-transform: scale(1.6); /* Opera */
+		padding: 8px;
+    }
+    .woof_checkbox_label {
+    	font-size: 1.1em;
+	    margin-left: 12px !important;
+	}
 }
 @media ( max-width: 500px ) {
 	.navbar.navbar-default {
