@@ -2321,9 +2321,13 @@ div.sharedaddy h3.sd-title{
 	.single-product .summary.entry-summary {
 		width: 100% !important;
 	}
-	.page #content {
-		padding-left: 15px;
-		padding-right: 15px;
+	.page #content,
+	#breadcrumbs,
+	.single-services #content,
+	#secondary .widget,
+	#secondary form {
+		padding-left: 15px !important;
+		padding-right: 15px !important;
 	}
 	.page-template-page-contact .contact-form {
 		margin-bottom: 20px;
@@ -2360,6 +2364,10 @@ div.sharedaddy h3.sd-title{
 	}
 	#footer .social-media .top a.facebook {
 		background: url('../images/sprite-icons-social.png') -157px center no-repeat;
+	}
+	/* Sidebar */
+	#secondary form {
+		width: 100%;
 	}
 }
 @media ( max-width: 600px ) {
@@ -2421,6 +2429,13 @@ div.sharedaddy h3.sd-title{
 @media ( max-width: 500px ) {
 	.single-product .woocommerce-main-image img {
 		width: 100% !important;
+	}
+	#secondary .widget.widget_nav_menu {
+		text-align: center;
+	}
+	.btn.back-top {
+		bottom: 20px;
+		right: 20px;
 	}
 }
 @media ( max-width: 480px ) {
