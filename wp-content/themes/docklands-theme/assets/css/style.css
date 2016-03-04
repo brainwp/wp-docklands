@@ -2413,11 +2413,12 @@ div.sharedaddy h3.sd-title{
     	font-size: 1.1em;
 	    margin-left: 12px !important;
 	}
-}
-@media ( max-width: 500px ) {
-	.navbar.navbar-default {
+	.navbar.navbar-default,
+	#header #main-navigation {
 		display: none;
 	}
+}
+@media ( max-width: 500px ) {
 	.single-product .woocommerce-main-image img {
 		width: 100% !important;
 	}

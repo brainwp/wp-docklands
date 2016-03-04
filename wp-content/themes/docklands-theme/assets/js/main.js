@@ -2,7 +2,7 @@
 jQuery(document).ready(function($) {
 
 	// Slicknav Menu
-	//$('#menu-responsive-menu').slicknav();
+	$('#menu-responsive-menu').slicknav();
 
 	// Placeholder AloEasy Mail
 	$('#opt_name').attr('placeholder','Your Name');
