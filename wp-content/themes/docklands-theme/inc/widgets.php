@@ -1,5 +1,5 @@
 <?php
-/* Widget Ações */
+/* Widget Produtos */
 class Produtos_Widget extends WP_Widget {
 
 	public function __construct() {
@@ -132,8 +132,141 @@ class Produtos_Widget extends WP_Widget {
 	<?php
 	}
 }
+
+
+
+
+/* Widget Produtos */
+class Specials_Widget extends WP_Widget {
+
+	public function __construct() {
+		$widget_ops = array(
+			'classname' => 'Specials_Widget',
+			'description' => 'Widget para os posts Specials'
+		);
+		//$control_ops = array('width' => 400, 'height' => 350);
+		parent::__construct( 'Specials_Widget', 'Widget of the Specials', $widget_ops );
+	}
+
+	public function widget( $args, $instance ) {
+
+		/** This filter is documented in wp-includes/default-widgets.php */
+		$title = apply_filters( 'widget_specials_title', empty( $instance['title'] ) ? '' : $instance['title'], $instance, $this->id_base );
+
+		/**
+		 * Filter the content of the Text widget.
+		 *
+		 * @since 2.3.0
+		 *
+		 * @param string    $widget_text The widget content.
+		 * @param WP_Widget $instance    WP_Widget instance.
+		 */
+		$qtd_produtos = apply_filters( 'widget_produtos_qtd_produtos', empty( $instance['qtd_produtos'] ) ? '' : $instance['qtd_produtos'], $instance );
+
+		echo '<div class="col-md-12 Specials_Widget produtos-widget">';
+		echo '<h3 class="item">' . $title . '</h3>';
+		echo '<ul class="list-produtos">';
+
+		global $post;
+
+		/* Guarda a variável $post em $temp_post */
+		$temp_posts = $post;
+
+		/* Pega o ID do term Specials */
+		$get_term = get_term_by( 'slug', 'specials', 'product_cat', OBJECT );
+		$term_id = $get_term->term_id;
+
+		$produtos_posts = get_posts( array(
+			'post_type' => 'product',
+			'posts_per_page' => $qtd_produtos,
+			'tax_query' => array(
+    			array(
+      				'taxonomy' => 'product_cat',
+      				'field' => 'id',
+      				'terms' => $term_id,
+      				'include_children' => false
+    			)
+  			)
+		));
+
+		// Start the Loop.
+		if( $produtos_posts ) :
+			foreach( $produtos_posts as $post ) : setup_postdata( $post );
+			$product = new WC_Product( $post->ID );
+			echo "<li>";
+			echo "<a href=" . get_the_permalink() . ">";
+			echo "<div class='thumb pull-left'>";
+				the_post_thumbnail(array('200', '200'));
+			echo "</div>";
+			echo "<div class='desc col-sm-6'>";
+			echo "<span class='title'>";
+				the_title();
+			echo "</span><!-- title -->";
+			if( $product->get_sale_price() ){
+				echo '<div class="wrap-preco">';
+				echo '<span class="moeda-preco">'. get_woocommerce_currency_symbol() . ' </span><span class="price">';
+				echo $product->get_sale_price();
+				echo "</span><!-- price -->";
+				echo "<span class='old-price'>";
+				echo get_woocommerce_currency_symbol() . ' ' . $product->get_regular_price();
+				echo "</span><!-- old-price -->";
+				echo '</div><!-- .wrap-preco -->';
+			}
+			else{
+				echo '<div class="wrap-preco">';
+				echo '<span class="moeda-preco">'. get_woocommerce_currency_symbol() . ' </span><span class="price">';
+				echo $product->get_price();
+				echo "</span><!-- price -->";
+				echo '</div><!-- .wrap-preco -->';
+			}
+			echo "</div>";
+			echo "</a>";
+			echo "</li>";
+
+			endforeach;
+			wp_reset_postdata();
+
+		endif;
+		echo '</ul><!-- list_produtos --></div>';
+
+		/* Retorna o valor da variável $post como era antes do loop de produtos */
+		$post = $temp_posts;
+}
+
+	public function update( $new_instance, $old_instance ){
+		$instance = $old_instance;
+		$instance['title'] = $new_instance['title'];
+		$instance['qtd_produtos'] = $new_instance['qtd_produtos'];
+		return $instance;
+	}
+
+	public function form( $instance ) {
+		$instance = wp_parse_args( (array) $instance, array( 'title' => '', 'qtd_produtos' => '5' ) );
+		$title = strip_tags( $instance['title'] );
+		$qtd_produtos = strip_tags( $instance['qtd_produtos'] );
+		?>
+		<p>
+			<label for="<?php echo $this->get_field_id('title'); ?>">
+				<?php echo 'Titulo do Widget'; ?>
+			</label>
+			<input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo esc_attr($title); ?>" />
+		</p>
+		<p>
+			<label for="<?php echo $this->get_field_id('qtd_produtos'); ?>">
+				<?php echo 'Quantidade de Produtos'; ?>
+			</label>
+			<input class="widefat" id="<?php echo $this->get_field_id('qtd_produtos'); ?>" name="<?php echo $this->get_field_name('qtd_produtos'); ?>" type="text" value="<?php echo esc_attr($qtd_produtos); ?>" />
+		</p>
+	<?php
+	}
+}
+
+
+
+
 function theme_register_widgets() {
 	register_widget( 'Produtos_Widget' );
+	register_widget( 'Specials_Widget' );
 }
 
 add_action( 'widgets_init', 'theme_register_widgets' );
