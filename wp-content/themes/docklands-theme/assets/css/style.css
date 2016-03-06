@@ -502,13 +502,19 @@ body.home .slider-products .each .content .tag-price {
 	padding-top: 0px;
 }
 .arrivals .each {
-	margin-bottom: 15px;
+	margin-bottom: 35px;
 	min-height: 350px;
 	padding-left: 7px;
 	padding-right: 7px;
 }
 .each .content {
-	background-color: #FFF;
+	background-color: #F7F7F7;
+	-webkit-border-bottom-right-radius: 5px;
+	-webkit-border-bottom-left-radius: 5px;
+	-moz-border-radius-bottomright: 5px;
+	-moz-border-radius-bottomleft: 5px;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
 	height: 440px;
 	margin: 10px auto 0;
 	overflow: hidden;
@@ -518,6 +524,9 @@ body.home .slider-products .each .content .tag-price {
 .each .content .thumb {
 	border: 2px solid #CCC;
 	padding: 2px;
+}
+.products .each {
+	margin-bottom: 35px;
 }
 /* Content de cada produto no Resultado da Busca */
 .search-results .each .content {
@@ -574,9 +583,10 @@ body.home .slider-products .each .content .tag-price {
 }
 /* Parte inferior de cada produto */
 .each .content .footer {
-	background-color: #FFF;
+	background-color: #F7F7F7;
 	bottom: 0;
 	overflow: hidden;
+	padding-bottom: 10px;
 	position: absolute;
 	width: 100%;
 }
