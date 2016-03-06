@@ -102,8 +102,8 @@ get_header();
 			    	$location = get_field('contact-map');
 			    	if( !empty($location) ):
 			    	?>
-			        <div class="acf-map">
-			             <div class="marker" data-lat="<?php echo $location['lat']; ?>" data-lng="<?php echo $location['lng']; ?>"></div>
+			        <div class="map">
+			            <?php echo $location; ?>
 			        </div>
 			        <?php $link = get_field('contact-map-link');?>
 		            <?php if(!empty($link)): ?>
@@ -111,8 +111,6 @@ get_header();
 		                	<?php _e('See in Google Maps','odin');?>
 		                </a>
 		            <?php endif;?>
-
-			        <span class="address"><?php echo $location['address']; ?></span>
 
 		            <?php endif; ?>
 
