@@ -1376,6 +1376,17 @@ body.single-post .entry-title {
 	font-style: italic;
 	padding: 0 0 5px;
 }
+body.logged-in #footer .alo_easymail_form_table {
+	color: #8A8C8B;
+	font-size: 0.9em;
+	width: 100%;
+}
+#alo_em_widget_loading {
+	border: none !important;
+    color: #CCC;
+    font-size: 0.8em;
+    font-style: italic;
+}
 .btn.back-top {
 	background: url('../images/btn-top.jpg') center center no-repeat #292C2B;
 	bottom: 60px;
