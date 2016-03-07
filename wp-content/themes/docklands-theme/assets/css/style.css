@@ -528,6 +528,7 @@ body.home .slider-products .each .content .tag-price {
 }
 .products .each {
 	margin-bottom: 35px;
+	max-height: 380px;
 }
 /* Content de cada produto no Resultado da Busca */
 .search-results .each .content {
@@ -2250,6 +2251,39 @@ div.sharedaddy h3.sd-title{
 		padding-right: 15px !important;
 	}
 
+}
+
+@media ( min-width: 768px ) and (max-width: 1000px) {
+	.container {
+		margin: 0 auto;
+		width: 100%;
+	}
+	.menu-top .navbar-nav {
+		width: 68%;
+	}
+	.menu-top .social-media {
+		width: 30%;
+	}
+	#header .center {
+		display: block;
+		float: right;
+		width: 75%;
+	}
+	#header .center .desc {
+		float: right;
+		margin: 15px auto 25px;
+	}
+	#header .center .infos-contact {
+		float: right;
+	}
+	#header .itens-shop {
+	    margin-top: 10px;
+	    display: block;
+	    width: 100%;
+	}
+	#footer .social-media .top a.youtube {
+		margin-left: 0;
+	}
 }
 
 @media ( max-width: 800px ) {

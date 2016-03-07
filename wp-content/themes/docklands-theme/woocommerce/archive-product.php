@@ -29,8 +29,20 @@ get_header();
 					<?php woocommerce_product_loop_start(); ?>
 					<?php woocommerce_product_subcategories(); ?>
 					<?php if ( have_posts() ) : ?>
+
+					<?php $count = '0'; ?>
+
 					<?php while ( have_posts() ) : the_post(); ?>
+
+						<?php $count++; ?>
+
 						<?php get_template_part( 'content', 'produto' ); ?>
+
+						<?php if ( $count == '3' ): ?>
+							<div class="clear"></div>
+							<?php $count = '0'; ?>
+						<?php endif ?>
+
 	                <?php endwhile; // end of the loop. ?>
 	                <?php woocommerce_product_loop_end(); ?>
                 </div><!-- row -->
