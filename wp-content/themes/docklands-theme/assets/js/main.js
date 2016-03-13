@@ -272,6 +272,21 @@ jQuery(document).ready(function($) {
 	  ]
 	});
 
+	// woocommerce login on checkout
+	$( '.woocommerce .showlogin').on( 'click', function(e){
+		e.preventDefault();
+		if ( ! $(this).attr( 'data-open') ) {
+			$( '.woocommerce form.login' ).addClass( 'animated bounceIn' ).css( 'display', 'block' );
+		}
+	});
+	// woocommerce coupon on checkout
+	$( '.woocommerce .showcoupon').on( 'click', function(e){
+		e.preventDefault();
+		if ( ! $(this).attr( 'data-open') ) {
+			$( '.woocommerce form.checkout_coupon' ).addClass( 'animated bounceIn' ).css( 'display', 'block' );
+		}
+	});
+
 });
 (function($) {
 
