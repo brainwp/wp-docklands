@@ -1563,6 +1563,9 @@ body.logged-in #footer .alo_easymail_form_table {
 .woocommerce div.product .woocommerce-tabs ul.tabs li.active {
 	background-color: #FFF !important;
 }
+#content div.product div.images {
+	float:left !important;
+}
 .single-product .woocommerce-tabs h2,
 .single-product .woocommerce-tabs h3 {
 	text-transform: capitalize;
