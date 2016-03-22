@@ -1504,6 +1504,7 @@ body.logged-in #footer .alo_easymail_form_table {
 	text-transform: capitalize;
 	margin-bottom: 20px;
 }
+/* Page Contact */
 .page-contact .top-name{
 	width:100%;
 	display:block;
@@ -2568,6 +2569,15 @@ div.sharedaddy h3.sd-title{
 	}
 }
 @media ( max-width: 480px ) {
+	/* Page Contact */
+	.page-template-page-contact .contact-infos > div {
+		display: block;
+		width: 100%;
+	}
+	.page-template-page-contact .contact-infos > div.pull-right {
+		border-bottom: 1px solid #F1F1F1;
+		margin-bottom: 10px;
+	}
 }
 
 /* search form error */
