@@ -32,17 +32,25 @@ get_header('shop');
 
 				<div class="col-sm-12 arrivals full">
 					<?php
-					// WP_Query arguments
-					$args = array (
-						'post_type'              => 'product',
-						'posts_per_page'         => '6'
-					);
-					// The Query
-					$query = new WP_Query( $args );
+						// Count loop
+						$count = 0;
+						// WP_Query arguments
+						$args = array (
+							'post_type'              => 'product',
+							'posts_per_page'         => '6'
+						);
+						// The Query
+						$query = new WP_Query( $args );
 					?>
 					<?php if ( $query->have_posts() ) : ?>
 						<?php while ( $query->have_posts() ): $query->the_post(); ?>
+						
 							<?php get_template_part('content','produto'); ?>
+							<?php $count++; ?>
+							<?php if ( $count == 3 ): ?>
+								<div class="clear"></div>
+							<?php endif ?>
+
 						<?php endwhile; ?>
 					<?php endif; ?>
 					<?php wp_reset_postdata(); ?>
