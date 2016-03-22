@@ -864,6 +864,64 @@ h3.item {
 .list-produtos li .thumb img {
 	min-height: 100%;
 }
+/* Widget Produtos and Special Produtos */
+.special-widget ul,
+.produtos-widget ul {
+	padding-left: 0;
+}
+.special-widget ul li,
+.produtos-widget ul li {
+	list-style: none;
+	margin-bottom: 15px;
+	overflow: hidden;
+}
+.special-widget ul li .thumb,
+.produtos-widget ul li .thumb {
+	border: 1px solid #F1F1F1;
+	height: auto;
+	text-align: center;
+	padding: 3px;
+}
+.special-widget ul li .desc,
+.produtos-widget ul li .desc {
+	padding-top: 10px;
+}
+.special-widget ul li .desc .title,
+.produtos-widget ul li .desc .title {
+	display: block;
+}
+.special-widget ul li .moeda-preco,
+.produtos-widget ul li .moeda-preco {
+	color: #D27E26;
+	display: inline-block;
+	font-size: 1.2em;
+	float: left;
+	line-height: 1.8;
+	margin-right: 5px;
+}
+.special-widget ul li .price,
+.produtos-widget ul li .price {
+	color: #D27E26;
+	float: left;
+	font-size: 1.4em;
+	font-weight: bold;
+}
+.special-widget ul li .old-price,
+..produtos-widget ul li .old-price {
+	bottom: 0;
+	color: #B4B4B4;
+	font-size: 0.85em;
+	text-decoration: line-through;
+	position: absolute;
+	right: 0px;
+}
+.special-widget ul li .wrap-preco,
+.produtos-widget ul li .wrap-preco {
+	display: inline-block;
+    text-align: center;
+    width: auto;
+    margin: 5px auto 0;
+}
 .list-produtos li .title {
 	color: #006AB2;
 	display: block;

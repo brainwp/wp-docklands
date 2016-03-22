@@ -29,7 +29,7 @@ class Produtos_Widget extends WP_Widget {
 
 		echo '<div class="col-md-12 Produtos_Widget produtos-widget">';
 		echo '<h3 class="item">' . $title . '</h3>';
-		echo '<ul class="list-produtos">';
+		echo '<ul>';
 
 		global $post;
 
@@ -55,10 +55,10 @@ class Produtos_Widget extends WP_Widget {
 			$product = new WC_Product( $post->ID );
 			echo "<li>";
 			echo "<a href=" . get_the_permalink() . ">";
-			echo "<div class='thumb pull-left'>";
-				the_post_thumbnail(array('200', '200'));
+			echo "<div class='thumb col-xs-4 pull-left'>";
+				the_post_thumbnail( array( '120', '120' ) );
 			echo "</div>";
-			echo "<div class='desc col-sm-6'>";
+			echo "<div class='desc col-xs-8 pull-left'>";
 			echo "<span class='title'>";
 				the_title();
 			echo "</span><!-- title -->";
@@ -163,9 +163,9 @@ class Specials_Widget extends WP_Widget {
 		 */
 		$qtd_produtos = apply_filters( 'widget_produtos_qtd_produtos', empty( $instance['qtd_produtos'] ) ? '' : $instance['qtd_produtos'], $instance );
 
-		echo '<div class="col-md-12 Specials_Widget produtos-widget">';
+		echo '<div class="col-md-12 Specials_Widget special-widget nopadding">';
 		echo '<h3 class="item">' . $title . '</h3>';
-		echo '<ul class="list-produtos">';
+		echo '<ul>';
 
 		global $post;
 
@@ -195,10 +195,10 @@ class Specials_Widget extends WP_Widget {
 			$product = new WC_Product( $post->ID );
 			echo "<li>";
 			echo "<a href=" . get_the_permalink() . ">";
-			echo "<div class='thumb pull-left'>";
-				the_post_thumbnail(array('200', '200'));
+			echo "<div class='thumb col-xs-4 pull-left'>";
+				the_post_thumbnail( array( '120', '120' ) );
 			echo "</div>";
-			echo "<div class='desc col-sm-6'>";
+			echo "<div class='desc col-xs-8 pull-left'>";
 			echo "<span class='title'>";
 				the_title();
 			echo "</span><!-- title -->";
