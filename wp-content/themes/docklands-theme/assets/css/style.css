@@ -2578,6 +2578,26 @@ div.sharedaddy h3.sd-title{
 		border-bottom: 1px solid #F1F1F1;
 		margin-bottom: 10px;
 	}
+	/* Cart */
+	.woocommerce table.shop_table td,
+	.woocommerce table.shop_table th {
+		padding: 6px !important;
+	}
+}
+@media ( max-width: 400px ) {
+	/* Cart */
+	.woocommerce table.shop_table td,
+	.woocommerce table.shop_table th {
+		padding: 2px !important;
+	}
+	.woocommerce table.shop_table th.product-remove {
+		padding: 0 !important;
+	}
+	body.woocommerce-cart .woocommerce table.shop_table .coupon .button {
+		font-size: 0.7em;
+		padding-bottom: 12px;
+		padding-top: 12px;
+	}
 }
 
 /* search form error */
