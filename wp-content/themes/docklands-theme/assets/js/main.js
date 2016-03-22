@@ -103,7 +103,7 @@ jQuery(document).ready(function($) {
 		"showRetweet": false,
 		"showInteraction": false
 	};
-	twitterFetcher.fetch(config1);
+	console.log( twitterFetcher.fetch(config1) );
 
 	$('#selector_qty').on('change',function(e){
 		$('input.qty').val($(this).val());
