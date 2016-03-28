@@ -103,7 +103,7 @@ jQuery(document).ready(function($) {
 		"showRetweet": false,
 		"showInteraction": false
 	};
-	twitterFetcher.fetch(config1);
+	console.log( twitterFetcher.fetch(config1) );
 
 	$('#selector_qty').on('change',function(e){
 		$('input.qty').val($(this).val());
@@ -270,6 +270,16 @@ jQuery(document).ready(function($) {
 	    // settings: "unslick"
 	    // instead of a settings object
 	  ]
+	});
+	$( '.quote-checkout .showlogin').on( 'click', function(e) {
+		e.preventDefault();
+		$( 'form.login' ).slideToggle();
+	});
+	$( '.quote-checkout .showcoupon').on( 'click', function(e) {
+		e.preventDefault();
+		$( '.checkout_coupon' ).slideToggle( 400, function() {
+			$( '.checkout_coupon' ).find( ':input:eq(0)' ).focus();
+		});
 	});
 
 });
