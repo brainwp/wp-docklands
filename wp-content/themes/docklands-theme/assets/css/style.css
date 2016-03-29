@@ -12,7 +12,7 @@ Description: Odin main stylesheet.
 #content.widecolumn{
 	text-align: center;
 }
-@media only screen and (max-width: 700px) {
+@media only screen and ( max-width: 700px ) {
 	#content {
 		display: flex;
 		width: 100%;
@@ -2117,6 +2117,11 @@ body.page h1 {
 .page-contact .contact-form div.wpcf7-validation-errors{
 	text-align: center;
 }
+.wpcf7 input[type='text'],
+.wpcf7 input[type='email'],
+.wpcf7 textarea {
+	padding: 6px 8px;
+}
 .page-contact .contact-form span.wpcf7-not-valid-tip {
 	font-size: 0.8em;
 	font-style: italic;
@@ -2579,13 +2584,15 @@ div.sharedaddy h3.sd-title{
 		margin-bottom: 10px;
 	}
 	/* Widgets */
-	#secondary .widget,
-	#content #secondary,
-	.arrivals {
+	.woocommerce #secondary .widget {
 		padding-left: 0 !important;
 		padding-right: 0 !important;
 	}
-
+	body.woocommerce-cart #content #secondary,
+	body.woocommerce-cart .arrivals {
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+	}
 	/* Cart */
 	.woocommerce table.shop_table td,
 	.woocommerce table.shop_table th {
@@ -2596,6 +2603,37 @@ div.sharedaddy h3.sd-title{
 	}
 	body.woocommerce-cart .woocommerce table.shop_table .coupon .button {
 		width: 40% !important;	
+	}
+	/* Page Ask a Qustion */
+	.itens-shop .search-container input {
+		margin-bottom: 15px;
+		position: relative;
+	}
+	.itens-shop .search-container button {
+		display: none;
+	}
+	#breadcrumbs {
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+	}
+	.wpcf7 input[type='text'],
+	.wpcf7 input[type='email'],
+	.wpcf7 textarea {
+		width: 100%;
+	}
+	/* Advanced Search */
+	.page-template-page-search-advanced .each,
+	.page-template-page-search-advanced div.col-sm-9.right,
+	.page-template-page-search-advanced .col-sm-3.left {
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+	}
+	.page-template-page-search-advanced ul.product-categories li {
+		max-width: 100%;
+	}
+	#footer .alo_easymail_widget_form input[ type="submit" ] {
+		padding-left: 2px;
+		padding-right: 2px;
 	}
 }
 @media ( max-width: 400px ) {
