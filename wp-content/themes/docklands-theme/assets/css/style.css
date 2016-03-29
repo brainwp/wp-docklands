@@ -2578,10 +2578,24 @@ div.sharedaddy h3.sd-title{
 		border-bottom: 1px solid #F1F1F1;
 		margin-bottom: 10px;
 	}
+	/* Widgets */
+	#secondary .widget,
+	#content #secondary,
+	.arrivals {
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+	}
+
 	/* Cart */
 	.woocommerce table.shop_table td,
 	.woocommerce table.shop_table th {
 		padding: 6px !important;
+	}
+	body.woocommerce-cart .woocommerce table.shop_table .coupon .input-text {
+		width: 58% !important;
+	}
+	body.woocommerce-cart .woocommerce table.shop_table .coupon .button {
+		width: 40% !important;	
 	}
 }
 @media ( max-width: 400px ) {
