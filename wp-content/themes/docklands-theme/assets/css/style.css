@@ -2576,6 +2576,17 @@ div.sharedaddy h3.sd-title{
 		bottom: 20px;
 		right: 20px;
 	}
+	/* Products */
+	.product_meta .sku_wrapper,
+	.product_meta .posted_in,
+	.product_meta .tagged_as {
+		display: block;
+		margin-bottom: 3px;
+		width: 100%;	
+	}
+	.woocommerce div.product form.cart .variations select {
+		width: 100px !important;
+	}
 }
 @media ( max-width: 480px ) {
 	/* Content */
