@@ -12,7 +12,7 @@ Description: Odin main stylesheet.
 #content.widecolumn{
 	text-align: center;
 }
-@media only screen and ( max-width: 700px ) {
+@media only screen and ( max-width: 680px ) {
 	#content {
 		display: flex;
 		width: 100%;
@@ -2506,6 +2506,10 @@ div.sharedaddy h3.sd-title{
 	}
 }
 @media ( max-width: 600px ) {
+	/* Content */
+	#content {
+		margin-bottom: 240px;
+	}
 	/* Cart */
 	body.woocommerce-cart .cart-collaterals,
 	body.woocommerce-cart .woocommerce form.half {
@@ -2574,6 +2578,10 @@ div.sharedaddy h3.sd-title{
 	}
 }
 @media ( max-width: 480px ) {
+	/* Content */
+	#content {
+		margin-bottom: 100px;
+	}
 	/* Page Contact */
 	.page-template-page-contact .contact-infos > div {
 		display: block;
@@ -2636,7 +2644,17 @@ div.sharedaddy h3.sd-title{
 		padding-right: 2px;
 	}
 }
+@media ( max-width: 440px ) {
+	/* Content */
+	#content {
+		margin-bottom: 80px;
+	}
+}
 @media ( max-width: 400px ) {
+	/* Content */
+	#content {
+		margin-bottom: 50px;
+	}
 	/* Cart */
 	.woocommerce table.shop_table td,
 	.woocommerce table.shop_table th {
@@ -2649,6 +2667,12 @@ div.sharedaddy h3.sd-title{
 		font-size: 0.7em;
 		padding-bottom: 12px;
 		padding-top: 12px;
+	}
+}
+@media ( max-width: 320px ) {
+	/* Content */
+	#content {
+		margin-bottom: 20px;
 	}
 }
 
