@@ -12,7 +12,7 @@ Description: Odin main stylesheet.
 #content.widecolumn{
 	text-align: center;
 }
-@media only screen and (max-width: 700px) {
+@media only screen and ( max-width: 680px ) {
 	#content {
 		display: flex;
 		width: 100%;
@@ -2121,6 +2121,11 @@ body.page h1 {
 .page-contact .contact-form div.wpcf7-validation-errors{
 	text-align: center;
 }
+.wpcf7 input[type='text'],
+.wpcf7 input[type='email'],
+.wpcf7 textarea {
+	padding: 6px 8px;
+}
 .page-contact .contact-form span.wpcf7-not-valid-tip {
 	font-size: 0.8em;
 	font-style: italic;
@@ -2509,6 +2514,10 @@ div.sharedaddy h3.sd-title{
 	}
 }
 @media ( max-width: 600px ) {
+	/* Content */
+	#content {
+		margin-bottom: 240px;
+	}
 	/* Cart */
 	body.woocommerce-cart .cart-collaterals,
 	body.woocommerce-cart .woocommerce form.half {
@@ -2575,8 +2584,23 @@ div.sharedaddy h3.sd-title{
 		bottom: 20px;
 		right: 20px;
 	}
+	/* Products */
+	.product_meta .sku_wrapper,
+	.product_meta .posted_in,
+	.product_meta .tagged_as {
+		display: block;
+		margin-bottom: 3px;
+		width: 100%;	
+	}
+	.woocommerce div.product form.cart .variations select {
+		width: 100px !important;
+	}
 }
 @media ( max-width: 480px ) {
+	/* Content */
+	#content {
+		margin-bottom: 100px;
+	}
 	/* Page Contact */
 	.page-template-page-contact .contact-infos > div {
 		display: block;
@@ -2586,13 +2610,70 @@ div.sharedaddy h3.sd-title{
 		border-bottom: 1px solid #F1F1F1;
 		margin-bottom: 10px;
 	}
+	/* Widgets */
+	.woocommerce #secondary .widget {
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+	}
+	body.woocommerce-cart #content #secondary,
+	body.woocommerce-cart .arrivals {
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+	}
 	/* Cart */
 	.woocommerce table.shop_table td,
 	.woocommerce table.shop_table th {
 		padding: 6px !important;
 	}
+	body.woocommerce-cart .woocommerce table.shop_table .coupon .input-text {
+		width: 58% !important;
+	}
+	body.woocommerce-cart .woocommerce table.shop_table .coupon .button {
+		width: 40% !important;	
+	}
+	/* Page Ask a Qustion */
+	.itens-shop .search-container input {
+		margin-bottom: 15px;
+		position: relative;
+	}
+	.itens-shop .search-container button {
+		display: none;
+	}
+	#breadcrumbs {
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+	}
+	.wpcf7 input[type='text'],
+	.wpcf7 input[type='email'],
+	.wpcf7 textarea {
+		width: 100%;
+	}
+	/* Advanced Search */
+	.page-template-page-search-advanced .each,
+	.page-template-page-search-advanced div.col-sm-9.right,
+	.page-template-page-search-advanced .col-sm-3.left {
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+	}
+	.page-template-page-search-advanced ul.product-categories li {
+		max-width: 100%;
+	}
+	#footer .alo_easymail_widget_form input[ type="submit" ] {
+		padding-left: 2px;
+		padding-right: 2px;
+	}
+}
+@media ( max-width: 440px ) {
+	/* Content */
+	#content {
+		margin-bottom: 80px;
+	}
 }
 @media ( max-width: 400px ) {
+	/* Content */
+	#content {
+		margin-bottom: 50px;
+	}
 	/* Cart */
 	.woocommerce table.shop_table td,
 	.woocommerce table.shop_table th {
@@ -2605,6 +2686,12 @@ div.sharedaddy h3.sd-title{
 		font-size: 0.7em;
 		padding-bottom: 12px;
 		padding-top: 12px;
+	}
+}
+@media ( max-width: 320px ) {
+	/* Content */
+	#content {
+		margin-bottom: 20px;
 	}
 }
 
