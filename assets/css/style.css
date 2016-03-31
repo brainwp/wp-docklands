@@ -214,17 +214,27 @@ h3.bg-title {
 	width: 40px;
 }
 .menu-top .wrap .social-media .facebook {
-	background: url('../images/sprite-icons-social-header.png') -53px center no-repeat transparent;
+	background: url('../images/icons/f.png')center no-repeat transparent;
+	background-size: 31px;
+	opacity: 0.9;
 }
 .menu-top .wrap .social-media .googleplus {
-	background: url('../images/sprite-icons-social-header.png') -98px center no-repeat transparent;
+	background: url('../images/icons/gp.png')center no-repeat transparent;
+	background-size: 31px;
+	opacity: 0.9;
 }
 .menu-top .wrap .social-media .twitter {
-	background: url('../images/sprite-icons-social-header.png') -8px center no-repeat transparent;
+	background: url('../images/icons/t.png')center no-repeat transparent;
+	background-size: 31px;
+	opacity: 0.9;
 }
 .menu-top .wrap .social-media .youtube {
-	background: url('../images/sprite-icons-social-header.png') -148px center no-repeat transparent;
+	background: url('../images/icons/yt.png')center no-repeat transparent;
+	background-size: 31px;
+	opacity: 0.9;
 }
+	 
+	 
 .menu-top .wrap .social-media .pull-left a {
 	border-radius: 50%;
 	display: block;
@@ -232,8 +242,7 @@ h3.bg-title {
 	padding: 0px;
 	width: 40px;
 	border: 2px solid #F2F4F3;
-	margin-top: 1px;
-	margin-left: -2px;
+	
 }
 .menu-top .wrap .social-media .pull-left a:hover {
 	border: 2px solid #CCC;
@@ -2382,6 +2391,7 @@ div.sharedaddy h3.sd-title{
 	}
 }
 @media ( max-width: 768px ) {
+
 	#menu-top-menu {
 		display:none;
 	}
