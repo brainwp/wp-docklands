@@ -1963,9 +1963,13 @@ body.post-type-archive-services .slider-home .slick-next{
 	 	margin-top: 0!important;
 	 }
 	 
-	body.page-template-page-faq-php .sidebar-services {
-	 	margin-top: 0!important;
-	 }
+	.col-md-8 {
+    width: 72%!important;
+	}
+	 body.page-template-page-faq-php .sidebar-services {
+    margin-top: -2px!important;
+}
+	
 /*	END - MAY BE REQUIRED REVOME THIS PART*/
 	
 /*	PLUGIN CHANGE - WP SHORTCODE*/
@@ -1989,6 +1993,7 @@ body.post-type-archive-services .slider-home .slick-next{
 	 .ui-state-default{
 	 	border: 7px solid #0E77B1!important;
 		padding: 3px;
+		padding-left: 15px;
 		background-color: #0E77B1;
 	 }
 	 
