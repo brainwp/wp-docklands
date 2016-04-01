@@ -1962,12 +1962,19 @@ body.post-type-archive-services .slider-home .slick-next{
 	body.page-template-page-faq-php #secondary{
 	 	margin-top: 0!important;
 	 }
-	 
+	body.page-template-page-faq-php .single h2.bg-title, .page h2.bg-title, .single h3.bg-title {
+
+    font-size: 2.0em;
+
+	}	
+	 body.page-template-page-faq-php .entry-title{
+	 	font-size:28px;
+	 }
 	.col-md-8 {
     width: 72%!important;
 	}
 	 body.page-template-page-faq-php .sidebar-services {
-    margin-top: -2px!important;
+    margin-top: -8px!important;
 }
 	
 /*	END - MAY BE REQUIRED REVOME THIS PART*/
