@@ -1917,6 +1917,47 @@ body.post-type-archive-services .slider-home .slick-next{
 	padding-bottom: 5px;
 	border-bottom: 2px solid #f6f7f9;
 }
+	 
+/*FAQ PAGE*/
+	body.page-template-page-faq-php .sidebar-services{
+		
+	}
+	body.page-template-page-faq-php .widget-title{
+		display: block!important;
+		background: none!Important;
+		color: #d6740f;
+		margin-left: -5px;
+		border-bottom: 2px solid #f3f3f3;
+		font-size: 22px;
+		
+	}
+	body.page-template-page-faq-php .sidebar-services ul.menu a{
+		color: #59595b!important;
+		
+		
+		
+	}
+	
+	 
+	body.page-template-page-faq-php .sidebar-services ul.menu a:before{
+
+		content: "-";
+		display:inline-block;
+		border: none!important;
+		margin-right: 5px;
+}
+	
+	body.page-template-page-faq-php .sidebar-services ul.menu a{
+		border: none!important;
+		margin-left: 20px!Important;
+		font-size: 15px;
+}
+	
+	.sidebar-services ul.menu li {
+    	border: none!important;
+	}
+	
+	
 @media only screen and (min-width: 768px) {
 	body.single-services .sharedaddy, body.single-cases .sharedaddy {
 		clear: none !important;
