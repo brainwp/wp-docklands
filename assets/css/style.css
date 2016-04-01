@@ -2051,7 +2051,48 @@ body.post-type-archive-services .slider-home .slick-next{
 */
 	 .zilla-toggle-inner{border-radius: 0px!important;}
 	 
+/*Terms & Conditions PAGE*/
+	body.page-template-page-terms-conditions-php .page-contact .top-name{
+		font-size: 2.0em;
+	}
+	body.page-template-page-terms-conditions-php .widget-title{
+		display: block!important;
+		background: none!Important;
+		color: #d6740f;
+		margin-left: -5px;
+		border-bottom: 2px solid #f3f3f3;
+		font-size: 22px;
+		
+	}
+	body.page-template-page-terms-conditions-php ul.menu a{
+		color: #59595b!important;
+		
+		
+		
+	}
 	
+	 
+	body.page-template-page-terms-conditions-php .sidebar-services ul.menu a:before{
+
+		content: "-";
+		display:inline-block;
+		border: none!important;
+		margin-right: 5px;
+}
+	
+	body.page-template-page-terms-conditions-php .sidebar-services ul.menu a{
+		border: none!important;
+		margin-left: 20px!Important;
+		font-size: 15px;
+}
+	
+	body.page-template-page-terms-conditions-php ul.menu li {
+    	border: none!important;
+	}
+	body.page-template-page-terms-conditions-php #secondary {
+    	margin-top: 10px!important;
+	}
+	 
 	
 @media only screen and (min-width: 768px) {
 	body.single-services .sharedaddy, body.single-cases .sharedaddy {
