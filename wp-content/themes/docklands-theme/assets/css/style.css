@@ -2156,7 +2156,51 @@ body.post-type-archive-services .slider-home .slick-next{
     background-color: #373737;
     padding-bottom: 10px;
     padding-top: 10px;
+	}
+	 
+	 .page-template-default .cart-collaterals .cross-sells h2{
+	 	margin-top: 0px;
+		font-size: 17px!important;
+		 color: #48484a;
+		 font-family: 'Helvetica Neue', Helvetica, Arial;
+		 font-weight: bold;
+		 text-transform: none;
+		 background: #f1f1f1;
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJod…EiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background: -moz-linear-gradient(top, #ffffff 0%, #e1e5e8 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#e1e5e8));
+    background: -webkit-linear-gradient(top, #ffffff 0%,#e1e5e8 100%);
+    background: -o-linear-gradient(top, #ffffff 0%,#e1e5e8 100%);
+    background: -ms-linear-gradient(top, #ffffff 0%,#e1e5e8 100%);
+    background: linear-gradient(to bottom, #ffffff 0%,#e1e5e8 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e1e5e8',GradientType=0 );
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    margin-top: 20px;
+    padding: 12px 24px;
+    clear: both;
+    display: inline-block;
+    width: 100%;
+		
+	 	
+	 }
+	 
+	 .woocommerce .cart-collaterals .cross-sells, .woocommerce-page .cart-collaterals .cross-sells {
+		 width: 100%!important;}
+	 
+	 .woocommerce .cart-collaterals .cross-sells, .woocommerce-page .cart-collaterals .cross-sells{
+	 	margin-bottom: 20px;
+	 }
+	 	 .cart-collaterals{
+	 	display: flex;
+		flex-flow: column-reverse;
+	 }
+	 
+	 .woocommerce-cart .cart-collaterals .cart_totals table {
+		margin-left: 27px!important;
 }
+	 
 	 
 @media (min-width: 768px)
 .navbar-collapse.collapse {
@@ -2172,6 +2216,7 @@ body.post-type-archive-services .slider-home .slick-next{
     margin-top: 1.5px;
     -webkit-overflow-scrolling: touch;
 }
+
 	 
 
 @media only screen and (min-width: 768px) {
