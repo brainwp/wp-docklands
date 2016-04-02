@@ -18,13 +18,13 @@
 			if ( is_page_template( 'page-faq.php' ) ) {
 				dynamic_sidebar( 'faq-sidebar' );
 			}
-			
-			
+
+
 		elseif ( is_page_template( 'page-terms-conditions.php' ) ) {
 				dynamic_sidebar( 'terms-sidebar' );
 			}
-			
-			
+
+
 		else {
 				if ( ! dynamic_sidebar( 'main-sidebar' ) ) {
 					the_widget( 'WP_Widget_Recent_Posts', array( 'number' => 10 ) );
@@ -32,7 +32,7 @@
 					the_widget( 'WP_Widget_Tag_Cloud' );
 				}
 			}
-			
+
 		} elseif ( is_singular( 'cases' ) ) {
 			dynamic_sidebar( 'cases-sidebar' );
 		} else {
