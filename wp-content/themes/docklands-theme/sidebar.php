@@ -10,7 +10,7 @@
 ?>
 
 <div id="secondary" class="col-md-3" role="complementary">
-	<?php if ( is_singular( 'services' ) || is_singular( 'cases' ) || is_page() ) : ?>
+	<?php if ( is_singular( 'services' ) || is_singular( 'cases' ) ) : ?>
 		<?php get_search_form( true );?>
 	<?php endif;?>
 	<?php
