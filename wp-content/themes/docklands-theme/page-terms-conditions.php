@@ -17,7 +17,7 @@ $page_id = get_the_ID();
 					<?php the_title(); ?>
 				</h1><!-- .top-name -->
 			</div><!-- .page-contact -->
-			<?php get_sidebar( 'left' ); ?>
+			<?php get_sidebar(); ?>
 
 			<div class="col-sm-9 right">
 

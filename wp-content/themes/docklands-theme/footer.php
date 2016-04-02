@@ -70,10 +70,10 @@ $options = get_option('footer_cfg');
 				<div class="col-sm-4 social-media">
 					<div class="top">
 						<?php $options = get_option('social');?>
-						<a class="col-sm-3 youtube" href="<?php if(!empty($options['yt_url'])) echo $options['yt_url'];?>"></a>
-						<a class="col-sm-3 googleplus" href="<?php if(!empty($options['gplus_url'])) echo $options['gplus_url'];?>"></a>
-						<a class="col-sm-3 twitter" href="<?php if(!empty($options['twitter_url'])) echo $options['twitter_url'];?>"></a>
-						<a class="col-sm-3 facebook" href="<?php if(!empty($options['fb_url'])) echo $options['fb_url'];?>"></a>
+						<a class="col-sm-3 youtube" href="<?php if(!empty($options['yt_url'])) echo $options['yt_url'];?>" title="Youtube"></a>
+						<a class="col-sm-3 googleplus" href="<?php if(!empty($options['gplus_url'])) echo $options['gplus_url'];?>"title="Google Plus"></a>
+						<a class="col-sm-3 twitter" href="<?php if(!empty($options['twitter_url'])) echo $options['twitter_url'];?>" title="Twitter"></a>
+						<a class="col-sm-3 facebook" href="<?php if(!empty($options['fb_url'])) echo $options['fb_url'];?>" title="Facebook"></a>
 					</div><!-- top -->
 					<div class="bottom col-sm-12">
 						<span class="join">Join the Docklands Office Furniture Newsletter:</span>

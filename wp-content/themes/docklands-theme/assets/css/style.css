@@ -214,17 +214,27 @@ h3.bg-title {
 	width: 40px;
 }
 .menu-top .wrap .social-media .facebook {
-	background: url('../images/sprite-icons-social-header.png') -53px center no-repeat transparent;
+	background: url('../images/icons/f.png')center no-repeat transparent;
+	background-size: 31px;
+	opacity: 0.9;
 }
 .menu-top .wrap .social-media .googleplus {
-	background: url('../images/sprite-icons-social-header.png') -98px center no-repeat transparent;
+	background: url('../images/icons/gp.png')center no-repeat transparent;
+	background-size: 31px;
+	opacity: 0.9;
 }
 .menu-top .wrap .social-media .twitter {
-	background: url('../images/sprite-icons-social-header.png') -8px center no-repeat transparent;
+	background: url('../images/icons/t.png')center no-repeat transparent;
+	background-size: 31px;
+	opacity: 0.9;
 }
 .menu-top .wrap .social-media .youtube {
-	background: url('../images/sprite-icons-social-header.png') -148px center no-repeat transparent;
+	background: url('../images/icons/yt.png')center no-repeat transparent;
+	background-size: 31px;
+	opacity: 0.9;
 }
+	 
+	 
 .menu-top .wrap .social-media .pull-left a {
 	border-radius: 50%;
 	display: block;
@@ -232,8 +242,7 @@ h3.bg-title {
 	padding: 0px;
 	width: 40px;
 	border: 2px solid #F2F4F3;
-	margin-top: 1px;
-	margin-left: -2px;
+	
 }
 .menu-top .wrap .social-media .pull-left a:hover {
 	border: 2px solid #CCC;
@@ -1376,17 +1385,21 @@ body.single-post .entry-title {
 	width: 100%;
 }
 #footer .social-media .top a.youtube {
-	background: url('../images/sprite-icons-social.png') 10px center no-repeat;
+	background: url('../images/iconyt.png') center no-repeat;
+	background-size: 27px;
 	margin-left: 47px;
 }
 #footer .social-media .top a.googleplus {
-	background: url('../images/sprite-icons-social.png') -38px center no-repeat;
+	background: url('../images/iconplus.png') center no-repeat;
+	background-size: 27px;
 }
 #footer .social-media .top a.twitter {
-	background: url('../images/sprite-icons-social.png') -90px center no-repeat;
+	background: url('../images/icont.png') center no-repeat;
+	background-size: 27px;
 }
 #footer .social-media .top a.facebook {
-	background: url('../images/sprite-icons-social.png') -142px center no-repeat;
+	background: url('../images/iconf.png') center no-repeat;
+	background-size: 27px;
 }
 #footer .social-media .bottom {
 	padding-bottom: 0;
@@ -1904,6 +1917,183 @@ body.post-type-archive-services .slider-home .slick-next{
 	padding-bottom: 5px;
 	border-bottom: 2px solid #f6f7f9;
 }
+	 
+/*FAQ PAGE*/
+	body.page-template-page-faq-php .sidebar-services{
+		
+	}
+	body.page-template-page-faq-php .widget-title{
+		display: block!important;
+		background: none!Important;
+		color: #d6740f;
+		margin-left: -5px;
+		border-bottom: 2px solid #f3f3f3;
+		font-size: 22px;
+		
+	}
+	body.page-template-page-faq-php .sidebar-services ul.menu a{
+		color: #59595b!important;
+		
+		
+		
+	}
+	
+	 
+	body.page-template-page-faq-php .sidebar-services ul.menu a:before{
+
+		content: "-";
+		display:inline-block;
+		border: none!important;
+		margin-right: 5px;
+}
+	
+	body.page-template-page-faq-php .sidebar-services ul.menu a{
+		border: none!important;
+		margin-left: 20px!Important;
+		font-size: 15px;
+}
+	
+	body.page-template-page-faq-php .sidebar-services ul.menu li {
+    	border: none!important;
+	}
+	 
+/*	START - MAY BE REQUIRED REVOME THIS PART*/
+	
+	body.page-template-page-faq-php #secondary{
+	 	margin-top: 0!important;
+	 }
+	body.page-template-page-faq-php .single h2.bg-title, .page h2.bg-title, .single h3.bg-title {
+
+    font-size: 2.0em;
+
+	}	
+	 body.page-template-page-faq-php .entry-title{
+	 	font-size:28px;
+	 }
+	.col-md-8 {
+    width: 72%!important;
+	}
+	 body.page-template-page-faq-php .sidebar-services {
+    margin-top: -8px!important;
+}
+	
+/*	END - MAY BE REQUIRED REVOME THIS PART*/
+	
+/*	PLUGIN CHANGE - WP SHORTCODE*/
+	 .zilla-toggle ui-accordion ui-widget ui-helper-reset{
+	 	border-radius: 0px;
+	 }
+	 .zilla-toggle-title{
+	 	font-size: 17px!important;
+		text-transform: none!important;
+		padding: 3px 10px 5px 10px;
+	 }
+	 
+	 .zilla-toggle{
+	 	border:0px!important;
+		padding: 1px;
+		background: none!Important;
+	 }
+	 .zilla-toggle-title, .zilla-toggle{
+	 	border-radius: 0px!important;
+	 }
+	 .ui-state-default{
+	 	border: 7px solid #0E77B1!important;
+		padding: 3px;
+		padding-left: 15px;
+		background-color: #0E77B1;
+	 }
+	 
+	 .ui-accordion-header-icon{
+	 	float: right!important;
+		background-size:19px!important;
+		
+	 }
+	 .ui-accordion .ui-accordion-header .ui-icon{
+	 	margin-right: 0px!important;
+	 }
+	 
+/*	 WHEN IS ACTIVE*/
+	  .ui-state-active{
+	 	background-color: #DA8228!important;
+		border: 7px solid #DA8228!important;
+	 }
+	 
+	 .ui-accordion-header-active{
+	 	border: 7px solid ##DB8329!important;
+	 }
+
+	 
+	 .ui-accordion-content-active{
+		border-left: 4px solid #DA8228;
+	 	background-color:  white!important;
+		color: #2d2d2d;
+		
+	 }
+
+	 
+	 .ui-toggle-title-active{
+	 	
+		padding: 3px;
+		background-color: #DA8228;
+	 }
+/*
+	 .ui-accordion-content {
+    		padding: 0.4em 0.8em 0.4em!important;
+	}
+*/
+	 
+	 
+/*
+	 .ui-accordion-content {
+   			padding: 0.4em 0.8em 0.4em!important;
+	 }
+*/
+	 .zilla-toggle-inner{border-radius: 0px!important;}
+	 
+/*Terms & Conditions PAGE*/
+	body.page-template-page-terms-conditions-php .page-contact .top-name{
+		font-size: 2.0em;
+	}
+	body.page-template-page-terms-conditions-php .widget-title{
+		display: block!important;
+		background: none!Important;
+		color: #d6740f;
+		margin-left: -5px;
+		border-bottom: 2px solid #f3f3f3;
+		font-size: 22px;
+		
+	}
+	body.page-template-page-terms-conditions-php ul.menu a{
+		color: #59595b!important;
+		
+		
+		
+	}
+	
+	 
+	body.page-template-page-terms-conditions-php .sidebar-services ul.menu a:before{
+
+		content: "-";
+		display:inline-block;
+		border: none!important;
+		margin-right: 5px;
+}
+	
+	body.page-template-page-terms-conditions-php .sidebar-services ul.menu a{
+		border: none!important;
+		margin-left: 20px!Important;
+		font-size: 15px;
+}
+	
+	body.page-template-page-terms-conditions-php ul.menu li {
+    	border: none!important;
+	}
+	body.page-template-page-terms-conditions-php #secondary {
+    	margin-top: 10px!important;
+	}
+	 
+	
 @media only screen and (min-width: 768px) {
 	body.single-services .sharedaddy, body.single-cases .sharedaddy {
 		clear: none !important;
@@ -2378,6 +2568,7 @@ div.sharedaddy h3.sd-title{
 	}
 }
 @media ( max-width: 768px ) {
+
 	#menu-top-menu {
 		display:none;
 	}
@@ -2488,17 +2679,21 @@ div.sharedaddy h3.sd-title{
 		padding: 25px;
 	}
 	#footer .social-media .top a.youtube {
-		background: url('../images/sprite-icons-social.png') 6px center no-repeat;
+		background: url('../images/iconyt.png') center no-repeat;
+		background-size: 27px;
 		margin-left: -4px;
 	}
 	#footer .social-media .top a.googleplus {
-		background: url('../images/sprite-icons-social.png') -47px center no-repeat;
+		background: url('../images/iconplus.png') center no-repeat;
+	background-size: 27px;
 	}
 	#footer .social-media .top a.twitter {
-		background: url('../images/sprite-icons-social.png') -102px center no-repeat;
+		background: url('../images/icont.png') center no-repeat;
+	background-size: 27px;
 	}
 	#footer .social-media .top a.facebook {
-		background: url('../images/sprite-icons-social.png') -157px center no-repeat;
+		background: url('../images/iconf.png') center no-repeat;
+	background-size: 27px;
 	}
 	/* Sidebar */
 	#secondary form {
