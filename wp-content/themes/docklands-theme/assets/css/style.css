@@ -2200,6 +2200,31 @@ body.post-type-archive-services .slider-home .slick-next{
 	 .woocommerce-cart .cart-collaterals .cart_totals table {
 		margin-left: 27px!important;
 }
+	 #account_email{
+	 	margin-bottom: 18px;
+	 }
+	 
+	 .woocommerce-edit-account fieldset{
+	 	margin-top: 15px;
+	 }
+
+	 #account_first_name, #account_last_name, #account_email, #password_current, #password_1, #password_2{
+	 	float: left;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		border: 1px solid #d3ced2;
+		padding: 6px 6px 5px;
+		margin: 0 4px 0 0;
+		outline: 0;
+		line-height: 1;
+	 }
+	 
+	 .woocommerce form fieldset legend{
+		font-size: 16px;
+		font-weight: bold;
+	 }
+	 
 	 
 	 
 @media (min-width: 768px)
@@ -2217,6 +2242,7 @@ body.post-type-archive-services .slider-home .slick-next{
     -webkit-overflow-scrolling: touch;
 }
 
+	
 	 
 
 @media only screen and (min-width: 768px) {
