@@ -278,10 +278,10 @@ function odin_widgets_init() {
 			'after_title' => '</h3>',
 		)
 	);
-	
-	
-	
-	
+
+
+
+
 	register_sidebar(
 		array(
 			'name' => __( 'Sidebar FAQ', 'odin' ),
@@ -293,7 +293,7 @@ function odin_widgets_init() {
 			'after_title' => '</h3>',
 		)
 	);
-	
+
 	register_sidebar(
 		array(
 			'name' => __( 'Sidebar Conditions', 'odin' ),
@@ -305,9 +305,9 @@ function odin_widgets_init() {
 			'after_title' => '</h3>',
 		)
 	);
-	
-	
-	
+
+
+
 	register_sidebar(
 		array(
 			'name' => __( 'Sidebar Single Cases', 'odin' ),
@@ -319,7 +319,6 @@ function odin_widgets_init() {
 			'after_title' => '</h3>',
 		)
 	);
-	'aaaaa'
 	register_sidebar(
 		array(
 			'name' => __( 'Sidebar Archive Services', 'odin' ),
