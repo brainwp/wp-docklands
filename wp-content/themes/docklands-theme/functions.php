@@ -289,6 +289,7 @@ function odin_widgets_init() {
 			'after_title' => '</h3>',
 		)
 	);
+	'aaaaa'
 	register_sidebar(
 		array(
 			'name' => __( 'Sidebar Archive Services', 'odin' ),
