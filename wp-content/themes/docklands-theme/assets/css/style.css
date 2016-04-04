@@ -2232,32 +2232,42 @@ body.post-type-archive-services .slider-home .slick-next{
      
      .single-product .woocommerce-main-image.zoom{
          background: url(../images/img-mask.png) no-repeat bottom; 
-         -webkit-transition:all ease-out 300ms;
-         -moz-transition:all ease-out 300ms;
-         -ms-transition:all ease-out 300ms;
-         -o-transition:all ease-out 300ms;
          transition:all ease-out 300ms;
      }
      
      .woocommerce div.product div.images img:hover{
          opacity: 0.5;
-         -webkit-transition:all ease-out 300ms;
-         -moz-transition:all ease-out 300ms;
-         -ms-transition:all ease-out 300ms;
-         -o-transition:all ease-out 300ms;
          transition:all ease-out 300ms;
      }
      
      .woocommerce div.product div.images img{
          opacity: 1;
-         -webkit-transition:all ease-out 300ms;
-         -moz-transition:all ease-out 300ms;
-         -ms-transition:all ease-out 300ms;
-         -o-transition:all ease-out 300ms;
          transition:all ease-out 300ms;
      }
      
+/*     ------------------------------------------------------*/
      
+    .woocommerce-page div.product div.thumbnails a :hover{
+         background: url(../images/img-mask.png) no-repeat center;
+        background-size: 30px 30px;
+     }
+     
+     .woocommerce-page div.product div.thumbnails a {
+         background: url(../images/img-mask.png) no-repeat bottom; 
+         transition:all ease-out 300ms;
+         background-size: 90px 90px;
+         
+     }
+     
+     .woocommerce-page div.product div.images img:hover{
+         opacity: 0.5;
+         transition:all ease-out 300ms;
+     }
+     
+     .woocommerce-page div.product div.images img{
+         opacity: 1;
+         transition:all ease-out 300ms;
+     }
      
 	 
 	 
