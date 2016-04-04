@@ -40,7 +40,7 @@ $cat = wp_get_object_terms($post->ID,'product_cat');
 
 		} else {
 
-			echo apply_filters( 'woocommerce_single_product_image_html', sprintf( '<img src="%s" alt="%s" /><span></span>', wc_placeholder_img_src(), __( 'Placeholder', 'woocommerce' ) ), $post->ID );
+			echo apply_filters( 'woocommerce_single_product_image_html', sprintf( '<img src="%s" alt="%s" />', wc_placeholder_img_src(), __( 'Placeholder', 'woocommerce' ) ), $post->ID );
 		
 		}
 
