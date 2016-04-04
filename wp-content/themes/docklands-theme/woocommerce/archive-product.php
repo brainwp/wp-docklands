@@ -12,6 +12,7 @@
  */
 $options = get_option('home_cfg');
 get_header();
+global $wp_query;
 ?>
 
 	<div id="primary" class="col-sm-12">
@@ -46,7 +47,29 @@ get_header();
 	                <?php endwhile; // end of the loop. ?>
 	                <?php woocommerce_product_loop_end(); ?>
                 </div><!-- row -->
-
+				<div class="col-md-12 pagination-control">
+				    <div class="col-md-4 nopadding">
+					    <label><?php _e('Show','odin');?></label>
+					    <select>
+                            <option value="<?php echo get_permalink( woocommerce_get_page_id( 'shop' ) );?>">
+                            	<?php _e('12 per page','odin');?>
+                            </option>
+                            <option value="<?php echo get_permalink( woocommerce_get_page_id( 'shop' ) );?>?per_page=24" <?php if(isset($_GET['per_page'])) selected( $_GET['per_page'], 24 ); ?>>
+                            	<?php _e('24 per page','odin');?>
+                            </option>
+                            <option value="<?php echo get_permalink( woocommerce_get_page_id( 'shop' ) );?>?per_page=36" <?php if(isset($_GET['per_page'])) selected( $_GET['per_page'], 36 );?>>
+                            	<?php _e('36 per page','odin');?>
+                            </option>
+					    </select>
+					</div><!-- .col-md-4 -->
+					<?php if( $wp_query->max_num_pages > 1):?>
+					<div class="col-md-4 pull-right">
+						<div class="pull-right news-pagination-links">
+							<?php brasa_news_pagination( $wp_query->max_num_pages );?>
+						</div><!-- .pull-right -->
+					</div><!-- .col-md-4 -->
+				    <?php endif;?>
+				</div><!-- .col-md-12 pagination-control -->
                 <div class="col-md-12 pagination">
                 	<?php
                 	// Page navigation.
@@ -56,58 +79,10 @@ get_header();
             	<?php else : ?>
             		<?php get_template_part( 'content', 'none' );?>
             	<?php endif;?>
+            	<?php get_template_part( 'parts/recentrly-items' ); ?>
+
 			</div><!-- right -->
 
-			<div class="col-sm-12 full">
-
-				<?php if ( $banner_1 = $options['home_banner_1'] ) : ?>
-				    <?php $link = (!empty($options['home_banner_1_link']))? $options['home_banner_1_link'] : 'javascript:void(0)'; ?>
-
-					<div class="banner col-sm-6">
-						<a href="<?php echo $link;?>">
-							<?php echo wp_get_attachment_image($banner_1,'half-horizontal-thumb'); ?>
-						</a>
-					</div><!-- banner -->
-
-				<?php endif ?>
-
-				<div class="col-sm-6 video">
-					<div class="content">
-						<?php echo strip_tags($options['home_video'],'<iframe>'); ?>
-					</div><!-- content -->
-				</div><!-- video -->
-
-			</div>
-
-			<div class="col-sm-12 full">
-
-				<?php if ( $differential = get_field( 'home_differential', 'options' ) ) : ?>
-
-					<div class="differential col-xs-12">
-						<h4>Why Docklands are unique:</h4>
-						<span><?php echo $differential; ?></span>
-					</div><!-- differential -->
-
-				<?php endif ?>
-
-				<?php if ( $banner_2 = get_field( 'home_banner_2', 'options' ) ) : ?>
-
-					<div class="banner col-sm-6">
-						<img src="<?php echo $banner_2; ?>" alt="">
-					</div><!-- banner -->
-
-				<?php endif ?>
-
-				<?php if ( $banner_3 = get_field( 'home_banner_3', 'options' ) ) : ?>
-
-					<div class="banner col-sm-6">
-						<img src="<?php echo $banner_3; ?>" alt="">
-					</div><!-- banner -->
-
-				<?php endif ?>
-
-			</div><!-- full -->
-			<?php get_template_part( 'parts/recentrly-items' ); ?>
 		</div><!-- #content -->
 	</div><!-- #primary -->
 

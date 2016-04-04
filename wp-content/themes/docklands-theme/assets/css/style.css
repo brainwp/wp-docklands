@@ -233,8 +233,8 @@ h3.bg-title {
 	background-size: 31px;
 	opacity: 0.9;
 }
-	 
-	 
+
+
 .menu-top .wrap .social-media .pull-left a {
 	border-radius: 50%;
 	display: block;
@@ -242,7 +242,7 @@ h3.bg-title {
 	padding: 0px;
 	width: 40px;
 	border: 2px solid #F2F4F3;
-	
+
 }
 .menu-top .wrap .social-media .pull-left a:hover {
 	border: 2px solid #CCC;
@@ -543,7 +543,7 @@ body.home .slider-products .each .content .tag-price {
 	padding: 2px;
 }
 .products .each {
-	margin-bottom: 35px;
+	margin-bottom: 80px;
 	max-height: 380px;
 }
 /* Content de cada produto no Resultado da Busca */
@@ -1917,10 +1917,10 @@ body.post-type-archive-services .slider-home .slick-next{
 	padding-bottom: 5px;
 	border-bottom: 2px solid #f6f7f9;
 }
-	 
+
 /*FAQ PAGE*/
 	body.page-template-page-faq-php .sidebar-services{
-		
+
 	}
 	body.page-template-page-faq-php .widget-title{
 		display: block!important;
@@ -1929,16 +1929,16 @@ body.post-type-archive-services .slider-home .slick-next{
 		margin-left: -5px;
 		border-bottom: 2px solid #f3f3f3;
 		font-size: 22px;
-		
+
 	}
 	body.page-template-page-faq-php .sidebar-services ul.menu a{
 		color: #59595b!important;
-		
-		
-		
+
+
+
 	}
-	
-	 
+
+
 	body.page-template-page-faq-php .sidebar-services ul.menu a:before{
 
 		content: "-";
@@ -1946,19 +1946,19 @@ body.post-type-archive-services .slider-home .slick-next{
 		border: none!important;
 		margin-right: 5px;
 }
-	
+
 	body.page-template-page-faq-php .sidebar-services ul.menu a{
 		border: none!important;
 		margin-left: 20px!Important;
 		font-size: 15px;
 }
-	
+
 	body.page-template-page-faq-php .sidebar-services ul.menu li {
     	border: none!important;
 	}
-	 
+
 /*	START - MAY BE REQUIRED REVOME THIS PART*/
-	
+
 	body.page-template-page-faq-php #secondary{
 	 	margin-top: 0!important;
 	 }
@@ -1966,7 +1966,7 @@ body.post-type-archive-services .slider-home .slick-next{
 
     font-size: 2.0em;
 
-	}	
+	}
 	 body.page-template-page-faq-php .entry-title{
 	 	font-size:28px;
 	 }
@@ -1976,9 +1976,9 @@ body.post-type-archive-services .slider-home .slick-next{
 	 body.page-template-page-faq-php .sidebar-services {
     margin-top: -8px!important;
 }
-	
+
 /*	END - MAY BE REQUIRED REVOME THIS PART*/
-	
+
 /*	PLUGIN CHANGE - WP SHORTCODE*/
 	 .zilla-toggle ui-accordion ui-widget ui-helper-reset{
 	 	border-radius: 0px;
@@ -1988,7 +1988,7 @@ body.post-type-archive-services .slider-home .slick-next{
 		text-transform: none!important;
 		padding: 3px 10px 5px 10px;
 	 }
-	 
+
 	 .zilla-toggle{
 	 	border:0px!important;
 		padding: 1px;
@@ -2003,37 +2003,37 @@ body.post-type-archive-services .slider-home .slick-next{
 		padding-left: 15px;
 		background-color: #0E77B1;
 	 }
-	 
+
 	 .ui-accordion-header-icon{
 	 	float: right!important;
 		background-size:19px!important;
-		
+
 	 }
 	 .ui-accordion .ui-accordion-header .ui-icon{
 	 	margin-right: 0px!important;
 	 }
-	 
+
 /*	 WHEN IS ACTIVE*/
 	  .ui-state-active{
 	 	background-color: #DA8228!important;
 		border: 7px solid #DA8228!important;
 	 }
-	 
+
 	 .ui-accordion-header-active{
 	 	border: 7px solid ##DB8329!important;
 	 }
 
-	 
+
 	 .ui-accordion-content-active{
 		border-left: 4px solid #DA8228;
 	 	background-color:  white!important;
 		color: #2d2d2d;
-		
+
 	 }
 
-	 
+
 	 .ui-toggle-title-active{
-	 	
+
 		padding: 3px;
 		background-color: #DA8228;
 	 }
@@ -2042,15 +2042,15 @@ body.post-type-archive-services .slider-home .slick-next{
     		padding: 0.4em 0.8em 0.4em!important;
 	}
 */
-	 
-	 
+
+
 /*
 	 .ui-accordion-content {
    			padding: 0.4em 0.8em 0.4em!important;
 	 }
 */
 	 .zilla-toggle-inner{border-radius: 0px!important;}
-	 
+
 /*Terms & Conditions PAGE*/
 	body.page-template-page-terms-conditions-php .page-contact .top-name{
 		font-size: 2.0em;
@@ -2062,16 +2062,16 @@ body.post-type-archive-services .slider-home .slick-next{
 		margin-left: -5px;
 		border-bottom: 2px solid #f3f3f3;
 		font-size: 22px;
-		
+
 	}
 	body.page-template-page-terms-conditions-php ul.menu a{
 		color: #59595b!important;
-		
-		
-		
+
+
+
 	}
-	
-	 
+
+
 	body.page-template-page-terms-conditions-php .sidebar-services ul.menu a:before{
 
 		content: "-";
@@ -2079,13 +2079,13 @@ body.post-type-archive-services .slider-home .slick-next{
 		border: none!important;
 		margin-right: 5px;
 }
-	
+
 	body.page-template-page-terms-conditions-php .sidebar-services ul.menu a{
 		border: none!important;
 		margin-left: 20px!Important;
 		font-size: 15px;
 }
-	
+
 	body.page-template-page-terms-conditions-php ul.menu li {
     	border: none!important;
 	}
@@ -2094,25 +2094,25 @@ body.post-type-archive-services .slider-home .slick-next{
 	}
 	 #main-navigation .navbar-nav>li>a{
 	 	padding: none!important;
-	 	
+
 	 }
-	 
+
 	 #main-navigation .navbar-nav>li>a {
 		 padding-top: 24px!important;
 	 	font-size: 15px;
 	 }
-	 
+
 	 #main-navigation .navbar-nav>li {
     	border-right:1px solid white;
 		margin-right: 5px;
 	}
-	 
+
 	 #main-navigation .navbar-nav>li:last-child {
     	border-right:0px!important;
 		margin-right: 0px;
 		 width: 200px;
 	}
-	 	 
+
 
 	#main-navigation .navbar-collapse {
     padding-right: 0px;
@@ -2120,22 +2120,22 @@ body.post-type-archive-services .slider-home .slick-next{
     border-top: 0px!important;
     -webkit-overflow-scrolling: touch;
 }
-	 
+
 	#main-navigation {
 		background: #231F20!important;
 		border-radius: 0;
 	}
-	 
+
 	#main-navigation a {
 		background: #231F20;
 		color: white;
 		}
 	 #main-navigation #navbar-nav{
-	 		
+
 	 }
-	 
+
 	#main-navigation .navbar-collapse {
-		
+
 		padding-right: 0px;
 		padding-left: 30px;
 		border-top:0px!important;
@@ -2147,17 +2147,17 @@ body.post-type-archive-services .slider-home .slick-next{
 	#main-navigation .navbar-default .navbar-collapse, .navbar-default .navbar-form {
 		    margin-top: 1.5px;
 	}
-	 
+
 	 .dropdown-menu .menu-item{
 	 	border-bottom: 0.3px solid white;
 	 }
-	 
+
 	 #header #main-navigation .dropdown-menu li > a {
     background-color: #373737;
     padding-bottom: 10px;
     padding-top: 10px;
 	}
-	 
+
 	 .page-template-default .cart-collaterals .cross-sells h2{
 	 	margin-top: 0px;
 		font-size: 17px!important;
@@ -2182,13 +2182,13 @@ body.post-type-archive-services .slider-home .slick-next{
     clear: both;
     display: inline-block;
     width: 100%;
-		
-	 	
+
+
 	 }
-	 
+
 	 .woocommerce .cart-collaterals .cross-sells, .woocommerce-page .cart-collaterals .cross-sells {
 		 width: 100%!important;}
-	 
+
 	 .woocommerce .cart-collaterals .cross-sells, .woocommerce-page .cart-collaterals .cross-sells{
 	 	margin-bottom: 20px;
 	 }
@@ -2196,14 +2196,14 @@ body.post-type-archive-services .slider-home .slick-next{
 	 	display: flex;
 		flex-flow: column-reverse;
 	 }
-	 
+
 	 .woocommerce-cart .cart-collaterals .cart_totals table {
 		margin-left: 27px!important;
 }
 	 #account_email{
 	 	margin-bottom: 18px;
 	 }
-	 
+
 	 .woocommerce-edit-account fieldset{
 	 	margin-top: 15px;
 	 }
@@ -2219,58 +2219,58 @@ body.post-type-archive-services .slider-home .slick-next{
 		outline: 0;
 		line-height: 1;
 	 }
-	 
+
 	 .woocommerce form fieldset legend{
 		font-size: 16px;
 		font-weight: bold;
 	 }
-     
-        
+
+
      .single-product .woocommerce-main-image.zoom:hover{
-         background: url(../images/img-mask.png) no-repeat center; 
+         background: url(../images/img-mask.png) no-repeat center;
      }
-     
+
      .single-product .woocommerce-main-image.zoom{
-         background: url(../images/img-mask.png) no-repeat bottom; 
+         background: url(../images/img-mask.png) no-repeat bottom;
          transition:all ease-out 300ms;
      }
-     
+
      .woocommerce div.product div.images img:hover{
          opacity: 0.5;
          transition:all ease-out 300ms;
      }
-     
+
      .woocommerce div.product div.images img{
          opacity: 1;
          transition:all ease-out 300ms;
      }
-     
+
 /*     ------------------------------------------------------*/
-     
+
     .woocommerce-page div.product div.thumbnails a :hover{
          background: url(../images/img-mask.png) no-repeat center;
         background-size: 30px 30px;
      }
-     
+
      .woocommerce-page div.product div.thumbnails a {
-         background: url(../images/img-mask.png) no-repeat bottom; 
+         background: url(../images/img-mask.png) no-repeat bottom;
          transition:all ease-out 300ms;
          background-size: 90px 90px;
-         
+
      }
-     
+
      .woocommerce-page div.product div.images img:hover{
          opacity: 0.5;
          transition:all ease-out 300ms;
      }
-     
+
      .woocommerce-page div.product div.images img{
          opacity: 1;
          transition:all ease-out 300ms;
      }
-     
-	 
-	 
+
+
+
 @media (min-width: 768px)
 .navbar-collapse.collapse {
     display: block !important;
@@ -2286,8 +2286,8 @@ body.post-type-archive-services .slider-home .slick-next{
     -webkit-overflow-scrolling: touch;
 }
 
-	
-	 
+
+
 
 @media only screen and (min-width: 768px) {
 	body.single-services .sharedaddy, body.single-cases .sharedaddy {
@@ -2972,7 +2972,7 @@ div.sharedaddy h3.sd-title{
 	.product_meta .tagged_as {
 		display: block;
 		margin-bottom: 3px;
-		width: 100%;	
+		width: 100%;
 	}
 	.woocommerce div.product form.cart .variations select {
 		width: 100px !important;
@@ -3011,7 +3011,7 @@ div.sharedaddy h3.sd-title{
 		width: 58% !important;
 	}
 	body.woocommerce-cart .woocommerce table.shop_table .coupon .button {
-		width: 40% !important;	
+		width: 40% !important;
 	}
 	/* Page Ask a Qustion */
 	.itens-shop .search-container input {
@@ -3086,7 +3086,7 @@ div.sharedaddy h3.sd-title{
 /* START Make the cart table responsive */ /* http://css-tricks.com/responsive-data-tables/ */
 @media screen and (max-width: 600px) {
     /* Force table to not be like tables anymore */
-    
+
     .woocommerce-page table.shop_table,
     .woocommerce-page table.shop_table thead,
     .woocommerce-page table.shop_table tbody,
@@ -3096,7 +3096,7 @@ div.sharedaddy h3.sd-title{
         display: block;
     }
     /* Hide table headers (but not display: none;, for accessibility) */
-    
+
     .woocommerce-page table.shop_table thead tr {
         position: absolute;
         top: -9999px;
@@ -3107,7 +3107,7 @@ div.sharedaddy h3.sd-title{
     }
     .woocommerce-page table.shop_table td {
         /* Behave like a &amp;quot;row&amp;quot; */
-        
+
         border: 1px solid #d2d3d3;
         position: relative;
         padding-left: 30% !important;
@@ -3121,10 +3121,10 @@ div.sharedaddy h3.sd-title{
     }
     .woocommerce-page table.shop_table td:before {
         /* Now like a table header */
-        
+
         position: absolute;
         /* Top/left values mimic padding */
-        
+
         top: 6px;
         left: 6px;
         width: 25%;
@@ -3225,7 +3225,7 @@ div.sharedaddy h3.sd-title{
         border: 0;
     }
     /* make buttons full width, text wide anyway, improves effectiveness */
-    
+
     #content table.cart td.actions .button,
     .woocommerce #content table.cart td.actions .input-text,
     .woocommerce #content table.cart td.actions input,
@@ -3241,7 +3241,7 @@ div.sharedaddy h3.sd-title{
         width: 100%;
     }
     /* keep coupon at 50% */
-    
+
     #content table.cart td.actions .coupon .button,
     .woocommerce #content table.cart td.actions .coupon .input-text,
     .woocommerce #content table.cart td.actions .coupon input,
@@ -3257,7 +3257,7 @@ div.sharedaddy h3.sd-title{
         width: 48%;
     }
     /* clean up how coupon inputs display */
-    
+
     #content table.cart td.actions .coupon,
     .woocommerce table.cart td.actions .coupon,
     .woocommerce-page #content table.cart td.actions .coupon,
@@ -3271,7 +3271,7 @@ div.sharedaddy h3.sd-title{
         margin-bottom: 1em;
     }
     /* remove cross sells, they interfere with flow between cart and cart totals + shipping calculator */
-    
+
     .woocommerce .cart-collaterals .cross-sells,
     .woocommerce-page .cart-collaterals .cross-sells {
         display: none;
@@ -3316,3 +3316,7 @@ div.sharedaddy h3.sd-title{
 }
 
 /* END Make the cart table responsive */
+
+.woocommerce .pagination-control {
+	padding-top:40px;
+}
