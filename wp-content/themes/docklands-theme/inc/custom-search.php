@@ -5,6 +5,11 @@ function advanced_search( $query ) {
         $query->set( 'meta_key', '_stock_status' );
         $query->set( 'meta_value', 'instock' );
     }
+    if ( isset( $_GET[ 'per_page'] ) ) {
+    	if ( intval( $_GET[ 'per_page'] ) < 100  ) {
+    		$query->set( 'posts_per_page', $_GET[ 'per_page' ] );
+    	}
+    }
 }
 add_action( 'pre_get_posts', 'advanced_search' );
 ?>
