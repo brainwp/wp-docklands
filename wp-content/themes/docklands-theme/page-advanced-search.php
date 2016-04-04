@@ -37,13 +37,29 @@ get_header();
 				<?php while ( $query->have_posts() ) : $query->the_post(); ?>
 					<?php get_template_part( 'content', 'produto' ); ?>
                 <?php endwhile; // end of the loop. ?>
-                <div class="col-md-12 pagination">
-                	<?php
-                	// Page navigation.
-					echo odin_pagination( 2, 1, false, $query );
-					?>
-                </div><!-- .col-md-12 pagination -->
-
+				<div class="col-md-12 pagination-control">
+				    <div class="col-md-4 nopadding">
+					    <label><?php _e('Show','odin');?></label>
+					    <select>
+                            <option value="<?php echo get_permalink( woocommerce_get_page_id( 'shop' ) );?>">
+                            	<?php _e('12 per page','odin');?>
+                            </option>
+                            <option value="<?php echo get_permalink( woocommerce_get_page_id( 'shop' ) );?>?per_page=24" <?php if(isset($_GET['per_page'])) selected( $_GET['per_page'], 24 ); ?>>
+                            	<?php _e('24 per page','odin');?>
+                            </option>
+                            <option value="<?php echo get_permalink( woocommerce_get_page_id( 'shop' ) );?>?per_page=36" <?php if(isset($_GET['per_page'])) selected( $_GET['per_page'], 36 );?>>
+                            	<?php _e('36 per page','odin');?>
+                            </option>
+					    </select>
+					</div><!-- .col-md-4 -->
+					<?php if( $wp_query->max_num_pages > 1):?>
+					<div class="col-md-4 pull-right">
+						<div class="pull-right news-pagination-links">
+							<?php brasa_news_pagination( $wp_query->max_num_pages );?>
+						</div><!-- .pull-right -->
+					</div><!-- .col-md-4 -->
+				    <?php endif;?>
+				</div><!-- .col-md-12 pagination-control -->
 
                 <?php get_template_part( 'parts/recentrly-items' ); ?>
 			</div><!-- right -->
