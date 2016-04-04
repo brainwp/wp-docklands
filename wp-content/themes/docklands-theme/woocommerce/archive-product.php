@@ -70,12 +70,6 @@ global $wp_query;
 					</div><!-- .col-md-4 -->
 				    <?php endif;?>
 				</div><!-- .col-md-12 pagination-control -->
-                <div class="col-md-12 pagination">
-                	<?php
-                	// Page navigation.
-					odin_paging_nav();
-					?>
-                </div><!-- .col-md-12 pagination -->
             	<?php else : ?>
             		<?php get_template_part( 'content', 'none' );?>
             	<?php endif;?>
