@@ -2016,12 +2016,58 @@ body.post-type-archive-services .slider-home .slick-next{
 		background: none!Important;
 	 }
 	 .zilla-toggle-title, .zilla-toggle{
-	 	border-radius: 0px!important;
-		border-left:6px solid #0e77b1!important;
-		border-right: 1px solid grey !important;
-		border-top: 1px solid grey !important;
-		border-bottom: 1px solid grey !important;
-		margin-bottom: -0.5px;
+	 	border-radius: 0px !important;
+		border-left: 6px solid #0e77b1 !important;
+		border-right: 1px solid #2d2d2d !important;
+		border-top: 1px solid #2d2d2d !important;
+		border-bottom: 2px solid #2d2d2d !important;
+		margin-bottom: -1px;
+
+	 }
+	 .page-template-page-faq .wpcf7{
+		 border-top: 1px solid #4d4d4d;
+	 	margin-top: 70px;
+	 }
+
+	 .page-template-page-faq h1{
+		 font-size:18px;
+		 color: #f3bb4e;
+		 text-transform: none!important;
+		 margin-top: 35px;
+		 margin-bottom: 25px !important;
+
+	 }
+
+	 .page-template-page-faq .wpcf7-form-control-wrap {
+		position: relative;
+		margin-right: 10px;
+}
+	 .page-template-page-faq .wpcf7 input{
+     	padding-left: 6px!important;
+    	padding-top: 1px!important;
+   		padding-bottom: 1px!important;
+		border-radius: 4px;
+		border: 1px solid #8d8d8d;
+}
+	  .page-template-page-faq .wpcf7 textarea{
+	  	width: 100%;
+		 margin-top: 5px;
+		border-radius: 4px;
+		 border: 1px solid #8d8d8d;
+
+	  }
+
+	 .page-template-page-faq .wpcf7 input[type="submit"]{
+	 		border-radius: 1px!important;
+		 border: 0px;
+		 background:#f3bb4e;
+		 color:white;
+		 font-size: 15px;
+		 padding-left: 20px!important;
+		 padding-right: 20px!important;
+		 padding-top: 7px!important;
+		 padding-bottom: 7px!important;
+
 
 	 }
 
