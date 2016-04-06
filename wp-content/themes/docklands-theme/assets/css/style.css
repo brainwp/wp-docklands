@@ -2287,7 +2287,7 @@ body.post-type-archive-services .slider-home .slick-next{
 
 /*     PENTE FINO*/
 
-     .sd-social-icon a.share-facebook{
+   .sd-social-icon a.share-facebook{
          background: url('../images/icons/f.png')center no-repeat transparent!important;
 	    background-size: 31px!important;
 	    opacity: 0.9;
