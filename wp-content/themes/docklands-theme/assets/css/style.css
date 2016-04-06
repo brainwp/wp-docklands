@@ -2235,7 +2235,7 @@ body.post-type-archive-services .slider-home .slick-next{
          background: url(../images/img-mask.png) no-repeat bottom;
          transition:all ease-out 300ms;
 =======
-         background: url(../images/img-mask.png) no-repeat bottom; 
+         background: url(../images/img-mask.png) no-repeat bottom;
          transition:all ease-out 250ms;
 >>>>>>> 58bc78559a8142e717d39282b610779a0029c73e
      }
@@ -2262,7 +2262,7 @@ body.post-type-archive-services .slider-home .slick-next{
          background: url(../images/img-mask.png) no-repeat bottom;
          transition:all ease-out 300ms;
 =======
-         background: url(../images/img-mask.png) no-repeat bottom; 
+         background: url(../images/img-mask.png) no-repeat bottom;
          transition:all ease-out 290ms;
 >>>>>>> 58bc78559a8142e717d39282b610779a0029c73e
          background-size: 90px 90px;
@@ -2283,10 +2283,10 @@ body.post-type-archive-services .slider-home .slick-next{
 
 
 =======
-     
-     
+
+
 /*     PENTE FINO*/
-     
+
      .sd-social-icon a.share-facebook{
          background: url('../images/icons/f.png')center no-repeat transparent!important;
 	    background-size: 31px!important;
@@ -2300,19 +2300,19 @@ body.post-type-archive-services .slider-home .slick-next{
 	    opacity: 0.9;
          width:40px !important;
 	    height:40px !important;
-     
+
      }
-     
+
      .sd-social-icon a.share-google-plus-1{
          background: url('../images/icons/gp.png')center no-repeat transparent!important;
 	    background-size: 31px!important;
 	    opacity: 0.9;
          width:40px !important;
 	    height:40px !important;
-     
+
      }
-	 
-	 
+
+
 >>>>>>> 58bc78559a8142e717d39282b610779a0029c73e
 @media (min-width: 768px)
 .navbar-collapse.collapse {
@@ -3368,4 +3368,9 @@ div.sharedaddy h3.sd-title{
 
 .woocommerce .pagination-control {
 	padding-top:40px;
+}
+
+/* request a quote cart */
+.request-a-quote-title {
+	width:100% !important;
 }
