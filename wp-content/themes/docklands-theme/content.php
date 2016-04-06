@@ -61,6 +61,7 @@
 					'link_before' => '<span>',
 					'link_after'  => '</span>',
 				) );
+				if ( ! is_page_template( 'page-faq.php') ) ;
 			?>
 			<?php if ( is_singular( 'cases' ) ) : ?>
 				<?php $link = get_post_type_archive_link( 'See Testimonials' );?>
