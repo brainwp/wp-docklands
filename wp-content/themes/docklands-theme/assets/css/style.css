@@ -2231,13 +2231,8 @@ body.post-type-archive-services .slider-home .slick-next{
      }
 
      .single-product .woocommerce-main-image.zoom{
-<<<<<<< HEAD
-         background: url(../images/img-mask.png) no-repeat bottom;
-         transition:all ease-out 300ms;
-=======
          background: url(../images/img-mask.png) no-repeat bottom;
          transition:all ease-out 250ms;
->>>>>>> 58bc78559a8142e717d39282b610779a0029c73e
      }
 
      .woocommerce div.product div.images img:hover{
@@ -2258,15 +2253,8 @@ body.post-type-archive-services .slider-home .slick-next{
      }
 
      .woocommerce-page div.product div.thumbnails a {
-<<<<<<< HEAD
-         background: url(../images/img-mask.png) no-repeat bottom;
-         transition:all ease-out 300ms;
-=======
-         background: url(../images/img-mask.png) no-repeat bottom;
          transition:all ease-out 290ms;
->>>>>>> 58bc78559a8142e717d39282b610779a0029c73e
          background-size: 90px 90px;
-
      }
 
      .woocommerce-page div.product div.images img:hover{
@@ -2278,43 +2266,34 @@ body.post-type-archive-services .slider-home .slick-next{
          opacity: 1;
          transition:all ease-out 290ms;
      }
-<<<<<<< HEAD
-
-
-
-=======
 
 
 /*     PENTE FINO*/
 
      .sd-social-icon a.share-facebook{
-         background: url('../images/icons/f.png')center no-repeat transparent!important;
+        background: url('../images/icons/f.png')center no-repeat transparent!important;
 	    background-size: 31px!important;
 	    opacity: 0.9;
-         width:40px !important;
+        width:40px !important;
 	    height:40px !important;
      }
      .sd-social-icon a.share-twitter{
-         background: url('../images/icons/t.png')center no-repeat transparent!important;
+        background: url('../images/icons/t.png')center no-repeat transparent!important;
 	    background-size: 31px!important;
 	    opacity: 0.9;
-         width:40px !important;
+        width:40px !important;
 	    height:40px !important;
-
      }
 
      .sd-social-icon a.share-google-plus-1{
-         background: url('../images/icons/gp.png')center no-repeat transparent!important;
+     	background: url('../images/icons/gp.png')center no-repeat transparent!important;
 	    background-size: 31px!important;
 	    opacity: 0.9;
-         width:40px !important;
+        width:40px !important;
 	    height:40px !important;
-
      }
 
 
->>>>>>> 58bc78559a8142e717d39282b610779a0029c73e
-@media (min-width: 768px)
 .navbar-collapse.collapse {
     display: block !important;
     height: auto!important;
