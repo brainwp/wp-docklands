@@ -672,6 +672,26 @@ ul.product-categories li {
 ul.product-categories ul li:last-child{
 	border: none !important;
 }
+#main-navigation .navbar-nav > li:last-child {
+    border-right: 0px !important;
+    margin-right: 0px;
+    width: auto !important;
+}
+#main-navigation .navbar-nav > li > a {
+    padding-top: 21px !important;
+    font-size: 15px;
+    height: 62px;
+}
+#main-navigation ul ul li:hover > ul {
+    display: block;
+    position: absolute;
+    margin-left: 99%;
+    top: -3px;
+}
+#main-navigation .navbar-nav > li > a {
+    padding-top: 24px !important;
+    font-size: 17px!important;
+}
 ul.product-categories > li > a {
 	color: #8A8782;
 	display: inline-block;
