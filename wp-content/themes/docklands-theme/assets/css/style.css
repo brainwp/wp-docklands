@@ -1982,6 +1982,7 @@ body.post-type-archive-services .slider-home .slick-next{
 /*	PLUGIN CHANGE - WP SHORTCODE*/
 	 .zilla-toggle ui-accordion ui-widget ui-helper-reset{
 	 	border-radius: 0px;
+
 	 }
 	 .zilla-toggle-title{
 	 	font-size: 17px!important;
@@ -1991,17 +1992,40 @@ body.post-type-archive-services .slider-home .slick-next{
 
 	 .zilla-toggle{
 	 	border:0px!important;
-		padding: 1px;
+		padding: 0px;
 		background: none!Important;
 	 }
 	 .zilla-toggle-title, .zilla-toggle{
 	 	border-radius: 0px!important;
+		border-left:6px solid #0e77b1!important;
+		border-right: 1px solid grey !important;
+		border-top: 1px solid grey !important;
+		border-bottom: 1px solid grey !important;
+		margin-bottom: -0.5px;
+
 	 }
+
 	 .ui-state-default{
-	 	border: 7px solid #0E77B1!important;
+	 	border: 7px solid white !important;
 		padding: 3px;
 		padding-left: 15px;
-		background-color: #0E77B1;
+		background-color: white;
+		color: #1d1d1d;
+	 }
+
+	 .zilla-toggle span.ui-icon {
+	 	background: none!important;
+		 display: block;
+	 }
+
+	 .zilla-toggle .ui-icon:before {
+	 	background: url("../images/toggle-closed.png") no-repeat scroll 0 0 transparent !important;
+		float: left;
+		height: 25px;
+		margin-left: -8px;
+		width: 25px;
+		content: ' ';
+		background-size: 25px 25px !important;
 	 }
 
 	 .ui-accordion-header-icon{
@@ -2011,23 +2035,42 @@ body.post-type-archive-services .slider-home .slick-next{
 	 }
 	 .ui-accordion .ui-accordion-header .ui-icon{
 	 	margin-right: 0px!important;
+		margin-top: 0px!important;
+	 }
+
+	 .zilla-toggle .ui-state-active .ui-icon{
+	 	background: none!important;
+		display: block;
+	 }
+
+	 .zilla-toggle .ui-state-active .ui-icon:before {
+	 	background: url("../images/toggle-open.png") no-repeat scroll 0 0 transparent !important;
+		float: left;
+		height: 25px;
+		margin-left: -8px;
+		width: 25px;
+		content: ' ';
+		background-size: 20px 20px !important;
+		margin-top: 2px;
+
 	 }
 
 /*	 WHEN IS ACTIVE*/
 	  .ui-state-active{
-	 	background-color: #DA8228!important;
-		border: 7px solid #DA8228!important;
+	 	background-color: #0e77b1!important;
+		border: 7px solid #0e77b1!important;
+
 	 }
 
 	 .ui-accordion-header-active{
-	 	border: 7px solid ##DB8329!important;
+		color: white!important;
 	 }
 
 
 	 .ui-accordion-content-active{
-		border-left: 4px solid #DA8228;
 	 	background-color:  white!important;
 		color: #2d2d2d;
+
 
 	 }
 
@@ -2036,6 +2079,7 @@ body.post-type-archive-services .slider-home .slick-next{
 
 		padding: 3px;
 		background-color: #DA8228;
+
 	 }
 /*
 	 .ui-accordion-content {
@@ -2231,13 +2275,12 @@ body.post-type-archive-services .slider-home .slick-next{
      }
 
      .single-product .woocommerce-main-image.zoom{
-<<<<<<< HEAD
+
          background: url(../images/img-mask.png) no-repeat bottom;
          transition:all ease-out 300ms;
-=======
-         background: url(../images/img-mask.png) no-repeat bottom;
+ background: url(../images/img-mask.png) no-repeat bottom;
          transition:all ease-out 250ms;
->>>>>>> 58bc78559a8142e717d39282b610779a0029c73e
+
      }
 
      .woocommerce div.product div.images img:hover{
@@ -2258,13 +2301,13 @@ body.post-type-archive-services .slider-home .slick-next{
      }
 
      .woocommerce-page div.product div.thumbnails a {
-<<<<<<< HEAD
+
          background: url(../images/img-mask.png) no-repeat bottom;
          transition:all ease-out 300ms;
-=======
+
          background: url(../images/img-mask.png) no-repeat bottom;
          transition:all ease-out 290ms;
->>>>>>> 58bc78559a8142e717d39282b610779a0029c73e
+
          background-size: 90px 90px;
 
      }
@@ -2278,11 +2321,7 @@ body.post-type-archive-services .slider-home .slick-next{
          opacity: 1;
          transition:all ease-out 290ms;
      }
-<<<<<<< HEAD
 
-
-
-=======
 
 
 /*     PENTE FINO*/
@@ -2313,7 +2352,7 @@ body.post-type-archive-services .slider-home .slick-next{
      }
 
 
->>>>>>> 58bc78559a8142e717d39282b610779a0029c73e
+
 @media (min-width: 768px)
 .navbar-collapse.collapse {
     display: block !important;
