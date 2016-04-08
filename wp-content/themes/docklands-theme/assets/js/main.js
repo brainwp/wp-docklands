@@ -271,17 +271,6 @@ jQuery(document).ready(function($) {
 	    // instead of a settings object
 	  ]
 	});
-	$( '.quote-checkout .showlogin').on( 'click', function(e) {
-		e.preventDefault();
-		$( 'form.login' ).slideToggle();
-	});
-	$( '.quote-checkout .showcoupon').on( 'click', function(e) {
-		e.preventDefault();
-		$( '.checkout_coupon' ).slideToggle( 400, function() {
-			$( '.checkout_coupon' ).find( ':input:eq(0)' ).focus();
-		});
-	});
-
 });
 (function($) {
 
