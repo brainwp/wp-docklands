@@ -27,8 +27,14 @@ global $wp_query;
 				<h3 class="bg-title"><?php echo brasa_current_term(); ?></h3>
 
 				<div class="row">
+					<?php if ( is_tax() ) : ?>
+						<div class="col-md-12">
+					<?php endif;?>
 					<?php woocommerce_product_loop_start(); ?>
 					<?php woocommerce_product_subcategories(); ?>
+					<?php if ( is_tax() ) : ?>
+						</div>
+					<?php endif;?>
 					<?php if ( have_posts() ) : ?>
 
 					<?php $count = '0'; ?>
@@ -71,7 +77,9 @@ global $wp_query;
 				    <?php endif;?>
 				</div><!-- .col-md-12 pagination-control -->
             	<?php else : ?>
-            		<?php get_template_part( 'content', 'none' );?>
+            		<?php if ( ! is_tax() ) : ?>
+            			<?php get_template_part( 'content', 'none' );?>
+            		<?php endif;?>
             	<?php endif;?>
             	<?php get_template_part( 'parts/recentrly-items' ); ?>
 
