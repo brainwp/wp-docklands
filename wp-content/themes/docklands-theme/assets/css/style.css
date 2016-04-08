@@ -2355,17 +2355,8 @@ body.post-type-archive-services .slider-home .slick-next{
      }
 
      .single-product .woocommerce-main-image.zoom{
-<<<<<<< HEAD
          background: url(../images/img-mask.png) no-repeat bottom;
          transition:all ease-out 250ms;
-=======
-
-         background: url(../images/img-mask.png) no-repeat bottom;
-         transition:all ease-out 300ms;
- background: url(../images/img-mask.png) no-repeat bottom;
-         transition:all ease-out 250ms;
-
->>>>>>> 88f6c51be36aaf66c2eaf9eb06e1c066ca288280
      }
 
      .woocommerce div.product div.images img:hover{
@@ -2386,17 +2377,9 @@ body.post-type-archive-services .slider-home .slick-next{
      }
 
      .woocommerce-page div.product div.thumbnails a {
-<<<<<<< HEAD
-         transition:all ease-out 290ms;
-=======
-
-         background: url(../images/img-mask.png) no-repeat bottom;
-         transition:all ease-out 300ms;
 
          background: url(../images/img-mask.png) no-repeat bottom;
          transition:all ease-out 290ms;
-
->>>>>>> 88f6c51be36aaf66c2eaf9eb06e1c066ca288280
          background-size: 90px 90px;
      }
 
@@ -2410,20 +2393,12 @@ body.post-type-archive-services .slider-home .slick-next{
          transition:all ease-out 290ms;
      }
 
-<<<<<<< HEAD
-
-/*     PENTE FINO*/
-
-     .sd-social-icon a.share-facebook{
-        background: url('../images/icons/f.png')center no-repeat transparent!important;
-=======
 
 
 /*     PENTE FINO*/
 
    .sd-social-icon a.share-facebook{
          background: url('../images/icons/f.png')center no-repeat transparent!important;
->>>>>>> 88f6c51be36aaf66c2eaf9eb06e1c066ca288280
 	    background-size: 31px!important;
 	    opacity: 0.9;
         width:40px !important;
@@ -2445,12 +2420,6 @@ body.post-type-archive-services .slider-home .slick-next{
 	    height:40px !important;
      }
 
-
-<<<<<<< HEAD
-=======
-
-@media (min-width: 768px)
->>>>>>> 88f6c51be36aaf66c2eaf9eb06e1c066ca288280
 .navbar-collapse.collapse {
     display: block !important;
     height: auto!important;
