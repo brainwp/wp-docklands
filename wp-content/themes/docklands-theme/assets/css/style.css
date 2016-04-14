@@ -2327,10 +2327,6 @@ body.post-type-archive-services .slider-home .slick-next{
 	 	display: flex;
 		flex-flow: column-reverse;
 	 }
-
-	 .woocommerce-cart .cart-collaterals .cart_totals table {
-		margin-left: 27px!important;
-}
 	 #account_email{
 	 	margin-bottom: 18px;
 	 }
@@ -3374,6 +3370,12 @@ div.sharedaddy h3.sd-title{
 	.woocommerce div.product form.cart .variations select {
 		width: 100px !important;
 	}
+	.woocommerce .cart-collaterals table  {
+
+	}
+	.woocommerce-cart .cart-collaterals .cart_totals table {
+		margin-left: 0;
+	}
 }
 @media ( max-width: 480px ) {
 	/* Header */
@@ -3474,8 +3476,6 @@ div.sharedaddy h3.sd-title{
 		overflow: hidden;
 	}
 	/* Cart */
-	.woocommerce table.shop_table th.product-remove {
-	}
 	body.woocommerce-cart .woocommerce table.shop_table .coupon .button {
 		font-size: 0.7em;
 		padding-bottom: 12px;
