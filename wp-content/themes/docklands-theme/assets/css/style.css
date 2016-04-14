@@ -3374,6 +3374,12 @@ div.sharedaddy h3.sd-title{
 	.woocommerce-cart .cart-collaterals .cart_totals table {
 		margin-left: 0;
 	}
+	.col-md-5.pull-right.buttons {
+		margin-bottom: 40px;
+	}
+	.single h3.bg-title {
+		font-weight: lighter;
+	}
 }
 @media ( max-width: 480px ) {
 	/* Header */
