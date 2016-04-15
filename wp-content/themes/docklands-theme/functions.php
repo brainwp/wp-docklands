@@ -744,3 +744,16 @@ if (!function_exists('odin_get_term_meta')) {
 		return get_option( $option );
 	}
 }
+
+
+add_action( 'woocommerce_email_header', 'add_css_to_email' );
+function add_css_to_email() {
+	echo '
+		<style type="text/css">
+			#header_wrapper h1 {
+				font-weight: 400;
+				text-align: center;
+			}
+		</style>
+	';
+}
