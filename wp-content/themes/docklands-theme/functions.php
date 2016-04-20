@@ -192,6 +192,17 @@ function odin_widgets_init() {
 	);
 	register_sidebar(
 		array(
+			'name' => __( 'Left Sidebar Guides', 'odin' ),
+			'id' => 'left-sidebar-guides',
+			'description' => __( 'Left Sidebar', 'odin' ),
+			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+			'after_widget' => '</aside>',
+			'before_title' => '<h3 class="widgettitle widget-title">',
+			'after_title' => '</h3>',
+		)
+	);
+	register_sidebar(
+		array(
 			'name' => __( 'Left Sidebar Contact', 'odin' ),
 			'id' => 'left-sidebar-contact',
 			'description' => __( 'Left Sidebar', 'odin' ),
@@ -526,6 +537,9 @@ function odin_stylesheet_uri( $uri, $dir ) {
 function add_woo_class($classes) {
 	// add 'class-name' to the $classes array
 	$classes[] = 'woocommerce';
+	if ( is_page() && is_page_template( 'page-pdf.php' ) ) {
+		$classes[] = 'post-type-archive-services';
+	}
 	// return the $classes array
 	return $classes;
 }

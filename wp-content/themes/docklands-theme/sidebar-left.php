@@ -48,6 +48,8 @@ global $is_advanced_search;
 			dynamic_sidebar( 'left-sidebar-about' );
 		} elseif ( is_page() && is_page_template( 'page-contact.php' ) ) {
 			dynamic_sidebar( 'left-sidebar-contact' );
+		} elseif ( is_page() && is_page_template( 'page-pdf.php' ) ) {
+			dynamic_sidebar( 'left-sidebar-guides' );
 		} elseif ( is_post_type_archive( 'cases' ) ) {
 			dynamic_sidebar( 'sidebar-archive-cases' );
 		} elseif ( is_post_type_archive( 'services' ) ) {

@@ -17,6 +17,8 @@ endif;
 		<div class="product-info">
 			<?php if ( is_post_type_archive( 'cases' ) ) : ?>
 				<?php _e('View Products', 'odin'); ?>
+			<?php elseif ( is_page() && is_page_template( 'page-pdf.php' ) ) : ?>
+				<?php _e( 'See Now', 'odin' );?>
 			<?php else : ?>
 				<?php _e('View Service', 'odin'); ?>
 			<?php endif;?>
