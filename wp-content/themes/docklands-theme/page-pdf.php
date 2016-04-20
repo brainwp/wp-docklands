@@ -41,6 +41,35 @@ get_header();
 					<?php endif; ?>
 
 				</div><!-- arrivals -->
+				<h3 class="bg-title-news">
+					<a><?php _e('New Arrivals','odin');?></a>
+				</h3>
+				<div class="col-sm-12 arrivals full">
+					<?php
+						// Count loop
+						$count = 0;
+						// WP_Query arguments
+						$args = array (
+							'post_type'              => 'product',
+							'posts_per_page'         => 3
+						);
+						// The Query
+						$query = new WP_Query( $args );
+					?>
+					<?php if ( $query->have_posts() ) : ?>
+						<?php while ( $query->have_posts() ): $query->the_post(); ?>
+
+							<?php get_template_part('content','produto'); ?>
+							<?php $count++; ?>
+							<?php if ( $count == 3 ): ?>
+								<div class="clear"></div>
+							<?php endif ?>
+
+						<?php endwhile; ?>
+					<?php endif; ?>
+					<?php wp_reset_postdata(); ?>
+
+				</div><!-- arrivals -->
 				<?php get_template_part( 'parts/recentrly-items' ); ?>
 
 			</div><!-- right -->
