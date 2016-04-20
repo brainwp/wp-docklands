@@ -3548,11 +3548,7 @@ div.sharedaddy h3.sd-title{
 .request-a-quote-title {
 	width:100% !important;
 }
-.brasa-request-a-quote-cart {
-	float:left;
-	width:50%;
-	clear: left;
-}
+
 body.woocommerce-cart .brasa-request-a-quote-cart > form.half {
 	width:100% !important;
 	float:left;
@@ -3567,4 +3563,13 @@ body.woocommerce-cart .brasa-request-a-quote-cart > form.half {
 	body.tax-product_cat ul.products li.product.last {
 		margin: 0 0 2.992em 0 !important;
 	}
+	.brasa-request-a-quote-cart {
+		float:left;
+		width:50%;
+		clear: left;
+	}
+}
+
+body.cart input.checkout-button {
+	display: none !important;
 }
