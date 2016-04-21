@@ -696,7 +696,7 @@ ul.product-categories ul li:last-child{
     top: -3px;
 }
 #main-navigation .navbar-nav > li > a {
-    padding-top: 24px !important;
+    padding-top: 20px!important!important;
     font-size: 17px!important;
 }
 ul.product-categories > li > a {
@@ -2228,8 +2228,12 @@ body.post-type-archive-services .slider-home .slick-next{
 
 	 }
 
+	 #header #main-navigation .navbar-nav .caret{
+	 	display: none!Important;
+	 }
+
 	 #main-navigation .navbar-nav>li>a {
-		 padding-top: 24px!important;
+		 padding-top: 20px!important;
 	 	font-size: 15px;
 	 }
 
