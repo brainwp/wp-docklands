@@ -3573,7 +3573,13 @@ body.woocommerce-cart .brasa-request-a-quote-cart > form.half {
 		clear: left;
 	}
 }
-
+@media ( max-width: 600px ) {
+	.request-a-quote-title {
+		padding-top:30px;
+		padding-bottom: 20px;
+		clear: both;
+	}
+}
 body.cart input.checkout-button {
 	display: none !important;
 }
