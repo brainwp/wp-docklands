@@ -49,7 +49,9 @@
 				<?php echo brasa_continue_reading( get_the_excerpt(), get_permalink() );?>
 			</div><!-- .entry-summary -->
 		<?php endif; ?>
-
+		<?php if ( function_exists( 'sharing_display' ) ) : ?>
+			<?php echo sharing_display(); ?>
+		<?php endif;?>
 	<?php else : ?>
 
 		<div class="entry-content">
