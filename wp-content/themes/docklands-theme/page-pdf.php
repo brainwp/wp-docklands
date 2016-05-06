@@ -6,6 +6,9 @@
  * Please note that this is the WordPress construct of pages and that other
  * 'pages' on your WordPress site will use a different template.
  *
+ *
+ * Template name: Guides/PDF
+ *
  * @package Odin
  * @since 2.2.0
  */
