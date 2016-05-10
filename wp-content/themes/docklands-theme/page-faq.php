@@ -12,7 +12,7 @@ get_header(); ?>
 
 		<?php odin_breadcrumbs(); ?>
 
-		<h2 class="bg-title"><?php _e( 'Frequent Asked Questions', 'odin' ); ?></h2>
+		<h2 class="bg-title"><!-- <?php _e( 'Frequent Asked Questions', 'odin' ); ?> --><?php the_title(); ?></h2>
 	</div>
 
 <?php get_sidebar(); ?>

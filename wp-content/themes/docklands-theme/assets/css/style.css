@@ -1996,6 +1996,15 @@ body.post-type-archive-services .slider-home .slick-next{
 	}
 	 body.page-template-page-faq-php .entry-title{
 	 	font-size:28px;
+	 	display:none;
+	 }
+
+	 body.page-template-page-faq-php .entry-content h1:first-child{
+	 	font-size: 22px;
+	    text-transform: uppercase!important;
+	    color: #2d2d2d;
+	    font-weight: bold;
+
 	 }
 	.col-md-8 {
     width: 72%!important;
