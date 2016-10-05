@@ -635,13 +635,13 @@ body.home .slider-products .each .content .tag-price {
 	width: 100%;
 }
 
-.home .full .video .content {
+.home .full .banner .content, .home .full .video .content {
 	position: relative;
 	padding-bottom: 56.25%; /* 16:9 */
 	padding-top: 25px;
 	height: 0;
 }
-.home .full .video .content iframe  {
+.home .full .banner .content img, .home .full .video .content iframe  {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -3591,4 +3591,26 @@ body.woocommerce-cart .brasa-request-a-quote-cart > form.half {
 }
 body.cart input.checkout-button {
 	display: none !important;
+}
+
+/* 
+ * Hack para alinhamento vertical de imagens.
+ * Necessariamente a imagem deve estar dentro de uma div
+ * (ou outro elemento) com a class .wrapper-image.
+ */
+.wrapper-image {
+	/* habilita o flex nos filhos diretos */
+	display: -ms-flex;
+	display: -webkit-flex;
+	display: flex;
+
+	/* centraliza na vertical */
+	-ms-align-items: center;
+	-webkit-align-items: center;
+	align-items: center;
+
+	/* centraliza na horizontal */
+	-ms-justify-content: center;
+	-webkit-justify-content: center;
+	justify-content: center;
 }

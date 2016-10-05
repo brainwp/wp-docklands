@@ -63,16 +63,14 @@ get_header('shop');
 				<?php if ( $banner_1 = $options['home_banner_1'] ) : ?>
 				    <?php $link = (!empty($options['home_banner_1_link']))? $options['home_banner_1_link'] : 'javascript:void(0)'; ?>
 
-					<div class="banner col-sm-6">
-						<a href="<?php echo $link;?>">
-							<?php $image_attributes = wp_get_attachment_image_src( $banner_1 ); ?>
-							<?php $style = '';?>
-							<?php if ( isset( $options['home_banner_1_height'] ) ) : ?>
-								<?php $style = 'height:' . $options['home_banner_1_height'] . 'px;';?>
-							<?php endif; ?>
-							<img src="<?php echo $image_attributes[0];?>" style="<?php // echo $style; ?>" />
-						</a>
-					</div><!-- banner -->
+					<div class="banner col-sm-6 wrapper-image">
+						<div class="content">
+							<a href="<?php echo $link;?>">
+								<?php $image_attributes = wp_get_attachment_image_src( $banner_1 ); ?>
+								<img src="<?php echo $image_attributes[0]; ?>" />
+							</a>
+						</div><!-- content -->
+					</div><!-- banner wrapper-image -->
 
 				<?php endif ?>
 
