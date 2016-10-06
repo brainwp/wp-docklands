@@ -984,6 +984,17 @@ h3.item {
 	font-size: 1.4em;
 	font-weight: bold;
 }
+.produtos-widget ul li .wrap-preco {
+	width: 100%;
+}
+.produtos-widget ul li .wrap-preco .old-price {
+	color: #CCC;
+	float: right;
+	font-weight: 600;
+	padding-top: 5px;
+	text-align: right;
+	text-decoration: line-through;
+}
 .list-produtos li .old-price {
 	bottom: 0;
 	color: #B4B4B4;
