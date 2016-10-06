@@ -3179,8 +3179,7 @@ div.sharedaddy h3.sd-title{
 		width: 100%;
 	}
 }
-@media ( max-width: 768px ) {
-
+@media all and ( max-width: 768px ) {
 	#menu-top-menu {
 		display:none;
 	}
@@ -3311,6 +3310,19 @@ div.sharedaddy h3.sd-title{
 	/* Sidebar */
 	#secondary form {
 		width: 100%;
+	}
+	/* Advanced Search */
+	.advanced-search .home .full {
+		padding-bottom: 1px;
+	}
+	.advanced-search .each .content .thumb {
+		background-color: #FFF;
+	}
+}
+@media all and ( max-width: 768px ) {
+	.produtos-widget ul li .wrap-preco .old-price {
+		float: left;
+		margin-left: 15px;
 	}
 }
 @media ( max-width: 600px ) {
@@ -3502,9 +3514,9 @@ div.sharedaddy h3.sd-title{
 		width: 100%;
 	}
 	/* Advanced Search */
-	.page-template-page-search-advanced .each,
-	.page-template-page-search-advanced div.col-sm-9.right,
-	.page-template-page-search-advanced .col-sm-3.left {
+	.advanced-search .arrivals .each,
+	.advanced-search div.col-sm-9.right,
+	.advanced-search .col-sm-3.left {
 		padding-left: 0 !important;
 		padding-right: 0 !important;
 	}
@@ -3521,7 +3533,6 @@ div.sharedaddy h3.sd-title{
 	#content {
 		margin-bottom: 0;
 	}
-
 }
 @media ( max-width: 400px ) {
 	/* Content */

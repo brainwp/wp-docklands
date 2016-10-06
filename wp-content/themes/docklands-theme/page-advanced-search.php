@@ -15,7 +15,7 @@ $is_advanced_search = true;
 get_header();
 ?>
 
-	<div id="primary" class="col-sm-12">
+	<div id="primary" class="col-sm-12 advanced-search">
 		<div id="content" class="site-content home" role="main">
 
 			<?php get_sidebar( 'left' ); ?>
