@@ -141,7 +141,7 @@ $odin_theme_options->set_fields(
 					'id' => 'home_banner_1',
 					'label' => __('First Banner','odin'),
 					'type' => 'image',
-					'description' => __('Select imagem for first banner in home','odin'),
+					'description' => __('Select imagem for first banner in home. Sized of 455 x 280px.','odin'),
 				),
 				array(
 					'id' => 'home_banner_1_link',

@@ -61,12 +61,12 @@ get_header('shop');
 			<div class="col-sm-12 full">
 
 				<?php if ( $banner_1 = $options['home_banner_1'] ) : ?>
-				    <?php $link = (!empty($options['home_banner_1_link']))? $options['home_banner_1_link'] : 'javascript:void(0)'; ?>
+				    <?php $link = (!empty($options['home_banner_1_link']))? $options['home_banner_1_link'] : ''; ?>
 
 					<div class="banner col-sm-6 wrapper-image">
 						<div class="content">
 							<a href="<?php echo $link;?>">
-								<?php $image_attributes = wp_get_attachment_image_src( $banner_1 ); ?>
+								<?php $image_attributes = wp_get_attachment_image_src( $banner_1, 'full' ); ?>
 								<img src="<?php echo $image_attributes[0]; ?>" />
 							</a>
 						</div><!-- content -->

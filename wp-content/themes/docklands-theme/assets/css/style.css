@@ -641,7 +641,13 @@ body.home .slider-products .each .content .tag-price {
 	padding-top: 25px;
 	height: 0;
 }
-.home .full .banner .content img, .home .full .video .content iframe  {
+.home .full .banner .content img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+}
+.home .full .video .content iframe  {
 	position: absolute;
 	top: 0;
 	left: 0;
