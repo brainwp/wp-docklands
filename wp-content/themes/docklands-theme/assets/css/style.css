@@ -24,6 +24,13 @@ Description: Odin main stylesheet.
 	#content > div.col-sm-9.right {
 		order:3;
 	}
+	.page-template-page-search-advanced #content #secondary {
+		order:3;
+	}
+	.page-template-page-search-advanced #content > div.col-sm-9.right {
+		order:1;
+	}
+
 }
 .nopadding {
    padding: 0 !important;
