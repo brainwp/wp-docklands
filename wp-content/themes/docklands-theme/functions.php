@@ -681,7 +681,7 @@ function excerpt_length( $length ) {
 add_filter( 'excerpt_length', 'excerpt_length', 999 );
 
 function excerpt_more( $more ) {
-	return '...   <a class="read-more" href="' . get_permalink( get_the_ID() ) . '">' . __( 'Continue reading >>>', 'odin' ) . '</a>';
+	return '... ';
 }
 add_filter( 'excerpt_more', 'excerpt_more' );
 
