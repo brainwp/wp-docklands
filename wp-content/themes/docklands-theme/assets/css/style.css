@@ -12,7 +12,7 @@ Description: Odin main stylesheet.
 #content.widecolumn{
 	text-align: center;
 }
-@media only screen and ( max-width: 680px ) {
+@media all and ( max-width: 680px ) {
 	#content {
 		display: flex;
 		width: 100%;
@@ -24,11 +24,32 @@ Description: Odin main stylesheet.
 	#content > div.col-sm-9.right {
 		order:3;
 	}
-	.page-template-page-search-advanced #content #secondary {
-		order:3;
+	.page-template-page-search-advanced #content {
+		display: inline-block;
+		width: auto;
+		flex-flow: none;
 	}
-	.page-template-page-search-advanced #content > div.col-sm-9.right {
-		order:1;
+	.page-template-page-search-advanced .col-sm-9.right,
+	.page-template-page-search-advanced #content #secondary .Produtos_Widget {
+		display: none;
+	}
+	.page-template-page-search-advanced #content #secondary {
+		display: flex;
+		flex-flow: row wrap;
+		width: 100%;
+	}
+	.page-template-page-search-advanced #content #secondary > aside,
+	.page-template-page-search-advanced #content #secondary > div {
+		width: 100%;
+	}
+	.page-template-page-search-advanced #content #secondary .widget.WOOF_Widget {
+		order: 0;
+	}
+	.page-template-page-search-advanced #content #secondary .widget.widget_text {
+		order: 5;
+	}
+	.page-template-page-search-advanced #content #secondary .widget.woocommerce.widget_product_categories {
+		order: 3;
 	}
 
 }
