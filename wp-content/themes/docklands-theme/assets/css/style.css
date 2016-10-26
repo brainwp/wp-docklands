@@ -204,7 +204,6 @@ h3.bg-title {
 }
 .entry-content, .entry-summary { color: #5B5B5D; overflow: hidden; }
 .entry-content img {
-	border: 5px solid #F1F1F1;
 	margin-bottom: 20px;
 	outline: 1px solid #CCC;
 }
@@ -3649,7 +3648,7 @@ body.cart input.checkout-button {
 	display: none !important;
 }
 
-/* 
+/*
  * Hack para alinhamento vertical de imagens.
  * Necessariamente a imagem deve estar dentro de uma div
  * (ou outro elemento) com a class .wrapper-image.
