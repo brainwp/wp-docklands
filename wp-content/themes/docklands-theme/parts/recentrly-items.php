@@ -11,7 +11,8 @@ global $woo_post_views;
 		$args = array (
 			'post_type'              => 'product',
 			'posts_per_page'         => 5,
-			'post__in'               => $woo_post_views->get_posts()
+			'post__in'               => $woo_post_views->get_posts(),
+			'_is_wc_query'			 => true
 		);
 
 		// The Query
