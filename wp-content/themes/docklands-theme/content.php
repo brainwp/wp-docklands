@@ -66,7 +66,7 @@
 				if ( ! is_page_template( 'page-faq.php') ) ;
 			?>
 			<?php if ( is_singular( 'cases' ) ) : ?>
-				<?php $link = get_post_type_archive_link( 'See Testimonials' );?>
+				<?php $link = get_post_type_archive_link( 'testimonials' );?>
 				<a href="<?php echo esc_url( $link );?>" class="btn btn-warning">
 					<b><?php _e( 'See Testimonials', 'odin');?></b>
 				</a>
