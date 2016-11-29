@@ -29,68 +29,68 @@ get_header();
 				</h1><!-- .top-name -->
 				<div class="col-md-5 pull-left contact-infos">
 					<h4><?php _e('Contact Us/E-mail','odin'); ?></h4>
-					<div class="col-md-4 pull-left">
+					<div class="col-sm-4 pull-left">
 						<?php _e('E-mail:','odin'); ?>
-					</div><!-- .col-md-4 pull-left -->
-					<div class="col-md-8 pull-right">
+					</div><!-- .col-sm-4 pull-left -->
+					<div class="col-sm-8 pull-right">
 						<?php echo get_post_meta( get_the_ID(), 'contact-email', true ); ?>
-					</div><!-- .col-md-8 pull-left -->
+					</div><!-- .col-sm-8 pull-left -->
 					<h4><?php _e('Contact Us/Phone','odin'); ?></h4>
-					<div class="col-md-4 pull-left">
+					<div class="col-sm-4 pull-left">
 						<?php _e('Office:','odin'); ?>
-					</div><!-- .col-md-4 pull-left -->
-					<div class="col-md-8 pull-right">
+					</div><!-- .col-sm-4 pull-left -->
+					<div class="col-sm-8 pull-right">
 						<?php echo get_post_meta( get_the_ID(), 'contact-tel-office', true ); ?>
-					</div><!-- .col-md-8 pull-left -->
-					<div class="col-md-4 pull-left">
+					</div><!-- .col-sm-8 pull-left -->
+					<div class="col-sm-4 pull-left">
 						<?php _e('24hr Hot Line:','odin'); ?>
-					</div><!-- .col-md-4 pull-left -->
-					<div class="col-md-8 pull-right">
+					</div><!-- .col-sm-4 pull-left -->
+					<div class="col-sm-8 pull-right">
 						<?php echo get_post_meta( get_the_ID(), 'contact-tel-hot-line', true ); ?>
-					</div><!-- .col-md-8 pull-left -->
+					</div><!-- .col-sm-8 pull-left -->
 					<h4><?php _e('Contact Us/Office Hours','odin'); ?></h4>
-					<div class="col-md-4 pull-left">
+					<div class="col-sm-4 pull-left">
 						<?php _e('Monday:','odin'); ?>
-					</div><!-- .col-md-4 pull-left -->
-					<div class="col-md-8 pull-right">
+					</div><!-- .col-sm-4 pull-left -->
+					<div class="col-sm-8 pull-right">
 						<?php echo get_post_meta( get_the_ID(), 'contact-hr-monday', true ); ?>
-					</div><!-- .col-md-8 pull-left -->
-					<div class="col-md-4 pull-left">
+					</div><!-- .col-sm-8 pull-left -->
+					<div class="col-sm-4 pull-left">
 						<?php _e('Tuesday:','odin'); ?>
-					</div><!-- .col-md-4 pull-left -->
-					<div class="col-md-8 pull-right">
+					</div><!-- .col-sm-4 pull-left -->
+					<div class="col-sm-8 pull-right">
 						<?php echo get_post_meta( get_the_ID(), 'contact-hr-tuesday', true ); ?>
-					</div><!-- .col-md-8 pull-left -->
-					<div class="col-md-4 pull-left">
+					</div><!-- .col-sm-8 pull-left -->
+					<div class="col-sm-4 pull-left">
 						<?php _e('Wednesday:','odin'); ?>
-					</div><!-- .col-md-4 pull-left -->
-					<div class="col-md-8 pull-right">
+					</div><!-- .col-sm-4 pull-left -->
+					<div class="col-sm-8 pull-right">
 						<?php echo get_post_meta( get_the_ID(), 'contact-hr-wednesday', true ); ?>
-					</div><!-- .col-md-8 pull-left -->
-					<div class="col-md-4 pull-left">
+					</div><!-- .col-sm-8 pull-left -->
+					<div class="col-sm-4 pull-left">
 						<?php _e('Thursday:','odin'); ?>
-					</div><!-- .col-md-4 pull-left -->
-					<div class="col-md-8 pull-right">
+					</div><!-- .col-sm-4 pull-left -->
+					<div class="col-sm-8 pull-right">
 						<?php echo get_post_meta( get_the_ID(), 'contact-hr-thursday', true ); ?>
-					</div><!-- .col-md-8 pull-left -->
-					<div class="col-md-4 pull-left">
+					</div><!-- .col-sm-8 pull-left -->
+					<div class="col-sm-4 pull-left">
 						<?php _e('Friday:','odin'); ?>
-					</div><!-- .col-md-4 pull-left -->
-					<div class="col-md-8 pull-right">
+					</div><!-- .col-sm-4 pull-left -->
+					<div class="col-sm-8 pull-right">
 						<?php echo get_post_meta( get_the_ID(), 'contact-hr-friday', true ); ?>
-					</div><!-- .col-md-8 pull-left -->
-					<div class="col-md-4 pull-left">
+					</div><!-- .col-sm-8 pull-left -->
+					<div class="col-sm-4 pull-left">
 						<?php _e('Saturday:','odin'); ?>
-					</div><!-- .col-md-4 pull-left -->
-					<div class="col-md-8 pull-right">
+					</div><!-- .col-sm-4 pull-left -->
+					<div class="col-sm-8 pull-right">
 						<?php echo get_post_meta( get_the_ID(), 'contact-hr-saturday', true ); ?>
-					</div><!-- .col-md-8 pull-left -->
-					<div class="col-md-4 pull-left">
+					</div><!-- .col-sm-8 pull-left -->
+					<div class="col-sm-4 pull-left">
 						<?php _e('Sunday:','odin'); ?>
-					</div><!-- .col-md-4 pull-left -->
-					<div class="col-md-8 pull-right">
+					</div><!-- .col-sm-4 pull-left -->
+					<div class="col-sm-8 pull-right">
 						<?php echo get_post_meta( get_the_ID(), 'contact-hr-sunday', true ); ?>
-					</div><!-- .col-md-8 pull-left -->
+					</div><!-- .col-sm-8 pull-left -->
 				</div><!-- .col-md-5 pull-left contact-infos -->
 
 				<div class="col-md-7 pull-left contact-form">
