@@ -1,14 +1,5 @@
 <?php
-/**
- * The template for displaying product category thumbnails within loops.
- *
- * Override this template by copying it to yourtheme/woocommerce/content-product_cat.php
- *
- * @author 		WooThemes
- * @package 	WooCommerce/Templates
- * @version     1.6.4
- */
-
+// Content Services
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 global $woocommerce_loop;
@@ -17,51 +8,28 @@ global $woocommerce_loop;
 if ( empty( $woocommerce_loop['loop'] ) )
 	$woocommerce_loop['loop'] = 0;
 
-// Store column count for displaying the grid
-if ( empty( $woocommerce_loop['columns'] ) )
-	$woocommerce_loop['columns'] = apply_filters( 'loop_shop_columns', 4 );
-
 // Increase loop count
 $woocommerce_loop['loop']++;
+
+// set columns
+$class = 'col-md-6 cases';
 ?>
-<li class="col-md-3 product-category<?php
-    if ( ( $woocommerce_loop['loop'] - 1 ) % $woocommerce_loop['columns'] == 0 || $woocommerce_loop['columns'] == 1 )
-        echo ' first';
-	if ( $woocommerce_loop['loop'] % $woocommerce_loop['columns'] == 0 )
-		echo ' last';
-	?>">
+<a class="<?php echo $class;?> services each" href="<?php the_permalink(); ?>">
 
-	<?php do_action( 'woocommerce_before_subcategory', $category ); ?>
+	<div class="thumb">
+		<?php $thumbnail_id = get_woocommerce_term_meta( $category->term_id, 'thumbnail_id',true ); ?>
+		<?php $image = wp_get_attachment_image_src( $thumbnail_id, 'medium', false );?>
+		<img src="<?php echo esc_url( $image[0] );?>" alt="<?php echo esc_attr( $category->name );?>" />
+	</div><!-- .thumb -->
 
-	<a href="<?php echo get_term_link( $category->slug, 'product_cat' ); ?>">
+	<div class="desc">
 
-		<?php
-			/**
-			 * woocommerce_before_subcategory_title hook
-			 *
-			 * @hooked woocommerce_subcategory_thumbnail - 10
-			 */
-			do_action( 'woocommerce_before_subcategory_title', $category );
-		?>
+		<h3><?php echo apply_filters( 'the_title', $category->name );?></h3>
+		<div class="product-info">
+			<?php _e('View Products', 'odin'); ?>
+			<span class="orange">&gt;</span>
+		</div><!-- .product-info -->
 
-		<h3>
-			<?php
-				echo $category->name;
+	</div><!-- .desc -->
 
-				if ( $category->count > 0 )
-					echo apply_filters( 'woocommerce_subcategory_count_html', ' <mark class="count">(' . $category->count . ')</mark>', $category );
-			?>
-		</h3>
-
-		<?php
-			/**
-			 * woocommerce_after_subcategory_title hook
-			 */
-			do_action( 'woocommerce_after_subcategory_title', $category );
-		?>
-
-	</a>
-
-	<?php do_action( 'woocommerce_after_subcategory', $category ); ?>
-
-</li>
+</a><!-- .col-md-4 services -->

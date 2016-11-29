@@ -16,7 +16,7 @@ endif;
 		<h3><?php the_title(); ?></h3>
 		<div class="product-info">
 			<?php if ( is_post_type_archive( 'cases' ) ) : ?>
-				<?php _e('View Products', 'odin'); ?>
+				<?php _e('View Cases', 'odin'); ?>
 			<?php elseif ( is_page() && is_page_template( 'page-pdf.php' ) ) : ?>
 				<?php _e( 'See Now', 'odin' );?>
 			<?php else : ?>
