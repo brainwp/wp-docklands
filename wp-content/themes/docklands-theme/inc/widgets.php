@@ -39,6 +39,7 @@ class Produtos_Widget extends WP_Widget {
 		$produtos_posts = get_posts( array(
 			'post_type' => 'product',
 			'posts_per_page' => $qtd_produtos,
+			'_is_wc_query'	=> true,
 			'tax_query' => array(
     			array(
       				'taxonomy' => 'product_cat',
