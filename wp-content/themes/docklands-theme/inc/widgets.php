@@ -72,7 +72,7 @@ class Produtos_Widget extends WP_Widget {
 				echo get_woocommerce_currency_symbol() . ' ' . $product->get_regular_price();
 				echo "</span><!-- old-price -->";
 				echo '</div><!-- .wrap-preco -->';
-			} elseif ( $product->is_type( 'variable' ) && $product->get_variation_sale_price() ) {
+			} elseif ( $product->is_type( 'variable' ) && $product->get_variation_sale_price() && $product->get_variation_sale_price() != $product->get_variation_regular_price() ) {
 				echo '<div class="wrap-preco">';
 				echo '<span class="moeda-preco">'. get_woocommerce_currency_symbol() . ' </span><span class="price">';
 				echo $product->get_variation_sale_price();
