@@ -14,7 +14,7 @@ $woocommerce_loop['loop']++;
 // set columns
 $class = 'col-md-6 cases';
 ?>
-<a class="<?php echo $class;?> services each" href="<?php the_permalink(); ?>">
+<a class="<?php echo $class;?> services each" href="<?php echo get_term_link( $category );?>">
 
 	<div class="thumb">
 		<?php $thumbnail_id = get_woocommerce_term_meta( $category->term_id, 'thumbnail_id',true ); ?>
