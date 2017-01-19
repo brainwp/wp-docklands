@@ -31,7 +31,7 @@ Description: Odin main stylesheet.
 	}
 	.page-template-page-search-advanced .col-sm-9.right,
 	.page-template-page-search-advanced #content #secondary .Produtos_Widget {
-		display: none;
+		/*display: none;*/
 	}
 	.page-template-page-search-advanced #content #secondary {
 		display: flex;
