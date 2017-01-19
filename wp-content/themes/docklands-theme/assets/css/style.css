@@ -51,7 +51,9 @@ Description: Odin main stylesheet.
 	.page-template-page-search-advanced #content #secondary .widget.woocommerce.widget_product_categories {
 		order: 3;
 	}
-
+	.products .each {
+		max-height: none;
+	}
 }
 .nopadding {
    padding: 0 !important;
