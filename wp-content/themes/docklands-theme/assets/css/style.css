@@ -51,12 +51,10 @@ Description: Odin main stylesheet.
 	.page-template-page-search-advanced #content #secondary .widget.woocommerce.widget_product_categories {
 		order: 3;
 	}
-	.products .each {
-		max-height: none;
-	}
 }
 .nopadding {
-   padding: 0 !important;
+   padding-left: 0 !important;
+   padding-right: 0 !important;
    margin: 0 !important;
 }
 .clear{
@@ -3396,6 +3394,7 @@ div.sharedaddy h3.sd-title{
 		border-bottom-left-radius: 5px;
 		margin-top: 40px;
 		padding-bottom: 10px;
+		max-height: none;
 	}
 	body.woocommerce-page .each .content .footer,
 	body.woocommerce-page .each .content {
@@ -3608,22 +3607,32 @@ div.sharedaddy h3.sd-title{
 .form-group-error {
 	padding:0;
 }
-
 .woocommerce .pagination-control {
-	padding-top:40px;
+	overflow: hidden;
+	padding-top: 40px;
 }
-
-/* request a quote cart */
+@media all and ( max-width: 680px ) {
+	.woocommerce .pagination-control .col-md-4.nopadding {
+		padding: 15px 0;
+		text-align: center;
+	}
+	.woocommerce .pagination-control .col-md-4.pull-right {
+		float: none;
+		text-align: center;
+	}
+	.woocommerce .pagination-control .col-md-4.pull-right .news-pagination-links {
+		display: inline-block;
+		text-align: center;
+	}
+}
+/* Request a quote cart */
 .request-a-quote-title {
 	width:100% !important;
 }
-
 body.woocommerce-cart .brasa-request-a-quote-cart > form.half {
 	width:100% !important;
 	float:left;
 }
-
-
 @media ( min-width: 760px ) {
 	body.tax-product_cat ul.products li.product {
 		width:22% !important;
