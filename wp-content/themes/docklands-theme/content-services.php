@@ -5,7 +5,7 @@ if ( is_post_type_archive( 'cases' ) ) :
 	$class = 'col-md-6 cases';
 endif;
 ?>
-<a class="<?php echo $class;?> services each" href="<?php the_permalink(); ?>">
+<a class="<?php echo $class;?> services each col-xs-12" href="<?php the_permalink(); ?>">
 
 	<div class="thumb">
 		<?php the_post_thumbnail('square-thumb'); ?>

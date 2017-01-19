@@ -6,6 +6,7 @@ function advanced_search( $query ) {
         $query->set( 'meta_value', 'instock' );
     }
     if ( isset( $_GET[ 'per_page'] ) ) {
+    	//var_dump( $query );
     	if ( intval( $_GET[ 'per_page'] ) < 100 && $query->get( '_is_wc_query' ) != true ) {
     		$query->set( 'posts_per_page', $_GET[ 'per_page' ] );
     	}

@@ -39,6 +39,7 @@ class Produtos_Widget extends WP_Widget {
 		$produtos_posts = get_posts( array(
 			'post_type' => 'product',
 			'posts_per_page' => $qtd_produtos,
+			'_is_wc_query'	=> true,
 			'tax_query' => array(
     			array(
       				'taxonomy' => 'product_cat',
@@ -52,7 +53,7 @@ class Produtos_Widget extends WP_Widget {
 		// Start the Loop.
 		if( $produtos_posts ) :
 			foreach( $produtos_posts as $post ) : setup_postdata( $post );
-			$product = new WC_Product( $post->ID );
+			$product = wc_get_product( $post->ID );
 			echo "<li>";
 			echo "<a href=" . get_the_permalink() . ">";
 			echo "<div class='thumb col-xs-4 pull-left'>";
@@ -71,8 +72,16 @@ class Produtos_Widget extends WP_Widget {
 				echo get_woocommerce_currency_symbol() . ' ' . $product->get_regular_price();
 				echo "</span><!-- old-price -->";
 				echo '</div><!-- .wrap-preco -->';
-			}
-			else{
+			} elseif ( $product->is_type( 'variable' ) && $product->get_variation_sale_price() && $product->get_variation_sale_price() != $product->get_variation_regular_price() ) {
+				echo '<div class="wrap-preco">';
+				echo '<span class="moeda-preco">'. get_woocommerce_currency_symbol() . ' </span><span class="price">';
+				echo $product->get_variation_sale_price();
+				echo "</span><!-- price -->";
+				echo "<span class='old-price'>";
+				echo get_woocommerce_currency_symbol() . ' ' . $product->get_variation_regular_price();
+				echo "</span><!-- old-price -->";
+				echo '</div><!-- .wrap-preco -->';
+			} else{
 				echo '<div class="wrap-preco">';
 				echo '<span class="moeda-preco">'. get_woocommerce_currency_symbol() . ' </span><span class="price">';
 				echo $product->get_price();
@@ -192,7 +201,7 @@ class Specials_Widget extends WP_Widget {
 		// Start the Loop.
 		if( $produtos_posts ) :
 			foreach( $produtos_posts as $post ) : setup_postdata( $post );
-			$product = new WC_Product( $post->ID );
+			$product = wc_get_product( $post->ID );
 			echo "<li>";
 			echo "<a href=" . get_the_permalink() . ">";
 			echo "<div class='thumb col-xs-4 pull-left'>";
@@ -211,8 +220,16 @@ class Specials_Widget extends WP_Widget {
 				echo get_woocommerce_currency_symbol() . ' ' . $product->get_regular_price();
 				echo "</span><!-- old-price -->";
 				echo '</div><!-- .wrap-preco -->';
-			}
-			else{
+			} elseif ( $product->is_type( 'variable' ) && $product->get_variation_sale_price() ) {
+				echo '<div class="wrap-preco">';
+				echo '<span class="moeda-preco">'. get_woocommerce_currency_symbol() . ' </span><span class="price">';
+				echo $product->get_variation_sale_price();
+				echo "</span><!-- price -->";
+				echo "<span class='old-price'>";
+				echo get_woocommerce_currency_symbol() . ' ' . $product->get_variation_regular_price();
+				echo "</span><!-- old-price -->";
+				echo '</div><!-- .wrap-preco -->';
+			} else{
 				echo '<div class="wrap-preco">';
 				echo '<span class="moeda-preco">'. get_woocommerce_currency_symbol() . ' </span><span class="price">';
 				echo $product->get_price();
@@ -266,7 +283,7 @@ class Specials_Widget extends WP_Widget {
 
 function theme_register_widgets() {
 	register_widget( 'Produtos_Widget' );
-	register_widget( 'Specials_Widget' );
+	//register_widget( 'Specials_Widget' );
 }
 
 add_action( 'widgets_init', 'theme_register_widgets' );
