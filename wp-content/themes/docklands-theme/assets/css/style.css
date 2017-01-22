@@ -1641,7 +1641,7 @@ body.logged-in #footer .alo_easymail_form_table {
 	text-transform: none !important;
 }
 .single-product .woocommerce-main-image.zoom{
-	border: 1px solid #CCC;
+
 	display: block;
 	overflow: hidden;
 	padding: 3px;
@@ -3682,3 +3682,4 @@ body.cart input.checkout-button {
 	-webkit-justify-content: center;
 	justify-content: center;
 }
+
