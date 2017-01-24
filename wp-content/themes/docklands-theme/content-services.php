@@ -1,7 +1,7 @@
 <?php
 // Content Services
 $class = 'col-md-4';
-if ( is_post_type_archive( 'cases' ) ) :
+if ( is_post_type_archive( 'cases' ) || is_post_type_archive( 'services' ) ) :
 	$class = 'col-md-6 cases';
 endif;
 ?>
