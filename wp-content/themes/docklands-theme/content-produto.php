@@ -43,7 +43,11 @@ $product = $_pf->get_product( get_the_ID() );
 										<?php endif;?>
 										<button type="submit" class="btn cart"><?php _e('Add to cart','odin'); ?></button>
 									</form>
-									<a href="<?php the_permalink(); ?>" class="btn details pull-right">
+									<?php $link = get_permalink( get_the_ID() );?>
+									<?php if ( $product->product_type == 'variation' ) {
+										$link = $product->get_permalink();
+									} ?>
+									<a href="<?php echo esc_url( $link );?>" class="btn details pull-right">
 										<?php _e('Details','odin'); ?>
 									</a>
 								</div><!-- bottom -->

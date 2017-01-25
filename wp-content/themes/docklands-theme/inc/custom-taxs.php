@@ -294,11 +294,6 @@ function set_post_types_archives_query( $query ) {
         $query->set( 'posts_per_page', '-1' );
         return;
     }
-    if ( $query->is_main_query() && is_search() && isset( $_GET[ 'post_type'] ) && $_GET[ 'post_type'] == 'product' ) {
-    	$query->set( 'post_type', array( 'product', 'product_variation' ) );
-    	//echo json_encode( $query, true );
-    	return;
-    }
 }
 add_action( 'pre_get_posts', 'set_post_types_archives_query' );
 ?>
