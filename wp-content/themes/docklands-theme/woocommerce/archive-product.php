@@ -56,14 +56,18 @@ global $wp_query;
 				<div class="col-md-12 pagination-control">
 				    <div class="col-md-4 nopadding">
 					    <label><?php _e('Show','odin');?></label>
+					    <?php $search = '';?>
+					    <?php if ( isset( $_GET[ 's'] ) ) : ?>
+					    	<?php $search = '&s=' . get_search_query();?>
+					    <?php endif;?>
 					    <select>
-                            <option value="<?php echo get_permalink( woocommerce_get_page_id( 'shop' ) );?>">
+                            <option value="<?php echo get_permalink( woocommerce_get_page_id( 'shop' ) ) . '?per_page=12' . $search;?>">
                             	<?php _e('12 per page','odin');?>
                             </option>
-                            <option value="<?php echo get_permalink( woocommerce_get_page_id( 'shop' ) );?>?per_page=24" <?php if(isset($_GET['per_page'])) selected( $_GET['per_page'], 24 ); ?>>
+                            <option value="<?php echo get_permalink( woocommerce_get_page_id( 'shop' ) );?>?per_page=24<?php echo $search;?>" <?php if(isset($_GET['per_page'])) selected( $_GET['per_page'], 24 ); ?>>
                             	<?php _e('24 per page','odin');?>
                             </option>
-                            <option value="<?php echo get_permalink( woocommerce_get_page_id( 'shop' ) );?>?per_page=36" <?php if(isset($_GET['per_page'])) selected( $_GET['per_page'], 36 );?>>
+                            <option value="<?php echo get_permalink( woocommerce_get_page_id( 'shop' ) );?>?per_page=36<?php echo $search;?>" <?php if(isset($_GET['per_page'])) selected( $_GET['per_page'], 36 );?>>
                             	<?php _e('36 per page','odin');?>
                             </option>
 					    </select>
