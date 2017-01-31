@@ -24,12 +24,13 @@ class Brasa_Dams_FTP_Update{
 			//$connect = sprintf('ftp://%s:%s@%s/Stock.xml', $cfg['dams_ftp_user'], $cfg['dams_ftp_pass'], $cfg['dams_ftp_host']);
 
 			if ( !$ftp_connect || !$login_result ) {
-    			//echo 'oiii';
-    			//die();
+    			die( 'login failed' );
     		}
     		//ftp_chdir( $ftp_connect, '/' );
     		$local = fopen( get_template_directory() . '/inc/temp.xml', 'w' );
+    		var_dump( $local );
     		$result = ftp_fget( $ftp_connect, $local, 'Stock.xml', FTP_BINARY );
+    		var_dump( $result );
 			fclose( $local );
 			ftp_close( $ftp_connect );
 
@@ -41,11 +42,12 @@ class Brasa_Dams_FTP_Update{
 		if(is_admin() || !isset( $_GET['do_dams_cron'] ) )
 			return;
 		$update_date = sprintf( 'update_stock_last_date_%s', current_time( 'Y-m-d' ) );
+		echo $update_date;
 		$file = simplexml_load_string( $this->get_xml_file() ) ;
 		// WP_Query arguments
 		$args = array (
 			'post_type'              => array( 'product', 'product_variation'),
-			'posts_per_page'		 => 400,
+			'posts_per_page'		 => 1200,
 			'meta_query'             => array(
 				'relation' => 'AND',
 				array(
