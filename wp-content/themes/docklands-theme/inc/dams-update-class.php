@@ -28,9 +28,7 @@ class Brasa_Dams_FTP_Update{
     		}
     		//ftp_chdir( $ftp_connect, '/' );
     		$local = fopen( get_template_directory() . '/inc/temp.xml', 'w' );
-    		var_dump( $local );
     		$result = ftp_fget( $ftp_connect, $local, 'Stock.xml', FTP_BINARY );
-    		var_dump( $result );
 			fclose( $local );
 			ftp_close( $ftp_connect );
 
@@ -42,7 +40,6 @@ class Brasa_Dams_FTP_Update{
 		if(is_admin() || !isset( $_GET['do_dams_cron'] ) )
 			return;
 		$update_date = sprintf( 'update_stock_last_date_%s', current_time( 'Y-m-d' ) );
-		echo $update_date;
 		$file = simplexml_load_string( $this->get_xml_file() ) ;
 		// WP_Query arguments
 		$args = array (
