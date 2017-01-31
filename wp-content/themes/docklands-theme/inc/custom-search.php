@@ -11,6 +11,9 @@ function advanced_search( $query ) {
     		$query->set( 'posts_per_page', $_GET[ 'per_page' ] );
     	}
     }
+    if ( is_search() && ! isset( $_REQUEST[ 'post_type'] ) ) {
+    	$query->set( 'post_type', array( 'post' ) );
+    }
 }
 add_action( 'pre_get_posts', 'advanced_search' );
 ?>
