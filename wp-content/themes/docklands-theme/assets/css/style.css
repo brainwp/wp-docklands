@@ -3588,7 +3588,7 @@ div.sharedaddy h3.sd-title{
 }
 .woocommerce .pagination-control {
 	overflow: hidden;
-	padding-top: 40px;
+	padding: 15px 0;
 }
 @media all and ( max-width: 680px ) {
 	.woocommerce .pagination-control .col-md-4.nopadding {
@@ -3596,12 +3596,16 @@ div.sharedaddy h3.sd-title{
 		text-align: center;
 	}
 	.woocommerce .pagination-control .col-md-4.pull-right {
-		float: none;
+		float: none !important;
+		margin: 20px auto 0 auto;
+		overflow: hidden;
 		text-align: center;
+		width: 100%;
 	}
 	.woocommerce .pagination-control .col-md-4.pull-right .news-pagination-links {
 		display: inline-block;
 		text-align: center;
+		float: none !important;
 	}
 }
 /* Request a quote cart */
